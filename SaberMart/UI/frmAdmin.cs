@@ -11,15 +11,20 @@ using System.Windows.Forms;
 
 namespace SaberMart.UI
 {
-    public partial class frmAdmin : DevExpress.XtraEditors.XtraForm
+    public partial class frmAdmin : DevExpress.XtraBars.Ribbon.RibbonForm
     {
         public frmAdmin()
         {
             InitializeComponent();
         }
-        private void tileBar_SelectedItemChanged(object sender, TileItemEventArgs e)
+        void navBarControl_ActiveGroupChanged(object sender, DevExpress.XtraNavBar.NavBarGroupEventArgs e)
         {
-            navigationFrame.SelectedPageIndex = tileBarGroupTables.Items.IndexOf(e.Item);
+            navigationFrame.SelectedPageIndex = navBarControl.Groups.IndexOf(e.Group);
+        }
+        void barButtonNavigation_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            int barItemIndex = barSubItemNavigation.ItemLinks.IndexOf(e.Link);
+            navBarControl.ActiveGroup = navBarControl.Groups[barItemIndex];
         }
     }
 }

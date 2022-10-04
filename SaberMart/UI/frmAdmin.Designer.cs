@@ -21,7 +21,6 @@ namespace SaberMart.UI
             base.Dispose(disposing);
         }
 
-
         #region Windows Form Designer generated code
 
         /// <summary>
@@ -30,101 +29,159 @@ namespace SaberMart.UI
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.XtraEditors.TileItemElement tileItemElement6 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement7 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement3 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement4 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement5 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement1 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement2 = new DevExpress.XtraEditors.TileItemElement();
-            this.tileBar = new DevExpress.XtraBars.Navigation.TileBar();
-            this.tileBarGroupTables = new DevExpress.XtraBars.Navigation.TileBarGroup();
+            this.components = new System.ComponentModel.Container();
+            this.tabbedView = new DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView(this.components);
+            this.ribbonControl = new DevExpress.XtraBars.Ribbon.RibbonControl();
+            this.skinRibbonGalleryBarItem = new DevExpress.XtraBars.SkinRibbonGalleryBarItem();
+            this.barSubItemNavigation = new DevExpress.XtraBars.BarSubItem();
+            this.employeesBarButtonItem = new DevExpress.XtraBars.BarButtonItem();
+            this.customersBarButtonItem = new DevExpress.XtraBars.BarButtonItem();
+            this.skinDropDownButtonItem = new DevExpress.XtraBars.SkinDropDownButtonItem();
+            this.skinPaletteRibbonGalleryBarItem = new DevExpress.XtraBars.SkinPaletteRibbonGalleryBarItem();
+            this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
+            this.officeNavigationBar = new DevExpress.XtraBars.Navigation.OfficeNavigationBar();
+            this.navBarControl = new DevExpress.XtraNavBar.NavBarControl();
             this.navigationFrame = new DevExpress.XtraBars.Navigation.NavigationFrame();
             this.employeesNavigationPage = new DevExpress.XtraBars.Navigation.NavigationPage();
             this.employeesLabelControl = new DevExpress.XtraEditors.LabelControl();
             this.customersNavigationPage = new DevExpress.XtraBars.Navigation.NavigationPage();
             this.customersLabelControl = new DevExpress.XtraEditors.LabelControl();
-            this.tileBarItem2 = new DevExpress.XtraBars.Navigation.TileBarItem();
-            this.tileBarItem3 = new DevExpress.XtraBars.Navigation.TileBarItem();
-            this.tbiCustomer = new DevExpress.XtraBars.Navigation.TileBarItem();
-            this.tileBarItem6 = new DevExpress.XtraBars.Navigation.TileBarItem();
-            this.tileBarItem7 = new DevExpress.XtraBars.Navigation.TileBarItem();
-            this.tbiPos = new DevExpress.XtraBars.Navigation.TileBarItem();
-            this.tbiEmployee = new DevExpress.XtraBars.Navigation.TileBarItem();
+            ((System.ComponentModel.ISupportInitialize)(this.tabbedView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.officeNavigationBar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.navBarControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.navigationFrame)).BeginInit();
             this.navigationFrame.SuspendLayout();
             this.employeesNavigationPage.SuspendLayout();
             this.customersNavigationPage.SuspendLayout();
             this.SuspendLayout();
             // 
-            // tileBar
+            // ribbonControl
             // 
-            this.tileBar.AllowGlyphSkinning = true;
-            this.tileBar.AllowSelectedItem = true;
-            this.tileBar.AppearanceGroupText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(140)))), ((int)(((byte)(140)))));
-            this.tileBar.AppearanceGroupText.Options.UseForeColor = true;
-            this.tileBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.tileBar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tileBar.DropDownButtonWidth = 30;
-            this.tileBar.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            this.tileBar.Groups.Add(this.tileBarGroupTables);
-            this.tileBar.IndentBetweenGroups = 10;
-            this.tileBar.IndentBetweenItems = 10;
-            this.tileBar.ItemPadding = new System.Windows.Forms.Padding(8, 6, 12, 6);
-            this.tileBar.Location = new System.Drawing.Point(0, 0);
-            this.tileBar.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.tileBar.MaxId = 17;
-            this.tileBar.MaximumSize = new System.Drawing.Size(0, 135);
-            this.tileBar.MinimumSize = new System.Drawing.Size(117, 135);
-            this.tileBar.Name = "tileBar";
-            this.tileBar.Padding = new System.Windows.Forms.Padding(34, 14, 34, 14);
-            this.tileBar.ScrollMode = DevExpress.XtraEditors.TileControlScrollMode.None;
-            this.tileBar.SelectionBorderWidth = 2;
-            this.tileBar.SelectionColorMode = DevExpress.XtraBars.Navigation.SelectionColorMode.UseItemBackColor;
-            this.tileBar.ShowGroupText = false;
-            this.tileBar.Size = new System.Drawing.Size(1161, 135);
-            this.tileBar.TabIndex = 1;
-            this.tileBar.Text = "tileBar";
-            this.tileBar.WideTileWidth = 150;
-            this.tileBar.SelectedItemChanged += new DevExpress.XtraEditors.TileItemClickEventHandler(this.tileBar_SelectedItemChanged);
+            this.ribbonControl.EmptyAreaImageOptions.ImagePadding = new System.Windows.Forms.Padding(35, 37, 35, 37);
+            this.ribbonControl.ExpandCollapseItem.Id = 0;
+            this.ribbonControl.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
+            this.ribbonControl.ExpandCollapseItem,
+            this.ribbonControl.SearchEditItem,
+            this.skinRibbonGalleryBarItem,
+            this.barSubItemNavigation,
+            this.employeesBarButtonItem,
+            this.customersBarButtonItem,
+            this.skinDropDownButtonItem,
+            this.skinPaletteRibbonGalleryBarItem});
+            this.ribbonControl.Location = new System.Drawing.Point(0, 0);
+            this.ribbonControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ribbonControl.MaxItemId = 46;
+            this.ribbonControl.MdiMergeStyle = DevExpress.XtraBars.Ribbon.RibbonMdiMergeStyle.Always;
+            this.ribbonControl.Name = "ribbonControl";
+            this.ribbonControl.OptionsMenuMinWidth = 385;
+            this.ribbonControl.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2013;
+            this.ribbonControl.ShowApplicationButton = DevExpress.Utils.DefaultBoolean.False;
+            this.ribbonControl.Size = new System.Drawing.Size(922, 71);
+            this.ribbonControl.StatusBar = this.ribbonStatusBar;
+            this.ribbonControl.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
             // 
-            // tileBarGroupTables
+            // skinRibbonGalleryBarItem
             // 
-            this.tileBarGroupTables.Items.Add(this.tbiPos);
-            this.tileBarGroupTables.Items.Add(this.tbiEmployee);
-            this.tileBarGroupTables.Items.Add(this.tbiCustomer);
-            this.tileBarGroupTables.Items.Add(this.tileBarItem6);
-            this.tileBarGroupTables.Items.Add(this.tileBarItem7);
-            this.tileBarGroupTables.Name = "tileBarGroupTables";
-            this.tileBarGroupTables.Text = "QUẢN LÝ";
+            this.skinRibbonGalleryBarItem.Id = 14;
+            this.skinRibbonGalleryBarItem.Name = "skinRibbonGalleryBarItem";
+            // 
+            // barSubItemNavigation
+            // 
+            this.barSubItemNavigation.Caption = "Navigation";
+            this.barSubItemNavigation.Id = 15;
+            this.barSubItemNavigation.ImageOptions.ImageUri.Uri = "NavigationBar";
+            this.barSubItemNavigation.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.employeesBarButtonItem),
+            new DevExpress.XtraBars.LinkPersistInfo(this.customersBarButtonItem)});
+            this.barSubItemNavigation.Name = "barSubItemNavigation";
+            // 
+            // employeesBarButtonItem
+            // 
+            this.employeesBarButtonItem.Caption = "Employees";
+            this.employeesBarButtonItem.Id = 44;
+            this.employeesBarButtonItem.Name = "employeesBarButtonItem";
+            this.employeesBarButtonItem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonNavigation_ItemClick);
+            // 
+            // customersBarButtonItem
+            // 
+            this.customersBarButtonItem.Caption = "Customers";
+            this.customersBarButtonItem.Id = 45;
+            this.customersBarButtonItem.Name = "customersBarButtonItem";
+            this.customersBarButtonItem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonNavigation_ItemClick);
+            // 
+            // skinDropDownButtonItem
+            // 
+            this.skinDropDownButtonItem.Id = 46;
+            this.skinDropDownButtonItem.Name = "skinDropDownButtonItem";
+            // 
+            // skinPaletteRibbonGalleryBarItem
+            // 
+            this.skinPaletteRibbonGalleryBarItem.Caption = "$newskinpalettename$";
+            this.skinPaletteRibbonGalleryBarItem.Id = 47;
+            this.skinPaletteRibbonGalleryBarItem.Name = "skinPaletteRibbonGalleryBarItem";
+            // 
+            // ribbonStatusBar
+            // 
+            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 707);
+            this.ribbonStatusBar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ribbonStatusBar.Name = "ribbonStatusBar";
+            this.ribbonStatusBar.Ribbon = this.ribbonControl;
+            this.ribbonStatusBar.Size = new System.Drawing.Size(922, 30);
+            // 
+            // officeNavigationBar
+            // 
+            this.officeNavigationBar.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.officeNavigationBar.Location = new System.Drawing.Point(0, 656);
+            this.officeNavigationBar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.officeNavigationBar.Name = "officeNavigationBar";
+            this.officeNavigationBar.NavigationClient = this.navBarControl;
+            this.officeNavigationBar.Size = new System.Drawing.Size(922, 51);
+            this.officeNavigationBar.TabIndex = 1;
+            this.officeNavigationBar.Text = "officeNavigationBar";
+            // 
+            // navBarControl
+            // 
+            this.navBarControl.Dock = System.Windows.Forms.DockStyle.Left;
+            this.navBarControl.Location = new System.Drawing.Point(0, 71);
+            this.navBarControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.navBarControl.Name = "navBarControl";
+            this.navBarControl.OptionsNavPane.ExpandedWidth = 192;
+            this.navBarControl.PaintStyleKind = DevExpress.XtraNavBar.NavBarViewKind.NavigationPane;
+            this.navBarControl.Size = new System.Drawing.Size(192, 585);
+            this.navBarControl.TabIndex = 0;
+            this.navBarControl.Text = "navBarControl";
+            this.navBarControl.ActiveGroupChanged += new DevExpress.XtraNavBar.NavBarGroupEventHandler(this.navBarControl_ActiveGroupChanged);
             // 
             // navigationFrame
             // 
+            this.navigationFrame.Appearance.BackColor = System.Drawing.Color.White;
+            this.navigationFrame.Appearance.Options.UseBackColor = true;
             this.navigationFrame.Controls.Add(this.employeesNavigationPage);
             this.navigationFrame.Controls.Add(this.customersNavigationPage);
             this.navigationFrame.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.navigationFrame.Location = new System.Drawing.Point(0, 135);
-            this.navigationFrame.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.navigationFrame.Location = new System.Drawing.Point(192, 71);
+            this.navigationFrame.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.navigationFrame.Name = "navigationFrame";
             this.navigationFrame.Pages.AddRange(new DevExpress.XtraBars.Navigation.NavigationPageBase[] {
             this.employeesNavigationPage,
             this.customersNavigationPage});
+            this.navigationFrame.RibbonAndBarsMergeStyle = DevExpress.XtraBars.Docking2010.Views.RibbonAndBarsMergeStyle.Always;
             this.navigationFrame.SelectedPage = this.employeesNavigationPage;
-            this.navigationFrame.Size = new System.Drawing.Size(1161, 555);
+            this.navigationFrame.Size = new System.Drawing.Size(730, 585);
             this.navigationFrame.TabIndex = 0;
             this.navigationFrame.Text = "navigationFrame";
             // 
             // employeesNavigationPage
             // 
-            this.employeesNavigationPage.Caption = "employeesNavigationPage";
             this.employeesNavigationPage.Controls.Add(this.employeesLabelControl);
             this.employeesNavigationPage.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.employeesNavigationPage.Name = "employeesNavigationPage";
-            this.employeesNavigationPage.Size = new System.Drawing.Size(1161, 555);
+            this.employeesNavigationPage.Size = new System.Drawing.Size(730, 585);
             // 
             // employeesLabelControl
             // 
-            this.employeesLabelControl.Appearance.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.employeesLabelControl.Appearance.Font = new System.Drawing.Font("Tahoma", 25.25F);
             this.employeesLabelControl.Appearance.ForeColor = System.Drawing.Color.Gray;
             this.employeesLabelControl.Appearance.Options.UseFont = true;
             this.employeesLabelControl.Appearance.Options.UseForeColor = true;
@@ -136,17 +193,16 @@ namespace SaberMart.UI
             this.employeesLabelControl.Location = new System.Drawing.Point(0, 0);
             this.employeesLabelControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.employeesLabelControl.Name = "employeesLabelControl";
-            this.employeesLabelControl.Size = new System.Drawing.Size(1161, 555);
-            this.employeesLabelControl.TabIndex = 2;
+            this.employeesLabelControl.Size = new System.Drawing.Size(730, 585);
+            this.employeesLabelControl.TabIndex = 0;
             this.employeesLabelControl.Text = "Employees";
             // 
             // customersNavigationPage
             // 
-            this.customersNavigationPage.Caption = "customersNavigationPage";
             this.customersNavigationPage.Controls.Add(this.customersLabelControl);
             this.customersNavigationPage.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.customersNavigationPage.Name = "customersNavigationPage";
-            this.customersNavigationPage.Size = new System.Drawing.Size(1161, 555);
+            this.customersNavigationPage.Size = new System.Drawing.Size(730, 585);
             // 
             // customersLabelControl
             // 
@@ -162,134 +218,53 @@ namespace SaberMart.UI
             this.customersLabelControl.Location = new System.Drawing.Point(0, 0);
             this.customersLabelControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.customersLabelControl.Name = "customersLabelControl";
-            this.customersLabelControl.Size = new System.Drawing.Size(1161, 555);
-            this.customersLabelControl.TabIndex = 2;
+            this.customersLabelControl.Size = new System.Drawing.Size(730, 585);
+            this.customersLabelControl.TabIndex = 1;
             this.customersLabelControl.Text = "Customers";
-            // 
-            // tileBarItem2
-            // 
-            this.tileBarItem2.AppearanceItem.Hovered.BackColor = System.Drawing.Color.Maroon;
-            this.tileBarItem2.AppearanceItem.Hovered.Options.UseBackColor = true;
-            this.tileBarItem2.AppearanceItem.Normal.BackColor = System.Drawing.Color.Firebrick;
-            this.tileBarItem2.AppearanceItem.Normal.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tileBarItem2.AppearanceItem.Normal.Options.UseBackColor = true;
-            this.tileBarItem2.AppearanceItem.Normal.Options.UseFont = true;
-            this.tileBarItem2.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement6.Text = "tileBarItem1";
-            this.tileBarItem2.Elements.Add(tileItemElement6);
-            this.tileBarItem2.Id = 3;
-            this.tileBarItem2.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
-            this.tileBarItem2.Name = "tileBarItem2";
-            // 
-            // tileBarItem3
-            // 
-            this.tileBarItem3.AppearanceItem.Hovered.BackColor = System.Drawing.Color.Maroon;
-            this.tileBarItem3.AppearanceItem.Hovered.Options.UseBackColor = true;
-            this.tileBarItem3.AppearanceItem.Normal.BackColor = System.Drawing.Color.Firebrick;
-            this.tileBarItem3.AppearanceItem.Normal.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tileBarItem3.AppearanceItem.Normal.Options.UseBackColor = true;
-            this.tileBarItem3.AppearanceItem.Normal.Options.UseFont = true;
-            this.tileBarItem3.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement7.Text = "tileBarItem1";
-            this.tileBarItem3.Elements.Add(tileItemElement7);
-            this.tileBarItem3.Id = 3;
-            this.tileBarItem3.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
-            this.tileBarItem3.Name = "tileBarItem3";
-            // 
-            // tbiCustomer
-            // 
-            this.tbiCustomer.BackgroundImage = global::SaberMart.Properties.Resources.customer_32x32;
-            this.tbiCustomer.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement3.Text = "KHÁCH HÀNG";
-            this.tbiCustomer.Elements.Add(tileItemElement3);
-            this.tbiCustomer.Id = 14;
-            this.tbiCustomer.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
-            this.tbiCustomer.Name = "tbiCustomer";
-            // 
-            // tileBarItem6
-            // 
-            this.tileBarItem6.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement4.Text = "tileBarItem6";
-            this.tileBarItem6.Elements.Add(tileItemElement4);
-            this.tileBarItem6.Id = 15;
-            this.tileBarItem6.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
-            this.tileBarItem6.Name = "tileBarItem6";
-            // 
-            // tileBarItem7
-            // 
-            this.tileBarItem7.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement5.Text = "tileBarItem7";
-            this.tileBarItem7.Elements.Add(tileItemElement5);
-            this.tileBarItem7.Id = 16;
-            this.tileBarItem7.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
-            this.tileBarItem7.Name = "tileBarItem7";
-            // 
-            // tbiPos
-            // 
-            this.tbiPos.AppearanceItem.Hovered.BackColor = System.Drawing.Color.OrangeRed;
-            this.tbiPos.AppearanceItem.Hovered.Options.UseBackColor = true;
-            this.tbiPos.AppearanceItem.Normal.BackColor = System.Drawing.Color.Firebrick;
-            this.tbiPos.AppearanceItem.Normal.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbiPos.AppearanceItem.Normal.Options.UseBackColor = true;
-            this.tbiPos.AppearanceItem.Normal.Options.UseFont = true;
-            this.tbiPos.BackgroundImage = global::SaberMart.Properties.Resources.boposition2_32x32;
-            this.tbiPos.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement1.Text = "CHỨC VỤ";
-            this.tbiPos.Elements.Add(tileItemElement1);
-            this.tbiPos.Id = 12;
-            this.tbiPos.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
-            this.tbiPos.Name = "tbiPos";
-            // 
-            // tbiEmployee
-            // 
-            this.tbiEmployee.AppearanceItem.Hovered.BackColor = System.Drawing.Color.OrangeRed;
-            this.tbiEmployee.AppearanceItem.Hovered.Options.UseBackColor = true;
-            this.tbiEmployee.AppearanceItem.Normal.BackColor = System.Drawing.Color.Firebrick;
-            this.tbiEmployee.AppearanceItem.Normal.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbiEmployee.AppearanceItem.Normal.Options.UseBackColor = true;
-            this.tbiEmployee.AppearanceItem.Normal.Options.UseFont = true;
-            this.tbiEmployee.BackgroundImage = global::SaberMart.Properties.Resources.employee_32x32;
-            this.tbiEmployee.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement2.Text = "KHÁCH HÀNG";
-            this.tbiEmployee.Elements.Add(tileItemElement2);
-            this.tbiEmployee.Id = 13;
-            this.tbiEmployee.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
-            this.tbiEmployee.Name = "tbiEmployee";
             // 
             // frmAdmin
             // 
-            this.Appearance.BackColor = System.Drawing.Color.White;
-            this.Appearance.Options.UseBackColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1161, 690);
+            this.ClientSize = new System.Drawing.Size(922, 737);
             this.Controls.Add(this.navigationFrame);
-            this.Controls.Add(this.tileBar);
+            this.Controls.Add(this.navBarControl);
+            this.Controls.Add(this.officeNavigationBar);
+            this.Controls.Add(this.ribbonStatusBar);
+            this.Controls.Add(this.ribbonControl);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmAdmin";
+            this.Ribbon = this.ribbonControl;
+            this.StatusBar = this.ribbonStatusBar;
+            ((System.ComponentModel.ISupportInitialize)(this.tabbedView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.officeNavigationBar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.navBarControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.navigationFrame)).EndInit();
             this.navigationFrame.ResumeLayout(false);
             this.employeesNavigationPage.ResumeLayout(false);
             this.customersNavigationPage.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-
-        private DevExpress.XtraBars.Navigation.TileBar tileBar;
+        private DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView tabbedView;
+        private DevExpress.XtraBars.Ribbon.RibbonControl ribbonControl;
+        private DevExpress.XtraBars.Ribbon.RibbonStatusBar ribbonStatusBar;
+        private DevExpress.XtraBars.BarSubItem barSubItemNavigation;
+        private DevExpress.XtraBars.SkinRibbonGalleryBarItem skinRibbonGalleryBarItem;
+        private DevExpress.XtraBars.Navigation.OfficeNavigationBar officeNavigationBar;
         private DevExpress.XtraBars.Navigation.NavigationFrame navigationFrame;
-        private DevExpress.XtraBars.Navigation.TileBarGroup tileBarGroupTables;
+        private DevExpress.XtraNavBar.NavBarControl navBarControl;
         private DevExpress.XtraBars.Navigation.NavigationPage employeesNavigationPage;
-        private DevExpress.XtraBars.Navigation.NavigationPage customersNavigationPage;
         private DevExpress.XtraEditors.LabelControl employeesLabelControl;
+        private DevExpress.XtraBars.Navigation.NavigationPage customersNavigationPage;
         private DevExpress.XtraEditors.LabelControl customersLabelControl;
-        private DevExpress.XtraBars.Navigation.TileBarItem tileBarItem2;
-        private DevExpress.XtraBars.Navigation.TileBarItem tileBarItem3;
-        private DevExpress.XtraBars.Navigation.TileBarItem tbiPos;
-        private DevExpress.XtraBars.Navigation.TileBarItem tbiEmployee;
-        private DevExpress.XtraBars.Navigation.TileBarItem tbiCustomer;
-        private DevExpress.XtraBars.Navigation.TileBarItem tileBarItem6;
-        private DevExpress.XtraBars.Navigation.TileBarItem tileBarItem7;
+        private DevExpress.XtraBars.BarButtonItem employeesBarButtonItem;
+        private DevExpress.XtraBars.BarButtonItem customersBarButtonItem;
+        private DevExpress.XtraBars.SkinDropDownButtonItem skinDropDownButtonItem;
+        private DevExpress.XtraBars.SkinPaletteRibbonGalleryBarItem skinPaletteRibbonGalleryBarItem;
     }
 }
