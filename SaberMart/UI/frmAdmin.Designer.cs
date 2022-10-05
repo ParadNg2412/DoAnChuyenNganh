@@ -30,241 +30,457 @@ namespace SaberMart.UI
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.tabbedView = new DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView(this.components);
-            this.ribbonControl = new DevExpress.XtraBars.Ribbon.RibbonControl();
-            this.skinRibbonGalleryBarItem = new DevExpress.XtraBars.SkinRibbonGalleryBarItem();
-            this.barSubItemNavigation = new DevExpress.XtraBars.BarSubItem();
-            this.employeesBarButtonItem = new DevExpress.XtraBars.BarButtonItem();
-            this.customersBarButtonItem = new DevExpress.XtraBars.BarButtonItem();
-            this.skinDropDownButtonItem = new DevExpress.XtraBars.SkinDropDownButtonItem();
-            this.skinPaletteRibbonGalleryBarItem = new DevExpress.XtraBars.SkinPaletteRibbonGalleryBarItem();
-            this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
-            this.officeNavigationBar = new DevExpress.XtraBars.Navigation.OfficeNavigationBar();
-            this.navBarControl = new DevExpress.XtraNavBar.NavBarControl();
-            this.navigationFrame = new DevExpress.XtraBars.Navigation.NavigationFrame();
-            this.employeesNavigationPage = new DevExpress.XtraBars.Navigation.NavigationPage();
-            this.employeesLabelControl = new DevExpress.XtraEditors.LabelControl();
-            this.customersNavigationPage = new DevExpress.XtraBars.Navigation.NavigationPage();
-            this.customersLabelControl = new DevExpress.XtraEditors.LabelControl();
-            ((System.ComponentModel.ISupportInitialize)(this.tabbedView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.officeNavigationBar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.navBarControl)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.navigationFrame)).BeginInit();
-            this.navigationFrame.SuspendLayout();
-            this.employeesNavigationPage.SuspendLayout();
-            this.customersNavigationPage.SuspendLayout();
+            this.fluentDesignFormContainer1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer();
+            this.accordionControl1 = new DevExpress.XtraBars.Navigation.AccordionControl();
+            this.accordionControlElement1 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement2 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement3 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement4 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement6 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement7 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement8 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement9 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement5 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement10 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement11 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement12 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement13 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement14 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement15 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement16 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.fluentDesignFormControl1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl();
+            this.fluentFormDefaultManager1 = new DevExpress.XtraBars.FluentDesignSystem.FluentFormDefaultManager(this.components);
+            this.barDockingMenuItem1 = new DevExpress.XtraBars.BarDockingMenuItem();
+            this.barDockingMenuItem2 = new DevExpress.XtraBars.BarDockingMenuItem();
+            ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fluentFormDefaultManager1)).BeginInit();
             this.SuspendLayout();
             // 
-            // ribbonControl
+            // fluentDesignFormContainer1
             // 
-            this.ribbonControl.EmptyAreaImageOptions.ImagePadding = new System.Windows.Forms.Padding(35, 37, 35, 37);
-            this.ribbonControl.ExpandCollapseItem.Id = 0;
-            this.ribbonControl.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
-            this.ribbonControl.ExpandCollapseItem,
-            this.ribbonControl.SearchEditItem,
-            this.skinRibbonGalleryBarItem,
-            this.barSubItemNavigation,
-            this.employeesBarButtonItem,
-            this.customersBarButtonItem,
-            this.skinDropDownButtonItem,
-            this.skinPaletteRibbonGalleryBarItem});
-            this.ribbonControl.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.ribbonControl.MaxItemId = 46;
-            this.ribbonControl.MdiMergeStyle = DevExpress.XtraBars.Ribbon.RibbonMdiMergeStyle.Always;
-            this.ribbonControl.Name = "ribbonControl";
-            this.ribbonControl.OptionsMenuMinWidth = 385;
-            this.ribbonControl.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2013;
-            this.ribbonControl.ShowApplicationButton = DevExpress.Utils.DefaultBoolean.False;
-            this.ribbonControl.Size = new System.Drawing.Size(922, 71);
-            this.ribbonControl.StatusBar = this.ribbonStatusBar;
-            this.ribbonControl.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
+            this.fluentDesignFormContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.fluentDesignFormContainer1.Location = new System.Drawing.Point(252, 39);
+            this.fluentDesignFormContainer1.Name = "fluentDesignFormContainer1";
+            this.fluentDesignFormContainer1.Size = new System.Drawing.Size(921, 531);
+            this.fluentDesignFormContainer1.TabIndex = 0;
             // 
-            // skinRibbonGalleryBarItem
+            // accordionControl1
             // 
-            this.skinRibbonGalleryBarItem.Id = 14;
-            this.skinRibbonGalleryBarItem.Name = "skinRibbonGalleryBarItem";
+            this.accordionControl1.Appearance.AccordionControl.BackColor = System.Drawing.Color.OrangeRed;
+            this.accordionControl1.Appearance.AccordionControl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.accordionControl1.Appearance.AccordionControl.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.accordionControl1.Appearance.AccordionControl.Options.UseBackColor = true;
+            this.accordionControl1.Appearance.AccordionControl.Options.UseForeColor = true;
+            this.accordionControl1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.accordionControl1.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
+            this.accordionControlElement1,
+            this.accordionControlElement4,
+            this.accordionControlElement5,
+            this.accordionControlElement11,
+            this.accordionControlElement13,
+            this.accordionControlElement15});
+            this.accordionControl1.Location = new System.Drawing.Point(0, 39);
+            this.accordionControl1.Name = "accordionControl1";
+            this.accordionControl1.OptionsMinimizing.AllowMinimizeMode = DevExpress.Utils.DefaultBoolean.True;
+            this.accordionControl1.ScrollBarMode = DevExpress.XtraBars.Navigation.ScrollBarMode.AutoCollapse;
+            this.accordionControl1.ShowFilterControl = DevExpress.XtraBars.Navigation.ShowFilterControl.Auto;
+            this.accordionControl1.Size = new System.Drawing.Size(252, 531);
+            this.accordionControl1.TabIndex = 1;
+            this.accordionControl1.ViewType = DevExpress.XtraBars.Navigation.AccordionControlViewType.HamburgerMenu;
             // 
-            // barSubItemNavigation
+            // accordionControlElement1
             // 
-            this.barSubItemNavigation.Caption = "Navigation";
-            this.barSubItemNavigation.Id = 15;
-            this.barSubItemNavigation.ImageOptions.ImageUri.Uri = "NavigationBar";
-            this.barSubItemNavigation.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(this.employeesBarButtonItem),
-            new DevExpress.XtraBars.LinkPersistInfo(this.customersBarButtonItem)});
-            this.barSubItemNavigation.Name = "barSubItemNavigation";
+            this.accordionControlElement1.Appearance.Hovered.BackColor = System.Drawing.Color.Maroon;
+            this.accordionControlElement1.Appearance.Hovered.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accordionControlElement1.Appearance.Hovered.Options.UseBackColor = true;
+            this.accordionControlElement1.Appearance.Hovered.Options.UseFont = true;
+            this.accordionControlElement1.Appearance.Normal.BackColor = System.Drawing.Color.Firebrick;
+            this.accordionControlElement1.Appearance.Normal.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accordionControlElement1.Appearance.Normal.Options.UseBackColor = true;
+            this.accordionControlElement1.Appearance.Normal.Options.UseFont = true;
+            this.accordionControlElement1.Appearance.Pressed.BackColor = System.Drawing.Color.Maroon;
+            this.accordionControlElement1.Appearance.Pressed.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accordionControlElement1.Appearance.Pressed.Options.UseBackColor = true;
+            this.accordionControlElement1.Appearance.Pressed.Options.UseFont = true;
+            this.accordionControlElement1.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
+            this.accordionControlElement2,
+            this.accordionControlElement3});
+            this.accordionControlElement1.ImageOptions.Image = global::SaberMart.Properties.Resources.employee_32x32;
+            this.accordionControlElement1.Name = "accordionControlElement1";
+            this.accordionControlElement1.Text = "NHÂN VIÊN";
             // 
-            // employeesBarButtonItem
+            // accordionControlElement2
             // 
-            this.employeesBarButtonItem.Caption = "Employees";
-            this.employeesBarButtonItem.Id = 44;
-            this.employeesBarButtonItem.Name = "employeesBarButtonItem";
-            this.employeesBarButtonItem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonNavigation_ItemClick);
+            this.accordionControlElement2.Appearance.Hovered.BackColor = System.Drawing.Color.Gray;
+            this.accordionControlElement2.Appearance.Hovered.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accordionControlElement2.Appearance.Hovered.Options.UseBackColor = true;
+            this.accordionControlElement2.Appearance.Hovered.Options.UseFont = true;
+            this.accordionControlElement2.Appearance.Normal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.accordionControlElement2.Appearance.Normal.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accordionControlElement2.Appearance.Normal.Options.UseBackColor = true;
+            this.accordionControlElement2.Appearance.Normal.Options.UseFont = true;
+            this.accordionControlElement2.Appearance.Pressed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.accordionControlElement2.Appearance.Pressed.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accordionControlElement2.Appearance.Pressed.Options.UseBackColor = true;
+            this.accordionControlElement2.Appearance.Pressed.Options.UseFont = true;
+            this.accordionControlElement2.ImageOptions.Image = global::SaberMart.Properties.Resources.boposition2_32x32;
+            this.accordionControlElement2.Name = "accordionControlElement2";
+            this.accordionControlElement2.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionControlElement2.Text = "CHỨC VỤ";
             // 
-            // customersBarButtonItem
+            // accordionControlElement3
             // 
-            this.customersBarButtonItem.Caption = "Customers";
-            this.customersBarButtonItem.Id = 45;
-            this.customersBarButtonItem.Name = "customersBarButtonItem";
-            this.customersBarButtonItem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonNavigation_ItemClick);
+            this.accordionControlElement3.Appearance.Hovered.BackColor = System.Drawing.Color.Gray;
+            this.accordionControlElement3.Appearance.Hovered.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accordionControlElement3.Appearance.Hovered.Options.UseBackColor = true;
+            this.accordionControlElement3.Appearance.Hovered.Options.UseFont = true;
+            this.accordionControlElement3.Appearance.Normal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.accordionControlElement3.Appearance.Normal.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accordionControlElement3.Appearance.Normal.Options.UseBackColor = true;
+            this.accordionControlElement3.Appearance.Normal.Options.UseFont = true;
+            this.accordionControlElement3.Appearance.Pressed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.accordionControlElement3.Appearance.Pressed.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accordionControlElement3.Appearance.Pressed.Options.UseBackColor = true;
+            this.accordionControlElement3.Appearance.Pressed.Options.UseFont = true;
+            this.accordionControlElement3.ImageOptions.Image = global::SaberMart.Properties.Resources.contact_32x32;
+            this.accordionControlElement3.Name = "accordionControlElement3";
+            this.accordionControlElement3.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionControlElement3.Text = "THÔNG TIN NHÂN VIÊN";
             // 
-            // skinDropDownButtonItem
+            // accordionControlElement4
             // 
-            this.skinDropDownButtonItem.Id = 46;
-            this.skinDropDownButtonItem.Name = "skinDropDownButtonItem";
+            this.accordionControlElement4.Appearance.Hovered.BackColor = System.Drawing.Color.Maroon;
+            this.accordionControlElement4.Appearance.Hovered.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accordionControlElement4.Appearance.Hovered.Options.UseBackColor = true;
+            this.accordionControlElement4.Appearance.Hovered.Options.UseFont = true;
+            this.accordionControlElement4.Appearance.Normal.BackColor = System.Drawing.Color.Firebrick;
+            this.accordionControlElement4.Appearance.Normal.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accordionControlElement4.Appearance.Normal.Options.UseBackColor = true;
+            this.accordionControlElement4.Appearance.Normal.Options.UseFont = true;
+            this.accordionControlElement4.Appearance.Pressed.BackColor = System.Drawing.Color.Maroon;
+            this.accordionControlElement4.Appearance.Pressed.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accordionControlElement4.Appearance.Pressed.Options.UseBackColor = true;
+            this.accordionControlElement4.Appearance.Pressed.Options.UseFont = true;
+            this.accordionControlElement4.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
+            this.accordionControlElement6,
+            this.accordionControlElement7,
+            this.accordionControlElement8,
+            this.accordionControlElement9});
+            this.accordionControlElement4.ImageOptions.Image = global::SaberMart.Properties.Resources.boproduct_32x32;
+            this.accordionControlElement4.Name = "accordionControlElement4";
+            this.accordionControlElement4.Text = "KHO HÀNG";
             // 
-            // skinPaletteRibbonGalleryBarItem
+            // accordionControlElement6
             // 
-            this.skinPaletteRibbonGalleryBarItem.Caption = "$newskinpalettename$";
-            this.skinPaletteRibbonGalleryBarItem.Id = 47;
-            this.skinPaletteRibbonGalleryBarItem.Name = "skinPaletteRibbonGalleryBarItem";
+            this.accordionControlElement6.Appearance.Hovered.BackColor = System.Drawing.Color.Gray;
+            this.accordionControlElement6.Appearance.Hovered.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accordionControlElement6.Appearance.Hovered.Options.UseBackColor = true;
+            this.accordionControlElement6.Appearance.Hovered.Options.UseFont = true;
+            this.accordionControlElement6.Appearance.Normal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.accordionControlElement6.Appearance.Normal.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accordionControlElement6.Appearance.Normal.Options.UseBackColor = true;
+            this.accordionControlElement6.Appearance.Normal.Options.UseFont = true;
+            this.accordionControlElement6.Appearance.Pressed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.accordionControlElement6.Appearance.Pressed.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accordionControlElement6.Appearance.Pressed.Options.UseBackColor = true;
+            this.accordionControlElement6.Appearance.Pressed.Options.UseFont = true;
+            this.accordionControlElement6.ImageOptions.Image = global::SaberMart.Properties.Resources.boorderitem_32x32;
+            this.accordionControlElement6.Name = "accordionControlElement6";
+            this.accordionControlElement6.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionControlElement6.Text = "PHIẾU NHẬP";
             // 
-            // ribbonStatusBar
+            // accordionControlElement7
             // 
-            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 707);
-            this.ribbonStatusBar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.ribbonStatusBar.Name = "ribbonStatusBar";
-            this.ribbonStatusBar.Ribbon = this.ribbonControl;
-            this.ribbonStatusBar.Size = new System.Drawing.Size(922, 30);
+            this.accordionControlElement7.Appearance.Hovered.BackColor = System.Drawing.Color.Gray;
+            this.accordionControlElement7.Appearance.Hovered.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accordionControlElement7.Appearance.Hovered.Options.UseBackColor = true;
+            this.accordionControlElement7.Appearance.Hovered.Options.UseFont = true;
+            this.accordionControlElement7.Appearance.Normal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.accordionControlElement7.Appearance.Normal.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accordionControlElement7.Appearance.Normal.Options.UseBackColor = true;
+            this.accordionControlElement7.Appearance.Normal.Options.UseFont = true;
+            this.accordionControlElement7.Appearance.Pressed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.accordionControlElement7.Appearance.Pressed.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accordionControlElement7.Appearance.Pressed.Options.UseBackColor = true;
+            this.accordionControlElement7.Appearance.Pressed.Options.UseFont = true;
+            this.accordionControlElement7.ImageOptions.Image = global::SaberMart.Properties.Resources.home_32x32;
+            this.accordionControlElement7.Name = "accordionControlElement7";
+            this.accordionControlElement7.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionControlElement7.Text = "NHÀ CUNG CẤP";
             // 
-            // officeNavigationBar
+            // accordionControlElement8
             // 
-            this.officeNavigationBar.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.officeNavigationBar.Location = new System.Drawing.Point(0, 656);
-            this.officeNavigationBar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.officeNavigationBar.Name = "officeNavigationBar";
-            this.officeNavigationBar.NavigationClient = this.navBarControl;
-            this.officeNavigationBar.Size = new System.Drawing.Size(922, 51);
-            this.officeNavigationBar.TabIndex = 1;
-            this.officeNavigationBar.Text = "officeNavigationBar";
+            this.accordionControlElement8.Appearance.Hovered.BackColor = System.Drawing.Color.Gray;
+            this.accordionControlElement8.Appearance.Hovered.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accordionControlElement8.Appearance.Hovered.Options.UseBackColor = true;
+            this.accordionControlElement8.Appearance.Hovered.Options.UseFont = true;
+            this.accordionControlElement8.Appearance.Normal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.accordionControlElement8.Appearance.Normal.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accordionControlElement8.Appearance.Normal.Options.UseBackColor = true;
+            this.accordionControlElement8.Appearance.Normal.Options.UseFont = true;
+            this.accordionControlElement8.Appearance.Pressed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.accordionControlElement8.Appearance.Pressed.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accordionControlElement8.Appearance.Pressed.Options.UseBackColor = true;
+            this.accordionControlElement8.Appearance.Pressed.Options.UseFont = true;
+            this.accordionControlElement8.ImageOptions.Image = global::SaberMart.Properties.Resources.boproductgroup_32x32;
+            this.accordionControlElement8.Name = "accordionControlElement8";
+            this.accordionControlElement8.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionControlElement8.Text = "LOẠI SẢN PHẨM";
             // 
-            // navBarControl
+            // accordionControlElement9
             // 
-            this.navBarControl.Dock = System.Windows.Forms.DockStyle.Left;
-            this.navBarControl.Location = new System.Drawing.Point(0, 71);
-            this.navBarControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.navBarControl.Name = "navBarControl";
-            this.navBarControl.OptionsNavPane.ExpandedWidth = 192;
-            this.navBarControl.PaintStyleKind = DevExpress.XtraNavBar.NavBarViewKind.NavigationPane;
-            this.navBarControl.Size = new System.Drawing.Size(192, 585);
-            this.navBarControl.TabIndex = 0;
-            this.navBarControl.Text = "navBarControl";
-            this.navBarControl.ActiveGroupChanged += new DevExpress.XtraNavBar.NavBarGroupEventHandler(this.navBarControl_ActiveGroupChanged);
+            this.accordionControlElement9.Appearance.Hovered.BackColor = System.Drawing.Color.Gray;
+            this.accordionControlElement9.Appearance.Hovered.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accordionControlElement9.Appearance.Hovered.Options.UseBackColor = true;
+            this.accordionControlElement9.Appearance.Hovered.Options.UseFont = true;
+            this.accordionControlElement9.Appearance.Normal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.accordionControlElement9.Appearance.Normal.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accordionControlElement9.Appearance.Normal.Options.UseBackColor = true;
+            this.accordionControlElement9.Appearance.Normal.Options.UseFont = true;
+            this.accordionControlElement9.Appearance.Pressed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.accordionControlElement9.Appearance.Pressed.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accordionControlElement9.Appearance.Pressed.Options.UseBackColor = true;
+            this.accordionControlElement9.Appearance.Pressed.Options.UseFont = true;
+            this.accordionControlElement9.ImageOptions.Image = global::SaberMart.Properties.Resources.information_32x32;
+            this.accordionControlElement9.Name = "accordionControlElement9";
+            this.accordionControlElement9.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionControlElement9.Text = "THÔNG TIN SẢN PHẨM";
             // 
-            // navigationFrame
+            // accordionControlElement5
             // 
-            this.navigationFrame.Appearance.BackColor = System.Drawing.Color.White;
-            this.navigationFrame.Appearance.Options.UseBackColor = true;
-            this.navigationFrame.Controls.Add(this.employeesNavigationPage);
-            this.navigationFrame.Controls.Add(this.customersNavigationPage);
-            this.navigationFrame.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.navigationFrame.Location = new System.Drawing.Point(192, 71);
-            this.navigationFrame.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.navigationFrame.Name = "navigationFrame";
-            this.navigationFrame.Pages.AddRange(new DevExpress.XtraBars.Navigation.NavigationPageBase[] {
-            this.employeesNavigationPage,
-            this.customersNavigationPage});
-            this.navigationFrame.RibbonAndBarsMergeStyle = DevExpress.XtraBars.Docking2010.Views.RibbonAndBarsMergeStyle.Always;
-            this.navigationFrame.SelectedPage = this.employeesNavigationPage;
-            this.navigationFrame.Size = new System.Drawing.Size(730, 585);
-            this.navigationFrame.TabIndex = 0;
-            this.navigationFrame.Text = "navigationFrame";
+            this.accordionControlElement5.Appearance.Hovered.BackColor = System.Drawing.Color.Maroon;
+            this.accordionControlElement5.Appearance.Hovered.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accordionControlElement5.Appearance.Hovered.Options.UseBackColor = true;
+            this.accordionControlElement5.Appearance.Hovered.Options.UseFont = true;
+            this.accordionControlElement5.Appearance.Normal.BackColor = System.Drawing.Color.Firebrick;
+            this.accordionControlElement5.Appearance.Normal.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accordionControlElement5.Appearance.Normal.Options.UseBackColor = true;
+            this.accordionControlElement5.Appearance.Normal.Options.UseFont = true;
+            this.accordionControlElement5.Appearance.Pressed.BackColor = System.Drawing.Color.Maroon;
+            this.accordionControlElement5.Appearance.Pressed.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accordionControlElement5.Appearance.Pressed.Options.UseBackColor = true;
+            this.accordionControlElement5.Appearance.Pressed.Options.UseFont = true;
+            this.accordionControlElement5.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
+            this.accordionControlElement10});
+            this.accordionControlElement5.ImageOptions.Image = global::SaberMart.Properties.Resources.boorder_32x32;
+            this.accordionControlElement5.Name = "accordionControlElement5";
+            this.accordionControlElement5.Text = "HÓA ĐƠN";
             // 
-            // employeesNavigationPage
+            // accordionControlElement10
             // 
-            this.employeesNavigationPage.Controls.Add(this.employeesLabelControl);
-            this.employeesNavigationPage.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.employeesNavigationPage.Name = "employeesNavigationPage";
-            this.employeesNavigationPage.Size = new System.Drawing.Size(730, 585);
+            this.accordionControlElement10.Appearance.Hovered.BackColor = System.Drawing.Color.Gray;
+            this.accordionControlElement10.Appearance.Hovered.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accordionControlElement10.Appearance.Hovered.Options.UseBackColor = true;
+            this.accordionControlElement10.Appearance.Hovered.Options.UseFont = true;
+            this.accordionControlElement10.Appearance.Normal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.accordionControlElement10.Appearance.Normal.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accordionControlElement10.Appearance.Normal.Options.UseBackColor = true;
+            this.accordionControlElement10.Appearance.Normal.Options.UseFont = true;
+            this.accordionControlElement10.Appearance.Pressed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.accordionControlElement10.Appearance.Pressed.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accordionControlElement10.Appearance.Pressed.Options.UseBackColor = true;
+            this.accordionControlElement10.Appearance.Pressed.Options.UseFont = true;
+            this.accordionControlElement10.ImageOptions.Image = global::SaberMart.Properties.Resources.pageinfo_32x32;
+            this.accordionControlElement10.Name = "accordionControlElement10";
+            this.accordionControlElement10.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionControlElement10.Text = "THÔNG TIN HÓA ĐƠN";
             // 
-            // employeesLabelControl
+            // accordionControlElement11
             // 
-            this.employeesLabelControl.Appearance.Font = new System.Drawing.Font("Tahoma", 25.25F);
-            this.employeesLabelControl.Appearance.ForeColor = System.Drawing.Color.Gray;
-            this.employeesLabelControl.Appearance.Options.UseFont = true;
-            this.employeesLabelControl.Appearance.Options.UseForeColor = true;
-            this.employeesLabelControl.Appearance.Options.UseTextOptions = true;
-            this.employeesLabelControl.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.employeesLabelControl.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.employeesLabelControl.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.employeesLabelControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.employeesLabelControl.Location = new System.Drawing.Point(0, 0);
-            this.employeesLabelControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.employeesLabelControl.Name = "employeesLabelControl";
-            this.employeesLabelControl.Size = new System.Drawing.Size(730, 585);
-            this.employeesLabelControl.TabIndex = 0;
-            this.employeesLabelControl.Text = "Employees";
+            this.accordionControlElement11.Appearance.Disabled.BackColor = System.Drawing.Color.Gray;
+            this.accordionControlElement11.Appearance.Disabled.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accordionControlElement11.Appearance.Disabled.Options.UseBackColor = true;
+            this.accordionControlElement11.Appearance.Disabled.Options.UseFont = true;
+            this.accordionControlElement11.Appearance.Hovered.BackColor = System.Drawing.Color.Maroon;
+            this.accordionControlElement11.Appearance.Hovered.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accordionControlElement11.Appearance.Hovered.Options.UseBackColor = true;
+            this.accordionControlElement11.Appearance.Hovered.Options.UseFont = true;
+            this.accordionControlElement11.Appearance.Normal.BackColor = System.Drawing.Color.Firebrick;
+            this.accordionControlElement11.Appearance.Normal.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accordionControlElement11.Appearance.Normal.Options.UseBackColor = true;
+            this.accordionControlElement11.Appearance.Normal.Options.UseFont = true;
+            this.accordionControlElement11.Appearance.Pressed.BackColor = System.Drawing.Color.Maroon;
+            this.accordionControlElement11.Appearance.Pressed.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accordionControlElement11.Appearance.Pressed.Options.UseBackColor = true;
+            this.accordionControlElement11.Appearance.Pressed.Options.UseFont = true;
+            this.accordionControlElement11.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
+            this.accordionControlElement12});
+            this.accordionControlElement11.ImageOptions.Image = global::SaberMart.Properties.Resources.customer_32x32;
+            this.accordionControlElement11.Name = "accordionControlElement11";
+            this.accordionControlElement11.Text = "KHÁCH HÀNG";
             // 
-            // customersNavigationPage
+            // accordionControlElement12
             // 
-            this.customersNavigationPage.Controls.Add(this.customersLabelControl);
-            this.customersNavigationPage.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.customersNavigationPage.Name = "customersNavigationPage";
-            this.customersNavigationPage.Size = new System.Drawing.Size(730, 585);
+            this.accordionControlElement12.Appearance.Hovered.BackColor = System.Drawing.Color.Gray;
+            this.accordionControlElement12.Appearance.Hovered.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accordionControlElement12.Appearance.Hovered.Options.UseBackColor = true;
+            this.accordionControlElement12.Appearance.Hovered.Options.UseFont = true;
+            this.accordionControlElement12.Appearance.Normal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.accordionControlElement12.Appearance.Normal.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accordionControlElement12.Appearance.Normal.Options.UseBackColor = true;
+            this.accordionControlElement12.Appearance.Normal.Options.UseFont = true;
+            this.accordionControlElement12.Appearance.Pressed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.accordionControlElement12.Appearance.Pressed.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accordionControlElement12.Appearance.Pressed.Options.UseBackColor = true;
+            this.accordionControlElement12.Appearance.Pressed.Options.UseFont = true;
+            this.accordionControlElement12.ImageOptions.Image = global::SaberMart.Properties.Resources.information_32x32;
+            this.accordionControlElement12.Name = "accordionControlElement12";
+            this.accordionControlElement12.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionControlElement12.Text = "THÔNG TIN KHÁCH HÀNG";
             // 
-            // customersLabelControl
+            // accordionControlElement13
             // 
-            this.customersLabelControl.Appearance.Font = new System.Drawing.Font("Tahoma", 25.25F);
-            this.customersLabelControl.Appearance.ForeColor = System.Drawing.Color.Gray;
-            this.customersLabelControl.Appearance.Options.UseFont = true;
-            this.customersLabelControl.Appearance.Options.UseForeColor = true;
-            this.customersLabelControl.Appearance.Options.UseTextOptions = true;
-            this.customersLabelControl.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.customersLabelControl.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.customersLabelControl.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.customersLabelControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.customersLabelControl.Location = new System.Drawing.Point(0, 0);
-            this.customersLabelControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.customersLabelControl.Name = "customersLabelControl";
-            this.customersLabelControl.Size = new System.Drawing.Size(730, 585);
-            this.customersLabelControl.TabIndex = 1;
-            this.customersLabelControl.Text = "Customers";
+            this.accordionControlElement13.Appearance.Hovered.BackColor = System.Drawing.Color.Maroon;
+            this.accordionControlElement13.Appearance.Hovered.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accordionControlElement13.Appearance.Hovered.Options.UseBackColor = true;
+            this.accordionControlElement13.Appearance.Hovered.Options.UseFont = true;
+            this.accordionControlElement13.Appearance.Normal.BackColor = System.Drawing.Color.Firebrick;
+            this.accordionControlElement13.Appearance.Normal.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accordionControlElement13.Appearance.Normal.Options.UseBackColor = true;
+            this.accordionControlElement13.Appearance.Normal.Options.UseFont = true;
+            this.accordionControlElement13.Appearance.Pressed.BackColor = System.Drawing.Color.Maroon;
+            this.accordionControlElement13.Appearance.Pressed.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accordionControlElement13.Appearance.Pressed.Options.UseBackColor = true;
+            this.accordionControlElement13.Appearance.Pressed.Options.UseFont = true;
+            this.accordionControlElement13.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
+            this.accordionControlElement14});
+            this.accordionControlElement13.ImageOptions.Image = global::SaberMart.Properties.Resources.statistical_32x32;
+            this.accordionControlElement13.Name = "accordionControlElement13";
+            this.accordionControlElement13.Text = "THỐNG KÊ";
+            // 
+            // accordionControlElement14
+            // 
+            this.accordionControlElement14.Appearance.Hovered.BackColor = System.Drawing.Color.Gray;
+            this.accordionControlElement14.Appearance.Hovered.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accordionControlElement14.Appearance.Hovered.Options.UseBackColor = true;
+            this.accordionControlElement14.Appearance.Hovered.Options.UseFont = true;
+            this.accordionControlElement14.Appearance.Normal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.accordionControlElement14.Appearance.Normal.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accordionControlElement14.Appearance.Normal.Options.UseBackColor = true;
+            this.accordionControlElement14.Appearance.Normal.Options.UseFont = true;
+            this.accordionControlElement14.Appearance.Pressed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.accordionControlElement14.Appearance.Pressed.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accordionControlElement14.Appearance.Pressed.Options.UseBackColor = true;
+            this.accordionControlElement14.Appearance.Pressed.Options.UseFont = true;
+            this.accordionControlElement14.ImageOptions.Image = global::SaberMart.Properties.Resources.financial_32x32;
+            this.accordionControlElement14.Name = "accordionControlElement14";
+            this.accordionControlElement14.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionControlElement14.Text = "DOANH THU";
+            // 
+            // accordionControlElement15
+            // 
+            this.accordionControlElement15.Appearance.Hovered.BackColor = System.Drawing.Color.Maroon;
+            this.accordionControlElement15.Appearance.Hovered.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accordionControlElement15.Appearance.Hovered.Options.UseBackColor = true;
+            this.accordionControlElement15.Appearance.Hovered.Options.UseFont = true;
+            this.accordionControlElement15.Appearance.Normal.BackColor = System.Drawing.Color.Firebrick;
+            this.accordionControlElement15.Appearance.Normal.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accordionControlElement15.Appearance.Normal.Options.UseBackColor = true;
+            this.accordionControlElement15.Appearance.Normal.Options.UseFont = true;
+            this.accordionControlElement15.Appearance.Pressed.BackColor = System.Drawing.Color.Maroon;
+            this.accordionControlElement15.Appearance.Pressed.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accordionControlElement15.Appearance.Pressed.Options.UseBackColor = true;
+            this.accordionControlElement15.Appearance.Pressed.Options.UseFont = true;
+            this.accordionControlElement15.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
+            this.accordionControlElement16});
+            this.accordionControlElement15.ImageOptions.Image = global::SaberMart.Properties.Resources.operatingsystem_32x32;
+            this.accordionControlElement15.Name = "accordionControlElement15";
+            this.accordionControlElement15.Text = "HỆ THỐNG";
+            // 
+            // accordionControlElement16
+            // 
+            this.accordionControlElement16.Appearance.Hovered.BackColor = System.Drawing.Color.Gray;
+            this.accordionControlElement16.Appearance.Hovered.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accordionControlElement16.Appearance.Hovered.Options.UseBackColor = true;
+            this.accordionControlElement16.Appearance.Hovered.Options.UseFont = true;
+            this.accordionControlElement16.Appearance.Normal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.accordionControlElement16.Appearance.Normal.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accordionControlElement16.Appearance.Normal.Options.UseBackColor = true;
+            this.accordionControlElement16.Appearance.Normal.Options.UseFont = true;
+            this.accordionControlElement16.Appearance.Pressed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.accordionControlElement16.Appearance.Pressed.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accordionControlElement16.Appearance.Pressed.Options.UseBackColor = true;
+            this.accordionControlElement16.Appearance.Pressed.Options.UseFont = true;
+            this.accordionControlElement16.ImageOptions.Image = global::SaberMart.Properties.Resources.close_32x32;
+            this.accordionControlElement16.Name = "accordionControlElement16";
+            this.accordionControlElement16.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionControlElement16.Text = "THOÁT";
+            // 
+            // fluentDesignFormControl1
+            // 
+            this.fluentDesignFormControl1.FluentDesignForm = this;
+            this.fluentDesignFormControl1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
+            this.barDockingMenuItem1,
+            this.barDockingMenuItem2});
+            this.fluentDesignFormControl1.Location = new System.Drawing.Point(0, 0);
+            this.fluentDesignFormControl1.Manager = this.fluentFormDefaultManager1;
+            this.fluentDesignFormControl1.Name = "fluentDesignFormControl1";
+            this.fluentDesignFormControl1.Size = new System.Drawing.Size(1173, 39);
+            this.fluentDesignFormControl1.TabIndex = 2;
+            this.fluentDesignFormControl1.TabStop = false;
+            // 
+            // fluentFormDefaultManager1
+            // 
+            this.fluentFormDefaultManager1.Form = this;
+            this.fluentFormDefaultManager1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
+            this.barDockingMenuItem1,
+            this.barDockingMenuItem2});
+            this.fluentFormDefaultManager1.MaxItemId = 2;
+            // 
+            // barDockingMenuItem1
+            // 
+            this.barDockingMenuItem1.Id = 0;
+            this.barDockingMenuItem1.Name = "barDockingMenuItem1";
+            // 
+            // barDockingMenuItem2
+            // 
+            this.barDockingMenuItem2.Caption = "barDockingMenuItem2";
+            this.barDockingMenuItem2.Id = 1;
+            this.barDockingMenuItem2.Name = "barDockingMenuItem2";
             // 
             // frmAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(922, 737);
-            this.Controls.Add(this.navigationFrame);
-            this.Controls.Add(this.navBarControl);
-            this.Controls.Add(this.officeNavigationBar);
-            this.Controls.Add(this.ribbonStatusBar);
-            this.Controls.Add(this.ribbonControl);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ClientSize = new System.Drawing.Size(1173, 570);
+            this.ControlContainer = this.fluentDesignFormContainer1;
+            this.Controls.Add(this.fluentDesignFormContainer1);
+            this.Controls.Add(this.accordionControl1);
+            this.Controls.Add(this.fluentDesignFormControl1);
+            this.FluentDesignFormControl = this.fluentDesignFormControl1;
             this.Name = "frmAdmin";
-            this.Ribbon = this.ribbonControl;
-            this.StatusBar = this.ribbonStatusBar;
-            ((System.ComponentModel.ISupportInitialize)(this.tabbedView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.officeNavigationBar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.navBarControl)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.navigationFrame)).EndInit();
-            this.navigationFrame.ResumeLayout(false);
-            this.employeesNavigationPage.ResumeLayout(false);
-            this.customersNavigationPage.ResumeLayout(false);
+            this.NavigationControl = this.accordionControl1;
+            this.Text = "frmAdmin";
+            ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fluentFormDefaultManager1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-        private DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView tabbedView;
-        private DevExpress.XtraBars.Ribbon.RibbonControl ribbonControl;
-        private DevExpress.XtraBars.Ribbon.RibbonStatusBar ribbonStatusBar;
-        private DevExpress.XtraBars.BarSubItem barSubItemNavigation;
-        private DevExpress.XtraBars.SkinRibbonGalleryBarItem skinRibbonGalleryBarItem;
-        private DevExpress.XtraBars.Navigation.OfficeNavigationBar officeNavigationBar;
-        private DevExpress.XtraBars.Navigation.NavigationFrame navigationFrame;
-        private DevExpress.XtraNavBar.NavBarControl navBarControl;
-        private DevExpress.XtraBars.Navigation.NavigationPage employeesNavigationPage;
-        private DevExpress.XtraEditors.LabelControl employeesLabelControl;
-        private DevExpress.XtraBars.Navigation.NavigationPage customersNavigationPage;
-        private DevExpress.XtraEditors.LabelControl customersLabelControl;
-        private DevExpress.XtraBars.BarButtonItem employeesBarButtonItem;
-        private DevExpress.XtraBars.BarButtonItem customersBarButtonItem;
-        private DevExpress.XtraBars.SkinDropDownButtonItem skinDropDownButtonItem;
-        private DevExpress.XtraBars.SkinPaletteRibbonGalleryBarItem skinPaletteRibbonGalleryBarItem;
+        private DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer fluentDesignFormContainer1;
+        private DevExpress.XtraBars.Navigation.AccordionControl accordionControl1;
+        private DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl fluentDesignFormControl1;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement1;
+        private DevExpress.XtraBars.FluentDesignSystem.FluentFormDefaultManager fluentFormDefaultManager1;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement2;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement3;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement4;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement6;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement7;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement8;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement9;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement5;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement10;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement11;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement12;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement13;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement14;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement15;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement16;
+        private DevExpress.XtraBars.BarDockingMenuItem barDockingMenuItem1;
+        private DevExpress.XtraBars.BarDockingMenuItem barDockingMenuItem2;
     }
 }
