@@ -17,14 +17,17 @@ namespace SaberMart.DataEntity
         }
 
         [Key]
-        [StringLength(50)]
+        [StringLength(5)]
         public string MaSP { get; set; }
 
-        [StringLength(50)]
+        [StringLength(5)]
         public string MaNhom { get; set; }
 
         [StringLength(50)]
         public string TenSP { get; set; }
+
+        [Column(TypeName = "image")]
+        public byte[] PicSP { get; set; }
 
         [StringLength(50)]
         public string DonViTinh { get; set; }
@@ -35,7 +38,7 @@ namespace SaberMart.DataEntity
 
         public int? GiaNhap { get; set; }
 
-        [StringLength(50)]
+        [StringLength(5)]
         public string MaNCC { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

@@ -16,7 +16,7 @@ namespace SaberMart.DataEntity
         }
 
         [Key]
-        [StringLength(50)]
+        [StringLength(5)]
         public string MaCV { get; set; }
 
         [StringLength(50)]

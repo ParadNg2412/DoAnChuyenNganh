@@ -17,13 +17,13 @@ namespace SaberMart.DataEntity
         }
 
         [Key]
-        [StringLength(50)]
+        [StringLength(5)]
         public string MaNCC { get; set; }
 
         [StringLength(50)]
         public string TenNCC { get; set; }
 
-        [StringLength(13)]
+        [StringLength(12)]
         public string SDT { get; set; }
 
         [StringLength(50)]

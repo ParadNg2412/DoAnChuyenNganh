@@ -16,15 +16,16 @@ namespace SaberMart.DataEntity
         }
 
         [Key]
-        [StringLength(50)]
+        [StringLength(5)]
         public string MaPN { get; set; }
 
-        [StringLength(50)]
+        [StringLength(5)]
         public string MaNCC { get; set; }
 
-        [StringLength(50)]
+        [StringLength(5)]
         public string MaNV { get; set; }
 
+        [Column(TypeName = "date")]
         public DateTime? NgayNhap { get; set; }
 
         public int? TongTienNhap { get; set; }

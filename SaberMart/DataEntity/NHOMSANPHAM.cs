@@ -16,13 +16,11 @@ namespace SaberMart.DataEntity
         }
 
         [Key]
-        [StringLength(50)]
+        [StringLength(5)]
         public string MaNhom { get; set; }
 
         [StringLength(50)]
         public string TenNhom { get; set; }
-
-        public int? PTTang { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<SANPHAM> SANPHAMs { get; set; }

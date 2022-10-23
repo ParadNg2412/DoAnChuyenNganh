@@ -17,10 +17,10 @@ namespace SaberMart.DataEntity
         }
 
         [Key]
-        [StringLength(50)]
+        [StringLength(5)]
         public string MaNV { get; set; }
 
-        [StringLength(50)]
+        [StringLength(5)]
         public string MaCV { get; set; }
 
         [StringLength(50)]
@@ -32,12 +32,13 @@ namespace SaberMart.DataEntity
         [StringLength(13)]
         public string SDT { get; set; }
 
-        [StringLength(50)]
+        [StringLength(5)]
         public string GioiTinh { get; set; }
 
+        [Column(TypeName = "date")]
         public DateTime? NgaySinh { get; set; }
 
-        [StringLength(50)]
+        [StringLength(20)]
         public string Username { get; set; }
 
         [StringLength(8)]

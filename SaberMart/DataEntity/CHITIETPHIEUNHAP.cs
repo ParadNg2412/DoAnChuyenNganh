@@ -11,12 +11,12 @@ namespace SaberMart.DataEntity
     {
         [Key]
         [Column(Order = 0)]
-        [StringLength(50)]
+        [StringLength(5)]
         public string MaPN { get; set; }
 
         [Key]
         [Column(Order = 1)]
-        [StringLength(50)]
+        [StringLength(5)]
         public string MaSP { get; set; }
 
         public int? SLNhap { get; set; }

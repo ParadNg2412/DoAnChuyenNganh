@@ -63,9 +63,9 @@ namespace SaberMart.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap boorder_32x32 {
+        internal static System.Drawing.Bitmap add_32x32 {
             get {
-                object obj = ResourceManager.GetObject("boorder_32x32", resourceCulture);
+                object obj = ResourceManager.GetObject("add_32x32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,9 @@ namespace SaberMart.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap boorderitem_32x32 {
+        internal static System.Drawing.Bitmap delete_32x32 {
             get {
-                object obj = ResourceManager.GetObject("boorderitem_32x32", resourceCulture);
+                object obj = ResourceManager.GetObject("delete_32x32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,9 +83,9 @@ namespace SaberMart.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap boposition2_32x32 {
+        internal static System.Drawing.Bitmap edit_32x32 {
             get {
-                object obj = ResourceManager.GetObject("boposition2_32x32", resourceCulture);
+                object obj = ResourceManager.GetObject("edit_32x32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -93,9 +93,9 @@ namespace SaberMart.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap boproduct_32x32 {
+        internal static System.Drawing.Bitmap hide_32x32 {
             get {
-                object obj = ResourceManager.GetObject("boproduct_32x32", resourceCulture);
+                object obj = ResourceManager.GetObject("hide_32x32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -103,9 +103,9 @@ namespace SaberMart.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap boproductgroup_32x32 {
+        internal static System.Drawing.Bitmap Locked_32x32 {
             get {
-                object obj = ResourceManager.GetObject("boproductgroup_32x32", resourceCulture);
+                object obj = ResourceManager.GetObject("Locked_32x32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -113,9 +113,9 @@ namespace SaberMart.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap close_32x32 {
+        internal static System.Drawing.Bitmap logout {
             get {
-                object obj = ResourceManager.GetObject("close_32x32", resourceCulture);
+                object obj = ResourceManager.GetObject("logout", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -123,9 +123,9 @@ namespace SaberMart.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap contact_32x32 {
+        internal static System.Drawing.Bitmap print {
             get {
-                object obj = ResourceManager.GetObject("contact_32x32", resourceCulture);
+                object obj = ResourceManager.GetObject("print", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -133,9 +133,9 @@ namespace SaberMart.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap customer_32x32 {
+        internal static System.Drawing.Bitmap product_data {
             get {
-                object obj = ResourceManager.GetObject("customer_32x32", resourceCulture);
+                object obj = ResourceManager.GetObject("product_data", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -143,9 +143,9 @@ namespace SaberMart.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap employee_32x32 {
+        internal static System.Drawing.Bitmap search {
             get {
-                object obj = ResourceManager.GetObject("employee_32x32", resourceCulture);
+                object obj = ResourceManager.GetObject("search", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -153,9 +153,9 @@ namespace SaberMart.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap financial_32x32 {
+        internal static System.Drawing.Bitmap show_32x32 {
             get {
-                object obj = ResourceManager.GetObject("financial_32x32", resourceCulture);
+                object obj = ResourceManager.GetObject("show_32x32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -163,9 +163,9 @@ namespace SaberMart.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap forcetesting_32x32 {
+        internal static System.Drawing.Bitmap staff {
             get {
-                object obj = ResourceManager.GetObject("forcetesting_32x32", resourceCulture);
+                object obj = ResourceManager.GetObject("staff", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -173,9 +173,9 @@ namespace SaberMart.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap home_32x32 {
+        internal static System.Drawing.Bitmap storage {
             get {
-                object obj = ResourceManager.GetObject("home_32x32", resourceCulture);
+                object obj = ResourceManager.GetObject("storage", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -183,49 +183,9 @@ namespace SaberMart.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap information_32x32 {
+        internal static System.Drawing.Bitmap User_32x32 {
             get {
-                object obj = ResourceManager.GetObject("information_32x32", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap namemanager_32x32 {
-            get {
-                object obj = ResourceManager.GetObject("namemanager_32x32", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap operatingsystem_32x32 {
-            get {
-                object obj = ResourceManager.GetObject("operatingsystem_32x32", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap pageinfo_32x32 {
-            get {
-                object obj = ResourceManager.GetObject("pageinfo_32x32", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap statistical_32x32 {
-            get {
-                object obj = ResourceManager.GetObject("statistical_32x32", resourceCulture);
+                object obj = ResourceManager.GetObject("User_32x32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
