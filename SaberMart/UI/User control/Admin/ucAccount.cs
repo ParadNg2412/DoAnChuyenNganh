@@ -48,14 +48,14 @@ namespace SaberMart.UI.User_control.Admin
 
         private void loadGridView(List<NHANVIEN> lstS)
         {
-            dgvStaff.Rows.Clear();
+            dgvAccount.Rows.Clear();
             foreach (var item in lstS)
             {
-                int index = dgvStaff.Rows.Add();
-                dgvStaff.Rows[index].Cells[0].Value = item.TenNV;
-                dgvStaff.Rows[index].Cells[1].Value = item.LoaiTK;
-                dgvStaff.Rows[index].Cells[2].Value = item.Username;
-                dgvStaff.Rows[index].Cells[3].Value = item.MatKhau;
+                int index = dgvAccount.Rows.Add();
+                dgvAccount.Rows[index].Cells[0].Value = item.TenNV;
+                dgvAccount.Rows[index].Cells[1].Value = item.LoaiTK;
+                dgvAccount.Rows[index].Cells[2].Value = item.Username;
+                dgvAccount.Rows[index].Cells[3].Value = item.MatKhau;
             }
         }
 
@@ -65,17 +65,17 @@ namespace SaberMart.UI.User_control.Admin
             loadGridView(nv);
         }
 
-        private void dgvStaff_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvAccount_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             try
             {
-                if (dgvStaff.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
+                if (dgvAccount.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
                 {
-                    dgvStaff.CurrentCell.Selected = true;
-                    txtIDs.Text = dgvStaff.Rows[e.RowIndex].Cells["ColName"].FormattedValue.ToString();
-                    txtAcc.Text = dgvStaff.Rows[e.RowIndex].Cells["ColAccount"].FormattedValue.ToString();
-                    txtUsername.Text = dgvStaff.Rows[e.RowIndex].Cells["ColUsername"].FormattedValue.ToString();
-                    txtPassword.Text = dgvStaff.Rows[e.RowIndex].Cells["ColPassword"].FormattedValue.ToString();
+                    dgvAccount.CurrentCell.Selected = true;
+                    txtIDs.Text = dgvAccount.Rows[e.RowIndex].Cells["ColName"].FormattedValue.ToString();
+                    txtAcc.Text = dgvAccount.Rows[e.RowIndex].Cells["ColAccount"].FormattedValue.ToString();
+                    txtUsername.Text = dgvAccount.Rows[e.RowIndex].Cells["ColUsername"].FormattedValue.ToString();
+                    txtPassword.Text = dgvAccount.Rows[e.RowIndex].Cells["ColPassword"].FormattedValue.ToString();
                 }
             }
             catch (Exception ex)
@@ -192,5 +192,7 @@ namespace SaberMart.UI.User_control.Admin
                 }
             }
         }
+
+        
     }
 }

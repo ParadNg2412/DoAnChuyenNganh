@@ -10,7 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using SaberMart.UI.User_control.Admin;
-using SaberMart.UI.User_control;
+
 
 namespace SaberMart.UI
 {
@@ -42,9 +42,9 @@ namespace SaberMart.UI
         private void btnData_Click(object sender, EventArgs e)
         {
             pAdmin.Controls.Clear();
-            ucProductMenu product = new ucProductMenu();
-            product.Dock = DockStyle.Fill;
-            pAdmin.Controls.Add(product);
+            ucData data = new ucData();
+            data.Dock = DockStyle.Fill;
+            pAdmin.Controls.Add(data);
         }
 
         private void btnAccount_Click(object sender, EventArgs e)

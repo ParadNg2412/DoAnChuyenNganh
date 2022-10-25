@@ -8,13 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SaberMart.UI.User_control.Admin.Product
+namespace WinFormsApp1
 {
-    public partial class ucStorage : UserControl
+    public partial class Form1 : Form
     {
-        public ucStorage()
+        public Form1()
         {
             InitializeComponent();
         }
+
     }
 }

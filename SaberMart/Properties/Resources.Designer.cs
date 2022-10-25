@@ -133,6 +133,16 @@ namespace SaberMart.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap producer {
+            get {
+                object obj = ResourceManager.GetObject("producer", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap product_data {
             get {
                 object obj = ResourceManager.GetObject("product_data", resourceCulture);

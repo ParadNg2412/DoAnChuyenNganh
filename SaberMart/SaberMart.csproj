@@ -105,10 +105,10 @@
     <Compile Include="UI\frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\User control\Admin\Product\ucStorage.cs">
+    <Compile Include="UI\User control\Admin\Data\ucStorage.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UI\User control\Admin\Product\ucStorage.Designer.cs">
+    <Compile Include="UI\User control\Admin\Data\ucStorage.Designer.cs">
       <DependentUpon>ucStorage.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\User control\Admin\ucAccount.cs">
@@ -117,11 +117,11 @@
     <Compile Include="UI\User control\Admin\ucAccount.Designer.cs">
       <DependentUpon>ucAccount.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\User control\Admin\ucProductMenu.cs">
+    <Compile Include="UI\User control\Admin\ucData.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UI\User control\Admin\ucProductMenu.Designer.cs">
-      <DependentUpon>ucProductMenu.cs</DependentUpon>
+    <Compile Include="UI\User control\Admin\ucData.Designer.cs">
+      <DependentUpon>ucData.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\User control\Admin\ucStaff.cs">
       <SubType>UserControl</SubType>
@@ -141,14 +141,14 @@
     <EmbeddedResource Include="UI\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\User control\Admin\Product\ucStorage.resx">
+    <EmbeddedResource Include="UI\User control\Admin\Data\ucStorage.resx">
       <DependentUpon>ucStorage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\User control\Admin\ucAccount.resx">
       <DependentUpon>ucAccount.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\User control\Admin\ucProductMenu.resx">
-      <DependentUpon>ucProductMenu.cs</DependentUpon>
+    <EmbeddedResource Include="UI\User control\Admin\ucData.resx">
+      <DependentUpon>ucData.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\User control\Admin\ucStaff.resx">
       <DependentUpon>ucStaff.cs</DependentUpon>
@@ -170,6 +170,7 @@
   <ItemGroup>
     <Content Include="Database\DACN.sql" />
     <Content Include="Resources\kaenken-rekka.png" />
+    <None Include="Resources\producer.png" />
     <None Include="Resources\storage.png" />
     <None Include="Resources\product_data.png" />
     <None Include="Resources\print.png" />
@@ -184,7 +185,9 @@
     <None Include="Resources\delete_32x32.png" />
     <None Include="Resources\add_32x32.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="UI\User control\Staff\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

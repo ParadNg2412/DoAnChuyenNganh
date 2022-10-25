@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SaberMart.UI.User_control
+namespace SaberMart.UI.User_control.Admin
 {
     public partial class ucStaff : UserControl
     {

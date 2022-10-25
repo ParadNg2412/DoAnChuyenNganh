@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SaberMart.UI.User_control.Admin
+namespace SaberMart.UI.User_control.Admin.Data
 {
-    public partial class ucProductMenu : UserControl
+    public partial class ucStorage : UserControl
     {
-        public ucProductMenu()
+        public ucStorage()
         {
             InitializeComponent();
         }
