@@ -74,18 +74,21 @@ namespace SaberMart.UI
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(388, 487);
+            this.panel1.Size = new System.Drawing.Size(403, 487);
             this.panel1.TabIndex = 0;
             // 
             // labelControl4
             // 
+            this.labelControl4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl4.Appearance.BackColor = System.Drawing.Color.White;
             this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl4.Appearance.ForeColor = System.Drawing.Color.Black;
             this.labelControl4.Appearance.Options.UseBackColor = true;
             this.labelControl4.Appearance.Options.UseFont = true;
             this.labelControl4.Appearance.Options.UseForeColor = true;
-            this.labelControl4.Location = new System.Drawing.Point(127, 286);
+            this.labelControl4.Location = new System.Drawing.Point(132, 287);
             this.labelControl4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(153, 28);
@@ -94,13 +97,16 @@ namespace SaberMart.UI
             // 
             // labelControl3
             // 
+            this.labelControl3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl3.Appearance.BackColor = System.Drawing.Color.DarkRed;
             this.labelControl3.Appearance.Font = new System.Drawing.Font("Swordoflogos", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl3.Appearance.ForeColor = System.Drawing.Color.White;
             this.labelControl3.Appearance.Options.UseBackColor = true;
             this.labelControl3.Appearance.Options.UseFont = true;
             this.labelControl3.Appearance.Options.UseForeColor = true;
-            this.labelControl3.Location = new System.Drawing.Point(161, 245);
+            this.labelControl3.Location = new System.Drawing.Point(166, 246);
             this.labelControl3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(180, 40);
@@ -109,13 +115,16 @@ namespace SaberMart.UI
             // 
             // labelControl2
             // 
+            this.labelControl2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl2.Appearance.BackColor = System.Drawing.Color.White;
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Swordoflogos", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl2.Appearance.ForeColor = System.Drawing.Color.Black;
             this.labelControl2.Appearance.Options.UseBackColor = true;
             this.labelControl2.Appearance.Options.UseFont = true;
             this.labelControl2.Appearance.Options.UseForeColor = true;
-            this.labelControl2.Location = new System.Drawing.Point(161, 206);
+            this.labelControl2.Location = new System.Drawing.Point(166, 207);
             this.labelControl2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(223, 40);
@@ -124,11 +133,14 @@ namespace SaberMart.UI
             // 
             // labelControl1
             // 
+            this.labelControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 66F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl1.Appearance.ForeColor = System.Drawing.Color.White;
             this.labelControl1.Appearance.Options.UseFont = true;
             this.labelControl1.Appearance.Options.UseForeColor = true;
-            this.labelControl1.Location = new System.Drawing.Point(0, 175);
+            this.labelControl1.Location = new System.Drawing.Point(5, 176);
             this.labelControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(168, 133);
@@ -137,10 +149,12 @@ namespace SaberMart.UI
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(161, 69);
+            this.pictureBox1.Location = new System.Drawing.Point(166, 70);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(80, 320);
@@ -198,7 +212,7 @@ namespace SaberMart.UI
             this.btnLogin.Appearance.Options.UseBackColor = true;
             this.btnLogin.Appearance.Options.UseFont = true;
             this.btnLogin.AppearanceHovered.BackColor2 = System.Drawing.Color.DarkRed;
-            this.btnLogin.Location = new System.Drawing.Point(557, 345);
+            this.btnLogin.Location = new System.Drawing.Point(581, 345);
             this.btnLogin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(185, 46);
@@ -210,7 +224,7 @@ namespace SaberMart.UI
             // 
             this.labelControl7.Appearance.Font = new System.Drawing.Font("Swordoflogos", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl7.Appearance.Options.UseFont = true;
-            this.labelControl7.Location = new System.Drawing.Point(537, 39);
+            this.labelControl7.Location = new System.Drawing.Point(557, 39);
             this.labelControl7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.labelControl7.Name = "labelControl7";
             this.labelControl7.Size = new System.Drawing.Size(235, 48);
@@ -333,7 +347,7 @@ namespace SaberMart.UI
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(394, 466);
+            this.label2.Location = new System.Drawing.Point(409, 468);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(167, 19);
             this.label2.TabIndex = 20;
@@ -343,7 +357,7 @@ namespace SaberMart.UI
             // 
             this.lklForgetPass.AutoSize = true;
             this.lklForgetPass.Font = new System.Drawing.Font("Swordoflogos", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lklForgetPass.Location = new System.Drawing.Point(534, 414);
+            this.lklForgetPass.Location = new System.Drawing.Point(554, 414);
             this.lklForgetPass.Name = "lklForgetPass";
             this.lklForgetPass.Size = new System.Drawing.Size(232, 14);
             this.lklForgetPass.TabIndex = 21;
@@ -356,7 +370,8 @@ namespace SaberMart.UI
             this.Appearance.Options.UseBackColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(893, 487);
+            this.AutoSize = true;
+            this.ClientSize = new System.Drawing.Size(909, 487);
             this.Controls.Add(this.lklForgetPass);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -377,6 +392,7 @@ namespace SaberMart.UI
             this.IconOptions.Image = ((System.Drawing.Image)(resources.GetObject("frmLogin.IconOptions.Image")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmLogin";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.Text = "Login";
             this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
             this.panel1.ResumeLayout(false);

@@ -92,8 +92,5 @@ namespace SaberMart.UI
                 this.SelectNextControl((Control)sender, true, true, true, true);          
             }
         }
-
-         
-        
     }
 }

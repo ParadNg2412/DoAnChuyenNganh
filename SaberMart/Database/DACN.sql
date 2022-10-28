@@ -289,7 +289,7 @@ values('HD003', 'SP003', 1, 10000, 10000)
 insert into CHITIETHOADON(MaHD, MaSP, SLBan, DonGiaBan, ThanhTienBan)
 values('HD004', 'SP005', 1, 10000, 10000)
 insert into CHITIETHOADON(MaHD, MaSP, SLBan, DonGiaBan, ThanhTienBan)
-values('HD005', 'SP008', 2, 10000, 10000)
+values('HD005', 'SP008', 2, 10000, 20000)
 insert into CHITIETHOADON(MaHD, MaSP, SLBan, DonGiaBan, ThanhTienBan)
 values('HD006', 'SP002', 1, 9000, 9000)
 

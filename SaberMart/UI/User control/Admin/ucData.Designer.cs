@@ -29,25 +29,82 @@ namespace SaberMart.UI.User_control.Admin
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pdMenu = new System.Windows.Forms.Panel();
+            this.btnProduct = new DevExpress.XtraEditors.SimpleButton();
+            this.btnBrand = new DevExpress.XtraEditors.SimpleButton();
             this.btnStorage = new DevExpress.XtraEditors.SimpleButton();
             this.pData = new System.Windows.Forms.Panel();
-            this.btnBrand = new DevExpress.XtraEditors.SimpleButton();
-            this.panel1.SuspendLayout();
+            this.pdMenu.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
+            // pdMenu
             // 
-            this.panel1.BackColor = System.Drawing.Color.Black;
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel1.Controls.Add(this.btnBrand);
-            this.panel1.Controls.Add(this.btnStorage);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(111, 483);
-            this.panel1.TabIndex = 0;
+            this.pdMenu.BackColor = System.Drawing.Color.Black;
+            this.pdMenu.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pdMenu.Controls.Add(this.btnProduct);
+            this.pdMenu.Controls.Add(this.btnBrand);
+            this.pdMenu.Controls.Add(this.btnStorage);
+            this.pdMenu.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pdMenu.Location = new System.Drawing.Point(0, 0);
+            this.pdMenu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pdMenu.Name = "pdMenu";
+            this.pdMenu.Size = new System.Drawing.Size(147, 594);
+            this.pdMenu.TabIndex = 0;
+            this.pdMenu.Click += new System.EventHandler(this.pdMenu_Click);
+            // 
+            // btnProduct
+            // 
+            this.btnProduct.Appearance.BackColor = System.Drawing.Color.Gold;
+            this.btnProduct.Appearance.Font = new System.Drawing.Font("Swordoflogos", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProduct.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.btnProduct.Appearance.Options.UseBackColor = true;
+            this.btnProduct.Appearance.Options.UseFont = true;
+            this.btnProduct.Appearance.Options.UseForeColor = true;
+            this.btnProduct.AppearanceHovered.BackColor = System.Drawing.Color.Yellow;
+            this.btnProduct.AppearanceHovered.Font = new System.Drawing.Font("Swordoflogos", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProduct.AppearanceHovered.Options.UseBackColor = true;
+            this.btnProduct.AppearanceHovered.Options.UseFont = true;
+            this.btnProduct.AppearancePressed.BackColor = System.Drawing.Color.Black;
+            this.btnProduct.AppearancePressed.Font = new System.Drawing.Font("Swordoflogos", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProduct.AppearancePressed.Options.UseBackColor = true;
+            this.btnProduct.AppearancePressed.Options.UseFont = true;
+            this.btnProduct.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnProduct.ImageOptions.Image = global::SaberMart.Properties.Resources.boproduct_32x32;
+            this.btnProduct.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
+            this.btnProduct.Location = new System.Drawing.Point(0, 130);
+            this.btnProduct.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnProduct.Name = "btnProduct";
+            this.btnProduct.Size = new System.Drawing.Size(143, 65);
+            this.btnProduct.TabIndex = 2;
+            this.btnProduct.Text = "Product";
+            this.btnProduct.Click += new System.EventHandler(this.btnProduct_Click);
+            // 
+            // btnBrand
+            // 
+            this.btnBrand.Appearance.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Warning;
+            this.btnBrand.Appearance.Font = new System.Drawing.Font("Swordoflogos", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBrand.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.btnBrand.Appearance.Options.UseBackColor = true;
+            this.btnBrand.Appearance.Options.UseFont = true;
+            this.btnBrand.Appearance.Options.UseForeColor = true;
+            this.btnBrand.AppearanceHovered.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnBrand.AppearanceHovered.Font = new System.Drawing.Font("Swordoflogos", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBrand.AppearanceHovered.Options.UseBackColor = true;
+            this.btnBrand.AppearanceHovered.Options.UseFont = true;
+            this.btnBrand.AppearancePressed.BackColor = System.Drawing.Color.Black;
+            this.btnBrand.AppearancePressed.Font = new System.Drawing.Font("Swordoflogos", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBrand.AppearancePressed.Options.UseBackColor = true;
+            this.btnBrand.AppearancePressed.Options.UseFont = true;
+            this.btnBrand.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnBrand.ImageOptions.Image = global::SaberMart.Properties.Resources.producer;
+            this.btnBrand.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
+            this.btnBrand.Location = new System.Drawing.Point(0, 65);
+            this.btnBrand.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnBrand.Name = "btnBrand";
+            this.btnBrand.Size = new System.Drawing.Size(143, 65);
+            this.btnBrand.TabIndex = 1;
+            this.btnBrand.Text = "Brand";
+            this.btnBrand.Click += new System.EventHandler(this.btnBrand_Click);
             // 
             // btnStorage
             // 
@@ -69,68 +126,44 @@ namespace SaberMart.UI.User_control.Admin
             this.btnStorage.ImageOptions.Image = global::SaberMart.Properties.Resources.storage;
             this.btnStorage.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
             this.btnStorage.Location = new System.Drawing.Point(0, 0);
-            this.btnStorage.Margin = new System.Windows.Forms.Padding(2);
+            this.btnStorage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnStorage.Name = "btnStorage";
-            this.btnStorage.Size = new System.Drawing.Size(107, 53);
+            this.btnStorage.Size = new System.Drawing.Size(143, 65);
             this.btnStorage.TabIndex = 0;
             this.btnStorage.Text = "Storage";
             this.btnStorage.Click += new System.EventHandler(this.btnStorage_Click);
             // 
             // pData
             // 
+            this.pData.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pData.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pData.Location = new System.Drawing.Point(111, 0);
-            this.pData.Margin = new System.Windows.Forms.Padding(2);
+            this.pData.Location = new System.Drawing.Point(147, 0);
+            this.pData.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pData.Name = "pData";
-            this.pData.Size = new System.Drawing.Size(901, 483);
+            this.pData.Size = new System.Drawing.Size(1202, 594);
             this.pData.TabIndex = 1;
-            // 
-            // btnBrand
-            // 
-            this.btnBrand.Appearance.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Warning;
-            this.btnBrand.Appearance.Font = new System.Drawing.Font("Swordoflogos", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBrand.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.btnBrand.Appearance.Options.UseBackColor = true;
-            this.btnBrand.Appearance.Options.UseFont = true;
-            this.btnBrand.Appearance.Options.UseForeColor = true;
-            this.btnBrand.AppearanceHovered.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnBrand.AppearanceHovered.Font = new System.Drawing.Font("Swordoflogos", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBrand.AppearanceHovered.Options.UseBackColor = true;
-            this.btnBrand.AppearanceHovered.Options.UseFont = true;
-            this.btnBrand.AppearancePressed.BackColor = System.Drawing.Color.Black;
-            this.btnBrand.AppearancePressed.Font = new System.Drawing.Font("Swordoflogos", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBrand.AppearancePressed.Options.UseBackColor = true;
-            this.btnBrand.AppearancePressed.Options.UseFont = true;
-            this.btnBrand.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnBrand.ImageOptions.Image = global::SaberMart.Properties.Resources.producer;
-            this.btnBrand.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
-            this.btnBrand.Location = new System.Drawing.Point(0, 53);
-            this.btnBrand.Margin = new System.Windows.Forms.Padding(2);
-            this.btnBrand.Name = "btnBrand";
-            this.btnBrand.Size = new System.Drawing.Size(107, 53);
-            this.btnBrand.TabIndex = 1;
-            this.btnBrand.Text = "Brand";
-            this.btnBrand.Click += new System.EventHandler(this.btnBrand_Click);
             // 
             // ucData
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.pData);
-            this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Controls.Add(this.pdMenu);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "ucData";
-            this.Size = new System.Drawing.Size(1012, 483);
-            this.panel1.ResumeLayout(false);
+            this.Size = new System.Drawing.Size(1349, 594);
+            this.pdMenu.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pdMenu;
         private DevExpress.XtraEditors.SimpleButton btnStorage;
         private System.Windows.Forms.Panel pData;
         private DevExpress.XtraEditors.SimpleButton btnBrand;
+        private DevExpress.XtraEditors.SimpleButton btnProduct;
     }
 }

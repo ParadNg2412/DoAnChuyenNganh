@@ -83,7 +83,7 @@ namespace SaberMart.UI.User_control.Admin
         {
             if (txtIDp.Text == "" || txtNamep.Text == "" || txtSalery.Text == "" ||
                 txtIDs.Text == "" || txtNames.Text == "" || dtpDate.Text == "" || 
-                cbGender.Text == "" || txtPN.Text == "" || txtAddress.Text == "")
+                cbGender.SelectedItem == null || txtPN.Text == "" || txtAddress.Text == "")
             {
                 MessageBox.Show("Please enter full information!", "Notification!", MessageBoxButtons.OK);
             }

@@ -54,5 +54,10 @@ namespace SaberMart.UI
             account.Dock = DockStyle.Fill;
             pAdmin.Controls.Add(account);
         }
+
+        private void paMenu_Click(object sender, EventArgs e)
+        {
+            pAdmin.Controls.Clear();
+        }
     }
 }

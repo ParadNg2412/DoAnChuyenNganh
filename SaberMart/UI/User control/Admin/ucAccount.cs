@@ -94,7 +94,7 @@ namespace SaberMart.UI.User_control.Admin
             {
                 if (checkS(txtIDs.Text) != null)
                 {
-                    MessageBox.Show("Staff already exist!", "Notification", MessageBoxButtons.OK);
+                    MessageBox.Show("Account already exist!", "Notification", MessageBoxButtons.OK);
                 }
                 else
                 {
@@ -192,7 +192,5 @@ namespace SaberMart.UI.User_control.Admin
                 }
             }
         }
-
-        
     }
 }

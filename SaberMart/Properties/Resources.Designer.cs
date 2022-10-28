@@ -73,6 +73,26 @@ namespace SaberMart.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap boproduct_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("boproduct_32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap close_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("close_32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap delete_32x32 {
             get {
                 object obj = ResourceManager.GetObject("delete_32x32", resourceCulture);
@@ -96,6 +116,16 @@ namespace SaberMart.Properties {
         internal static System.Drawing.Bitmap hide_32x32 {
             get {
                 object obj = ResourceManager.GetObject("hide_32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Kamen_Rider_Saber {
+            get {
+                object obj = ResourceManager.GetObject("Kamen-Rider-Saber", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

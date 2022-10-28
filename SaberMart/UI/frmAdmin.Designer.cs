@@ -35,7 +35,7 @@ namespace SaberMart.UI
             this.barDockingMenuItem1 = new DevExpress.XtraBars.BarDockingMenuItem();
             this.barDockingMenuItem2 = new DevExpress.XtraBars.BarDockingMenuItem();
             this.fluentDesignFormControl1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.paMenu = new System.Windows.Forms.Panel();
             this.btnAccount = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
             this.btnData = new System.Windows.Forms.Button();
@@ -43,7 +43,7 @@ namespace SaberMart.UI
             this.pAdmin = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.fluentFormDefaultManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).BeginInit();
-            this.panel1.SuspendLayout();
+            this.paMenu.SuspendLayout();
             this.SuspendLayout();
             // 
             // fluentFormDefaultManager1
@@ -75,24 +75,25 @@ namespace SaberMart.UI
             this.fluentDesignFormControl1.Manager = this.fluentFormDefaultManager1;
             this.fluentDesignFormControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.fluentDesignFormControl1.Name = "fluentDesignFormControl1";
-            this.fluentDesignFormControl1.Size = new System.Drawing.Size(1012, 31);
+            this.fluentDesignFormControl1.Size = new System.Drawing.Size(1181, 39);
             this.fluentDesignFormControl1.TabIndex = 2;
             this.fluentDesignFormControl1.TabStop = false;
             // 
-            // panel1
+            // paMenu
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel1.Controls.Add(this.btnAccount);
-            this.panel1.Controls.Add(this.btnLogout);
-            this.panel1.Controls.Add(this.btnData);
-            this.panel1.Controls.Add(this.btnStaffUC);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 31);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1012, 69);
-            this.panel1.TabIndex = 3;
+            this.paMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.paMenu.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.paMenu.Controls.Add(this.btnAccount);
+            this.paMenu.Controls.Add(this.btnLogout);
+            this.paMenu.Controls.Add(this.btnData);
+            this.paMenu.Controls.Add(this.btnStaffUC);
+            this.paMenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.paMenu.Location = new System.Drawing.Point(0, 39);
+            this.paMenu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.paMenu.Name = "paMenu";
+            this.paMenu.Size = new System.Drawing.Size(1181, 84);
+            this.paMenu.TabIndex = 3;
+            this.paMenu.Click += new System.EventHandler(this.paMenu_Click);
             // 
             // btnAccount
             // 
@@ -106,10 +107,10 @@ namespace SaberMart.UI
             this.btnAccount.ForeColor = System.Drawing.SystemColors.Control;
             this.btnAccount.Image = global::SaberMart.Properties.Resources.User_32x32;
             this.btnAccount.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnAccount.Location = new System.Drawing.Point(169, 0);
+            this.btnAccount.Location = new System.Drawing.Point(280, 0);
             this.btnAccount.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAccount.Name = "btnAccount";
-            this.btnAccount.Size = new System.Drawing.Size(108, 65);
+            this.btnAccount.Size = new System.Drawing.Size(140, 80);
             this.btnAccount.TabIndex = 4;
             this.btnAccount.Text = "Account";
             this.btnAccount.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -129,10 +130,10 @@ namespace SaberMart.UI
             this.btnLogout.ForeColor = System.Drawing.SystemColors.Control;
             this.btnLogout.Image = ((System.Drawing.Image)(resources.GetObject("btnLogout.Image")));
             this.btnLogout.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnLogout.Location = new System.Drawing.Point(905, 0);
+            this.btnLogout.Location = new System.Drawing.Point(1057, 0);
             this.btnLogout.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(103, 65);
+            this.btnLogout.Size = new System.Drawing.Size(120, 80);
             this.btnLogout.TabIndex = 3;
             this.btnLogout.Text = "Logout";
             this.btnLogout.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -151,10 +152,10 @@ namespace SaberMart.UI
             this.btnData.ForeColor = System.Drawing.SystemColors.Control;
             this.btnData.Image = global::SaberMart.Properties.Resources.product_data;
             this.btnData.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnData.Location = new System.Drawing.Point(88, 0);
+            this.btnData.Location = new System.Drawing.Point(140, 0);
             this.btnData.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnData.Name = "btnData";
-            this.btnData.Size = new System.Drawing.Size(81, 65);
+            this.btnData.Size = new System.Drawing.Size(140, 80);
             this.btnData.TabIndex = 2;
             this.btnData.Text = "Data";
             this.btnData.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -177,7 +178,7 @@ namespace SaberMart.UI
             this.btnStaffUC.Location = new System.Drawing.Point(0, 0);
             this.btnStaffUC.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnStaffUC.Name = "btnStaffUC";
-            this.btnStaffUC.Size = new System.Drawing.Size(88, 65);
+            this.btnStaffUC.Size = new System.Drawing.Size(140, 80);
             this.btnStaffUC.TabIndex = 1;
             this.btnStaffUC.Text = "STAFF";
             this.btnStaffUC.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -187,30 +188,35 @@ namespace SaberMart.UI
             // 
             // pAdmin
             // 
+            this.pAdmin.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pAdmin.BackgroundImage")));
+            this.pAdmin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pAdmin.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pAdmin.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pAdmin.Location = new System.Drawing.Point(0, 100);
+            this.pAdmin.Location = new System.Drawing.Point(0, 123);
             this.pAdmin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pAdmin.Name = "pAdmin";
-            this.pAdmin.Size = new System.Drawing.Size(1012, 483);
+            this.pAdmin.Size = new System.Drawing.Size(1181, 595);
             this.pAdmin.TabIndex = 4;
             // 
             // frmAdmin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(1012, 583);
+            this.ClientSize = new System.Drawing.Size(1181, 718);
             this.Controls.Add(this.pAdmin);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.paMenu);
             this.Controls.Add(this.fluentDesignFormControl1);
             this.FluentDesignFormControl = this.fluentDesignFormControl1;
             this.IconOptions.Image = ((System.Drawing.Image)(resources.GetObject("frmAdmin.IconOptions.Image")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmAdmin";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.Text = "Saber Mart - Admin";
             ((System.ComponentModel.ISupportInitialize)(this.fluentFormDefaultManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).EndInit();
-            this.panel1.ResumeLayout(false);
+            this.paMenu.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -221,7 +227,7 @@ namespace SaberMart.UI
         private DevExpress.XtraBars.BarDockingMenuItem barDockingMenuItem1;
         private DevExpress.XtraBars.BarDockingMenuItem barDockingMenuItem2;
         private System.Windows.Forms.Panel pAdmin;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel paMenu;
         private System.Windows.Forms.Button btnStaffUC;
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Button btnData;

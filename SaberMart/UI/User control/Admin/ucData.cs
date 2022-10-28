@@ -30,9 +30,22 @@ namespace SaberMart.UI.User_control.Admin
         private void btnBrand_Click(object sender, EventArgs e)
         {
             pData.Controls.Clear();
-            //ucStorage st = new ucStorage();
-            //st.Dock = DockStyle.Fill;
-            //pData.Controls.Add(st);
+            ucBrand br = new ucBrand();
+            br.Dock = DockStyle.Fill;
+            pData.Controls.Add(br);
+        }
+
+        private void btnProduct_Click(object sender, EventArgs e)
+        {
+            pData.Controls.Clear();
+            ucProduct pr = new ucProduct();
+            pr.Dock = DockStyle.Fill;
+            pData.Controls.Add(pr);
+        }
+
+        private void pdMenu_Click(object sender, EventArgs e)
+        {
+            pData.Controls.Clear();
         }
     }
 }
