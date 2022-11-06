@@ -53,7 +53,7 @@ create table NHACUNGCAP(
 
 create table NHOMSANPHAM(
 	MaNhom varchar(5) primary key NOT NULL,
-	TenNhom nvarchar(50) NULL,
+	TenNhom nvarchar(50) NULL
 	
 )
 --PTTang int NULL
@@ -298,3 +298,8 @@ select * from CHITIETHOADON
 
 delete from HOADON
 delete from CHITIETHOADON
+
+select H.MaHD, sum(CT.ThanhTienBan) as [TongTienBan]
+from HOADON H, CHITIETHOADON CT
+where H.MaHD = CT.MaHD 
+group by H.MaHD

@@ -17,19 +17,6 @@ namespace SaberMart.UI.User_control.Admin.Data
             InitializeComponent();
         }
 
-        //private string checkG(string ID)
-        //{
-        //    List<NHOMSANPHAM> lstG = context.NHOMSANPHAMs.ToList();
-        //    foreach (var ck in lstG)
-        //    {
-        //        if (ID.Equals(ck.MaNhom))
-        //        {
-        //            return ck.MaNhom;
-        //        }
-        //    }
-        //    return null;
-        //}
-
         private string checkP(string ID)
         {
             List<SANPHAM> lstS = context.SANPHAMs.ToList();
@@ -49,7 +36,6 @@ namespace SaberMart.UI.User_control.Admin.Data
             foreach (var item in lstP)
             {
                 int index = dgvProduct.Rows.Add();
-                //dgvProduct.Rows[index].Cells[0].Value = item.PicSP;
                 dgvProduct.Rows[index].Cells[0].Value = item.MaSP;
                 dgvProduct.Rows[index].Cells[1].Value = item.TenSP;
                 dgvProduct.Rows[index].Cells[2].Value = item.DonViTinh;
@@ -58,7 +44,6 @@ namespace SaberMart.UI.User_control.Admin.Data
                 dgvProduct.Rows[index].Cells[5].Value = item.SLTon;
                 dgvProduct.Rows[index].Cells[6].Value = item.GiaBan;
                 dgvProduct.Rows[index].Cells[7].Value = item.GiaNhap;
-                dgvProduct.Rows[index].Cells[8].Value = item.PicSP;
             }
         }
 
@@ -120,15 +105,15 @@ namespace SaberMart.UI.User_control.Admin.Data
         private void btnAdd_Click(object sender, EventArgs e)
         {
             if (txtIDc.Text == "" || txtIDg.Text == "" || txtNameg.Text == "" || txtIDp.Text == "" || txtNamep.Text == "" ||
-                txtType.Text == "" || txtSales.Text == "" || txtPrices.Text == "")
+                txtType.Text == "" || txtSales.Text == "" || txtPrices.Text == "" || txtValue.Text == "")
             {
-                MessageBox.Show("Please enter full information!", "Notification!", MessageBoxButtons.OK);
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin!", "Thông báo!", MessageBoxButtons.OK);
             }
             try
             {
                 if (checkP(txtIDp.Text) != null)
                 {
-                    MessageBox.Show("Product already exist!", "Notification", MessageBoxButtons.OK);
+                    MessageBox.Show("Sản phẩm đã tồn tại!", "Thông báo!", MessageBoxButtons.OK);
                 }
                 else
                 {
@@ -141,8 +126,7 @@ namespace SaberMart.UI.User_control.Admin.Data
                         DonViTinh = txtType.Text,
                         SLTon = int.Parse(txtValue.Text),
                         GiaBan = int.Parse(txtSales.Text),
-                        GiaNhap = int.Parse(txtPrices.Text)//,
-                        
+                        GiaNhap = int.Parse(txtPrices.Text)
                     };
                     context.SANPHAMs.Add(addsp);
                     context.SaveChanges();
@@ -160,25 +144,25 @@ namespace SaberMart.UI.User_control.Admin.Data
         {
             if (checkP(txtIDp.Text) == null)
             {
-                MessageBox.Show("Product cannot be found!", "Notification!", MessageBoxButtons.OK);
+                MessageBox.Show("Không tìm thấy sản phẩm!", "Thông báo!", MessageBoxButtons.OK);
             }
             else
             {
                 SANPHAM delsp = context.SANPHAMs.FirstOrDefault(p => p.MaSP == txtIDp.Text);
                 if (delsp != null)
                 {
-                    if (MessageBox.Show("Do you want to remove?", "Notification!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    if (MessageBox.Show("Bạn muốn xóa?", "Thông báo!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
                         context.SANPHAMs.Remove(delsp);
                         context.SaveChanges();
-                        MessageBox.Show("Remove successfull!", "Notification!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Xóa sản phẩm thành công!", "Thông báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         List<SANPHAM> lstP = context.SANPHAMs.ToList();
                         loadGridView(lstP);
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Product cannot be found!", "Notification!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Không tìm thấy sản phẩm!", "Thông báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
         }
@@ -186,9 +170,9 @@ namespace SaberMart.UI.User_control.Admin.Data
         private void btnEdit_Click(object sender, EventArgs e)
         {
             if (txtIDc.Text == "" || txtIDg.Text == "" || txtNameg.Text == "" || txtIDp.Text == "" || txtNamep.Text == "" ||
-                txtType.Text == "" || txtSales.Text == "" || txtPrices.Text == "")
+                txtType.Text == "" || txtSales.Text == "" || txtPrices.Text == "" || txtValue.Text == "")
             {
-                MessageBox.Show("Please enter full information!", "Notification!", MessageBoxButtons.OK);
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin!", "Thông báo!", MessageBoxButtons.OK);
             }
             else
             {
@@ -204,11 +188,37 @@ namespace SaberMart.UI.User_control.Admin.Data
                     Upsp.SLTon = int.Parse(txtValue.Text);
                     Upsp.GiaBan = int.Parse(txtSales.Text);
                     Upsp.GiaNhap = int.Parse(txtPrices.Text);
-                    //Upsp.PicSP = picProduct;
                     context.SaveChanges();
                 }
                 List<SANPHAM> lstP = context.SANPHAMs.ToList();
                 loadGridView(lstP);
+            }
+        }
+
+        private void btnList_Click(object sender, EventArgs e)
+        {
+            List<SANPHAM> lstP = context.SANPHAMs.ToList();
+            loadGridView(lstP);
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            if (checkP(txtIDp.Text) == null)
+            {
+                MessageBox.Show("Không tìm thấy sản phẩm!", "Thông báo!", MessageBoxButtons.OK);
+            }
+            else
+            {
+                SANPHAM srchsp = context.SANPHAMs.FirstOrDefault(p => p.MaSP == txtIDp.Text);
+                if (srchsp != null)
+                {
+                    List<SANPHAM> lstP = context.SANPHAMs.Where(p => p.MaSP == txtIDp.Text).ToList();
+                    loadGridView(lstP);
+                }
+                else
+                {
+                    MessageBox.Show("Không tìm thấy sản phẩm!", "Thông báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
         }
     }

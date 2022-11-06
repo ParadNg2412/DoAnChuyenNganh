@@ -11,7 +11,6 @@ using System.Text;
 using System.Windows.Forms;
 using SaberMart.UI.User_control.Admin;
 
-
 namespace SaberMart.UI
 {
     public partial class frmAdmin : DevExpress.XtraBars.FluentDesignSystem.FluentDesignForm
@@ -58,6 +57,14 @@ namespace SaberMart.UI
         private void paMenu_Click(object sender, EventArgs e)
         {
             pAdmin.Controls.Clear();
+        }
+
+        private void btnBill_Click(object sender, EventArgs e)
+        {
+            pAdmin.Controls.Clear();
+            ucBill bill = new ucBill();
+            bill.Dock = DockStyle.Fill;
+            pAdmin.Controls.Add(bill);
         }
     }
 }

@@ -14,7 +14,7 @@ namespace SaberMart.UI
 {
     public partial class frmLogin : DevExpress.XtraEditors.XtraForm
     {
-        private string valueText;
+        public static string valueText;
         EntityDB context = new EntityDB();
 
         public frmLogin()
@@ -61,14 +61,14 @@ namespace SaberMart.UI
                     fAdmin.ShowDialog();
                     return;
                 }
-                //if (context.NHANVIENs.Where(p => p.Username == txtUsername.Text && p.MatKhau == txtPassword.Text && p.LoaiTK == "Nhân viên").Count() > 0)
-                //{
-                //    MessageBox.Show("Employee: Login successfull!", "Notification!", MessageBoxButtons.OK);
-                //    frmMain1 fMain = new frmMain1();
-                //    valueText = txtUserName.Text;
-                //    this.Hide();
-                //    fMain.ShowDialog();
-                //}
+                if (context.NHANVIENs.Where(p => p.Username == txtUsername.Text && p.MatKhau == txtPassword.Text && p.LoaiTK == "Nhân viên").Count() > 0)
+                {
+                    MessageBox.Show("Employee: Login successfull!", "Notification!", MessageBoxButtons.OK);
+                    frmStaff fStaff = new frmStaff();
+                    valueText = txtUsername.Text;
+                    this.Hide();
+                    fStaff.ShowDialog();
+                }
                 else
                 {
                     MessageBox.Show("Login failed!", "Notification", MessageBoxButtons.OK);
@@ -91,6 +91,13 @@ namespace SaberMart.UI
                 e.SuppressKeyPress = true;
                 this.SelectNextControl((Control)sender, true, true, true, true);          
             }
+        }
+
+        private void lklForgetPass_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            frmPassword fp = new frmPassword();
+            this.Hide();
+            fp.ShowDialog();
         }
     }
 }

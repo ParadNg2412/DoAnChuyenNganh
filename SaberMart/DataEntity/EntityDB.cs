@@ -8,7 +8,7 @@ namespace SaberMart.DataEntity
     public partial class EntityDB : DbContext
     {
         public EntityDB()
-            : base("name=Entity")
+            : base("name=EntityDB")
         {
         }
 
@@ -22,7 +22,6 @@ namespace SaberMart.DataEntity
         public virtual DbSet<NHOMSANPHAM> NHOMSANPHAMs { get; set; }
         public virtual DbSet<PHIEUNHAP> PHIEUNHAPs { get; set; }
         public virtual DbSet<SANPHAM> SANPHAMs { get; set; }
-        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

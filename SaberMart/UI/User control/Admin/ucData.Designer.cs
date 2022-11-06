@@ -55,61 +55,61 @@ namespace SaberMart.UI.User_control.Admin
             // btnProduct
             // 
             this.btnProduct.Appearance.BackColor = System.Drawing.Color.Gold;
-            this.btnProduct.Appearance.Font = new System.Drawing.Font("Swordoflogos", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProduct.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProduct.Appearance.ForeColor = System.Drawing.Color.Black;
             this.btnProduct.Appearance.Options.UseBackColor = true;
             this.btnProduct.Appearance.Options.UseFont = true;
             this.btnProduct.Appearance.Options.UseForeColor = true;
             this.btnProduct.AppearanceHovered.BackColor = System.Drawing.Color.Yellow;
-            this.btnProduct.AppearanceHovered.Font = new System.Drawing.Font("Swordoflogos", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProduct.AppearanceHovered.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProduct.AppearanceHovered.Options.UseBackColor = true;
             this.btnProduct.AppearanceHovered.Options.UseFont = true;
             this.btnProduct.AppearancePressed.BackColor = System.Drawing.Color.Black;
-            this.btnProduct.AppearancePressed.Font = new System.Drawing.Font("Swordoflogos", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProduct.AppearancePressed.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProduct.AppearancePressed.Options.UseBackColor = true;
             this.btnProduct.AppearancePressed.Options.UseFont = true;
             this.btnProduct.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnProduct.ImageOptions.Image = global::SaberMart.Properties.Resources.boproduct_32x32;
             this.btnProduct.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
-            this.btnProduct.Location = new System.Drawing.Point(0, 130);
+            this.btnProduct.Location = new System.Drawing.Point(0, 158);
             this.btnProduct.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnProduct.Name = "btnProduct";
-            this.btnProduct.Size = new System.Drawing.Size(143, 65);
+            this.btnProduct.Size = new System.Drawing.Size(143, 82);
             this.btnProduct.TabIndex = 2;
-            this.btnProduct.Text = "Product";
+            this.btnProduct.Text = "Sản phẩm";
             this.btnProduct.Click += new System.EventHandler(this.btnProduct_Click);
             // 
             // btnBrand
             // 
             this.btnBrand.Appearance.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Warning;
-            this.btnBrand.Appearance.Font = new System.Drawing.Font("Swordoflogos", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBrand.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBrand.Appearance.ForeColor = System.Drawing.Color.Black;
             this.btnBrand.Appearance.Options.UseBackColor = true;
             this.btnBrand.Appearance.Options.UseFont = true;
             this.btnBrand.Appearance.Options.UseForeColor = true;
             this.btnBrand.AppearanceHovered.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnBrand.AppearanceHovered.Font = new System.Drawing.Font("Swordoflogos", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBrand.AppearanceHovered.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBrand.AppearanceHovered.Options.UseBackColor = true;
             this.btnBrand.AppearanceHovered.Options.UseFont = true;
             this.btnBrand.AppearancePressed.BackColor = System.Drawing.Color.Black;
-            this.btnBrand.AppearancePressed.Font = new System.Drawing.Font("Swordoflogos", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBrand.AppearancePressed.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBrand.AppearancePressed.Options.UseBackColor = true;
             this.btnBrand.AppearancePressed.Options.UseFont = true;
             this.btnBrand.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnBrand.ImageOptions.Image = global::SaberMart.Properties.Resources.producer;
             this.btnBrand.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
-            this.btnBrand.Location = new System.Drawing.Point(0, 65);
+            this.btnBrand.Location = new System.Drawing.Point(0, 75);
             this.btnBrand.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnBrand.Name = "btnBrand";
-            this.btnBrand.Size = new System.Drawing.Size(143, 65);
+            this.btnBrand.Size = new System.Drawing.Size(143, 83);
             this.btnBrand.TabIndex = 1;
-            this.btnBrand.Text = "Brand";
+            this.btnBrand.Text = "Nhà cung cấp";
             this.btnBrand.Click += new System.EventHandler(this.btnBrand_Click);
             // 
             // btnStorage
             // 
             this.btnStorage.Appearance.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.btnStorage.Appearance.Font = new System.Drawing.Font("Swordoflogos", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStorage.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnStorage.Appearance.ForeColor = System.Drawing.Color.Black;
             this.btnStorage.Appearance.Options.UseBackColor = true;
             this.btnStorage.Appearance.Options.UseFont = true;
@@ -128,9 +128,9 @@ namespace SaberMart.UI.User_control.Admin
             this.btnStorage.Location = new System.Drawing.Point(0, 0);
             this.btnStorage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnStorage.Name = "btnStorage";
-            this.btnStorage.Size = new System.Drawing.Size(143, 65);
+            this.btnStorage.Size = new System.Drawing.Size(143, 75);
             this.btnStorage.TabIndex = 0;
-            this.btnStorage.Text = "Storage";
+            this.btnStorage.Text = "Phiếu nhập";
             this.btnStorage.Click += new System.EventHandler(this.btnStorage_Click);
             // 
             // pData

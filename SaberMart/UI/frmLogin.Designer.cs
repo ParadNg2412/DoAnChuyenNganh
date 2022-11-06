@@ -45,13 +45,13 @@ namespace SaberMart.UI
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lklForgetPass = new System.Windows.Forms.LinkLabel();
             this.pictureEdit2 = new DevExpress.XtraEditors.PictureEdit();
             this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
             this.pHide = new System.Windows.Forms.PictureBox();
             this.pShow = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.lklForgetPass = new System.Windows.Forms.LinkLabel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit2.Properties)).BeginInit();
@@ -74,7 +74,7 @@ namespace SaberMart.UI
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(403, 487);
+            this.panel1.Size = new System.Drawing.Size(409, 487);
             this.panel1.TabIndex = 0;
             // 
             // labelControl4
@@ -88,7 +88,7 @@ namespace SaberMart.UI
             this.labelControl4.Appearance.Options.UseBackColor = true;
             this.labelControl4.Appearance.Options.UseFont = true;
             this.labelControl4.Appearance.Options.UseForeColor = true;
-            this.labelControl4.Location = new System.Drawing.Point(132, 287);
+            this.labelControl4.Location = new System.Drawing.Point(140, 280);
             this.labelControl4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(153, 28);
@@ -106,7 +106,7 @@ namespace SaberMart.UI
             this.labelControl3.Appearance.Options.UseBackColor = true;
             this.labelControl3.Appearance.Options.UseFont = true;
             this.labelControl3.Appearance.Options.UseForeColor = true;
-            this.labelControl3.Location = new System.Drawing.Point(166, 246);
+            this.labelControl3.Location = new System.Drawing.Point(174, 239);
             this.labelControl3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(180, 40);
@@ -124,7 +124,7 @@ namespace SaberMart.UI
             this.labelControl2.Appearance.Options.UseBackColor = true;
             this.labelControl2.Appearance.Options.UseFont = true;
             this.labelControl2.Appearance.Options.UseForeColor = true;
-            this.labelControl2.Location = new System.Drawing.Point(166, 207);
+            this.labelControl2.Location = new System.Drawing.Point(174, 200);
             this.labelControl2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(223, 40);
@@ -140,7 +140,7 @@ namespace SaberMart.UI
             this.labelControl1.Appearance.ForeColor = System.Drawing.Color.White;
             this.labelControl1.Appearance.Options.UseFont = true;
             this.labelControl1.Appearance.Options.UseForeColor = true;
-            this.labelControl1.Location = new System.Drawing.Point(5, 176);
+            this.labelControl1.Location = new System.Drawing.Point(13, 169);
             this.labelControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(168, 133);
@@ -154,10 +154,10 @@ namespace SaberMart.UI
             this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(166, 70);
+            this.pictureBox1.Location = new System.Drawing.Point(176, 70);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(80, 320);
+            this.pictureBox1.Size = new System.Drawing.Size(86, 320);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
@@ -166,7 +166,7 @@ namespace SaberMart.UI
             // 
             this.btnExit.Appearance.BackColor = System.Drawing.Color.Silver;
             this.btnExit.Appearance.BackColor2 = System.Drawing.Color.Gray;
-            this.btnExit.Appearance.Font = new System.Drawing.Font("Swordoflogos", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.Appearance.Options.UseBackColor = true;
             this.btnExit.Appearance.Options.UseFont = true;
             this.btnExit.AppearanceHovered.BackColor2 = System.Drawing.Color.DimGray;
@@ -175,32 +175,32 @@ namespace SaberMart.UI
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(89, 46);
             this.btnExit.TabIndex = 9;
-            this.btnExit.Text = "Exit";
+            this.btnExit.Text = "Thoát";
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // labelControl5
             // 
             this.labelControl5.Appearance.BackColor = System.Drawing.Color.White;
-            this.labelControl5.Appearance.Font = new System.Drawing.Font("Swordoflogos", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl5.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl5.Appearance.Options.UseBackColor = true;
             this.labelControl5.Appearance.Options.UseFont = true;
-            this.labelControl5.Location = new System.Drawing.Point(433, 178);
+            this.labelControl5.Location = new System.Drawing.Point(492, 175);
             this.labelControl5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(184, 21);
+            this.labelControl5.Size = new System.Drawing.Size(125, 29);
             this.labelControl5.TabIndex = 3;
             this.labelControl5.Text = "Username";
             // 
             // labelControl6
             // 
             this.labelControl6.Appearance.BackColor = System.Drawing.Color.White;
-            this.labelControl6.Appearance.Font = new System.Drawing.Font("Swordoflogos", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl6.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl6.Appearance.Options.UseBackColor = true;
             this.labelControl6.Appearance.Options.UseFont = true;
-            this.labelControl6.Location = new System.Drawing.Point(433, 263);
+            this.labelControl6.Location = new System.Drawing.Point(498, 258);
             this.labelControl6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(184, 21);
+            this.labelControl6.Size = new System.Drawing.Size(119, 29);
             this.labelControl6.TabIndex = 4;
             this.labelControl6.Text = "Password";
             // 
@@ -208,26 +208,26 @@ namespace SaberMart.UI
             // 
             this.btnLogin.Appearance.BackColor = System.Drawing.Color.OrangeRed;
             this.btnLogin.Appearance.BackColor2 = System.Drawing.Color.Yellow;
-            this.btnLogin.Appearance.Font = new System.Drawing.Font("Swordoflogos", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogin.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.Appearance.Options.UseBackColor = true;
             this.btnLogin.Appearance.Options.UseFont = true;
             this.btnLogin.AppearanceHovered.BackColor2 = System.Drawing.Color.DarkRed;
-            this.btnLogin.Location = new System.Drawing.Point(581, 345);
+            this.btnLogin.Location = new System.Drawing.Point(598, 335);
             this.btnLogin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(185, 46);
+            this.btnLogin.Size = new System.Drawing.Size(153, 56);
             this.btnLogin.TabIndex = 7;
-            this.btnLogin.Text = "Login";
+            this.btnLogin.Text = "Đăng nhập";
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // labelControl7
             // 
-            this.labelControl7.Appearance.Font = new System.Drawing.Font("Swordoflogos", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl7.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl7.Appearance.Options.UseFont = true;
-            this.labelControl7.Location = new System.Drawing.Point(557, 39);
+            this.labelControl7.Location = new System.Drawing.Point(581, 40);
             this.labelControl7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.labelControl7.Name = "labelControl7";
-            this.labelControl7.Size = new System.Drawing.Size(235, 48);
+            this.labelControl7.Size = new System.Drawing.Size(192, 69);
             this.labelControl7.TabIndex = 8;
             this.labelControl7.Text = "LOGIN";
             // 
@@ -281,10 +281,46 @@ namespace SaberMart.UI
             this.panel3.Size = new System.Drawing.Size(242, 5);
             this.panel3.TabIndex = 16;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(747, 460);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(162, 19);
+            this.label1.TabIndex = 19;
+            this.label1.Text = "@Designed by Parad";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(415, 460);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(167, 19);
+            this.label2.TabIndex = 20;
+            this.label2.Text = "@Specialized Project";
+            // 
+            // lklForgetPass
+            // 
+            this.lklForgetPass.AutoSize = true;
+            this.lklForgetPass.Enabled = false;
+            this.lklForgetPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lklForgetPass.ForeColor = System.Drawing.Color.White;
+            this.lklForgetPass.Location = new System.Drawing.Point(606, 416);
+            this.lklForgetPass.Name = "lklForgetPass";
+            this.lklForgetPass.Size = new System.Drawing.Size(136, 20);
+            this.lklForgetPass.TabIndex = 21;
+            this.lklForgetPass.TabStop = true;
+            this.lklForgetPass.Text = "Quên mật khẩu ?\r\n";
+            this.lklForgetPass.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lklForgetPass_LinkClicked);
+            // 
             // pictureEdit2
             // 
             this.pictureEdit2.EditValue = global::SaberMart.Properties.Resources.Locked_32x32;
-            this.pictureEdit2.Location = new System.Drawing.Point(433, 222);
+            this.pictureEdit2.Location = new System.Drawing.Point(450, 257);
             this.pictureEdit2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureEdit2.Name = "pictureEdit2";
             this.pictureEdit2.Properties.Appearance.BackColor = System.Drawing.Color.Maroon;
@@ -296,7 +332,7 @@ namespace SaberMart.UI
             // pictureEdit1
             // 
             this.pictureEdit1.EditValue = global::SaberMart.Properties.Resources.User_32x32;
-            this.pictureEdit1.Location = new System.Drawing.Point(433, 138);
+            this.pictureEdit1.Location = new System.Drawing.Point(450, 170);
             this.pictureEdit1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureEdit1.Name = "pictureEdit1";
             this.pictureEdit1.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
@@ -333,37 +369,6 @@ namespace SaberMart.UI
             this.pShow.TabStop = false;
             this.pShow.Click += new System.EventHandler(this.pShow_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(730, 469);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(162, 19);
-            this.label1.TabIndex = 19;
-            this.label1.Text = "@Designed by Parad";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(409, 468);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(167, 19);
-            this.label2.TabIndex = 20;
-            this.label2.Text = "@Specialized Project";
-            // 
-            // lklForgetPass
-            // 
-            this.lklForgetPass.AutoSize = true;
-            this.lklForgetPass.Font = new System.Drawing.Font("Swordoflogos", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lklForgetPass.Location = new System.Drawing.Point(554, 414);
-            this.lklForgetPass.Name = "lklForgetPass";
-            this.lklForgetPass.Size = new System.Drawing.Size(232, 14);
-            this.lklForgetPass.TabIndex = 21;
-            this.lklForgetPass.TabStop = true;
-            this.lklForgetPass.Text = "Forget password ?";
-            // 
             // frmLogin
             // 
             this.Appearance.BackColor = System.Drawing.Color.Maroon;
@@ -389,7 +394,7 @@ namespace SaberMart.UI
             this.Controls.Add(this.labelControl5);
             this.Controls.Add(this.panel1);
             this.DoubleBuffered = true;
-            this.IconOptions.Image = ((System.Drawing.Image)(resources.GetObject("frmLogin.IconOptions.Image")));
+            this.IconOptions.Image = global::SaberMart.Properties.Resources.SaberMart;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmLogin";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
