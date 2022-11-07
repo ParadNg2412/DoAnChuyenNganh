@@ -116,6 +116,7 @@ create table CHITIETHOADON(
 	MaHD varchar(5) NOT NULL,
 	MaSP varchar(5) NOT NULL,
 	SLBan int NULL,
+	NgayBan date NULL,
 	DonGiaBan int NULL,
 	ThanhTienBan int NULL,
 	primary key (MaHD, MaSP)
@@ -276,22 +277,22 @@ values('HD005', 'NV002', 'KH001', '30/09/2022', 20000)
 insert into HOADON(MaHD, MaNV, MaKH, NgayBan, TongTienBan)
 values('HD006', 'NV002', 'KH003', '01/10/2022', 9000)
 
-insert into CHITIETHOADON(MaHD, MaSP, SLBan, DonGiaBan, ThanhTienBan)
-values('HD001', 'SP001', 1, 10000, 10000)
-insert into CHITIETHOADON(MaHD, MaSP, SLBan, DonGiaBan, ThanhTienBan)
-values('HD002', 'SP006', 1, 10000, 10000)
-insert into CHITIETHOADON(MaHD, MaSP, SLBan, DonGiaBan, ThanhTienBan)
-values('HD002', 'SP008', 1, 10000, 10000)
-insert into CHITIETHOADON(MaHD, MaSP, SLBan, DonGiaBan, ThanhTienBan)
-values('HD003', 'SP004', 1, 9000, 9000)
-insert into CHITIETHOADON(MaHD, MaSP, SLBan, DonGiaBan, ThanhTienBan)
-values('HD003', 'SP003', 1, 10000, 10000)
-insert into CHITIETHOADON(MaHD, MaSP, SLBan, DonGiaBan, ThanhTienBan)
-values('HD004', 'SP005', 1, 10000, 10000)
-insert into CHITIETHOADON(MaHD, MaSP, SLBan, DonGiaBan, ThanhTienBan)
-values('HD005', 'SP008', 2, 10000, 20000)
-insert into CHITIETHOADON(MaHD, MaSP, SLBan, DonGiaBan, ThanhTienBan)
-values('HD006', 'SP002', 1, 9000, 9000)
+insert into CHITIETHOADON(MaHD, MaSP, SLBan, DonGiaBan, ThanhTienBan, NgayBan)
+values('HD001', 'SP001', 1, 10000, 10000, '27/09/2022')
+insert into CHITIETHOADON(MaHD, MaSP, SLBan, DonGiaBan, ThanhTienBan, NgayBan)
+values('HD002', 'SP006', 1, 10000, 10000, '27/09/2022')
+insert into CHITIETHOADON(MaHD, MaSP, SLBan, DonGiaBan, ThanhTienBan, NgayBan)
+values('HD002', 'SP008', 1, 10000, 10000, '27/09/2022')
+insert into CHITIETHOADON(MaHD, MaSP, SLBan, DonGiaBan, ThanhTienBan, NgayBan)
+values('HD003', 'SP004', 1, 9000, 9000, '27/09/2022')
+insert into CHITIETHOADON(MaHD, MaSP, SLBan, DonGiaBan, ThanhTienBan, NgayBan)
+values('HD003', 'SP003', 1, 10000, 10000, '27/09/2022')
+insert into CHITIETHOADON(MaHD, MaSP, SLBan, DonGiaBan, ThanhTienBan, NgayBan)
+values('HD004', 'SP005', 1, 10000, 10000, '27/09/2022')
+insert into CHITIETHOADON(MaHD, MaSP, SLBan, DonGiaBan, ThanhTienBan, NgayBan)
+values('HD005', 'SP008', 2, 10000, 20000, '30/09/2022')
+insert into CHITIETHOADON(MaHD, MaSP, SLBan, DonGiaBan, ThanhTienBan, NgayBan)
+values('HD006', 'SP002', 1, 9000, 9000, '01/10/2022')
 
 select * from HOADON
 select * from CHITIETHOADON
@@ -299,7 +300,7 @@ select * from CHITIETHOADON
 delete from HOADON
 delete from CHITIETHOADON
 
-select H.MaHD, sum(CT.ThanhTienBan) as [TongTienBan]
+select H.MaHD as [Mã hóa đơn], sum(CT.ThanhTienBan) as [Tổng tiền]
 from HOADON H, CHITIETHOADON CT
 where H.MaHD = CT.MaHD 
 group by H.MaHD

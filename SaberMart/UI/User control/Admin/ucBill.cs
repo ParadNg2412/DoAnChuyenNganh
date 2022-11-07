@@ -20,6 +20,7 @@ namespace SaberMart.UI.User_control.Admin
     public partial class ucBill : UserControl
     {
         EntityDB context = new EntityDB();
+        List<CHITIETHOADON> tk;
         
         public ucBill()
         {
@@ -31,6 +32,20 @@ namespace SaberMart.UI.User_control.Admin
             cbIDc.DataSource = lstC;
             cbIDc.DisplayMember = "MaKH";
             cbIDc.ValueMember = "MaKH";
+        }
+
+        public void loadSatff(List<NHANVIEN> lstS)
+        {
+            cbIDs.DataSource = lstS;
+            cbIDs.DisplayMember = "MaNV";
+            cbIDs.ValueMember = "MaNV";
+        }
+
+        public void loadDetail(List<CHITIETHOADON> lstBD)
+        {
+            cbIDb.DataSource = lstBD;
+            cbIDb.DisplayMember = "MaHD";
+            cbIDb.ValueMember = "MaHD";
         }
 
         private string checkS(string Name)
@@ -80,7 +95,8 @@ namespace SaberMart.UI.User_control.Admin
                 int index = dgvProduct.Rows.Add();
                 dgvProduct.Rows[index].Cells[0].Value = item.MaSP;
                 dgvProduct.Rows[index].Cells[1].Value = item.TenSP;
-                dgvProduct.Rows[index].Cells[2].Value = item.GiaBan;
+                dgvProduct.Rows[index].Cells[2].Value = item.DonViTinh;
+                dgvProduct.Rows[index].Cells[3].Value = item.GiaBan;
             }
         }
 
@@ -105,16 +121,18 @@ namespace SaberMart.UI.User_control.Admin
             {
                 int index = dgvDetail.Rows.Add();
                 dgvDetail.Rows[index].Cells[0].Value = item.MaHD;
-                dgvDetail.Rows[index].Cells[1].Value = item.SANPHAM.TenSP;
-                dgvDetail.Rows[index].Cells[2].Value = item.SLBan;
-                dgvDetail.Rows[index].Cells[3].Value = item.DonGiaBan;
-                dgvDetail.Rows[index].Cells[4].Value = item.ThanhTienBan;
+                dgvDetail.Rows[index].Cells[1].Value = item.NgayBan;
+                dgvDetail.Rows[index].Cells[2].Value = item.SANPHAM.TenSP;
+                dgvDetail.Rows[index].Cells[3].Value = item.SLBan;
+                dgvDetail.Rows[index].Cells[4].Value = item.DonGiaBan;
+                dgvDetail.Rows[index].Cells[5].Value = item.ThanhTienBan;
             }
         }
 
         private void ucBill_Load(object sender, EventArgs e)
         {
             string temp = checkS(frmLogin.valueText);
+            List<NHANVIEN> lstS = context.NHANVIENs.ToList();
             List<SANPHAM> lstP = context.SANPHAMs.ToList();
             List<HOADON> lstB = context.HOADONs.ToList();
             List<KHACHHANG> lstC = context.KHACHHANGs.ToList();
@@ -123,7 +141,9 @@ namespace SaberMart.UI.User_control.Admin
             loadCustomer(lstC);
             loadGridSP(lstP);
             loadGridCTHD(lstBD);
-            txtIDs.Text = temp;
+            loadSatff(lstS);
+            loadDetail(lstBD);
+            cbIDs.Text = temp;
         }
 
         private void dgvBill_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -133,8 +153,8 @@ namespace SaberMart.UI.User_control.Admin
                 if (dgvBill.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
                 {
                     dgvBill.CurrentCell.Selected = true;
-                    txtIDb.Text = dgvBill.Rows[e.RowIndex].Cells["ColIDb"].FormattedValue.ToString();
-                    txtIDs.Text = dgvBill.Rows[e.RowIndex].Cells["ColStaff"].FormattedValue.ToString();
+                    txtIDb.Text = cbIDb.Text = dgvBill.Rows[e.RowIndex].Cells["ColIDb"].FormattedValue.ToString();
+                    cbIDs.Text = dgvBill.Rows[e.RowIndex].Cells["ColStaff"].FormattedValue.ToString();
                     cbIDc.Text = dgvBill.Rows[e.RowIndex].Cells["ColCustomer"].FormattedValue.ToString();
                     dtpDate.Text = dgvBill.Rows[e.RowIndex].Cells["ColDate"].FormattedValue.ToString();
                     txtTotal.Text = dgvBill.Rows[e.RowIndex].Cells["ColTotal"].FormattedValue.ToString();
@@ -155,6 +175,7 @@ namespace SaberMart.UI.User_control.Admin
                     dgvProduct.CurrentCell.Selected = true;
                     txtIDp.Text = dgvProduct.Rows[e.RowIndex].Cells["ColIDp"].FormattedValue.ToString();
                     txtNamep.Text = dgvProduct.Rows[e.RowIndex].Cells["ColNamep"].FormattedValue.ToString();
+                    txtType.Text = dgvProduct.Rows[e.RowIndex].Cells["ColType"].FormattedValue.ToString();
                     txtSales.Text = dgvProduct.Rows[e.RowIndex].Cells["ColSale"].FormattedValue.ToString();
                     var item = context.SANPHAMs.FirstOrDefault(p => p.MaSP == txtIDp.Text);
                     byte[] arr = item.PicSP;
@@ -175,7 +196,8 @@ namespace SaberMart.UI.User_control.Admin
                 if (dgvDetail.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
                 {
                     dgvDetail.CurrentCell.Selected = true;
-                    txtIDb2.Text = dgvDetail.Rows[e.RowIndex].Cells["ColIDbd"].FormattedValue.ToString();
+                    txtIDb.Text = dgvDetail.Rows[e.RowIndex].Cells["ColIDbd"].FormattedValue.ToString();
+                    dtpDate.Text = dgvDetail.Rows[e.RowIndex].Cells["ColDateD"].FormattedValue.ToString();
                     txtNamep.Text = dgvDetail.Rows[e.RowIndex].Cells["ColProduct"].FormattedValue.ToString();
                     txtValue.Text = dgvDetail.Rows[e.RowIndex].Cells["ColValue"].FormattedValue.ToString();
                     txtSales.Text = dgvDetail.Rows[e.RowIndex].Cells["ColSales"].FormattedValue.ToString();
@@ -190,8 +212,8 @@ namespace SaberMart.UI.User_control.Admin
 
         private void btnAdd1_Click(object sender, EventArgs e)
         {
-            if(txtNamep.Text == "" || txtValue.Text == "" || txtSales.Text == "" || txtPrices.Text == "" ||
-                txtIDb2.Text == "")
+            if(txtNamep.Text == "" || dtpDate.Text == "" || txtValue.Text == "" || txtSales.Text == "" || txtPrices.Text == "" ||
+                cbIDb.Text == "")
             {
                 MessageBox.Show("Vui lòng nhập đầy đủ thông tin!", "Thông báo!", MessageBoxButtons.OK);
             }
@@ -205,7 +227,8 @@ namespace SaberMart.UI.User_control.Admin
                 {
                     CHITIETHOADON BD = new CHITIETHOADON()
                     {
-                        MaHD = txtIDb2.Text,
+                        MaHD = cbIDb.Text,
+                        NgayBan = dtpDate.Value,
                         MaSP = txtIDp.Text,
                         SLBan = Convert.ToInt32(txtValue.Text),
                         DonGiaBan = Convert.ToInt32(txtSales.Text),
@@ -216,25 +239,18 @@ namespace SaberMart.UI.User_control.Admin
                     List<CHITIETHOADON> lstBD = context.CHITIETHOADONs.ToList();
                     loadGridCTHD(lstBD);
                 }
-                
             }
-            
-            //if(lstHD != null)
-            //{
-            //    lstHD.TongTienBan = Convert.ToInt32(txtTotal.Text);
-            //}
-            
         }
 
         private void btnDelete1_Click(object sender, EventArgs e)
         {
-            if (checkB(txtIDb2.Text) == null)
+            if (checkB(cbIDb.Text) == null)
             {
                 MessageBox.Show("Không tìm thấy hóa đơn!", "Thông báo!", MessageBoxButtons.OK);
             }
             else
             {
-                CHITIETHOADON BD = context.CHITIETHOADONs.FirstOrDefault(p => p.MaHD == txtIDb2.Text);
+                CHITIETHOADON BD = context.CHITIETHOADONs.FirstOrDefault(p => p.MaHD == cbIDb.Text);
                 if(BD != null)
                 {
                     if (MessageBox.Show("Bạn muốn xóa hóa đơn?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
@@ -284,7 +300,7 @@ namespace SaberMart.UI.User_control.Admin
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            if (txtIDb.Text == "" || txtIDs.Text == "" || cbIDc.Text == "" || dtpDate.Text == "")
+            if (txtIDb.Text == "" || cbIDs.Text == "" || cbIDc.Text == "" || dtpDate.Text == "")
             {
                 MessageBox.Show("Vui lòng nhập đầy đủ thông tin!", "Thông báo!", MessageBoxButtons.OK);
             }
@@ -300,7 +316,7 @@ namespace SaberMart.UI.User_control.Admin
                     {
                         MaHD = txtIDb.Text,
                         MaKH = cbIDc.Text,
-                        MaNV = txtIDs.Text,
+                        MaNV = cbIDs.Text,
                         NgayBan = dtpDate.Value
                     };
                     context.HOADONs.Add(hd);
@@ -333,7 +349,7 @@ namespace SaberMart.UI.User_control.Admin
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            if (txtIDb.Text == "" || txtIDs.Text == "" || cbIDc.Text == "" || dtpDate.Text == "" || txtTotal.Text == "")
+            if (txtIDb.Text == "" || cbIDs.Text == "" || cbIDc.Text == "" || dtpDate.Text == "" || txtTotal.Text == "")
             {
                 MessageBox.Show("Vui lòng nhập đầy đủ thông tin!", "Thông báo!", MessageBoxButtons.OK);
             }
@@ -343,7 +359,7 @@ namespace SaberMart.UI.User_control.Admin
                 if(HD != null)
                 {
                     HD.MaHD = txtIDb.Text;
-                    HD.MaNV = txtIDs.Text;
+                    HD.MaNV = cbIDs.Text;
                     HD.MaKH = cbIDc.Text;
                     HD.NgayBan = dtpDate.Value;
                     HD.TongTienBan = int.Parse(txtTotal.Text);
@@ -370,27 +386,7 @@ namespace SaberMart.UI.User_control.Admin
 
         private void btnCalc_Click(object sender, EventArgs e)
         {
-            //int sum = 0;
-            //int price = Prices();
-            //int value = int.Parse(txtValue.Text);
-            //if (txtIDb.Text == "")
-            //{
-            //    MessageBox.Show("Vui lòng nhập mã hóa đơn", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //}
-            //else
-            //{
-            //    if(sum == price)
-            //    {
-            //        sum += Prices();
-            //        txtTotal.Text = sum.ToString();
-            //    }
-            //    else
-            //    {
-            //        sum += value * price;
-            //        txtTotal.Text = sum.ToString();
-            //    }
-            //}
-
+           
         }
 
         private void btnPrices_Click(object sender, EventArgs e)
@@ -413,6 +409,76 @@ namespace SaberMart.UI.User_control.Admin
                 MessageBox.Show("Xóa hóa đơn thành công!", "Thông báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 List<HOADON> lstB = context.HOADONs.ToList();
                 loadGridHD(lstB);
+            }
+        }
+
+        private void btnList_Click(object sender, EventArgs e)
+        {
+            List<HOADON> lstB = context.HOADONs.ToList();
+            loadGridHD(lstB);
+        }
+
+        private void btnList1_Click(object sender, EventArgs e)
+        {
+            List<CHITIETHOADON> lstBD = context.CHITIETHOADONs.ToList();
+            loadGridCTHD(lstBD);
+        }
+
+        private void btnSearch2_Click(object sender, EventArgs e)
+        {
+            if (checkB(txtIDb.Text) == null)
+            {
+                MessageBox.Show("Không tìm thấy hóa đơn!", "Thông báo!", MessageBoxButtons.OK);
+            }
+            else
+            {
+                HOADON srchhd = context.HOADONs.FirstOrDefault(p => p.MaHD == txtIDb.Text);
+                if (srchhd != null)
+                {
+                    List<HOADON> lstB = context.HOADONs.Where(p => p.MaHD == txtIDb.Text).ToList();
+                    loadGridHD(lstB);
+                }
+                else
+                {
+                    MessageBox.Show("Không tìm thấy hóa đơn!", "Thông báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+        }
+
+        private void btnSearch1_Click(object sender, EventArgs e)
+        {
+            if (checkB(cbIDb.Text) == null)
+            {
+                MessageBox.Show("Không tìm thấy hóa đơn!", "Thông báo!", MessageBoxButtons.OK);
+            }
+            else
+            {
+                CHITIETHOADON srchhd = context.CHITIETHOADONs.FirstOrDefault(p => p.MaHD == cbIDb.Text);
+                if (srchhd != null)
+                {
+                    List<CHITIETHOADON> lstB = context.CHITIETHOADONs.Where(p => p.MaHD == cbIDb.Text).ToList();
+                    loadGridCTHD(lstB);
+                }
+                else
+                {
+                    MessageBox.Show("Không tìm thấy hóa đơn!", "Thông báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+        }
+
+        private void btnTotal1B_Click(object sender, EventArgs e)
+        {
+            int sum = 0;
+            for (int i = 0; i < dgvDetail.Rows.Count; i++)
+            {
+                sum += Convert.ToInt32(dgvDetail.Rows[i].Cells[5].Value);
+            }
+            txtTotal.Text = sum.ToString();
+
+            HOADON listHD = context.HOADONs.FirstOrDefault(p => p.MaHD == txtIDb.Text);
+            if (listHD != null)
+            {
+                listHD.TongTienBan = Convert.ToInt32(txtTotal.Text);
             }
         }
     }
