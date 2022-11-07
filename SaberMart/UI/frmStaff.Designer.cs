@@ -73,6 +73,7 @@
             this.btnBill.Text = "Hóa đơn";
             this.btnBill.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnBill.UseVisualStyleBackColor = false;
+            this.btnBill.Click += new System.EventHandler(this.btnBill_Click);
             // 
             // btnProduct
             // 

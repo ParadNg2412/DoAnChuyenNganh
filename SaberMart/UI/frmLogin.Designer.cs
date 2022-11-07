@@ -315,7 +315,7 @@ namespace SaberMart.UI
             this.lklForgetPass.TabIndex = 21;
             this.lklForgetPass.TabStop = true;
             this.lklForgetPass.Text = "Quên mật khẩu ?\r\n";
-            this.lklForgetPass.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lklForgetPass_LinkClicked);
+            this.lklForgetPass.Visible = false;
             // 
             // pictureEdit2
             // 

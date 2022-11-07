@@ -52,6 +52,12 @@ namespace SaberMart.UI.User_control.Admin.Data
             this.txtIDg = new DevExpress.XtraEditors.TextEdit();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvProduct = new System.Windows.Forms.DataGridView();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btnList = new DevExpress.XtraEditors.SimpleButton();
+            this.btnSearch = new DevExpress.XtraEditors.SimpleButton();
+            this.btnEdit = new DevExpress.XtraEditors.SimpleButton();
+            this.btnDelete = new DevExpress.XtraEditors.SimpleButton();
+            this.btnAdd = new DevExpress.XtraEditors.SimpleButton();
             this.ColIDp = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColNamep = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColType = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -60,12 +66,6 @@ namespace SaberMart.UI.User_control.Admin.Data
             this.ColStorage = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColSales = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColPrices = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.btnList = new DevExpress.XtraEditors.SimpleButton();
-            this.btnSearch = new DevExpress.XtraEditors.SimpleButton();
-            this.btnEdit = new DevExpress.XtraEditors.SimpleButton();
-            this.btnDelete = new DevExpress.XtraEditors.SimpleButton();
-            this.btnAdd = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.txtNamep.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtIDp.Properties)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -385,65 +385,9 @@ namespace SaberMart.UI.User_control.Admin.Data
             this.dgvProduct.ReadOnly = true;
             this.dgvProduct.RowHeadersWidth = 51;
             this.dgvProduct.RowTemplate.Height = 24;
-            this.dgvProduct.Size = new System.Drawing.Size(1120, 422);
+            this.dgvProduct.Size = new System.Drawing.Size(1120, 446);
             this.dgvProduct.TabIndex = 20;
             this.dgvProduct.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProduct_CellClick);
-            // 
-            // ColIDp
-            // 
-            this.ColIDp.HeaderText = "Mã sản phẩm";
-            this.ColIDp.MinimumWidth = 6;
-            this.ColIDp.Name = "ColIDp";
-            this.ColIDp.ReadOnly = true;
-            // 
-            // ColNamep
-            // 
-            this.ColNamep.HeaderText = "Tên sản phẩm";
-            this.ColNamep.MinimumWidth = 6;
-            this.ColNamep.Name = "ColNamep";
-            this.ColNamep.ReadOnly = true;
-            // 
-            // ColType
-            // 
-            this.ColType.HeaderText = "Đơn vị tính";
-            this.ColType.MinimumWidth = 6;
-            this.ColType.Name = "ColType";
-            this.ColType.ReadOnly = true;
-            // 
-            // ColGroup
-            // 
-            this.ColGroup.HeaderText = "Nhóm sản phẩm";
-            this.ColGroup.MinimumWidth = 6;
-            this.ColGroup.Name = "ColGroup";
-            this.ColGroup.ReadOnly = true;
-            // 
-            // ColCompany
-            // 
-            this.ColCompany.HeaderText = "Nhà cung cấp";
-            this.ColCompany.MinimumWidth = 6;
-            this.ColCompany.Name = "ColCompany";
-            this.ColCompany.ReadOnly = true;
-            // 
-            // ColStorage
-            // 
-            this.ColStorage.HeaderText = "Số lượng";
-            this.ColStorage.MinimumWidth = 6;
-            this.ColStorage.Name = "ColStorage";
-            this.ColStorage.ReadOnly = true;
-            // 
-            // ColSales
-            // 
-            this.ColSales.HeaderText = "Giá bán";
-            this.ColSales.MinimumWidth = 6;
-            this.ColSales.Name = "ColSales";
-            this.ColSales.ReadOnly = true;
-            // 
-            // ColPrices
-            // 
-            this.ColPrices.HeaderText = "Giá nhập";
-            this.ColPrices.MinimumWidth = 6;
-            this.ColPrices.Name = "ColPrices";
-            this.ColPrices.ReadOnly = true;
             // 
             // groupBox3
             // 
@@ -586,6 +530,62 @@ namespace SaberMart.UI.User_control.Admin.Data
             this.btnAdd.TabIndex = 0;
             this.btnAdd.Text = "Thêm";
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // ColIDp
+            // 
+            this.ColIDp.HeaderText = "Mã sản phẩm";
+            this.ColIDp.MinimumWidth = 6;
+            this.ColIDp.Name = "ColIDp";
+            this.ColIDp.ReadOnly = true;
+            // 
+            // ColNamep
+            // 
+            this.ColNamep.HeaderText = "Tên sản phẩm";
+            this.ColNamep.MinimumWidth = 6;
+            this.ColNamep.Name = "ColNamep";
+            this.ColNamep.ReadOnly = true;
+            // 
+            // ColType
+            // 
+            this.ColType.HeaderText = "Đơn vị tính";
+            this.ColType.MinimumWidth = 6;
+            this.ColType.Name = "ColType";
+            this.ColType.ReadOnly = true;
+            // 
+            // ColGroup
+            // 
+            this.ColGroup.HeaderText = "Nhóm sản phẩm";
+            this.ColGroup.MinimumWidth = 6;
+            this.ColGroup.Name = "ColGroup";
+            this.ColGroup.ReadOnly = true;
+            // 
+            // ColCompany
+            // 
+            this.ColCompany.HeaderText = "Nhà cung cấp";
+            this.ColCompany.MinimumWidth = 6;
+            this.ColCompany.Name = "ColCompany";
+            this.ColCompany.ReadOnly = true;
+            // 
+            // ColStorage
+            // 
+            this.ColStorage.HeaderText = "Số lượng";
+            this.ColStorage.MinimumWidth = 6;
+            this.ColStorage.Name = "ColStorage";
+            this.ColStorage.ReadOnly = true;
+            // 
+            // ColSales
+            // 
+            this.ColSales.HeaderText = "Giá bán";
+            this.ColSales.MinimumWidth = 6;
+            this.ColSales.Name = "ColSales";
+            this.ColSales.ReadOnly = true;
+            // 
+            // ColPrices
+            // 
+            this.ColPrices.HeaderText = "Giá nhập";
+            this.ColPrices.MinimumWidth = 6;
+            this.ColPrices.Name = "ColPrices";
+            this.ColPrices.ReadOnly = true;
             // 
             // ucProduct
             // 

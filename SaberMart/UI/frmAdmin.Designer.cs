@@ -120,6 +120,7 @@ namespace SaberMart.UI
             this.btnReceipt.Text = "Doanh thu";
             this.btnReceipt.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnReceipt.UseVisualStyleBackColor = false;
+            this.btnReceipt.Click += new System.EventHandler(this.btnReceipt_Click);
             // 
             // btnBill
             // 

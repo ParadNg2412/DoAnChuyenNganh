@@ -1,4 +1,4 @@
-﻿using SaberMart.DataEntity;
+﻿using SaberMart.EntityData;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -36,8 +36,10 @@ namespace SaberMart.UI.User_control.Admin.Data
             foreach (var item in lstP)
             {
                 int index = dgvProduct.Rows.Add();
+                //dgvProduct.Rows[index].Cells[0].Value = item.PicSP;
                 dgvProduct.Rows[index].Cells[0].Value = item.MaSP;
                 dgvProduct.Rows[index].Cells[1].Value = item.TenSP;
+
                 dgvProduct.Rows[index].Cells[2].Value = item.DonViTinh;
                 dgvProduct.Rows[index].Cells[3].Value = item.NHOMSANPHAM.TenNhom;
                 dgvProduct.Rows[index].Cells[4].Value = item.NHACUNGCAP.TenNCC;
@@ -53,16 +55,19 @@ namespace SaberMart.UI.User_control.Admin.Data
             {
                 if (dgvProduct.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
                 {
-                    dgvProduct.CurrentCell.Selected = true;                  
+                    dgvProduct.CurrentCell.Selected = true;
                     txtIDp.Text = dgvProduct.Rows[e.RowIndex].Cells["ColIDp"].FormattedValue.ToString();
                     txtNamep.Text = dgvProduct.Rows[e.RowIndex].Cells["ColNamep"].FormattedValue.ToString();
                     txtType.Text = dgvProduct.Rows[e.RowIndex].Cells["ColType"].FormattedValue.ToString();
                     txtNameg.Text = dgvProduct.Rows[e.RowIndex].Cells["ColGroup"].FormattedValue.ToString();
                     txtIDc.Text = dgvProduct.Rows[e.RowIndex].Cells["ColCompany"].FormattedValue.ToString();
+                    txtValue.Text = dgvProduct.Rows[e.RowIndex].Cells["ColStorage"].FormattedValue.ToString();
                     txtSales.Text = dgvProduct.Rows[e.RowIndex].Cells["ColSales"].FormattedValue.ToString();
                     txtPrices.Text = dgvProduct.Rows[e.RowIndex].Cells["ColPrices"].FormattedValue.ToString();
-                    picProduct.Text = dgvProduct.Rows[e.RowIndex].Cells["ColImage"].FormattedValue.ToString();
+
                     var item = context.SANPHAMs.FirstOrDefault(p => p.MaSP == txtIDp.Text);
+                    //byte[] imaged = (byte[])dgvProduct.Rows[e.RowIndex].Cells["ColImage"].FormattedValue;
+                    //string arr = item.PicSP;
                     Byte[] arr = item.PicSP;
                     MemoryStream ms = new MemoryStream(arr);
                     picProduct.Image = Image.FromStream(ms);
@@ -77,24 +82,18 @@ namespace SaberMart.UI.User_control.Admin.Data
 
         private void btnUpLoadPicture_Click(object sender, EventArgs e)
         {
-            try
+            string filePathImage = null;
+            OpenFileDialog openFile = new OpenFileDialog();
+            openFile.Filter = "Pictures files (*.jpg, *.jpeg, *.jpe, *.jfif, *.png)|*.jpg; *.jpeg; *.jpe; *.jfif; *.png|All files (*.*)|*.*";
+            openFile.FilterIndex = 1;
+            openFile.RestoreDirectory = true;
+            if (openFile.ShowDialog() == DialogResult.OK)
             {
-                string filePathImage = null;
-                OpenFileDialog openFile = new OpenFileDialog();
-                openFile.Filter = "Pictures files (*.jpg, *.jpeg, *.jpe, *.jfif, *.png)|*.jpg; *.jpeg; *.jpe; *.jfif; *.png|All files (*.*)|*.*";
-                openFile.FilterIndex = 1;
-                openFile.RestoreDirectory = true;
-                if (openFile.ShowDialog() == DialogResult.OK)
-                {
-                    filePathImage = openFile.FileName;
-                    picProduct.Image = Image.FromFile(filePathImage.ToString());
-                }
-            }
-            catch (Exception)
-            {
-                return;
+                filePathImage = openFile.FileName;
+                picProduct.Image = Image.FromFile(filePathImage.ToString());
             }
         }
+
 
         private void ucProduct_Load(object sender, EventArgs e)
         {
@@ -104,8 +103,8 @@ namespace SaberMart.UI.User_control.Admin.Data
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            if (txtIDc.Text == "" || txtIDg.Text == "" || txtNameg.Text == "" || txtIDp.Text == "" || txtNamep.Text == "" ||
-                txtType.Text == "" || txtSales.Text == "" || txtPrices.Text == "" || txtValue.Text == "")
+            if (txtIDc.Text == string.Empty || txtIDg.Text == string.Empty || txtNameg.Text == string.Empty || txtIDp.Text == string.Empty || txtNamep.Text == string.Empty ||
+                txtType.Text == string.Empty || txtSales.Text == string.Empty || txtPrices.Text == string.Empty || txtValue.Text == string.Empty)
             {
                 MessageBox.Show("Vui lòng nhập đầy đủ thông tin!", "Thông báo!", MessageBoxButtons.OK);
             }
@@ -169,8 +168,8 @@ namespace SaberMart.UI.User_control.Admin.Data
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            if (txtIDc.Text == "" || txtIDg.Text == "" || txtNameg.Text == "" || txtIDp.Text == "" || txtNamep.Text == "" ||
-                txtType.Text == "" || txtSales.Text == "" || txtPrices.Text == "" || txtValue.Text == "")
+            if (txtIDc.Text == string.Empty || txtIDg.Text == string.Empty || txtNameg.Text == string.Empty || txtIDp.Text == string.Empty || txtNamep.Text == string.Empty ||
+                txtType.Text == string.Empty || txtSales.Text == string.Empty || txtPrices.Text == string.Empty || txtValue.Text == string.Empty)
             {
                 MessageBox.Show("Vui lòng nhập đầy đủ thông tin!", "Thông báo!", MessageBoxButtons.OK);
             }
@@ -188,6 +187,7 @@ namespace SaberMart.UI.User_control.Admin.Data
                     Upsp.SLTon = int.Parse(txtValue.Text);
                     Upsp.GiaBan = int.Parse(txtSales.Text);
                     Upsp.GiaNhap = int.Parse(txtPrices.Text);
+                    //Upsp.PicSP = Byte[](picProduct.Image);
                     context.SaveChanges();
                 }
                 List<SANPHAM> lstP = context.SANPHAMs.ToList();

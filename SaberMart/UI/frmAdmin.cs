@@ -1,6 +1,6 @@
 ﻿using DevExpress.XtraBars;
 using DevExpress.XtraBars.Navigation;
-using SaberMart.DataEntity;
+using SaberMart.EntityData;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -30,7 +30,7 @@ namespace SaberMart.UI
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Do you want to logout?", "Notification", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("Bạn muốn đăng xuất?", "Notification", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 frmLogin flogin = new frmLogin();
                 this.Hide();
@@ -65,6 +65,14 @@ namespace SaberMart.UI
             ucBill bill = new ucBill();
             bill.Dock = DockStyle.Fill;
             pAdmin.Controls.Add(bill);
+        }
+
+        private void btnReceipt_Click(object sender, EventArgs e)
+        {
+            pAdmin.Controls.Clear();
+            ucProfit receipt = new ucProfit();
+            receipt.Dock = DockStyle.Fill;
+            pAdmin.Controls.Add(receipt);
         }
     }
 }

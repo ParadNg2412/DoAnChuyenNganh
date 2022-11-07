@@ -1,4 +1,4 @@
-namespace SaberMart.DataEntity
+namespace SaberMart.EntityData
 {
     using System;
     using System.Collections.Generic;

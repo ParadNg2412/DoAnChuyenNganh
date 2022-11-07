@@ -1,6 +1,6 @@
 ﻿using DevExpress.Office.Utils;
 using Microsoft.SqlServer.Management.Smo;
-using SaberMart.DataEntity;
+using SaberMart.EntityData;
 using SaberMart.UI.User_control.Admin.Data;
 using System;
 using System.Collections.Generic;

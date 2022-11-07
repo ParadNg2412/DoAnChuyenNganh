@@ -1,4 +1,4 @@
-﻿using SaberMart.DataEntity;
+﻿using SaberMart.EntityData;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -136,10 +136,10 @@ namespace SaberMart.UI.User_control.Admin.Data
                     txtIDp.Text = dgvProduct.Rows[e.RowIndex].Cells["ColIDp"].FormattedValue.ToString();
                     txtNamep.Text = dgvProduct.Rows[e.RowIndex].Cells["ColNamep"].FormattedValue.ToString();
                     txtSales.Text = dgvProduct.Rows[e.RowIndex].Cells["ColSale"].FormattedValue.ToString();
-                    var item = context.SANPHAMs.FirstOrDefault(p => p.MaSP == txtIDp.Text);
-                    byte[] arr = item.PicSP;
-                    MemoryStream ms = new MemoryStream(arr);
-                    picProduct.Image = Image.FromStream(ms);
+                    //var item = context.SANPHAMs.FirstOrDefault(p => p.MaSP == txtIDp.Text);
+                    //byte[] arr = item.PicSP;
+                    //MemoryStream ms = new MemoryStream(arr);
+                    //picProduct.Image = Image.FromStream(ms);
                 }
             }
             catch (Exception ex)

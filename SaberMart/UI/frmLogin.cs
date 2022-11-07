@@ -1,5 +1,5 @@
 ﻿using DevExpress.XtraEditors;
-using SaberMart.DataEntity;
+using SaberMart.EntityData;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -42,7 +42,7 @@ namespace SaberMart.UI
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Do you want to exit?", "Notification", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("Bạn muốn thoát?", "Notification", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 Close();
             }
@@ -54,7 +54,7 @@ namespace SaberMart.UI
             {
                 if (context.NHANVIENs.Where(p => p.Username == txtUsername.Text && p.MatKhau == txtPassword.Text && p.LoaiTK == "Admin").Count() > 0)
                 {
-                    MessageBox.Show("Admin: Login successfull!", "Notification", MessageBoxButtons.OK);
+                    MessageBox.Show("Admin: Đăng nhập thành công!", "Notification", MessageBoxButtons.OK);
                     frmAdmin fAdmin = new frmAdmin();
                     valueText = txtUsername.Text;
                     this.Hide();
@@ -63,7 +63,7 @@ namespace SaberMart.UI
                 }
                 if (context.NHANVIENs.Where(p => p.Username == txtUsername.Text && p.MatKhau == txtPassword.Text && p.LoaiTK == "Nhân viên").Count() > 0)
                 {
-                    MessageBox.Show("Employee: Login successfull!", "Notification!", MessageBoxButtons.OK);
+                    MessageBox.Show("Staff: Đăng nhập thành công!", "Notification!", MessageBoxButtons.OK);
                     frmStaff fStaff = new frmStaff();
                     valueText = txtUsername.Text;
                     this.Hide();
@@ -71,7 +71,7 @@ namespace SaberMart.UI
                 }
                 else
                 {
-                    MessageBox.Show("Login failed!", "Notification", MessageBoxButtons.OK);
+                    MessageBox.Show("Đăng nhập thất bại!", "Notification", MessageBoxButtons.OK);
                     txtUsername.Clear();
                     txtPassword.Clear();
                     txtUsername.Focus();
@@ -93,11 +93,11 @@ namespace SaberMart.UI
             }
         }
 
-        private void lklForgetPass_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            frmPassword fp = new frmPassword();
-            this.Hide();
-            fp.ShowDialog();
-        }
+        //private void lklForgetPass_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        //{
+        //    frmPassword fp = new frmPassword();
+        //    this.Hide();
+        //    fp.ShowDialog();
+        //}
     }
 }

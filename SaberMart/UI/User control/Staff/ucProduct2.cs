@@ -1,6 +1,6 @@
 ﻿using DevExpress.Text.Interop;
 using Microsoft.SqlServer.Management.Smo;
-using SaberMart.DataEntity;
+using SaberMart.EntityData;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

@@ -1,4 +1,4 @@
-namespace SaberMart.DataEntity
+namespace SaberMart.EntityData
 {
     using System;
     using System.Collections.Generic;
@@ -6,25 +6,23 @@ namespace SaberMart.DataEntity
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    [Table("CHUCVU")]
-    public partial class CHUCVU
+    [Table("NHOMSANPHAM")]
+    public partial class NHOMSANPHAM
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public CHUCVU()
+        public NHOMSANPHAM()
         {
-            NHANVIENs = new HashSet<NHANVIEN>();
+            SANPHAMs = new HashSet<SANPHAM>();
         }
 
         [Key]
         [StringLength(5)]
-        public string MaCV { get; set; }
+        public string MaNhom { get; set; }
 
         [StringLength(50)]
-        public string TenCV { get; set; }
-
-        public int? Luong { get; set; }
+        public string TenNhom { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<NHANVIEN> NHANVIENs { get; set; }
+        public virtual ICollection<SANPHAM> SANPHAMs { get; set; }
     }
 }

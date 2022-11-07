@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity;
 using System.Linq;
 
-namespace SaberMart.DataEntity
+namespace SaberMart.EntityData
 {
     public partial class EntityDB : DbContext
     {

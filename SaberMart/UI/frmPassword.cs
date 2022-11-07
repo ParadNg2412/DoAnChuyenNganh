@@ -1,6 +1,6 @@
 ﻿using DevExpress.Utils.Html.Internal;
 using DevExpress.XtraEditors;
-using SaberMart.DataEntity;
+using SaberMart.EntityData;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

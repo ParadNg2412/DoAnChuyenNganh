@@ -1,4 +1,4 @@
-﻿using SaberMart.DataEntity;
+﻿using SaberMart.EntityData;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

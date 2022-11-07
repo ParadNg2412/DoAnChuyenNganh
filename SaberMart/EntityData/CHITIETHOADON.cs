@@ -1,4 +1,4 @@
-namespace SaberMart.DataEntity
+namespace SaberMart.EntityData
 {
     using System;
     using System.Collections.Generic;
@@ -6,26 +6,26 @@ namespace SaberMart.DataEntity
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    [Table("CHITIETPHIEUNHAP")]
-    public partial class CHITIETPHIEUNHAP
+    [Table("CHITIETHOADON")]
+    public partial class CHITIETHOADON
     {
         [Key]
         [Column(Order = 0)]
         [StringLength(5)]
-        public string MaPN { get; set; }
+        public string MaHD { get; set; }
 
         [Key]
         [Column(Order = 1)]
         [StringLength(5)]
         public string MaSP { get; set; }
 
-        public int? SLNhap { get; set; }
+        public int? SLBan { get; set; }
 
-        public int? DonGiaNhap { get; set; }
+        public int? DonGiaBan { get; set; }
 
-        public int? ThanhTienNhap { get; set; }
+        public int? ThanhTienBan { get; set; }
 
-        public virtual PHIEUNHAP PHIEUNHAP { get; set; }
+        public virtual HOADON HOADON { get; set; }
 
         public virtual SANPHAM SANPHAM { get; set; }
     }

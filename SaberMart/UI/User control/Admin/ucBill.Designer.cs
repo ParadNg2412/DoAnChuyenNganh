@@ -322,6 +322,7 @@
             this.dtpDate.Name = "dtpDate";
             this.dtpDate.Size = new System.Drawing.Size(386, 30);
             this.dtpDate.TabIndex = 8;
+            this.dtpDate.Value = new System.DateTime(2022, 11, 7, 0, 0, 0, 0);
             // 
             // txtIDb
             // 
