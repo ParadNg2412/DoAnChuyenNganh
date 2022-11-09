@@ -70,9 +70,17 @@ namespace SaberMart.UI
         private void btnReceipt_Click(object sender, EventArgs e)
         {
             pAdmin.Controls.Clear();
-            ucProfit receipt = new ucProfit();
+            ucReceipt receipt = new ucReceipt();
             receipt.Dock = DockStyle.Fill;
             pAdmin.Controls.Add(receipt);
+        }
+
+        private void btnReport_Click(object sender, EventArgs e)
+        {
+            pAdmin.Controls.Clear();
+            ucReport report = new ucReport();
+            report.Dock = DockStyle.Fill;
+            pAdmin.Controls.Add(report);
         }
     }
 }

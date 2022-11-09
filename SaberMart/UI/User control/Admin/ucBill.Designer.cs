@@ -30,6 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucBill));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.btnList = new DevExpress.XtraEditors.SimpleButton();
+            this.btnSearch2 = new DevExpress.XtraEditors.SimpleButton();
             this.cbIDs = new System.Windows.Forms.ComboBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.btnEdit = new DevExpress.XtraEditors.SimpleButton();
@@ -73,26 +76,23 @@
             this.ColSale = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btnTotal1B = new System.Windows.Forms.Button();
             this.txtTotal = new DevExpress.XtraEditors.TextEdit();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnList1 = new DevExpress.XtraEditors.SimpleButton();
+            this.btnSearch1 = new DevExpress.XtraEditors.SimpleButton();
             this.btnNew1 = new DevExpress.XtraEditors.SimpleButton();
             this.btnSave1 = new DevExpress.XtraEditors.SimpleButton();
             this.btnDelete1 = new DevExpress.XtraEditors.SimpleButton();
             this.btnAdd1 = new DevExpress.XtraEditors.SimpleButton();
             this.dgvDetail = new System.Windows.Forms.DataGridView();
             this.ColIDbd = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColDateD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColProduct = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColValue = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColSales = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColPrices = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnSearch1 = new DevExpress.XtraEditors.SimpleButton();
-            this.btnList1 = new DevExpress.XtraEditors.SimpleButton();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.btnSearch2 = new DevExpress.XtraEditors.SimpleButton();
-            this.btnList = new DevExpress.XtraEditors.SimpleButton();
-            this.btnTotal1B = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtIDb.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBill)).BeginInit();
@@ -110,7 +110,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtTotal.Properties)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetail)).BeginInit();
-            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -137,13 +136,74 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin hóa đơn";
             // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.Black;
+            this.panel5.Controls.Add(this.btnList);
+            this.panel5.Controls.Add(this.btnSearch2);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel5.Location = new System.Drawing.Point(3, 24);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(156, 212);
+            this.panel5.TabIndex = 14;
+            // 
+            // btnList
+            // 
+            this.btnList.Appearance.BackColor = System.Drawing.Color.Coral;
+            this.btnList.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnList.Appearance.Options.UseBackColor = true;
+            this.btnList.Appearance.Options.UseFont = true;
+            this.btnList.AppearanceHovered.BackColor = System.Drawing.Color.DarkOrange;
+            this.btnList.AppearanceHovered.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnList.AppearanceHovered.Options.UseBackColor = true;
+            this.btnList.AppearanceHovered.Options.UseFont = true;
+            this.btnList.AppearancePressed.BackColor = System.Drawing.Color.DarkOrange;
+            this.btnList.AppearancePressed.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnList.AppearancePressed.Options.UseBackColor = true;
+            this.btnList.AppearancePressed.Options.UseFont = true;
+            this.btnList.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnList.ImageOptions.Image = global::SaberMart.Properties.Resources.print;
+            this.btnList.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
+            this.btnList.Location = new System.Drawing.Point(0, 65);
+            this.btnList.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnList.Name = "btnList";
+            this.btnList.Size = new System.Drawing.Size(156, 68);
+            this.btnList.TabIndex = 17;
+            this.btnList.Text = "Xuất danh sách";
+            this.btnList.Click += new System.EventHandler(this.btnList_Click);
+            // 
+            // btnSearch2
+            // 
+            this.btnSearch2.Appearance.BackColor = System.Drawing.Color.Coral;
+            this.btnSearch2.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch2.Appearance.Options.UseBackColor = true;
+            this.btnSearch2.Appearance.Options.UseFont = true;
+            this.btnSearch2.AppearanceHovered.BackColor = System.Drawing.Color.DarkOrange;
+            this.btnSearch2.AppearanceHovered.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch2.AppearanceHovered.Options.UseBackColor = true;
+            this.btnSearch2.AppearanceHovered.Options.UseFont = true;
+            this.btnSearch2.AppearancePressed.BackColor = System.Drawing.Color.DarkOrange;
+            this.btnSearch2.AppearancePressed.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch2.AppearancePressed.Options.UseBackColor = true;
+            this.btnSearch2.AppearancePressed.Options.UseFont = true;
+            this.btnSearch2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSearch2.ImageOptions.Image = global::SaberMart.Properties.Resources.search;
+            this.btnSearch2.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
+            this.btnSearch2.Location = new System.Drawing.Point(0, 0);
+            this.btnSearch2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSearch2.Name = "btnSearch2";
+            this.btnSearch2.Size = new System.Drawing.Size(156, 65);
+            this.btnSearch2.TabIndex = 16;
+            this.btnSearch2.Text = "Tìm theo mã";
+            this.btnSearch2.Click += new System.EventHandler(this.btnSearch2_Click);
+            // 
             // cbIDs
             // 
             this.cbIDs.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.cbIDs.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbIDs.FormattingEnabled = true;
-            this.cbIDs.Location = new System.Drawing.Point(183, 141);
+            this.cbIDs.Location = new System.Drawing.Point(359, 142);
             this.cbIDs.Name = "cbIDs";
             this.cbIDs.Size = new System.Drawing.Size(111, 33);
             this.cbIDs.TabIndex = 13;
@@ -317,7 +377,7 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.cbIDc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbIDc.FormattingEnabled = true;
-            this.cbIDc.Location = new System.Drawing.Point(183, 89);
+            this.cbIDc.Location = new System.Drawing.Point(359, 90);
             this.cbIDc.Name = "cbIDc";
             this.cbIDc.Size = new System.Drawing.Size(111, 33);
             this.cbIDc.TabIndex = 10;
@@ -328,7 +388,7 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.dtpDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpDate.Location = new System.Drawing.Point(130, 190);
+            this.dtpDate.Location = new System.Drawing.Point(306, 191);
             this.dtpDate.Name = "dtpDate";
             this.dtpDate.Size = new System.Drawing.Size(164, 30);
             this.dtpDate.TabIndex = 8;
@@ -338,7 +398,7 @@
             // 
             this.txtIDb.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtIDb.Location = new System.Drawing.Point(156, 39);
+            this.txtIDb.Location = new System.Drawing.Point(332, 40);
             this.txtIDb.Name = "txtIDb";
             this.txtIDb.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIDb.Properties.Appearance.Options.UseFont = true;
@@ -350,7 +410,7 @@
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(24, 190);
+            this.label4.Location = new System.Drawing.Point(200, 191);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(89, 22);
             this.label4.TabIndex = 4;
@@ -361,7 +421,7 @@
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(22, 94);
+            this.label3.Location = new System.Drawing.Point(198, 95);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(145, 22);
             this.label3.TabIndex = 3;
@@ -372,7 +432,7 @@
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(24, 146);
+            this.label2.Location = new System.Drawing.Point(200, 147);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(129, 22);
             this.label2.TabIndex = 2;
@@ -383,7 +443,7 @@
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(24, 44);
+            this.label1.Location = new System.Drawing.Point(200, 45);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(114, 22);
             this.label1.TabIndex = 1;
@@ -720,6 +780,21 @@
             this.panel3.Size = new System.Drawing.Size(764, 73);
             this.panel3.TabIndex = 3;
             // 
+            // btnTotal1B
+            // 
+            this.btnTotal1B.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.btnTotal1B.BackColor = System.Drawing.Color.Gray;
+            this.btnTotal1B.Image = global::SaberMart.Properties.Resources.cash;
+            this.btnTotal1B.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTotal1B.Location = new System.Drawing.Point(200, 13);
+            this.btnTotal1B.Name = "btnTotal1B";
+            this.btnTotal1B.Size = new System.Drawing.Size(157, 36);
+            this.btnTotal1B.TabIndex = 30;
+            this.btnTotal1B.Text = "Tổng cộng";
+            this.btnTotal1B.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnTotal1B.UseVisualStyleBackColor = false;
+            this.btnTotal1B.Click += new System.EventHandler(this.btnTotal1B_Click);
+            // 
             // txtTotal
             // 
             this.txtTotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
@@ -749,6 +824,56 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(764, 73);
             this.panel2.TabIndex = 2;
+            // 
+            // btnList1
+            // 
+            this.btnList1.Appearance.BackColor = System.Drawing.Color.Coral;
+            this.btnList1.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnList1.Appearance.Options.UseBackColor = true;
+            this.btnList1.Appearance.Options.UseFont = true;
+            this.btnList1.AppearanceHovered.BackColor = System.Drawing.Color.DarkOrange;
+            this.btnList1.AppearanceHovered.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnList1.AppearanceHovered.Options.UseBackColor = true;
+            this.btnList1.AppearanceHovered.Options.UseFont = true;
+            this.btnList1.AppearancePressed.BackColor = System.Drawing.Color.DarkOrange;
+            this.btnList1.AppearancePressed.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnList1.AppearancePressed.Options.UseBackColor = true;
+            this.btnList1.AppearancePressed.Options.UseFont = true;
+            this.btnList1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnList1.ImageOptions.Image = global::SaberMart.Properties.Resources.print;
+            this.btnList1.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
+            this.btnList1.Location = new System.Drawing.Point(467, 0);
+            this.btnList1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnList1.Name = "btnList1";
+            this.btnList1.Size = new System.Drawing.Size(162, 69);
+            this.btnList1.TabIndex = 15;
+            this.btnList1.Text = "Xuất danh sách";
+            this.btnList1.Click += new System.EventHandler(this.btnList1_Click);
+            // 
+            // btnSearch1
+            // 
+            this.btnSearch1.Appearance.BackColor = System.Drawing.Color.Coral;
+            this.btnSearch1.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch1.Appearance.Options.UseBackColor = true;
+            this.btnSearch1.Appearance.Options.UseFont = true;
+            this.btnSearch1.AppearanceHovered.BackColor = System.Drawing.Color.DarkOrange;
+            this.btnSearch1.AppearanceHovered.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch1.AppearanceHovered.Options.UseBackColor = true;
+            this.btnSearch1.AppearanceHovered.Options.UseFont = true;
+            this.btnSearch1.AppearancePressed.BackColor = System.Drawing.Color.DarkOrange;
+            this.btnSearch1.AppearancePressed.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch1.AppearancePressed.Options.UseBackColor = true;
+            this.btnSearch1.AppearancePressed.Options.UseFont = true;
+            this.btnSearch1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnSearch1.ImageOptions.Image = global::SaberMart.Properties.Resources.search;
+            this.btnSearch1.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
+            this.btnSearch1.Location = new System.Drawing.Point(629, 0);
+            this.btnSearch1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSearch1.Name = "btnSearch1";
+            this.btnSearch1.Size = new System.Drawing.Size(131, 69);
+            this.btnSearch1.TabIndex = 14;
+            this.btnSearch1.Text = "Tìm theo mã";
+            this.btnSearch1.Click += new System.EventHandler(this.btnSearch1_Click);
             // 
             // btnNew1
             // 
@@ -876,7 +1001,6 @@
             this.dgvDetail.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDetail.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColIDbd,
-            this.ColDateD,
             this.ColProduct,
             this.ColValue,
             this.ColSales,
@@ -897,13 +1021,6 @@
             this.ColIDbd.MinimumWidth = 6;
             this.ColIDbd.Name = "ColIDbd";
             this.ColIDbd.ReadOnly = true;
-            // 
-            // ColDateD
-            // 
-            this.ColDateD.HeaderText = "Ngày bán";
-            this.ColDateD.MinimumWidth = 6;
-            this.ColDateD.Name = "ColDateD";
-            this.ColDateD.ReadOnly = true;
             // 
             // ColProduct
             // 
@@ -933,132 +1050,6 @@
             this.ColPrices.Name = "ColPrices";
             this.ColPrices.ReadOnly = true;
             // 
-            // btnSearch1
-            // 
-            this.btnSearch1.Appearance.BackColor = System.Drawing.Color.Coral;
-            this.btnSearch1.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch1.Appearance.Options.UseBackColor = true;
-            this.btnSearch1.Appearance.Options.UseFont = true;
-            this.btnSearch1.AppearanceHovered.BackColor = System.Drawing.Color.DarkOrange;
-            this.btnSearch1.AppearanceHovered.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch1.AppearanceHovered.Options.UseBackColor = true;
-            this.btnSearch1.AppearanceHovered.Options.UseFont = true;
-            this.btnSearch1.AppearancePressed.BackColor = System.Drawing.Color.DarkOrange;
-            this.btnSearch1.AppearancePressed.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch1.AppearancePressed.Options.UseBackColor = true;
-            this.btnSearch1.AppearancePressed.Options.UseFont = true;
-            this.btnSearch1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnSearch1.ImageOptions.Image = global::SaberMart.Properties.Resources.search;
-            this.btnSearch1.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
-            this.btnSearch1.Location = new System.Drawing.Point(629, 0);
-            this.btnSearch1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnSearch1.Name = "btnSearch1";
-            this.btnSearch1.Size = new System.Drawing.Size(131, 69);
-            this.btnSearch1.TabIndex = 14;
-            this.btnSearch1.Text = "Tìm theo mã";
-            this.btnSearch1.Click += new System.EventHandler(this.btnSearch1_Click);
-            // 
-            // btnList1
-            // 
-            this.btnList1.Appearance.BackColor = System.Drawing.Color.Coral;
-            this.btnList1.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnList1.Appearance.Options.UseBackColor = true;
-            this.btnList1.Appearance.Options.UseFont = true;
-            this.btnList1.AppearanceHovered.BackColor = System.Drawing.Color.DarkOrange;
-            this.btnList1.AppearanceHovered.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnList1.AppearanceHovered.Options.UseBackColor = true;
-            this.btnList1.AppearanceHovered.Options.UseFont = true;
-            this.btnList1.AppearancePressed.BackColor = System.Drawing.Color.DarkOrange;
-            this.btnList1.AppearancePressed.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnList1.AppearancePressed.Options.UseBackColor = true;
-            this.btnList1.AppearancePressed.Options.UseFont = true;
-            this.btnList1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnList1.ImageOptions.Image = global::SaberMart.Properties.Resources.print;
-            this.btnList1.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
-            this.btnList1.Location = new System.Drawing.Point(467, 0);
-            this.btnList1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnList1.Name = "btnList1";
-            this.btnList1.Size = new System.Drawing.Size(162, 69);
-            this.btnList1.TabIndex = 15;
-            this.btnList1.Text = "Xuất danh sách";
-            this.btnList1.Click += new System.EventHandler(this.btnList1_Click);
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.Black;
-            this.panel5.Controls.Add(this.btnList);
-            this.panel5.Controls.Add(this.btnSearch2);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel5.Location = new System.Drawing.Point(418, 24);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(162, 212);
-            this.panel5.TabIndex = 14;
-            // 
-            // btnSearch2
-            // 
-            this.btnSearch2.Appearance.BackColor = System.Drawing.Color.Coral;
-            this.btnSearch2.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch2.Appearance.Options.UseBackColor = true;
-            this.btnSearch2.Appearance.Options.UseFont = true;
-            this.btnSearch2.AppearanceHovered.BackColor = System.Drawing.Color.DarkOrange;
-            this.btnSearch2.AppearanceHovered.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch2.AppearanceHovered.Options.UseBackColor = true;
-            this.btnSearch2.AppearanceHovered.Options.UseFont = true;
-            this.btnSearch2.AppearancePressed.BackColor = System.Drawing.Color.DarkOrange;
-            this.btnSearch2.AppearancePressed.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch2.AppearancePressed.Options.UseBackColor = true;
-            this.btnSearch2.AppearancePressed.Options.UseFont = true;
-            this.btnSearch2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnSearch2.ImageOptions.Image = global::SaberMart.Properties.Resources.search;
-            this.btnSearch2.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
-            this.btnSearch2.Location = new System.Drawing.Point(0, 0);
-            this.btnSearch2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnSearch2.Name = "btnSearch2";
-            this.btnSearch2.Size = new System.Drawing.Size(162, 65);
-            this.btnSearch2.TabIndex = 16;
-            this.btnSearch2.Text = "Tìm theo mã";
-            this.btnSearch2.Click += new System.EventHandler(this.btnSearch2_Click);
-            // 
-            // btnList
-            // 
-            this.btnList.Appearance.BackColor = System.Drawing.Color.Coral;
-            this.btnList.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnList.Appearance.Options.UseBackColor = true;
-            this.btnList.Appearance.Options.UseFont = true;
-            this.btnList.AppearanceHovered.BackColor = System.Drawing.Color.DarkOrange;
-            this.btnList.AppearanceHovered.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnList.AppearanceHovered.Options.UseBackColor = true;
-            this.btnList.AppearanceHovered.Options.UseFont = true;
-            this.btnList.AppearancePressed.BackColor = System.Drawing.Color.DarkOrange;
-            this.btnList.AppearancePressed.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnList.AppearancePressed.Options.UseBackColor = true;
-            this.btnList.AppearancePressed.Options.UseFont = true;
-            this.btnList.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnList.ImageOptions.Image = global::SaberMart.Properties.Resources.print;
-            this.btnList.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
-            this.btnList.Location = new System.Drawing.Point(0, 65);
-            this.btnList.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnList.Name = "btnList";
-            this.btnList.Size = new System.Drawing.Size(162, 68);
-            this.btnList.TabIndex = 17;
-            this.btnList.Text = "Xuất danh sách";
-            this.btnList.Click += new System.EventHandler(this.btnList_Click);
-            // 
-            // btnTotal1B
-            // 
-            this.btnTotal1B.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.btnTotal1B.BackColor = System.Drawing.Color.Gray;
-            this.btnTotal1B.Image = global::SaberMart.Properties.Resources.cash;
-            this.btnTotal1B.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTotal1B.Location = new System.Drawing.Point(200, 13);
-            this.btnTotal1B.Name = "btnTotal1B";
-            this.btnTotal1B.Size = new System.Drawing.Size(157, 36);
-            this.btnTotal1B.TabIndex = 30;
-            this.btnTotal1B.Text = "Tổng cộng";
-            this.btnTotal1B.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnTotal1B.UseVisualStyleBackColor = false;
-            this.btnTotal1B.Click += new System.EventHandler(this.btnTotal1B_Click);
-            // 
             // ucBill
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1073,6 +1064,7 @@
             this.Load += new System.EventHandler(this.ucBill_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.panel5.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.txtIDb.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBill)).EndInit();
@@ -1091,7 +1083,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtTotal.Properties)).EndInit();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetail)).EndInit();
-            this.panel5.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1148,12 +1139,6 @@
         private System.Windows.Forms.Label label10;
         private DevExpress.XtraEditors.TextEdit txtType;
         private System.Windows.Forms.ComboBox cbIDs;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColIDbd;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColDateD;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColProduct;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColValue;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColSales;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColPrices;
         private System.Windows.Forms.ComboBox cbIDb;
         private DevExpress.XtraEditors.SimpleButton btnSearch1;
         private DevExpress.XtraEditors.SimpleButton btnList1;
@@ -1161,5 +1146,10 @@
         private DevExpress.XtraEditors.SimpleButton btnList;
         private DevExpress.XtraEditors.SimpleButton btnSearch2;
         private System.Windows.Forms.Button btnTotal1B;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColIDbd;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColProduct;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColValue;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColSales;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColPrices;
     }
 }

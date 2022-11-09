@@ -42,15 +42,21 @@
     <Reference Include="Azure.Identity, Version=1.7.0.0, Culture=neutral, PublicKeyToken=92742159e12e44c8, processorArchitecture=MSIL">
       <HintPath>..\packages\Azure.Identity.1.7.0\lib\netstandard2.0\Azure.Identity.dll</HintPath>
     </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Charts.v21.2.Core, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.CodeParser.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Data.Desktop.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Data.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.DataAccess.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.DataAccess.v21.2.UI, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Diagram.v21.2.Core, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Images.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Office.v21.2.Core, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Pdf.v21.2.Core, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Pdf.v21.2.Drawing, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.PivotGrid.v21.2.Core, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Printing.v21.2.Core, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.RichEdit.v21.2.Core, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
@@ -61,15 +67,21 @@
     <Reference Include="DevExpress.Xpo.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraBars.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraCharts.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v21.2.Extensions, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v21.2.Wizard, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraDiagram.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraEditors.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraGauges.v21.2.Core, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraGrid.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraLayout.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraNavBar.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPivotGrid.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraPrinting.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraReports.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v21.2.CodeCompletion, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraReports.v21.2.Extensions, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraRichEdit.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeList.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraVerticalGrid.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
@@ -295,6 +307,8 @@
     <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
     </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -317,13 +331,27 @@
     <Compile Include="EntityData\NHOMSANPHAM.cs" />
     <Compile Include="EntityData\PHIEUNHAP.cs" />
     <Compile Include="EntityData\SANPHAM.cs" />
-    <Compile Include="Others\Account.cs" />
+    <Compile Include="Others\BillReport.cs" />
+    <Compile Include="Others\sBillReport.cs" />
+    <Compile Include="Others\SoldProductReport.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Report\crBill.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crBill.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\crProduct.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crProduct.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="UI\frmAdmin.cs">
       <SubType>Form</SubType>
@@ -336,12 +364,6 @@
     </Compile>
     <Compile Include="UI\frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\frmPassword.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\frmPassword.Designer.cs">
-      <DependentUpon>frmPassword.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\frmStaff.cs">
       <SubType>Form</SubType>
@@ -367,6 +389,18 @@
     <Compile Include="UI\User control\Admin\Data\ucStorage.Designer.cs">
       <DependentUpon>ucStorage.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\User control\Admin\Report\ucBillrp.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\User control\Admin\Report\ucBillrp.Designer.cs">
+      <DependentUpon>ucBillrp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\User control\Admin\Report\ucProductrp.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\User control\Admin\Report\ucProductrp.Designer.cs">
+      <DependentUpon>ucProductrp.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\User control\Admin\ucAccount.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -385,11 +419,17 @@
     <Compile Include="UI\User control\Admin\ucData.Designer.cs">
       <DependentUpon>ucData.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\User control\Admin\ucProfit.cs">
+    <Compile Include="UI\User control\Admin\ucReceipt.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UI\User control\Admin\ucProfit.Designer.cs">
-      <DependentUpon>ucProfit.cs</DependentUpon>
+    <Compile Include="UI\User control\Admin\ucReceipt.Designer.cs">
+      <DependentUpon>ucReceipt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\User control\Admin\ucReport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\User control\Admin\ucReport.Designer.cs">
+      <DependentUpon>ucReport.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\User control\Admin\ucStaff.cs">
       <SubType>UserControl</SubType>
@@ -415,14 +455,19 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Report\crBill.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crBill.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\crProduct.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crProduct.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\frmAdmin.resx">
       <DependentUpon>frmAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UI\frmPassword.resx">
-      <DependentUpon>frmPassword.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\frmStaff.resx">
       <DependentUpon>frmStaff.cs</DependentUpon>
@@ -436,6 +481,12 @@
     <EmbeddedResource Include="UI\User control\Admin\Data\ucStorage.resx">
       <DependentUpon>ucStorage.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\User control\Admin\Report\ucBillrp.resx">
+      <DependentUpon>ucBillrp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\User control\Admin\Report\ucProductrp.resx">
+      <DependentUpon>ucProductrp.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\User control\Admin\ucAccount.resx">
       <DependentUpon>ucAccount.cs</DependentUpon>
     </EmbeddedResource>
@@ -445,8 +496,11 @@
     <EmbeddedResource Include="UI\User control\Admin\ucData.resx">
       <DependentUpon>ucData.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\User control\Admin\ucProfit.resx">
-      <DependentUpon>ucProfit.cs</DependentUpon>
+    <EmbeddedResource Include="UI\User control\Admin\ucReceipt.resx">
+      <DependentUpon>ucReceipt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\User control\Admin\ucReport.resx">
+      <DependentUpon>ucReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\User control\Admin\ucStaff.resx">
       <DependentUpon>ucStaff.cs</DependentUpon>
@@ -473,6 +527,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Database\DACN.sql" />
+    <None Include="Resources\report.png" />
     <None Include="Resources\KaenkenRekka1.jpg" />
     <None Include="Resources\KaenkenRekka4.jpg" />
     <None Include="Resources\SaberMart.PNG" />
@@ -497,11 +552,10 @@
     <None Include="Resources\delete_32x32.png" />
     <None Include="Resources\add_32x32.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Report\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

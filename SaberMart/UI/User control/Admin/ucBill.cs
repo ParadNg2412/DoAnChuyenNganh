@@ -34,7 +34,7 @@ namespace SaberMart.UI.User_control.Admin
             cbIDc.ValueMember = "MaKH";
         }
 
-        public void loadSatff(List<NHANVIEN> lstS)
+        public void loadStaff(List<NHANVIEN> lstS)
         {
             cbIDs.DataSource = lstS;
             cbIDs.DisplayMember = "MaNV";
@@ -121,11 +121,10 @@ namespace SaberMart.UI.User_control.Admin
             {
                 int index = dgvDetail.Rows.Add();
                 dgvDetail.Rows[index].Cells[0].Value = item.MaHD;
-                dgvDetail.Rows[index].Cells[1].Value = item.NgayBan;
-                dgvDetail.Rows[index].Cells[2].Value = item.SANPHAM.TenSP;
-                dgvDetail.Rows[index].Cells[3].Value = item.SLBan;
-                dgvDetail.Rows[index].Cells[4].Value = item.DonGiaBan;
-                dgvDetail.Rows[index].Cells[5].Value = item.ThanhTienBan;
+                dgvDetail.Rows[index].Cells[1].Value = item.SANPHAM.TenSP;
+                dgvDetail.Rows[index].Cells[2].Value = item.SLBan;
+                dgvDetail.Rows[index].Cells[3].Value = item.DonGiaBan;
+                dgvDetail.Rows[index].Cells[4].Value = item.ThanhTienBan;
             }
         }
 
@@ -141,7 +140,7 @@ namespace SaberMart.UI.User_control.Admin
             loadCustomer(lstC);
             loadGridSP(lstP);
             loadGridCTHD(lstBD);
-            loadSatff(lstS);
+            loadStaff(lstS);
             loadDetail(lstBD);
             cbIDs.Text = temp;
         }
@@ -197,7 +196,6 @@ namespace SaberMart.UI.User_control.Admin
                 {
                     dgvDetail.CurrentCell.Selected = true;
                     txtIDb.Text = dgvDetail.Rows[e.RowIndex].Cells["ColIDbd"].FormattedValue.ToString();
-                    dtpDate.Text = dgvDetail.Rows[e.RowIndex].Cells["ColDateD"].FormattedValue.ToString();
                     txtNamep.Text = dgvDetail.Rows[e.RowIndex].Cells["ColProduct"].FormattedValue.ToString();
                     txtValue.Text = dgvDetail.Rows[e.RowIndex].Cells["ColValue"].FormattedValue.ToString();
                     txtSales.Text = dgvDetail.Rows[e.RowIndex].Cells["ColSales"].FormattedValue.ToString();
@@ -228,7 +226,6 @@ namespace SaberMart.UI.User_control.Admin
                     CHITIETHOADON BD = new CHITIETHOADON()
                     {
                         MaHD = cbIDb.Text,
-                        NgayBan = dtpDate.Value,
                         MaSP = txtIDp.Text,
                         SLBan = Convert.ToInt32(txtValue.Text),
                         DonGiaBan = Convert.ToInt32(txtSales.Text),
@@ -384,11 +381,6 @@ namespace SaberMart.UI.User_control.Admin
             return prices;
         }
 
-        private void btnCalc_Click(object sender, EventArgs e)
-        {
-           
-        }
-
         private void btnPrices_Click(object sender, EventArgs e)
         {
             int price = Prices();
@@ -471,7 +463,7 @@ namespace SaberMart.UI.User_control.Admin
             int sum = 0;
             for (int i = 0; i < dgvDetail.Rows.Count; i++)
             {
-                sum += Convert.ToInt32(dgvDetail.Rows[i].Cells[5].Value);
+                sum += Convert.ToInt32(dgvDetail.Rows[i].Cells[4].Value);
             }
             txtTotal.Text = sum.ToString();
 

@@ -115,11 +115,11 @@ namespace SaberMart.UI.User_control.Admin
             this.btnStorage.Appearance.Options.UseFont = true;
             this.btnStorage.Appearance.Options.UseForeColor = true;
             this.btnStorage.AppearanceHovered.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.btnStorage.AppearanceHovered.Font = new System.Drawing.Font("Swordoflogos", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStorage.AppearanceHovered.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnStorage.AppearanceHovered.Options.UseBackColor = true;
             this.btnStorage.AppearanceHovered.Options.UseFont = true;
             this.btnStorage.AppearancePressed.BackColor = System.Drawing.Color.Black;
-            this.btnStorage.AppearancePressed.Font = new System.Drawing.Font("Swordoflogos", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStorage.AppearancePressed.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnStorage.AppearancePressed.Options.UseBackColor = true;
             this.btnStorage.AppearancePressed.Options.UseFont = true;
             this.btnStorage.Dock = System.Windows.Forms.DockStyle.Top;

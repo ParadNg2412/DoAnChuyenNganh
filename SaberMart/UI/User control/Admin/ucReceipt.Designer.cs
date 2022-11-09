@@ -1,6 +1,6 @@
 ﻿namespace SaberMart.UI.User_control.Admin
 {
-    partial class ucProfit
+    partial class ucReceipt
     {
         /// <summary> 
         /// Required designer variable.
@@ -29,16 +29,13 @@
         private void InitializeComponent()
         {
             this.paMenu = new System.Windows.Forms.Panel();
-            this.btnReport = new DevExpress.XtraEditors.SimpleButton();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.btnGridView = new DevExpress.XtraEditors.SimpleButton();
             this.btnNew1 = new DevExpress.XtraEditors.SimpleButton();
+            this.btnGridView = new DevExpress.XtraEditors.SimpleButton();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dgvReceipt = new System.Windows.Forms.DataGridView();
             this.ColIDb = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColPrices = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dtpYear = new System.Windows.Forms.DateTimePicker();
@@ -56,8 +53,8 @@
             this.dtpDate = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.standardReportDesigner2 = new DevExpress.XtraReports.UserDesigner.Native.StandardReportDesigner();
             this.paMenu.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReceipt)).BeginInit();
             this.panel5.SuspendLayout();
@@ -72,86 +69,14 @@
             this.paMenu.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.paMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.paMenu.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.paMenu.Controls.Add(this.btnReport);
-            this.paMenu.Controls.Add(this.panel1);
+            this.paMenu.Controls.Add(this.btnNew1);
+            this.paMenu.Controls.Add(this.btnGridView);
             this.paMenu.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.paMenu.Location = new System.Drawing.Point(0, 731);
             this.paMenu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.paMenu.Name = "paMenu";
-            this.paMenu.Size = new System.Drawing.Size(1535, 87);
+            this.paMenu.Size = new System.Drawing.Size(1154, 87);
             this.paMenu.TabIndex = 4;
-            // 
-            // btnReport
-            // 
-            this.btnReport.Appearance.BackColor = System.Drawing.Color.Orange;
-            this.btnReport.Appearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnReport.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReport.Appearance.Options.UseBackColor = true;
-            this.btnReport.Appearance.Options.UseBorderColor = true;
-            this.btnReport.Appearance.Options.UseFont = true;
-            this.btnReport.AppearanceHovered.BackColor = System.Drawing.Color.Yellow;
-            this.btnReport.AppearanceHovered.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnReport.AppearanceHovered.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReport.AppearanceHovered.Options.UseBackColor = true;
-            this.btnReport.AppearanceHovered.Options.UseBorderColor = true;
-            this.btnReport.AppearanceHovered.Options.UseFont = true;
-            this.btnReport.AppearancePressed.BackColor = System.Drawing.Color.Gold;
-            this.btnReport.AppearancePressed.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnReport.AppearancePressed.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReport.AppearancePressed.Options.UseBackColor = true;
-            this.btnReport.AppearancePressed.Options.UseBorderColor = true;
-            this.btnReport.AppearancePressed.Options.UseFont = true;
-            this.btnReport.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnReport.ImageOptions.Image = global::SaberMart.Properties.Resources.cash;
-            this.btnReport.Location = new System.Drawing.Point(1334, 0);
-            this.btnReport.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnReport.Name = "btnReport";
-            this.btnReport.Size = new System.Drawing.Size(197, 83);
-            this.btnReport.TabIndex = 17;
-            this.btnReport.Text = "Xuất thống kê";
-            // 
-            // panel1
-            // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.panel1.BackColor = System.Drawing.Color.Black;
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.btnGridView);
-            this.panel1.Controls.Add(this.btnNew1);
-            this.panel1.Location = new System.Drawing.Point(21, 12);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(721, 60);
-            this.panel1.TabIndex = 0;
-            // 
-            // btnGridView
-            // 
-            this.btnGridView.Appearance.BackColor = System.Drawing.Color.Orange;
-            this.btnGridView.Appearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnGridView.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGridView.Appearance.Options.UseBackColor = true;
-            this.btnGridView.Appearance.Options.UseBorderColor = true;
-            this.btnGridView.Appearance.Options.UseFont = true;
-            this.btnGridView.AppearanceHovered.BackColor = System.Drawing.Color.Yellow;
-            this.btnGridView.AppearanceHovered.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnGridView.AppearanceHovered.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGridView.AppearanceHovered.Options.UseBackColor = true;
-            this.btnGridView.AppearanceHovered.Options.UseBorderColor = true;
-            this.btnGridView.AppearanceHovered.Options.UseFont = true;
-            this.btnGridView.AppearancePressed.BackColor = System.Drawing.Color.Gold;
-            this.btnGridView.AppearancePressed.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnGridView.AppearancePressed.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGridView.AppearancePressed.Options.UseBackColor = true;
-            this.btnGridView.AppearancePressed.Options.UseBorderColor = true;
-            this.btnGridView.AppearancePressed.Options.UseFont = true;
-            this.btnGridView.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnGridView.ImageOptions.Image = global::SaberMart.Properties.Resources.cash;
-            this.btnGridView.Location = new System.Drawing.Point(522, 0);
-            this.btnGridView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnGridView.Name = "btnGridView";
-            this.btnGridView.Size = new System.Drawing.Size(197, 58);
-            this.btnGridView.TabIndex = 15;
-            this.btnGridView.Text = "Xuất thống kê";
-            this.btnGridView.Click += new System.EventHandler(this.btnGridView_Click);
             // 
             // btnNew1
             // 
@@ -173,14 +98,42 @@
             this.btnNew1.AppearancePressed.Options.UseBackColor = true;
             this.btnNew1.AppearancePressed.Options.UseBorderColor = true;
             this.btnNew1.AppearancePressed.Options.UseFont = true;
-            this.btnNew1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnNew1.Location = new System.Drawing.Point(0, 0);
+            this.btnNew1.Location = new System.Drawing.Point(323, 14);
             this.btnNew1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnNew1.Name = "btnNew1";
             this.btnNew1.Size = new System.Drawing.Size(132, 58);
             this.btnNew1.TabIndex = 14;
             this.btnNew1.Text = "Làm mới";
             this.btnNew1.Click += new System.EventHandler(this.btnNew1_Click);
+            // 
+            // btnGridView
+            // 
+            this.btnGridView.Appearance.BackColor = System.Drawing.Color.Orange;
+            this.btnGridView.Appearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnGridView.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGridView.Appearance.Options.UseBackColor = true;
+            this.btnGridView.Appearance.Options.UseBorderColor = true;
+            this.btnGridView.Appearance.Options.UseFont = true;
+            this.btnGridView.AppearanceHovered.BackColor = System.Drawing.Color.Yellow;
+            this.btnGridView.AppearanceHovered.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnGridView.AppearanceHovered.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGridView.AppearanceHovered.Options.UseBackColor = true;
+            this.btnGridView.AppearanceHovered.Options.UseBorderColor = true;
+            this.btnGridView.AppearanceHovered.Options.UseFont = true;
+            this.btnGridView.AppearancePressed.BackColor = System.Drawing.Color.Gold;
+            this.btnGridView.AppearancePressed.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnGridView.AppearancePressed.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGridView.AppearancePressed.Options.UseBackColor = true;
+            this.btnGridView.AppearancePressed.Options.UseBorderColor = true;
+            this.btnGridView.AppearancePressed.Options.UseFont = true;
+            this.btnGridView.ImageOptions.Image = global::SaberMart.Properties.Resources.cash;
+            this.btnGridView.Location = new System.Drawing.Point(671, 14);
+            this.btnGridView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnGridView.Name = "btnGridView";
+            this.btnGridView.Size = new System.Drawing.Size(197, 58);
+            this.btnGridView.TabIndex = 15;
+            this.btnGridView.Text = "Xuất thống kê";
+            this.btnGridView.Click += new System.EventHandler(this.btnGridView_Click);
             // 
             // panel3
             // 
@@ -189,9 +142,9 @@
             this.panel3.BackColor = System.Drawing.Color.Crimson;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.dgvReceipt);
-            this.panel3.Location = new System.Drawing.Point(27, 158);
+            this.panel3.Location = new System.Drawing.Point(85, 157);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(717, 568);
+            this.panel3.Size = new System.Drawing.Size(980, 568);
             this.panel3.TabIndex = 5;
             // 
             // dgvReceipt
@@ -211,7 +164,7 @@
             this.dgvReceipt.ReadOnly = true;
             this.dgvReceipt.RowHeadersWidth = 51;
             this.dgvReceipt.RowTemplate.Height = 24;
-            this.dgvReceipt.Size = new System.Drawing.Size(683, 532);
+            this.dgvReceipt.Size = new System.Drawing.Size(946, 532);
             this.dgvReceipt.TabIndex = 1;
             this.dgvReceipt.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvReceipt_CellClick);
             // 
@@ -236,17 +189,6 @@
             this.ColPrices.Name = "ColPrices";
             this.ColPrices.ReadOnly = true;
             // 
-            // panel4
-            // 
-            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel4.BackColor = System.Drawing.Color.Crimson;
-            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel4.Location = new System.Drawing.Point(796, 158);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(715, 568);
-            this.panel4.TabIndex = 6;
-            // 
             // panel5
             // 
             this.panel5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
@@ -259,7 +201,7 @@
             this.panel5.Location = new System.Drawing.Point(0, 0);
             this.panel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1535, 153);
+            this.panel5.Size = new System.Drawing.Size(1154, 153);
             this.panel5.TabIndex = 7;
             // 
             // groupBox1
@@ -275,9 +217,9 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.txtTotal);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.groupBox1.Location = new System.Drawing.Point(660, 0);
+            this.groupBox1.Location = new System.Drawing.Point(402, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(871, 149);
+            this.groupBox1.Size = new System.Drawing.Size(748, 149);
             this.groupBox1.TabIndex = 14;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thống kê";
@@ -367,7 +309,7 @@
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(509, 109);
+            this.label3.Location = new System.Drawing.Point(386, 110);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(151, 22);
             this.label3.TabIndex = 26;
@@ -378,7 +320,7 @@
             this.txtTotal.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.txtTotal.EditValue = "0";
-            this.txtTotal.Location = new System.Drawing.Point(675, 104);
+            this.txtTotal.Location = new System.Drawing.Point(552, 105);
             this.txtTotal.Name = "txtTotal";
             this.txtTotal.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTotal.Properties.Appearance.Options.UseFont = true;
@@ -399,7 +341,7 @@
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Left;
             this.groupBox2.Location = new System.Drawing.Point(0, 0);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(512, 149);
+            this.groupBox2.Size = new System.Drawing.Size(385, 149);
             this.groupBox2.TabIndex = 13;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Hóa đơn";
@@ -439,9 +381,10 @@
             this.dtpDate.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.dtpDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpDate.Location = new System.Drawing.Point(141, 66);
             this.dtpDate.Name = "dtpDate";
-            this.dtpDate.Size = new System.Drawing.Size(356, 28);
+            this.dtpDate.Size = new System.Drawing.Size(148, 28);
             this.dtpDate.TabIndex = 10;
             this.dtpDate.Value = new System.DateTime(2022, 11, 7, 0, 0, 0, 0);
             // 
@@ -467,22 +410,20 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Mã hóa đơn";
             // 
-            // ucProfit
+            // ucReceipt
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.panel5);
-            this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.paMenu);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Name = "ucProfit";
-            this.Size = new System.Drawing.Size(1535, 818);
-            this.Load += new System.EventHandler(this.ucProfit_Load);
+            this.Name = "ucReceipt";
+            this.Size = new System.Drawing.Size(1154, 818);
+            this.Load += new System.EventHandler(this.ucReceipt_Load);
             this.paMenu.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvReceipt)).EndInit();
             this.panel5.ResumeLayout(false);
@@ -499,10 +440,8 @@
         #endregion
 
         private System.Windows.Forms.Panel paMenu;
-        private System.Windows.Forms.Panel panel1;
         private DevExpress.XtraEditors.SimpleButton btnNew1;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;
         private DevExpress.XtraEditors.SimpleButton btnGridView;
         private System.Windows.Forms.DataGridView dgvReceipt;
@@ -522,9 +461,9 @@
         private System.Windows.Forms.Button btnYear;
         private System.Windows.Forms.Button btnMonth;
         private System.Windows.Forms.Button btnDate;
-        private DevExpress.XtraEditors.SimpleButton btnReport;
         private System.Windows.Forms.DateTimePicker dtpYear;
         private System.Windows.Forms.DateTimePicker dtpMonth;
         private System.Windows.Forms.DateTimePicker dtpDay;
+        private DevExpress.XtraReports.UserDesigner.Native.StandardReportDesigner standardReportDesigner2;
     }
 }

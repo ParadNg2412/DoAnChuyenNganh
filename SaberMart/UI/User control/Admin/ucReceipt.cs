@@ -1,4 +1,5 @@
 ﻿using DevExpress.Text.Interop;
+using DevExpress.XtraDiagram.Base;
 using SaberMart.EntityData;
 using System;
 using System.Collections.Generic;
@@ -13,60 +14,70 @@ using System.Windows.Forms;
 
 namespace SaberMart.UI.User_control.Admin
 {
-    public partial class ucProfit : UserControl
+    public partial class ucReceipt : UserControl
     {
-        private List<CHITIETHOADON> tk, _temp;
+        private List<HOADON> tk, _temp;
         EntityDB context = new EntityDB();
 
-        public ucProfit()
+        public ucReceipt()
         {
             InitializeComponent();
         }
 
-        public void loadBill(List<CHITIETHOADON> lstB)
+        public void loadBill(List<HOADON> lstB)
         {
             cbIDb.DataSource = lstB;
             cbIDb.DisplayMember = "MaHD";
             cbIDb.ValueMember = "MaHD";
         }
 
-        private void loadGridView(List<CHITIETHOADON> lstB)
+        private void loadGridView(List<HOADON> lstB)
         {
             dgvReceipt.Rows.Clear();
-            var List = from q in lstB
-                       group q by new { q.MaHD, q.NgayBan } into p
-                       select new { MaHD = p.Key.MaHD, NgayBan = p.Key.NgayBan, TongTien = p.Sum(o => o.ThanhTienBan) };
-            foreach (var item in List)
+            foreach (var item in lstB)
             {
                 int index = dgvReceipt.Rows.Add();
                 dgvReceipt.Rows[index].Cells[0].Value = item.MaHD;
                 dgvReceipt.Rows[index].Cells[1].Value = item.NgayBan;
-                dgvReceipt.Rows[index].Cells[2].Value = item.TongTien;
+                dgvReceipt.Rows[index].Cells[2].Value = item.TongTienBan;
             }
         }
 
-        private void ucProfit_Load(object sender, EventArgs e)
+        private void ucReceipt_Load(object sender, EventArgs e)
         {
-            tk = context.CHITIETHOADONs.ToList();
+            tk = context.HOADONs.ToList();
             loadGridView(tk);
             loadBill(tk);
         }
 
         private void dgvReceipt_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            try
+            {
+                if (dgvReceipt.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
+                {
+                    dgvReceipt.CurrentCell.Selected = true;
+                    cbIDb.Text = dgvReceipt.Rows[e.RowIndex].Cells["ColIDb"].FormattedValue.ToString();
+                    dtpDate.Text = dgvReceipt.Rows[e.RowIndex].Cells["ColDate"].FormattedValue.ToString();
+                    txtPrices.Text = dgvReceipt.Rows[e.RowIndex].Cells["ColPrices"].FormattedValue.ToString();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void btnNew1_Click(object sender, EventArgs e)
         {
-            tk = context.CHITIETHOADONs.ToList();
+            tk = context.HOADONs.ToList();
             loadGridView(tk);
             dgvReceipt.Rows.Clear();
         }
 
         private void btnGridView_Click(object sender, EventArgs e)
         {
-            tk = context.CHITIETHOADONs.ToList();
+            tk = context.HOADONs.ToList();
             loadGridView(tk);
         }
 
@@ -77,7 +88,7 @@ namespace SaberMart.UI.User_control.Admin
             {
                 if (hd.NgayBan?.ToString("MM-dd-yyyy") == dtpDay.Value.ToString("MM-dd-yyyy"))
                 {
-                    tongTien += hd.ThanhTienBan;
+                    tongTien += hd.TongTienBan;
                 }
             }
 
@@ -91,13 +102,13 @@ namespace SaberMart.UI.User_control.Admin
             {
                 if (hd.NgayBan?.ToString("MM-yyyy") == dtpMonth.Value.ToString("MM-yyyy"))
                 {
-                    tongTien += hd.ThanhTienBan;
+                    tongTien += hd.TongTienBan;
                 }
             }
 
             txtTotal.Text = tongTien.ToString();
         }
-
+        
         private void btnYear_Click(object sender, EventArgs e)
         {
             int? tongTien = 0;
@@ -105,7 +116,7 @@ namespace SaberMart.UI.User_control.Admin
             {
                 if (hd.NgayBan?.ToString("yyyy") == dtpYear.Value.ToString("yyyy"))
                 {
-                    tongTien += hd.ThanhTienBan;
+                    tongTien += hd.TongTienBan;
                 }
             }
                 

@@ -92,12 +92,5 @@ namespace SaberMart.UI
                 this.SelectNextControl((Control)sender, true, true, true, true);          
             }
         }
-
-        //private void lklForgetPass_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        //{
-        //    frmPassword fp = new frmPassword();
-        //    this.Hide();
-        //    fp.ShowDialog();
-        //}
     }
 }

@@ -36,6 +36,7 @@ namespace SaberMart.UI
             this.barDockingMenuItem2 = new DevExpress.XtraBars.BarDockingMenuItem();
             this.fluentDesignFormControl1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl();
             this.paMenu = new System.Windows.Forms.Panel();
+            this.btnReport = new System.Windows.Forms.Button();
             this.btnReceipt = new System.Windows.Forms.Button();
             this.btnBill = new System.Windows.Forms.Button();
             this.btnAccount = new System.Windows.Forms.Button();
@@ -86,6 +87,7 @@ namespace SaberMart.UI
             this.paMenu.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.paMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.paMenu.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.paMenu.Controls.Add(this.btnReport);
             this.paMenu.Controls.Add(this.btnReceipt);
             this.paMenu.Controls.Add(this.btnBill);
             this.paMenu.Controls.Add(this.btnAccount);
@@ -99,6 +101,28 @@ namespace SaberMart.UI
             this.paMenu.Size = new System.Drawing.Size(1411, 83);
             this.paMenu.TabIndex = 3;
             this.paMenu.Click += new System.EventHandler(this.paMenu_Click);
+            // 
+            // btnReport
+            // 
+            this.btnReport.BackColor = System.Drawing.Color.Goldenrod;
+            this.btnReport.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnReport.FlatAppearance.CheckedBackColor = System.Drawing.Color.Black;
+            this.btnReport.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.btnReport.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
+            this.btnReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReport.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReport.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnReport.Image = global::SaberMart.Properties.Resources.report;
+            this.btnReport.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnReport.Location = new System.Drawing.Point(700, 0);
+            this.btnReport.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnReport.Name = "btnReport";
+            this.btnReport.Size = new System.Drawing.Size(140, 79);
+            this.btnReport.TabIndex = 7;
+            this.btnReport.Text = "Report";
+            this.btnReport.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnReport.UseVisualStyleBackColor = false;
+            this.btnReport.Click += new System.EventHandler(this.btnReport_Click);
             // 
             // btnReceipt
             // 
@@ -282,5 +306,6 @@ namespace SaberMart.UI
         private System.Windows.Forms.Button btnAccount;
         private System.Windows.Forms.Button btnBill;
         private System.Windows.Forms.Button btnReceipt;
+        private System.Windows.Forms.Button btnReport;
     }
 }
