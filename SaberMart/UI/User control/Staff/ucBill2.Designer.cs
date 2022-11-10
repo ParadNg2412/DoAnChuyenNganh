@@ -30,6 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucBill2));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.btnList = new DevExpress.XtraEditors.SimpleButton();
+            this.btnSearch2 = new DevExpress.XtraEditors.SimpleButton();
             this.panel4 = new System.Windows.Forms.Panel();
             this.btnEdit = new DevExpress.XtraEditors.SimpleButton();
             this.btnNew = new DevExpress.XtraEditors.SimpleButton();
@@ -50,8 +53,10 @@
             this.ColDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.cbIDb = new System.Windows.Forms.ComboBox();
+            this.txtType = new DevExpress.XtraEditors.TextEdit();
+            this.label10 = new System.Windows.Forms.Label();
             this.btnPrices = new System.Windows.Forms.Button();
-            this.txtIDb2 = new DevExpress.XtraEditors.TextEdit();
             this.label5 = new System.Windows.Forms.Label();
             this.txtIDp = new DevExpress.XtraEditors.TextEdit();
             this.txtPrices = new DevExpress.XtraEditors.TextEdit();
@@ -66,28 +71,33 @@
             this.dgvProduct = new System.Windows.Forms.DataGridView();
             this.ColIDp = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColNamep = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColType = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColSale = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnCalc = new System.Windows.Forms.Button();
             this.txtTotal = new DevExpress.XtraEditors.TextEdit();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnList1 = new DevExpress.XtraEditors.SimpleButton();
+            this.btnSearch1 = new DevExpress.XtraEditors.SimpleButton();
             this.btnNew1 = new DevExpress.XtraEditors.SimpleButton();
             this.btnSave1 = new DevExpress.XtraEditors.SimpleButton();
             this.btnAdd1 = new DevExpress.XtraEditors.SimpleButton();
             this.dgvDetail = new System.Windows.Forms.DataGridView();
             this.ColIDbd = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColProduct = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColType2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColValue = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColSales = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColPrices = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtIDs.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtIDb.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBill)).BeginInit();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtIDb2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtType.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtIDp.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPrices.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSales.Properties)).BeginInit();
@@ -106,6 +116,7 @@
             // 
             this.groupBox1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.groupBox1.BackColor = System.Drawing.Color.Gold;
+            this.groupBox1.Controls.Add(this.panel5);
             this.groupBox1.Controls.Add(this.panel4);
             this.groupBox1.Controls.Add(this.txtIDs);
             this.groupBox1.Controls.Add(this.cbIDc);
@@ -120,10 +131,71 @@
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1451, 306);
+            this.groupBox1.Size = new System.Drawing.Size(1451, 268);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin hóa đơn";
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.Black;
+            this.panel5.Controls.Add(this.btnList);
+            this.panel5.Controls.Add(this.btnSearch2);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel5.Location = new System.Drawing.Point(3, 24);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(147, 182);
+            this.panel5.TabIndex = 15;
+            // 
+            // btnList
+            // 
+            this.btnList.Appearance.BackColor = System.Drawing.Color.Coral;
+            this.btnList.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnList.Appearance.Options.UseBackColor = true;
+            this.btnList.Appearance.Options.UseFont = true;
+            this.btnList.AppearanceHovered.BackColor = System.Drawing.Color.DarkOrange;
+            this.btnList.AppearanceHovered.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnList.AppearanceHovered.Options.UseBackColor = true;
+            this.btnList.AppearanceHovered.Options.UseFont = true;
+            this.btnList.AppearancePressed.BackColor = System.Drawing.Color.DarkOrange;
+            this.btnList.AppearancePressed.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnList.AppearancePressed.Options.UseBackColor = true;
+            this.btnList.AppearancePressed.Options.UseFont = true;
+            this.btnList.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnList.ImageOptions.Image = global::SaberMart.Properties.Resources.print;
+            this.btnList.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
+            this.btnList.Location = new System.Drawing.Point(0, 65);
+            this.btnList.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnList.Name = "btnList";
+            this.btnList.Size = new System.Drawing.Size(147, 68);
+            this.btnList.TabIndex = 17;
+            this.btnList.Text = "Xuất danh sách";
+            this.btnList.Click += new System.EventHandler(this.btnList_Click);
+            // 
+            // btnSearch2
+            // 
+            this.btnSearch2.Appearance.BackColor = System.Drawing.Color.Coral;
+            this.btnSearch2.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch2.Appearance.Options.UseBackColor = true;
+            this.btnSearch2.Appearance.Options.UseFont = true;
+            this.btnSearch2.AppearanceHovered.BackColor = System.Drawing.Color.DarkOrange;
+            this.btnSearch2.AppearanceHovered.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch2.AppearanceHovered.Options.UseBackColor = true;
+            this.btnSearch2.AppearanceHovered.Options.UseFont = true;
+            this.btnSearch2.AppearancePressed.BackColor = System.Drawing.Color.DarkOrange;
+            this.btnSearch2.AppearancePressed.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch2.AppearancePressed.Options.UseBackColor = true;
+            this.btnSearch2.AppearancePressed.Options.UseFont = true;
+            this.btnSearch2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSearch2.ImageOptions.Image = global::SaberMart.Properties.Resources.search;
+            this.btnSearch2.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
+            this.btnSearch2.Location = new System.Drawing.Point(0, 0);
+            this.btnSearch2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSearch2.Name = "btnSearch2";
+            this.btnSearch2.Size = new System.Drawing.Size(147, 65);
+            this.btnSearch2.TabIndex = 16;
+            this.btnSearch2.Text = "Tìm theo mã";
+            this.btnSearch2.Click += new System.EventHandler(this.btnSearch2_Click);
             // 
             // panel4
             // 
@@ -134,9 +206,9 @@
             this.panel4.Controls.Add(this.btnSave);
             this.panel4.Controls.Add(this.btnAdd);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel4.Location = new System.Drawing.Point(3, 244);
+            this.panel4.Location = new System.Drawing.Point(3, 206);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(690, 59);
+            this.panel4.Size = new System.Drawing.Size(523, 59);
             this.panel4.TabIndex = 12;
             // 
             // btnEdit
@@ -167,6 +239,7 @@
             this.btnEdit.Size = new System.Drawing.Size(106, 55);
             this.btnEdit.TabIndex = 14;
             this.btnEdit.Text = "Sửa";
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnNew
             // 
@@ -195,6 +268,7 @@
             this.btnNew.Size = new System.Drawing.Size(117, 55);
             this.btnNew.TabIndex = 13;
             this.btnNew.Text = "Làm mới";
+            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
             // 
             // btnSave
             // 
@@ -224,6 +298,7 @@
             this.btnSave.Size = new System.Drawing.Size(112, 55);
             this.btnSave.TabIndex = 12;
             this.btnSave.Text = "Lưu";
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnAdd
             // 
@@ -253,12 +328,14 @@
             this.btnAdd.Size = new System.Drawing.Size(118, 55);
             this.btnAdd.TabIndex = 10;
             this.btnAdd.Text = "Thêm";
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // txtIDs
             // 
             this.txtIDs.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtIDs.Location = new System.Drawing.Point(458, 39);
+            this.txtIDs.EditValue = "NV00";
+            this.txtIDs.Location = new System.Drawing.Point(327, 70);
             this.txtIDs.Name = "txtIDs";
             this.txtIDs.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIDs.Properties.Appearance.Options.UseFont = true;
@@ -271,7 +348,7 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.cbIDc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbIDc.FormattingEnabled = true;
-            this.cbIDc.Location = new System.Drawing.Point(183, 94);
+            this.cbIDc.Location = new System.Drawing.Point(341, 122);
             this.cbIDc.Name = "cbIDc";
             this.cbIDc.Size = new System.Drawing.Size(111, 33);
             this.cbIDc.TabIndex = 10;
@@ -281,16 +358,17 @@
             this.dtpDate.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.dtpDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpDate.Location = new System.Drawing.Point(130, 155);
+            this.dtpDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpDate.Location = new System.Drawing.Point(288, 170);
             this.dtpDate.Name = "dtpDate";
-            this.dtpDate.Size = new System.Drawing.Size(386, 30);
+            this.dtpDate.Size = new System.Drawing.Size(164, 30);
             this.dtpDate.TabIndex = 8;
             // 
             // txtIDb
             // 
             this.txtIDb.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtIDb.Location = new System.Drawing.Point(156, 39);
+            this.txtIDb.Location = new System.Drawing.Point(317, 21);
             this.txtIDb.Name = "txtIDb";
             this.txtIDb.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIDb.Properties.Appearance.Options.UseFont = true;
@@ -302,7 +380,7 @@
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(24, 155);
+            this.label4.Location = new System.Drawing.Point(180, 177);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(89, 22);
             this.label4.TabIndex = 4;
@@ -313,7 +391,7 @@
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(22, 99);
+            this.label3.Location = new System.Drawing.Point(180, 127);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(145, 22);
             this.label3.TabIndex = 3;
@@ -324,7 +402,7 @@
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(314, 44);
+            this.label2.Location = new System.Drawing.Point(183, 75);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(129, 22);
             this.label2.TabIndex = 2;
@@ -335,7 +413,7 @@
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(24, 44);
+            this.label1.Location = new System.Drawing.Point(185, 26);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(114, 22);
             this.label1.TabIndex = 1;
@@ -353,13 +431,14 @@
             this.ColDate,
             this.ColTotal});
             this.dgvBill.Dock = System.Windows.Forms.DockStyle.Right;
-            this.dgvBill.Location = new System.Drawing.Point(693, 24);
+            this.dgvBill.Location = new System.Drawing.Point(526, 24);
             this.dgvBill.Name = "dgvBill";
             this.dgvBill.ReadOnly = true;
             this.dgvBill.RowHeadersWidth = 51;
             this.dgvBill.RowTemplate.Height = 24;
-            this.dgvBill.Size = new System.Drawing.Size(755, 279);
+            this.dgvBill.Size = new System.Drawing.Size(922, 241);
             this.dgvBill.TabIndex = 0;
+            this.dgvBill.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBill_CellClick);
             // 
             // ColIDb
             // 
@@ -400,8 +479,10 @@
             // 
             this.groupBox2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.groupBox2.BackColor = System.Drawing.Color.Orange;
+            this.groupBox2.Controls.Add(this.cbIDb);
+            this.groupBox2.Controls.Add(this.txtType);
+            this.groupBox2.Controls.Add(this.label10);
             this.groupBox2.Controls.Add(this.btnPrices);
-            this.groupBox2.Controls.Add(this.txtIDb2);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.txtIDp);
             this.groupBox2.Controls.Add(this.txtPrices);
@@ -416,36 +497,59 @@
             this.groupBox2.Controls.Add(this.dgvProduct);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Left;
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(0, 306);
+            this.groupBox2.Location = new System.Drawing.Point(0, 268);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(802, 486);
+            this.groupBox2.Size = new System.Drawing.Size(802, 524);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Chi tiết";
+            // 
+            // cbIDb
+            // 
+            this.cbIDb.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.cbIDb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbIDb.FormattingEnabled = true;
+            this.cbIDb.Location = new System.Drawing.Point(446, 33);
+            this.cbIDb.Name = "cbIDb";
+            this.cbIDb.Size = new System.Drawing.Size(111, 33);
+            this.cbIDb.TabIndex = 31;
+            // 
+            // txtType
+            // 
+            this.txtType.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.txtType.Location = new System.Drawing.Point(399, 137);
+            this.txtType.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtType.Name = "txtType";
+            this.txtType.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtType.Properties.Appearance.Options.UseFont = true;
+            this.txtType.Size = new System.Drawing.Size(170, 32);
+            this.txtType.TabIndex = 29;
+            // 
+            // label10
+            // 
+            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(284, 142);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(106, 22);
+            this.label10.TabIndex = 28;
+            this.label10.Text = "Đơn vị tính";
             // 
             // btnPrices
             // 
             this.btnPrices.BackColor = System.Drawing.Color.Gray;
             this.btnPrices.Image = global::SaberMart.Properties.Resources.cash;
             this.btnPrices.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPrices.Location = new System.Drawing.Point(307, 135);
+            this.btnPrices.Location = new System.Drawing.Point(271, 188);
             this.btnPrices.Name = "btnPrices";
             this.btnPrices.Size = new System.Drawing.Size(136, 36);
             this.btnPrices.TabIndex = 27;
             this.btnPrices.Text = "Tính tiền";
             this.btnPrices.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnPrices.UseVisualStyleBackColor = false;
-            // 
-            // txtIDb2
-            // 
-            this.txtIDb2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtIDb2.Location = new System.Drawing.Point(446, 35);
-            this.txtIDb2.Name = "txtIDb2";
-            this.txtIDb2.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIDb2.Properties.Appearance.Options.UseFont = true;
-            this.txtIDb2.Size = new System.Drawing.Size(111, 32);
-            this.txtIDb2.TabIndex = 26;
+            this.btnPrices.Click += new System.EventHandler(this.btnPrices_Click);
             // 
             // label5
             // 
@@ -473,7 +577,7 @@
             // 
             this.txtPrices.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtPrices.Location = new System.Drawing.Point(458, 137);
+            this.txtPrices.Location = new System.Drawing.Point(422, 190);
             this.txtPrices.Name = "txtPrices";
             this.txtPrices.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPrices.Properties.Appearance.Options.UseFont = true;
@@ -510,7 +614,7 @@
             this.txtNamep.Name = "txtNamep";
             this.txtNamep.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNamep.Properties.Appearance.Options.UseFont = true;
-            this.txtNamep.Size = new System.Drawing.Size(276, 32);
+            this.txtNamep.Size = new System.Drawing.Size(374, 32);
             this.txtNamep.TabIndex = 18;
             // 
             // Label9
@@ -543,6 +647,7 @@
             this.txtValue.Properties.Appearance.Options.UseFont = true;
             this.txtValue.Size = new System.Drawing.Size(111, 32);
             this.txtValue.TabIndex = 15;
+            this.txtValue.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtValue_KeyPress);
             // 
             // label7
             // 
@@ -574,15 +679,17 @@
             this.dgvProduct.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColIDp,
             this.ColNamep,
+            this.ColType,
             this.ColSale});
             this.dgvProduct.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgvProduct.Location = new System.Drawing.Point(3, 239);
+            this.dgvProduct.Location = new System.Drawing.Point(3, 244);
             this.dgvProduct.Name = "dgvProduct";
             this.dgvProduct.ReadOnly = true;
             this.dgvProduct.RowHeadersWidth = 51;
             this.dgvProduct.RowTemplate.Height = 24;
-            this.dgvProduct.Size = new System.Drawing.Size(796, 244);
+            this.dgvProduct.Size = new System.Drawing.Size(796, 277);
             this.dgvProduct.TabIndex = 0;
+            this.dgvProduct.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProduct_CellClick);
             // 
             // ColIDp
             // 
@@ -599,6 +706,13 @@
             this.ColNamep.MinimumWidth = 6;
             this.ColNamep.Name = "ColNamep";
             this.ColNamep.ReadOnly = true;
+            // 
+            // ColType
+            // 
+            this.ColType.HeaderText = "Đơn vị tính";
+            this.ColType.MinimumWidth = 6;
+            this.ColType.Name = "ColType";
+            this.ColType.ReadOnly = true;
             // 
             // ColSale
             // 
@@ -618,9 +732,9 @@
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.dgvDetail);
             this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel1.Location = new System.Drawing.Point(820, 313);
+            this.panel1.Location = new System.Drawing.Point(808, 274);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(610, 476);
+            this.panel1.Size = new System.Drawing.Size(640, 515);
             this.panel1.TabIndex = 3;
             // 
             // panel3
@@ -631,9 +745,9 @@
             this.panel3.Controls.Add(this.txtTotal);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel3.ForeColor = System.Drawing.Color.Black;
-            this.panel3.Location = new System.Drawing.Point(0, 330);
+            this.panel3.Location = new System.Drawing.Point(0, 369);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(610, 73);
+            this.panel3.Size = new System.Drawing.Size(640, 73);
             this.panel3.TabIndex = 3;
             // 
             // btnCalc
@@ -648,6 +762,7 @@
             this.btnCalc.Text = "Tính tiền";
             this.btnCalc.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCalc.UseVisualStyleBackColor = false;
+            this.btnCalc.Click += new System.EventHandler(this.btnCalc_Click);
             // 
             // txtTotal
             // 
@@ -662,14 +777,66 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.Black;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel2.Controls.Add(this.btnList1);
+            this.panel2.Controls.Add(this.btnSearch1);
             this.panel2.Controls.Add(this.btnNew1);
             this.panel2.Controls.Add(this.btnSave1);
             this.panel2.Controls.Add(this.btnAdd1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 403);
+            this.panel2.Location = new System.Drawing.Point(0, 442);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(610, 73);
+            this.panel2.Size = new System.Drawing.Size(640, 73);
             this.panel2.TabIndex = 2;
+            // 
+            // btnList1
+            // 
+            this.btnList1.Appearance.BackColor = System.Drawing.Color.Coral;
+            this.btnList1.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnList1.Appearance.Options.UseBackColor = true;
+            this.btnList1.Appearance.Options.UseFont = true;
+            this.btnList1.AppearanceHovered.BackColor = System.Drawing.Color.DarkOrange;
+            this.btnList1.AppearanceHovered.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnList1.AppearanceHovered.Options.UseBackColor = true;
+            this.btnList1.AppearanceHovered.Options.UseFont = true;
+            this.btnList1.AppearancePressed.BackColor = System.Drawing.Color.DarkOrange;
+            this.btnList1.AppearancePressed.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnList1.AppearancePressed.Options.UseBackColor = true;
+            this.btnList1.AppearancePressed.Options.UseFont = true;
+            this.btnList1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnList1.ImageOptions.Image = global::SaberMart.Properties.Resources.print;
+            this.btnList1.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
+            this.btnList1.Location = new System.Drawing.Point(343, 0);
+            this.btnList1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnList1.Name = "btnList1";
+            this.btnList1.Size = new System.Drawing.Size(162, 69);
+            this.btnList1.TabIndex = 17;
+            this.btnList1.Text = "Xuất danh sách";
+            this.btnList1.Click += new System.EventHandler(this.btnList1_Click);
+            // 
+            // btnSearch1
+            // 
+            this.btnSearch1.Appearance.BackColor = System.Drawing.Color.Coral;
+            this.btnSearch1.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch1.Appearance.Options.UseBackColor = true;
+            this.btnSearch1.Appearance.Options.UseFont = true;
+            this.btnSearch1.AppearanceHovered.BackColor = System.Drawing.Color.DarkOrange;
+            this.btnSearch1.AppearanceHovered.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch1.AppearanceHovered.Options.UseBackColor = true;
+            this.btnSearch1.AppearanceHovered.Options.UseFont = true;
+            this.btnSearch1.AppearancePressed.BackColor = System.Drawing.Color.DarkOrange;
+            this.btnSearch1.AppearancePressed.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch1.AppearancePressed.Options.UseBackColor = true;
+            this.btnSearch1.AppearancePressed.Options.UseFont = true;
+            this.btnSearch1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnSearch1.ImageOptions.Image = global::SaberMart.Properties.Resources.search;
+            this.btnSearch1.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
+            this.btnSearch1.Location = new System.Drawing.Point(505, 0);
+            this.btnSearch1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSearch1.Name = "btnSearch1";
+            this.btnSearch1.Size = new System.Drawing.Size(131, 69);
+            this.btnSearch1.TabIndex = 16;
+            this.btnSearch1.Text = "Tìm theo mã";
+            this.btnSearch1.Click += new System.EventHandler(this.btnSearch1_Click);
             // 
             // btnNew1
             // 
@@ -698,6 +865,7 @@
             this.btnNew1.Size = new System.Drawing.Size(117, 69);
             this.btnNew1.TabIndex = 13;
             this.btnNew1.Text = "Làm mới";
+            this.btnNew1.Click += new System.EventHandler(this.btnNew1_Click);
             // 
             // btnSave1
             // 
@@ -727,6 +895,7 @@
             this.btnSave1.Size = new System.Drawing.Size(107, 69);
             this.btnSave1.TabIndex = 12;
             this.btnSave1.Text = "Lưu";
+            this.btnSave1.Click += new System.EventHandler(this.btnSave1_Click);
             // 
             // btnAdd1
             // 
@@ -756,6 +925,7 @@
             this.btnAdd1.Size = new System.Drawing.Size(106, 69);
             this.btnAdd1.TabIndex = 10;
             this.btnAdd1.Text = "Thêm";
+            this.btnAdd1.Click += new System.EventHandler(this.btnAdd1_Click);
             // 
             // dgvDetail
             // 
@@ -765,6 +935,7 @@
             this.dgvDetail.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColIDbd,
             this.ColProduct,
+            this.ColType2,
             this.ColValue,
             this.ColSales,
             this.ColPrices});
@@ -774,8 +945,9 @@
             this.dgvDetail.ReadOnly = true;
             this.dgvDetail.RowHeadersWidth = 51;
             this.dgvDetail.RowTemplate.Height = 24;
-            this.dgvDetail.Size = new System.Drawing.Size(610, 318);
+            this.dgvDetail.Size = new System.Drawing.Size(640, 318);
             this.dgvDetail.TabIndex = 1;
+            this.dgvDetail.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDetail_CellClick);
             // 
             // ColIDbd
             // 
@@ -790,6 +962,13 @@
             this.ColProduct.MinimumWidth = 6;
             this.ColProduct.Name = "ColProduct";
             this.ColProduct.ReadOnly = true;
+            // 
+            // ColType2
+            // 
+            this.ColType2.HeaderText = "Đơn vị tính";
+            this.ColType2.MinimumWidth = 6;
+            this.ColType2.Name = "ColType2";
+            this.ColType2.ReadOnly = true;
             // 
             // ColValue
             // 
@@ -822,15 +1001,17 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "ucBill2";
             this.Size = new System.Drawing.Size(1451, 792);
+            this.Load += new System.EventHandler(this.ucBill2_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.panel5.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.txtIDs.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtIDb.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBill)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtIDb2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtType.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtIDp.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPrices.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSales.Properties)).EndInit();
@@ -871,7 +1052,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColTotal;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btnPrices;
-        private DevExpress.XtraEditors.TextEdit txtIDb2;
         private System.Windows.Forms.Label label5;
         private DevExpress.XtraEditors.TextEdit txtIDp;
         private DevExpress.XtraEditors.TextEdit txtPrices;
@@ -884,9 +1064,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DataGridView dgvProduct;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColIDp;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColNamep;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColSale;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button btnCalc;
@@ -896,10 +1073,23 @@
         private DevExpress.XtraEditors.SimpleButton btnSave1;
         private DevExpress.XtraEditors.SimpleButton btnAdd1;
         private System.Windows.Forms.DataGridView dgvDetail;
+        private DevExpress.XtraEditors.TextEdit txtType;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColIDp;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColNamep;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColType;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColSale;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColIDbd;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColProduct;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColType2;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColValue;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColSales;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColPrices;
+        private DevExpress.XtraEditors.SimpleButton btnList1;
+        private DevExpress.XtraEditors.SimpleButton btnSearch1;
+        private System.Windows.Forms.Panel panel5;
+        private DevExpress.XtraEditors.SimpleButton btnList;
+        private DevExpress.XtraEditors.SimpleButton btnSearch2;
+        private System.Windows.Forms.ComboBox cbIDb;
     }
 }

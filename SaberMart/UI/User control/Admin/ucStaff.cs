@@ -85,13 +85,13 @@ namespace SaberMart.UI.User_control.Admin
                 txtIDs.Text == "" || txtNames.Text == "" || dtpDate.Text == "" || 
                 cbGender.SelectedItem == null || txtPN.Text == "" || txtAddress.Text == "")
             {
-                MessageBox.Show("Please enter full information!", "Notification!", MessageBoxButtons.OK);
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin!", "Thông báo!", MessageBoxButtons.OK);
             }
             try
             {
                 if (checkS(txtIDs.Text) != null)
                 {
-                    MessageBox.Show("Staff already exist!", "Notification", MessageBoxButtons.OK);
+                    MessageBox.Show("Nhân viên đã tồn tại!", "Thông báo", MessageBoxButtons.OK);
                 }
                 else
                 {
@@ -123,7 +123,7 @@ namespace SaberMart.UI.User_control.Admin
                 txtIDs.Text == "" || txtNames.Text == "" || cbGender.Text == "" || 
                 dtpDate.Text == "" || txtPN.Text == "" || txtAddress.Text == "")
             {
-                MessageBox.Show("Please enter full information!", "Notification!", MessageBoxButtons.OK);
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin!", "Thông báo!", MessageBoxButtons.OK);
             }
             else
             {
@@ -138,6 +138,7 @@ namespace SaberMart.UI.User_control.Admin
                     Upnv.GioiTinh = cbGender.Text;
                     Upnv.NgaySinh = dtpDate.Value;
                     Upnv.SDT = txtPN.Text;
+                    Upnv.DiaChi = txtAddress.Text;
                     context.SaveChanges();
                 }
                 List<NHANVIEN> lstNV = context.NHANVIENs.ToList();
@@ -149,25 +150,25 @@ namespace SaberMart.UI.User_control.Admin
         {
             if (checkS(txtIDs.Text) == null)
             {
-                MessageBox.Show("Staff cannot be found!", "Notification!", MessageBoxButtons.OK);
+                MessageBox.Show("Không tìm thấy nhân viên!", "Thông báo!", MessageBoxButtons.OK);
             }
             else
             {
                 NHANVIEN delnv = context.NHANVIENs.FirstOrDefault(p => p.MaNV == txtIDs.Text);
                 if(delnv != null)
                 {
-                    if (MessageBox.Show("Do you want to remove?", "Notification!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    if (MessageBox.Show("Bạn muốn xóa?", "Thông báo!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
                         context.NHANVIENs.Remove(delnv);
                         context.SaveChanges();
-                        MessageBox.Show("Remove successfull!", "Notification!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Xóa nhân viên thành công!", "Thông báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         List<NHANVIEN> lstS = context.NHANVIENs.ToList();
                         loadGridView(lstS);
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Staff cannot be found!", "Notification!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Không tìm thấy nhân viên!", "Thông báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
         }
@@ -182,7 +183,7 @@ namespace SaberMart.UI.User_control.Admin
         {
             if(checkS(txtIDs.Text) == null)
             {
-                MessageBox.Show("Staff cannot be found!", "Notification!", MessageBoxButtons.OK);
+                MessageBox.Show("Không tìm thấy nhân viên!", "Thông báo!", MessageBoxButtons.OK);
             }
             else
             {
@@ -194,7 +195,7 @@ namespace SaberMart.UI.User_control.Admin
                 }
                 else
                 {
-                    MessageBox.Show("Staff cannot be found!", "Notification!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Không tìm thấy nhân viên!", "Thông báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
         }

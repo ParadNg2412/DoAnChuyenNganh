@@ -82,5 +82,13 @@ namespace SaberMart.UI
             report.Dock = DockStyle.Fill;
             pAdmin.Controls.Add(report);
         }
+
+        private void btnCustomer_Click(object sender, EventArgs e)
+        {
+            pAdmin.Controls.Clear();
+            ucCustomer customer = new ucCustomer();
+            customer.Dock = DockStyle.Fill;
+            pAdmin.Controls.Add(customer);
+        }
     }
 }

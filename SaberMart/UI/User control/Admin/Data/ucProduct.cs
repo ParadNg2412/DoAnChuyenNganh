@@ -17,6 +17,20 @@ namespace SaberMart.UI.User_control.Admin.Data
             InitializeComponent();
         }
 
+        private void loadNCC (List<NHACUNGCAP> lstC)
+        {
+            cbIDc.DataSource = lstC;
+            cbIDc.DisplayMember = "MaNCC";
+            cbIDc.ValueMember = "MaNCC";
+        }
+
+        private void loadLSP(List<SANPHAM> lstP)
+        {
+            cbIDg.DataSource = lstP;
+            cbIDg.DisplayMember = "MaNhom";
+            cbIDg.ValueMember = "MaNhom";
+        }
+
         private string checkP(string ID)
         {
             List<SANPHAM> lstS = context.SANPHAMs.ToList();
@@ -28,6 +42,34 @@ namespace SaberMart.UI.User_control.Admin.Data
                 }
             }
             return null;
+        }
+
+        private void loadGridView2 (List<NHACUNGCAP> lstC)
+        {
+            dgvCompany.Rows.Clear();
+            foreach (var item in lstC)
+            {
+                int index = dgvCompany.Rows.Add();
+                dgvCompany.Rows[index].Cells[0].Value = item.MaNCC;
+                dgvCompany.Rows[index].Cells[1].Value = item.TenNCC;
+            }
+        }
+
+        private void dgvCompany_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                if (dgvCompany.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
+                {
+                    dgvCompany.CurrentCell.Selected = true;
+                    cbIDc.Text = dgvCompany.Rows[e.RowIndex].Cells["ColIDc"].FormattedValue.ToString();
+                    txtNamec.Text = dgvCompany.Rows[e.RowIndex].Cells["ColNamec"].FormattedValue.ToString();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error");
+            }
         }
 
         private void loadGridView(List<SANPHAM> lstP)
@@ -60,7 +102,7 @@ namespace SaberMart.UI.User_control.Admin.Data
                     txtNamep.Text = dgvProduct.Rows[e.RowIndex].Cells["ColNamep"].FormattedValue.ToString();
                     txtType.Text = dgvProduct.Rows[e.RowIndex].Cells["ColType"].FormattedValue.ToString();
                     txtNameg.Text = dgvProduct.Rows[e.RowIndex].Cells["ColGroup"].FormattedValue.ToString();
-                    txtIDc.Text = dgvProduct.Rows[e.RowIndex].Cells["ColCompany"].FormattedValue.ToString();
+                    txtNamec.Text = dgvProduct.Rows[e.RowIndex].Cells["ColCompany"].FormattedValue.ToString();
                     txtValue.Text = dgvProduct.Rows[e.RowIndex].Cells["ColStorage"].FormattedValue.ToString();
                     txtSales.Text = dgvProduct.Rows[e.RowIndex].Cells["ColSales"].FormattedValue.ToString();
                     txtPrices.Text = dgvProduct.Rows[e.RowIndex].Cells["ColPrices"].FormattedValue.ToString();
@@ -98,13 +140,17 @@ namespace SaberMart.UI.User_control.Admin.Data
         private void ucProduct_Load(object sender, EventArgs e)
         {
             List<SANPHAM> sp = context.SANPHAMs.ToList();
+            List<NHACUNGCAP> ncc = context.NHACUNGCAPs.ToList();
             loadGridView(sp);
+            loadGridView2(ncc);
+            loadLSP(sp);
+            loadNCC(ncc);
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            if (txtIDc.Text == string.Empty || txtIDg.Text == string.Empty || txtNameg.Text == string.Empty || txtIDp.Text == string.Empty || txtNamep.Text == string.Empty ||
-                txtType.Text == string.Empty || txtSales.Text == string.Empty || txtPrices.Text == string.Empty || txtValue.Text == string.Empty)
+            if (cbIDc.Text == "" || cbIDg.Text == "" || txtNameg.Text == "" || txtIDp.Text == "" || txtNamep.Text == "" ||
+                txtType.Text == "" || txtSales.Text == "" || txtPrices.Text == "" || txtValue.Text == "")
             {
                 MessageBox.Show("Vui lòng nhập đầy đủ thông tin!", "Thông báo!", MessageBoxButtons.OK);
             }
@@ -119,9 +165,9 @@ namespace SaberMart.UI.User_control.Admin.Data
                     SANPHAM addsp = new SANPHAM()
                     {
                         MaSP = txtIDp.Text,
-                        TenSP = txtIDg.Text,
-                        MaNCC = txtNamep.Text,
-                        MaNhom = txtType.Text,
+                        TenSP = txtNamep.Text,
+                        MaNCC = cbIDc.Text,
+                        MaNhom = cbIDg.Text,
                         DonViTinh = txtType.Text,
                         SLTon = int.Parse(txtValue.Text),
                         GiaBan = int.Parse(txtSales.Text),
@@ -168,8 +214,8 @@ namespace SaberMart.UI.User_control.Admin.Data
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            if (txtIDc.Text == string.Empty || txtIDg.Text == string.Empty || txtNameg.Text == string.Empty || txtIDp.Text == string.Empty || txtNamep.Text == string.Empty ||
-                txtType.Text == string.Empty || txtSales.Text == string.Empty || txtPrices.Text == string.Empty || txtValue.Text == string.Empty)
+            if (cbIDc.Text == "" || cbIDg.Text == "" || txtNameg.Text == "" || txtIDp.Text == "" || txtNamep.Text == "" ||
+                txtType.Text == "" || txtSales.Text == "" || txtPrices.Text == "" || txtValue.Text == "")
             {
                 MessageBox.Show("Vui lòng nhập đầy đủ thông tin!", "Thông báo!", MessageBoxButtons.OK);
             }
@@ -180,8 +226,8 @@ namespace SaberMart.UI.User_control.Admin.Data
                 {
                     Upsp.MaSP = txtIDp.Text;
                     Upsp.TenSP = txtNamep.Text;
-                    Upsp.MaNCC = txtIDc.Text;
-                    Upsp.MaNhom = Upsp.NHOMSANPHAM.MaNhom = txtIDg.Text;
+                    Upsp.MaNCC = txtNamec.Text;
+                    Upsp.MaNhom = cbIDg.Text;
                     Upsp.NHOMSANPHAM.TenNhom = txtNameg.Text;
                     Upsp.DonViTinh = txtType.Text;
                     Upsp.SLTon = int.Parse(txtValue.Text);
@@ -221,5 +267,7 @@ namespace SaberMart.UI.User_control.Admin.Data
                 }
             }
         }
+
+        
     }
 }

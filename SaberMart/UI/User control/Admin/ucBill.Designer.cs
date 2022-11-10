@@ -70,10 +70,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.dgvProduct = new System.Windows.Forms.DataGridView();
-            this.ColIDp = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColNamep = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColType = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColSale = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnTotal1B = new System.Windows.Forms.Button();
@@ -88,9 +84,14 @@
             this.dgvDetail = new System.Windows.Forms.DataGridView();
             this.ColIDbd = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColProduct = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColType2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColValue = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColSales = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColPrices = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColIDp = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColNamep = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColType = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColSale = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -644,7 +645,7 @@
             this.txtNamep.Name = "txtNamep";
             this.txtNamep.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNamep.Properties.Appearance.Options.UseFont = true;
-            this.txtNamep.Size = new System.Drawing.Size(276, 32);
+            this.txtNamep.Size = new System.Drawing.Size(386, 32);
             this.txtNamep.TabIndex = 18;
             // 
             // Label9
@@ -720,37 +721,6 @@
             this.dgvProduct.Size = new System.Drawing.Size(795, 244);
             this.dgvProduct.TabIndex = 0;
             this.dgvProduct.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProduct_CellClick);
-            // 
-            // ColIDp
-            // 
-            this.ColIDp.HeaderText = "Mã Sản phẩm";
-            this.ColIDp.MaxInputLength = 100000;
-            this.ColIDp.MinimumWidth = 6;
-            this.ColIDp.Name = "ColIDp";
-            this.ColIDp.ReadOnly = true;
-            // 
-            // ColNamep
-            // 
-            this.ColNamep.HeaderText = "Tên sản phẩm";
-            this.ColNamep.MaxInputLength = 1000000;
-            this.ColNamep.MinimumWidth = 6;
-            this.ColNamep.Name = "ColNamep";
-            this.ColNamep.ReadOnly = true;
-            // 
-            // ColType
-            // 
-            this.ColType.HeaderText = "Đơn vị tính";
-            this.ColType.MinimumWidth = 6;
-            this.ColType.Name = "ColType";
-            this.ColType.ReadOnly = true;
-            // 
-            // ColSale
-            // 
-            this.ColSale.HeaderText = "Giá tiền";
-            this.ColSale.MaxInputLength = 100000;
-            this.ColSale.MinimumWidth = 6;
-            this.ColSale.Name = "ColSale";
-            this.ColSale.ReadOnly = true;
             // 
             // panel1
             // 
@@ -1002,6 +972,7 @@
             this.dgvDetail.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColIDbd,
             this.ColProduct,
+            this.ColType2,
             this.ColValue,
             this.ColSales,
             this.ColPrices});
@@ -1029,6 +1000,13 @@
             this.ColProduct.Name = "ColProduct";
             this.ColProduct.ReadOnly = true;
             // 
+            // ColType2
+            // 
+            this.ColType2.HeaderText = "Đơn vị tính";
+            this.ColType2.MinimumWidth = 6;
+            this.ColType2.Name = "ColType2";
+            this.ColType2.ReadOnly = true;
+            // 
             // ColValue
             // 
             this.ColValue.HeaderText = "Số lượng";
@@ -1049,6 +1027,37 @@
             this.ColPrices.MinimumWidth = 6;
             this.ColPrices.Name = "ColPrices";
             this.ColPrices.ReadOnly = true;
+            // 
+            // ColIDp
+            // 
+            this.ColIDp.HeaderText = "Mã Sản phẩm";
+            this.ColIDp.MaxInputLength = 100000;
+            this.ColIDp.MinimumWidth = 6;
+            this.ColIDp.Name = "ColIDp";
+            this.ColIDp.ReadOnly = true;
+            // 
+            // ColNamep
+            // 
+            this.ColNamep.HeaderText = "Tên sản phẩm";
+            this.ColNamep.MaxInputLength = 1000000;
+            this.ColNamep.MinimumWidth = 6;
+            this.ColNamep.Name = "ColNamep";
+            this.ColNamep.ReadOnly = true;
+            // 
+            // ColType
+            // 
+            this.ColType.HeaderText = "Đơn vị tính";
+            this.ColType.MinimumWidth = 6;
+            this.ColType.Name = "ColType";
+            this.ColType.ReadOnly = true;
+            // 
+            // ColSale
+            // 
+            this.ColSale.HeaderText = "Giá tiền";
+            this.ColSale.MaxInputLength = 100000;
+            this.ColSale.MinimumWidth = 6;
+            this.ColSale.Name = "ColSale";
+            this.ColSale.ReadOnly = true;
             // 
             // ucBill
             // 
@@ -1132,10 +1141,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColCustomer;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColTotal;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColIDp;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColNamep;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColType;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColSale;
         private System.Windows.Forms.Label label10;
         private DevExpress.XtraEditors.TextEdit txtType;
         private System.Windows.Forms.ComboBox cbIDs;
@@ -1148,8 +1153,13 @@
         private System.Windows.Forms.Button btnTotal1B;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColIDbd;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColProduct;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColType2;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColValue;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColSales;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColPrices;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColIDp;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColNamep;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColType;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColSale;
     }
 }

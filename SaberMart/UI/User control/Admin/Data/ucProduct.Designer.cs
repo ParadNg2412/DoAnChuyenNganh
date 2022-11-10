@@ -34,11 +34,12 @@ namespace SaberMart.UI.User_control.Admin.Data
             this.txtIDp = new DevExpress.XtraEditors.TextEdit();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.cbIDc = new System.Windows.Forms.ComboBox();
             this.txtValue = new DevExpress.XtraEditors.TextEdit();
             this.label9 = new System.Windows.Forms.Label();
             this.btnUpLoadPicture = new System.Windows.Forms.Button();
             this.picProduct = new System.Windows.Forms.PictureBox();
-            this.txtIDc = new DevExpress.XtraEditors.TextEdit();
+            this.txtNamec = new DevExpress.XtraEditors.TextEdit();
             this.label8 = new System.Windows.Forms.Label();
             this.txtPrices = new DevExpress.XtraEditors.TextEdit();
             this.label7 = new System.Windows.Forms.Label();
@@ -48,16 +49,10 @@ namespace SaberMart.UI.User_control.Admin.Data
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cbIDg = new System.Windows.Forms.ComboBox();
             this.txtNameg = new DevExpress.XtraEditors.TextEdit();
-            this.txtIDg = new DevExpress.XtraEditors.TextEdit();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvProduct = new System.Windows.Forms.DataGridView();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.btnList = new DevExpress.XtraEditors.SimpleButton();
-            this.btnSearch = new DevExpress.XtraEditors.SimpleButton();
-            this.btnEdit = new DevExpress.XtraEditors.SimpleButton();
-            this.btnDelete = new DevExpress.XtraEditors.SimpleButton();
-            this.btnAdd = new DevExpress.XtraEditors.SimpleButton();
             this.ColIDp = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColNamep = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColType = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -66,20 +61,29 @@ namespace SaberMart.UI.User_control.Admin.Data
             this.ColStorage = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColSales = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColPrices = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btnList = new DevExpress.XtraEditors.SimpleButton();
+            this.btnSearch = new DevExpress.XtraEditors.SimpleButton();
+            this.btnEdit = new DevExpress.XtraEditors.SimpleButton();
+            this.btnDelete = new DevExpress.XtraEditors.SimpleButton();
+            this.btnAdd = new DevExpress.XtraEditors.SimpleButton();
+            this.dgvCompany = new System.Windows.Forms.DataGridView();
+            this.ColIDc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColNamec = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.txtNamep.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtIDp.Properties)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtValue.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picProduct)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtIDc.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNamec.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPrices.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSales.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtType.Properties)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtNameg.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtIDg.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).BeginInit();
             this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCompany)).BeginInit();
             this.SuspendLayout();
             // 
             // label4
@@ -130,11 +134,12 @@ namespace SaberMart.UI.User_control.Admin.Data
             // 
             this.groupBox2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.groupBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.groupBox2.Controls.Add(this.cbIDc);
             this.groupBox2.Controls.Add(this.txtValue);
             this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Controls.Add(this.btnUpLoadPicture);
             this.groupBox2.Controls.Add(this.picProduct);
-            this.groupBox2.Controls.Add(this.txtIDc);
+            this.groupBox2.Controls.Add(this.txtNamec);
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Controls.Add(this.txtPrices);
             this.groupBox2.Controls.Add(this.label7);
@@ -157,6 +162,15 @@ namespace SaberMart.UI.User_control.Admin.Data
             this.groupBox2.TabIndex = 22;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Sản phẩm";
+            // 
+            // cbIDc
+            // 
+            this.cbIDc.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.cbIDc.FormattingEnabled = true;
+            this.cbIDc.Location = new System.Drawing.Point(221, 88);
+            this.cbIDc.Name = "cbIDc";
+            this.cbIDc.Size = new System.Drawing.Size(121, 30);
+            this.cbIDc.TabIndex = 61;
             // 
             // txtValue
             // 
@@ -208,16 +222,16 @@ namespace SaberMart.UI.User_control.Admin.Data
             this.picProduct.TabIndex = 57;
             this.picProduct.TabStop = false;
             // 
-            // txtIDc
+            // txtNamec
             // 
-            this.txtIDc.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.txtIDc.Location = new System.Drawing.Point(235, 88);
-            this.txtIDc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtIDc.Name = "txtIDc";
-            this.txtIDc.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIDc.Properties.Appearance.Options.UseFont = true;
-            this.txtIDc.Size = new System.Drawing.Size(98, 28);
-            this.txtIDc.TabIndex = 26;
+            this.txtNamec.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.txtNamec.Location = new System.Drawing.Point(31, 138);
+            this.txtNamec.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtNamec.Name = "txtNamec";
+            this.txtNamec.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNamec.Properties.Appearance.Options.UseFont = true;
+            this.txtNamec.Size = new System.Drawing.Size(311, 28);
+            this.txtNamec.TabIndex = 26;
             // 
             // label8
             // 
@@ -233,7 +247,7 @@ namespace SaberMart.UI.User_control.Admin.Data
             // txtPrices
             // 
             this.txtPrices.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.txtPrices.Location = new System.Drawing.Point(654, 137);
+            this.txtPrices.Location = new System.Drawing.Point(756, 137);
             this.txtPrices.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPrices.Name = "txtPrices";
             this.txtPrices.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -246,7 +260,7 @@ namespace SaberMart.UI.User_control.Admin.Data
             this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(545, 139);
+            this.label7.Location = new System.Drawing.Point(647, 139);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(91, 22);
             this.label7.TabIndex = 15;
@@ -255,7 +269,7 @@ namespace SaberMart.UI.User_control.Admin.Data
             // txtSales
             // 
             this.txtSales.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.txtSales.Location = new System.Drawing.Point(284, 137);
+            this.txtSales.Location = new System.Drawing.Point(450, 137);
             this.txtSales.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtSales.Name = "txtSales";
             this.txtSales.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -268,7 +282,7 @@ namespace SaberMart.UI.User_control.Admin.Data
             this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(189, 140);
+            this.label5.Location = new System.Drawing.Point(355, 140);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(80, 22);
             this.label5.TabIndex = 13;
@@ -312,9 +326,9 @@ namespace SaberMart.UI.User_control.Admin.Data
             // 
             this.groupBox1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.groupBox1.Controls.Add(this.cbIDg);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.txtNameg);
-            this.groupBox1.Controls.Add(this.txtIDg);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -327,6 +341,15 @@ namespace SaberMart.UI.User_control.Admin.Data
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Nhóm sản phẩm";
             // 
+            // cbIDg
+            // 
+            this.cbIDg.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.cbIDg.FormattingEnabled = true;
+            this.cbIDg.Location = new System.Drawing.Point(434, 21);
+            this.cbIDg.Name = "cbIDg";
+            this.cbIDg.Size = new System.Drawing.Size(121, 30);
+            this.cbIDg.TabIndex = 62;
+            // 
             // txtNameg
             // 
             this.txtNameg.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
@@ -338,18 +361,6 @@ namespace SaberMart.UI.User_control.Admin.Data
             this.txtNameg.Properties.Appearance.Options.UseFont = true;
             this.txtNameg.Size = new System.Drawing.Size(186, 28);
             this.txtNameg.TabIndex = 16;
-            // 
-            // txtIDg
-            // 
-            this.txtIDg.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.txtIDg.Cursor = System.Windows.Forms.Cursors.Default;
-            this.txtIDg.Location = new System.Drawing.Point(434, 25);
-            this.txtIDg.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtIDg.Name = "txtIDg";
-            this.txtIDg.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIDg.Properties.Appearance.Options.UseFont = true;
-            this.txtIDg.Size = new System.Drawing.Size(98, 28);
-            this.txtIDg.TabIndex = 15;
             // 
             // label1
             // 
@@ -379,15 +390,71 @@ namespace SaberMart.UI.User_control.Admin.Data
             this.ColStorage,
             this.ColSales,
             this.ColPrices});
-            this.dgvProduct.Location = new System.Drawing.Point(63, 284);
+            this.dgvProduct.Location = new System.Drawing.Point(31, 283);
             this.dgvProduct.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvProduct.Name = "dgvProduct";
             this.dgvProduct.ReadOnly = true;
             this.dgvProduct.RowHeadersWidth = 51;
             this.dgvProduct.RowTemplate.Height = 24;
-            this.dgvProduct.Size = new System.Drawing.Size(1120, 446);
+            this.dgvProduct.Size = new System.Drawing.Size(1216, 226);
             this.dgvProduct.TabIndex = 20;
             this.dgvProduct.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProduct_CellClick);
+            // 
+            // ColIDp
+            // 
+            this.ColIDp.HeaderText = "Mã sản phẩm";
+            this.ColIDp.MinimumWidth = 6;
+            this.ColIDp.Name = "ColIDp";
+            this.ColIDp.ReadOnly = true;
+            // 
+            // ColNamep
+            // 
+            this.ColNamep.HeaderText = "Tên sản phẩm";
+            this.ColNamep.MinimumWidth = 6;
+            this.ColNamep.Name = "ColNamep";
+            this.ColNamep.ReadOnly = true;
+            // 
+            // ColType
+            // 
+            this.ColType.HeaderText = "Đơn vị tính";
+            this.ColType.MinimumWidth = 6;
+            this.ColType.Name = "ColType";
+            this.ColType.ReadOnly = true;
+            // 
+            // ColGroup
+            // 
+            this.ColGroup.HeaderText = "Nhóm sản phẩm";
+            this.ColGroup.MinimumWidth = 6;
+            this.ColGroup.Name = "ColGroup";
+            this.ColGroup.ReadOnly = true;
+            // 
+            // ColCompany
+            // 
+            this.ColCompany.HeaderText = "Nhà cung cấp";
+            this.ColCompany.MinimumWidth = 6;
+            this.ColCompany.Name = "ColCompany";
+            this.ColCompany.ReadOnly = true;
+            // 
+            // ColStorage
+            // 
+            this.ColStorage.HeaderText = "Số lượng";
+            this.ColStorage.MinimumWidth = 6;
+            this.ColStorage.Name = "ColStorage";
+            this.ColStorage.ReadOnly = true;
+            // 
+            // ColSales
+            // 
+            this.ColSales.HeaderText = "Giá bán";
+            this.ColSales.MinimumWidth = 6;
+            this.ColSales.Name = "ColSales";
+            this.ColSales.ReadOnly = true;
+            // 
+            // ColPrices
+            // 
+            this.ColPrices.HeaderText = "Giá nhập";
+            this.ColPrices.MinimumWidth = 6;
+            this.ColPrices.Name = "ColPrices";
+            this.ColPrices.ReadOnly = true;
             // 
             // groupBox3
             // 
@@ -531,61 +598,39 @@ namespace SaberMart.UI.User_control.Admin.Data
             this.btnAdd.Text = "Thêm";
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // ColIDp
+            // dgvCompany
             // 
-            this.ColIDp.HeaderText = "Mã sản phẩm";
-            this.ColIDp.MinimumWidth = 6;
-            this.ColIDp.Name = "ColIDp";
-            this.ColIDp.ReadOnly = true;
+            this.dgvCompany.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvCompany.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvCompany.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvCompany.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCompany.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ColIDc,
+            this.ColNamec});
+            this.dgvCompany.Location = new System.Drawing.Point(741, 523);
+            this.dgvCompany.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvCompany.Name = "dgvCompany";
+            this.dgvCompany.ReadOnly = true;
+            this.dgvCompany.RowHeadersWidth = 51;
+            this.dgvCompany.RowTemplate.Height = 24;
+            this.dgvCompany.Size = new System.Drawing.Size(506, 208);
+            this.dgvCompany.TabIndex = 24;
+            this.dgvCompany.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCompany_CellClick);
             // 
-            // ColNamep
+            // ColIDc
             // 
-            this.ColNamep.HeaderText = "Tên sản phẩm";
-            this.ColNamep.MinimumWidth = 6;
-            this.ColNamep.Name = "ColNamep";
-            this.ColNamep.ReadOnly = true;
+            this.ColIDc.HeaderText = "Mã công ty";
+            this.ColIDc.MinimumWidth = 6;
+            this.ColIDc.Name = "ColIDc";
+            this.ColIDc.ReadOnly = true;
             // 
-            // ColType
+            // ColNamec
             // 
-            this.ColType.HeaderText = "Đơn vị tính";
-            this.ColType.MinimumWidth = 6;
-            this.ColType.Name = "ColType";
-            this.ColType.ReadOnly = true;
-            // 
-            // ColGroup
-            // 
-            this.ColGroup.HeaderText = "Nhóm sản phẩm";
-            this.ColGroup.MinimumWidth = 6;
-            this.ColGroup.Name = "ColGroup";
-            this.ColGroup.ReadOnly = true;
-            // 
-            // ColCompany
-            // 
-            this.ColCompany.HeaderText = "Nhà cung cấp";
-            this.ColCompany.MinimumWidth = 6;
-            this.ColCompany.Name = "ColCompany";
-            this.ColCompany.ReadOnly = true;
-            // 
-            // ColStorage
-            // 
-            this.ColStorage.HeaderText = "Số lượng";
-            this.ColStorage.MinimumWidth = 6;
-            this.ColStorage.Name = "ColStorage";
-            this.ColStorage.ReadOnly = true;
-            // 
-            // ColSales
-            // 
-            this.ColSales.HeaderText = "Giá bán";
-            this.ColSales.MinimumWidth = 6;
-            this.ColSales.Name = "ColSales";
-            this.ColSales.ReadOnly = true;
-            // 
-            // ColPrices
-            // 
-            this.ColPrices.HeaderText = "Giá nhập";
-            this.ColPrices.MinimumWidth = 6;
-            this.ColPrices.Name = "ColPrices";
-            this.ColPrices.ReadOnly = true;
+            this.ColNamec.HeaderText = "Tên công ty";
+            this.ColNamec.MinimumWidth = 6;
+            this.ColNamec.Name = "ColNamec";
+            this.ColNamec.ReadOnly = true;
             // 
             // ucProduct
             // 
@@ -593,6 +638,7 @@ namespace SaberMart.UI.User_control.Admin.Data
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.Transparent;
+            this.Controls.Add(this.dgvCompany);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -607,16 +653,16 @@ namespace SaberMart.UI.User_control.Admin.Data
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtValue.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picProduct)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtIDc.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNamec.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPrices.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSales.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtType.Properties)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtNameg.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtIDg.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).EndInit();
             this.groupBox3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCompany)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -630,7 +676,6 @@ namespace SaberMart.UI.User_control.Admin.Data
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox1;
         private DevExpress.XtraEditors.TextEdit txtNameg;
-        private DevExpress.XtraEditors.TextEdit txtIDg;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgvProduct;
         private DevExpress.XtraEditors.TextEdit txtType;
@@ -638,7 +683,7 @@ namespace SaberMart.UI.User_control.Admin.Data
         private System.Windows.Forms.Label label7;
         private DevExpress.XtraEditors.TextEdit txtSales;
         private System.Windows.Forms.Label label5;
-        private DevExpress.XtraEditors.TextEdit txtIDc;
+        private DevExpress.XtraEditors.TextEdit txtNamec;
         private System.Windows.Forms.Label label8;
         private DevExpress.XtraEditors.TextEdit txtPrices;
         private System.Windows.Forms.Button btnUpLoadPicture;
@@ -659,5 +704,10 @@ namespace SaberMart.UI.User_control.Admin.Data
         private System.Windows.Forms.DataGridViewTextBoxColumn ColStorage;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColSales;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColPrices;
+        private System.Windows.Forms.ComboBox cbIDc;
+        private System.Windows.Forms.ComboBox cbIDg;
+        private System.Windows.Forms.DataGridView dgvCompany;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColIDc;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColNamec;
     }
 }

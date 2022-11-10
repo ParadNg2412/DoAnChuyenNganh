@@ -13,6 +13,5 @@ namespace SaberMart.Others
         public string TenSP { get; set; }
         public string DonViTinh { get; set; }
         public int SLTon { get; set; }
-        public int SLBan { get; set; }
     }
 }

@@ -413,6 +413,12 @@
     <Compile Include="UI\User control\Admin\ucBill.Designer.cs">
       <DependentUpon>ucBill.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\User control\Admin\ucCustomer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\User control\Admin\ucCustomer.Designer.cs">
+      <DependentUpon>ucCustomer.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\User control\Admin\ucData.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -493,6 +499,9 @@
     <EmbeddedResource Include="UI\User control\Admin\ucBill.resx">
       <DependentUpon>ucBill.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\User control\Admin\ucCustomer.resx">
+      <DependentUpon>ucCustomer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\User control\Admin\ucData.resx">
       <DependentUpon>ucData.cs</DependentUpon>
     </EmbeddedResource>
@@ -536,6 +545,7 @@
     <None Include="Resources\close_32x32.png" />
     <None Include="Resources\bill.png" />
     <None Include="Resources\cash.png" />
+    <None Include="Resources\customer.png" />
     <Content Include="Resources\kaenken-rekka.png" />
     <None Include="Resources\producer.png" />
     <None Include="Resources\storage.png" />

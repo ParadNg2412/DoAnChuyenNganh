@@ -36,6 +36,7 @@ namespace SaberMart.UI
             this.barDockingMenuItem2 = new DevExpress.XtraBars.BarDockingMenuItem();
             this.fluentDesignFormControl1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl();
             this.paMenu = new System.Windows.Forms.Panel();
+            this.btnCustomer = new System.Windows.Forms.Button();
             this.btnReport = new System.Windows.Forms.Button();
             this.btnReceipt = new System.Windows.Forms.Button();
             this.btnBill = new System.Windows.Forms.Button();
@@ -87,6 +88,7 @@ namespace SaberMart.UI
             this.paMenu.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.paMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.paMenu.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.paMenu.Controls.Add(this.btnCustomer);
             this.paMenu.Controls.Add(this.btnReport);
             this.paMenu.Controls.Add(this.btnReceipt);
             this.paMenu.Controls.Add(this.btnBill);
@@ -101,6 +103,29 @@ namespace SaberMart.UI
             this.paMenu.Size = new System.Drawing.Size(1411, 83);
             this.paMenu.TabIndex = 3;
             this.paMenu.Click += new System.EventHandler(this.paMenu_Click);
+            // 
+            // btnCustomer
+            // 
+            this.btnCustomer.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnCustomer.BackColor = System.Drawing.Color.Maroon;
+            this.btnCustomer.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnCustomer.FlatAppearance.CheckedBackColor = System.Drawing.Color.Black;
+            this.btnCustomer.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.btnCustomer.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
+            this.btnCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCustomer.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCustomer.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnCustomer.Image = global::SaberMart.Properties.Resources.customer;
+            this.btnCustomer.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnCustomer.Location = new System.Drawing.Point(840, 0);
+            this.btnCustomer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCustomer.Name = "btnCustomer";
+            this.btnCustomer.Size = new System.Drawing.Size(140, 79);
+            this.btnCustomer.TabIndex = 8;
+            this.btnCustomer.Text = "Khách hàng";
+            this.btnCustomer.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnCustomer.UseVisualStyleBackColor = false;
+            this.btnCustomer.Click += new System.EventHandler(this.btnCustomer_Click);
             // 
             // btnReport
             // 
@@ -307,5 +332,6 @@ namespace SaberMart.UI
         private System.Windows.Forms.Button btnBill;
         private System.Windows.Forms.Button btnReceipt;
         private System.Windows.Forms.Button btnReport;
+        private System.Windows.Forms.Button btnCustomer;
     }
 }

@@ -122,9 +122,10 @@ namespace SaberMart.UI.User_control.Admin
                 int index = dgvDetail.Rows.Add();
                 dgvDetail.Rows[index].Cells[0].Value = item.MaHD;
                 dgvDetail.Rows[index].Cells[1].Value = item.SANPHAM.TenSP;
-                dgvDetail.Rows[index].Cells[2].Value = item.SLBan;
-                dgvDetail.Rows[index].Cells[3].Value = item.DonGiaBan;
-                dgvDetail.Rows[index].Cells[4].Value = item.ThanhTienBan;
+                dgvDetail.Rows[index].Cells[2].Value = item.SANPHAM.DonViTinh;
+                dgvDetail.Rows[index].Cells[3].Value = item.SLBan;
+                dgvDetail.Rows[index].Cells[4].Value = item.DonGiaBan;
+                dgvDetail.Rows[index].Cells[5].Value = item.ThanhTienBan;
             }
         }
 
@@ -197,6 +198,7 @@ namespace SaberMart.UI.User_control.Admin
                     dgvDetail.CurrentCell.Selected = true;
                     txtIDb.Text = dgvDetail.Rows[e.RowIndex].Cells["ColIDbd"].FormattedValue.ToString();
                     txtNamep.Text = dgvDetail.Rows[e.RowIndex].Cells["ColProduct"].FormattedValue.ToString();
+                    txtType.Text = dgvDetail.Rows[e.RowIndex].Cells["ColType2"].FormattedValue.ToString();
                     txtValue.Text = dgvDetail.Rows[e.RowIndex].Cells["ColValue"].FormattedValue.ToString();
                     txtSales.Text = dgvDetail.Rows[e.RowIndex].Cells["ColSales"].FormattedValue.ToString();
                     txtPrices.Text = dgvDetail.Rows[e.RowIndex].Cells["ColPrices"].FormattedValue.ToString();
@@ -463,7 +465,7 @@ namespace SaberMart.UI.User_control.Admin
             int sum = 0;
             for (int i = 0; i < dgvDetail.Rows.Count; i++)
             {
-                sum += Convert.ToInt32(dgvDetail.Rows[i].Cells[4].Value);
+                sum += Convert.ToInt32(dgvDetail.Rows[i].Cells[5].Value);
             }
             txtTotal.Text = sum.ToString();
 
