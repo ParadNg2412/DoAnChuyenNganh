@@ -28,6 +28,13 @@ namespace SaberMart.UI.User_control.Admin.Data
             cbIDc.ValueMember = "MaNCC";
         }
 
+        public void loadDetail(List<CHITIETPHIEUNHAP> lstBD)
+        {
+            cbIDb.DataSource = lstBD;
+            cbIDb.DisplayMember = "MaPN";
+            cbIDb.ValueMember = "MaPN";
+        }
+
         private string checkB(string ID)
         {
             List<CHITIETPHIEUNHAP> lstBD = context.CHITIETPHIEUNHAPs.ToList();
@@ -102,6 +109,7 @@ namespace SaberMart.UI.User_control.Admin.Data
             List<CHITIETPHIEUNHAP> lstBD = context.CHITIETPHIEUNHAPs.ToList();
             loadGridPN(lstB);
             loadCompany(lstC);
+            loadDetail(lstBD);
             loadGridSP(lstP);
             loadGridCTPN(lstBD);
         }
@@ -155,7 +163,7 @@ namespace SaberMart.UI.User_control.Admin.Data
                 if (dgvDetail.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
                 {
                     dgvDetail.CurrentCell.Selected = true;
-                    txtIDb2.Text = dgvDetail.Rows[e.RowIndex].Cells["ColIDbd"].FormattedValue.ToString();
+                    cbIDb.Text = dgvDetail.Rows[e.RowIndex].Cells["ColIDbd"].FormattedValue.ToString();
                     txtNamep.Text = dgvDetail.Rows[e.RowIndex].Cells["ColProduct"].FormattedValue.ToString();
                     txtValue.Text = dgvDetail.Rows[e.RowIndex].Cells["ColValue"].FormattedValue.ToString();
                     txtSales.Text = dgvDetail.Rows[e.RowIndex].Cells["ColSales"].FormattedValue.ToString();
@@ -288,7 +296,7 @@ namespace SaberMart.UI.User_control.Admin.Data
         private void btnAdd1_Click(object sender, EventArgs e)
         {
             if (txtNamep.Text == "" || txtValue.Text == "" || txtSales.Text == "" || txtPrices.Text == "" ||
-                txtIDb2.Text == "")
+                cbIDb.Text == "")
             {
                 MessageBox.Show("Vui lòng nhập đầy đủ thông tin!", "Thông báo!", MessageBoxButtons.OK);
             }
@@ -302,7 +310,7 @@ namespace SaberMart.UI.User_control.Admin.Data
                 {
                     CHITIETPHIEUNHAP BD = new CHITIETPHIEUNHAP()
                     {
-                        MaPN = txtIDb2.Text,
+                        MaPN = cbIDb.Text,
                         MaSP = txtIDp.Text,
                         SLNhap = Convert.ToInt32(txtValue.Text),
                         DonGiaNhap = Convert.ToInt32(txtSales.Text),
@@ -319,13 +327,13 @@ namespace SaberMart.UI.User_control.Admin.Data
 
         private void btnDelete1_Click(object sender, EventArgs e)
         {
-            if (checkB(txtIDb2.Text) == null)
+            if (checkB(cbIDb.Text) == null)
             {
                 MessageBox.Show("Không tìm thấy phiếu nhập!", "Thông báo!", MessageBoxButtons.OK);
             }
             else
             {
-                CHITIETPHIEUNHAP BD = context.CHITIETPHIEUNHAPs.FirstOrDefault(p => p.MaPN == txtIDb2.Text);
+                CHITIETPHIEUNHAP BD = context.CHITIETPHIEUNHAPs.FirstOrDefault(p => p.MaPN == cbIDb.Text);
                 if (BD != null)
                 {
                     if (MessageBox.Show("Bạn muốn xóa phiếu nhập?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
@@ -366,7 +374,72 @@ namespace SaberMart.UI.User_control.Admin.Data
 
         private void btnCalc_Click(object sender, EventArgs e)
         {
+            int sum = 0;
+            for (int i = 0; i < dgvDetail.Rows.Count; i++)
+            {
+                sum += Convert.ToInt32(dgvDetail.Rows[i].Cells[4].Value);
+            }
+            txtTotal.Text = sum.ToString();
 
+            PHIEUNHAP listHD = context.PHIEUNHAPs.FirstOrDefault(p => p.MaPN == txtIDb.Text);
+            if (listHD != null)
+            {
+                listHD.TongTienNhap = Convert.ToInt32(txtTotal.Text);
+            }
+        }
+
+        private void btnList1_Click(object sender, EventArgs e)
+        {
+            List<CHITIETPHIEUNHAP> lstBD = context.CHITIETPHIEUNHAPs.ToList();
+            loadGridCTPN(lstBD);
+        }
+
+        private void btnSearch1_Click(object sender, EventArgs e)
+        {
+            if (checkB(cbIDb.Text) == null)
+            {
+                MessageBox.Show("Không tìm thấy phiếu nhập!", "Thông báo!", MessageBoxButtons.OK);
+            }
+            else
+            {
+                CHITIETPHIEUNHAP srchhd = context.CHITIETPHIEUNHAPs.FirstOrDefault(p => p.MaPN == cbIDb.Text);
+                if (srchhd != null)
+                {
+                    List<CHITIETPHIEUNHAP> lstB = context.CHITIETPHIEUNHAPs.Where(p => p.MaPN == cbIDb.Text).ToList();
+                    loadGridCTPN(lstB);
+                }
+                else
+                {
+                    MessageBox.Show("Không tìm thấy phiếu nhập!", "Thông báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+        }
+
+        private void btnList_Click(object sender, EventArgs e)
+        {
+            List<PHIEUNHAP> lstB = context.PHIEUNHAPs.ToList();
+            loadGridPN(lstB);
+        }
+
+        private void btnSearch2_Click(object sender, EventArgs e)
+        {
+            if (checkB(txtIDb.Text) == null)
+            {
+                MessageBox.Show("Không tìm thấy phiếu nhập!", "Thông báo!", MessageBoxButtons.OK);
+            }
+            else
+            {
+                PHIEUNHAP srchhd = context.PHIEUNHAPs.FirstOrDefault(p => p.MaPN == txtIDb.Text);
+                if (srchhd != null)
+                {
+                    List<PHIEUNHAP> lstB = context.PHIEUNHAPs.Where(p => p.MaPN == txtIDb.Text).ToList();
+                    loadGridPN(lstB);
+                }
+                else
+                {
+                    MessageBox.Show("Không tìm thấy phiếu nhập!", "Thông báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
         }
     }
 }

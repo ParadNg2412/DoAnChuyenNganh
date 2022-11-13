@@ -42,7 +42,7 @@ namespace SaberMart.UI
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Bạn muốn thoát?", "Notification", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("Bạn muốn thoát?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 Close();
             }
@@ -54,7 +54,7 @@ namespace SaberMart.UI
             {
                 if (context.NHANVIENs.Where(p => p.Username == txtUsername.Text && p.MatKhau == txtPassword.Text && p.LoaiTK == "Admin").Count() > 0)
                 {
-                    MessageBox.Show("Admin: Đăng nhập thành công!", "Notification", MessageBoxButtons.OK);
+                    MessageBox.Show("Admin: Đăng nhập thành công!", "Thông báo", MessageBoxButtons.OK);
                     frmAdmin fAdmin = new frmAdmin();
                     valueText = txtUsername.Text;
                     this.Hide();
@@ -63,7 +63,7 @@ namespace SaberMart.UI
                 }
                 if (context.NHANVIENs.Where(p => p.Username == txtUsername.Text && p.MatKhau == txtPassword.Text && p.LoaiTK == "Nhân viên").Count() > 0)
                 {
-                    MessageBox.Show("Staff: Đăng nhập thành công!", "Notification!", MessageBoxButtons.OK);
+                    MessageBox.Show("Staff: Đăng nhập thành công!", "Thông báo!", MessageBoxButtons.OK);
                     frmStaff fStaff = new frmStaff();
                     valueText = txtUsername.Text;
                     this.Hide();
@@ -71,7 +71,7 @@ namespace SaberMart.UI
                 }
                 else
                 {
-                    MessageBox.Show("Đăng nhập thất bại!", "Notification", MessageBoxButtons.OK);
+                    MessageBox.Show("Đăng nhập thất bại!", "Thông báo", MessageBoxButtons.OK);
                     txtUsername.Clear();
                     txtPassword.Clear();
                     txtUsername.Focus();

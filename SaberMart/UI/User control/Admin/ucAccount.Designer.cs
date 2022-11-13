@@ -36,24 +36,23 @@ namespace SaberMart.UI.User_control.Admin
             this.Label12 = new System.Windows.Forms.Label();
             this.txtUsername = new DevExpress.XtraEditors.TextEdit();
             this.label10 = new System.Windows.Forms.Label();
-            this.txtAcc = new DevExpress.XtraEditors.TextEdit();
             this.label9 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.dgvAccount = new System.Windows.Forms.DataGridView();
-            this.ColName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColAccount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColUsername = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColPassword = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnList = new DevExpress.XtraEditors.SimpleButton();
             this.btnSearch = new DevExpress.XtraEditors.SimpleButton();
             this.btnEdit = new DevExpress.XtraEditors.SimpleButton();
             this.btnDelete = new DevExpress.XtraEditors.SimpleButton();
             this.btnAdd = new DevExpress.XtraEditors.SimpleButton();
+            this.dgvAccount = new System.Windows.Forms.DataGridView();
+            this.ColName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColAccount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColUsername = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColPassword = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cbAcc = new System.Windows.Forms.ComboBox();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtIDs.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPassword.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtUsername.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtAcc.Properties)).BeginInit();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAccount)).BeginInit();
             this.SuspendLayout();
@@ -62,13 +61,13 @@ namespace SaberMart.UI.User_control.Admin
             // 
             this.groupBox2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.groupBox2.BackColor = System.Drawing.Color.Chocolate;
+            this.groupBox2.Controls.Add(this.cbAcc);
             this.groupBox2.Controls.Add(this.txtIDs);
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.txtPassword);
             this.groupBox2.Controls.Add(this.Label12);
             this.groupBox2.Controls.Add(this.txtUsername);
             this.groupBox2.Controls.Add(this.label10);
-            this.groupBox2.Controls.Add(this.txtAcc);
             this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -147,23 +146,12 @@ namespace SaberMart.UI.User_control.Admin
             this.label10.TabIndex = 13;
             this.label10.Text = "Username";
             // 
-            // txtAcc
-            // 
-            this.txtAcc.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.txtAcc.Location = new System.Drawing.Point(240, 83);
-            this.txtAcc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtAcc.Name = "txtAcc";
-            this.txtAcc.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAcc.Properties.Appearance.Options.UseFont = true;
-            this.txtAcc.Size = new System.Drawing.Size(150, 32);
-            this.txtAcc.TabIndex = 12;
-            // 
             // label9
             // 
             this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(83, 85);
+            this.label9.Location = new System.Drawing.Point(83, 84);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(136, 22);
             this.label9.TabIndex = 11;
@@ -188,54 +176,6 @@ namespace SaberMart.UI.User_control.Admin
             this.groupBox3.TabIndex = 20;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Chức năng";
-            // 
-            // dgvAccount
-            // 
-            this.dgvAccount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.dgvAccount.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvAccount.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dgvAccount.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAccount.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ColName,
-            this.ColAccount,
-            this.ColUsername,
-            this.ColPassword});
-            this.dgvAccount.Location = new System.Drawing.Point(240, 169);
-            this.dgvAccount.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dgvAccount.Name = "dgvAccount";
-            this.dgvAccount.RowHeadersWidth = 51;
-            this.dgvAccount.RowTemplate.Height = 24;
-            this.dgvAccount.Size = new System.Drawing.Size(688, 530);
-            this.dgvAccount.TabIndex = 21;
-            this.dgvAccount.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAccount_CellClick);
-            // 
-            // ColName
-            // 
-            this.ColName.HeaderText = "Name";
-            this.ColName.MinimumWidth = 6;
-            this.ColName.Name = "ColName";
-            this.ColName.ReadOnly = true;
-            // 
-            // ColAccount
-            // 
-            this.ColAccount.HeaderText = "Account type";
-            this.ColAccount.MinimumWidth = 6;
-            this.ColAccount.Name = "ColAccount";
-            this.ColAccount.ReadOnly = true;
-            // 
-            // ColUsername
-            // 
-            this.ColUsername.HeaderText = "Username";
-            this.ColUsername.MinimumWidth = 6;
-            this.ColUsername.Name = "ColUsername";
-            this.ColUsername.ReadOnly = true;
-            // 
-            // ColPassword
-            // 
-            this.ColPassword.HeaderText = "Password";
-            this.ColPassword.MinimumWidth = 6;
-            this.ColPassword.Name = "ColPassword";
-            this.ColPassword.ReadOnly = true;
             // 
             // btnList
             // 
@@ -359,6 +299,67 @@ namespace SaberMart.UI.User_control.Admin
             this.btnAdd.Text = "Thêm";
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
+            // dgvAccount
+            // 
+            this.dgvAccount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.dgvAccount.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvAccount.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvAccount.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAccount.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ColName,
+            this.ColAccount,
+            this.ColUsername,
+            this.ColPassword});
+            this.dgvAccount.Location = new System.Drawing.Point(240, 169);
+            this.dgvAccount.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvAccount.Name = "dgvAccount";
+            this.dgvAccount.RowHeadersWidth = 51;
+            this.dgvAccount.RowTemplate.Height = 24;
+            this.dgvAccount.Size = new System.Drawing.Size(688, 530);
+            this.dgvAccount.TabIndex = 21;
+            this.dgvAccount.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAccount_CellClick);
+            // 
+            // ColName
+            // 
+            this.ColName.HeaderText = "Name";
+            this.ColName.MinimumWidth = 6;
+            this.ColName.Name = "ColName";
+            this.ColName.ReadOnly = true;
+            // 
+            // ColAccount
+            // 
+            this.ColAccount.HeaderText = "Account type";
+            this.ColAccount.MinimumWidth = 6;
+            this.ColAccount.Name = "ColAccount";
+            this.ColAccount.ReadOnly = true;
+            // 
+            // ColUsername
+            // 
+            this.ColUsername.HeaderText = "Username";
+            this.ColUsername.MinimumWidth = 6;
+            this.ColUsername.Name = "ColUsername";
+            this.ColUsername.ReadOnly = true;
+            // 
+            // ColPassword
+            // 
+            this.ColPassword.HeaderText = "Password";
+            this.ColPassword.MinimumWidth = 6;
+            this.ColPassword.Name = "ColPassword";
+            this.ColPassword.ReadOnly = true;
+            // 
+            // cbAcc
+            // 
+            this.cbAcc.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.cbAcc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbAcc.FormattingEnabled = true;
+            this.cbAcc.Items.AddRange(new object[] {
+            "Admin",
+            "Nhân viên"});
+            this.cbAcc.Location = new System.Drawing.Point(240, 79);
+            this.cbAcc.Name = "cbAcc";
+            this.cbAcc.Size = new System.Drawing.Size(167, 33);
+            this.cbAcc.TabIndex = 21;
+            // 
             // ucAccount
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
@@ -378,7 +379,6 @@ namespace SaberMart.UI.User_control.Admin
             ((System.ComponentModel.ISupportInitialize)(this.txtIDs.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPassword.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtUsername.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtAcc.Properties)).EndInit();
             this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAccount)).EndInit();
             this.ResumeLayout(false);
@@ -392,7 +392,6 @@ namespace SaberMart.UI.User_control.Admin
         private System.Windows.Forms.Label Label12;
         private DevExpress.XtraEditors.TextEdit txtUsername;
         private System.Windows.Forms.Label label10;
-        private DevExpress.XtraEditors.TextEdit txtAcc;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.DataGridView dgvAccount;
@@ -407,5 +406,6 @@ namespace SaberMart.UI.User_control.Admin
         private DevExpress.XtraEditors.SimpleButton btnEdit;
         private DevExpress.XtraEditors.SimpleButton btnDelete;
         private DevExpress.XtraEditors.SimpleButton btnAdd;
+        private System.Windows.Forms.ComboBox cbAcc;
     }
 }

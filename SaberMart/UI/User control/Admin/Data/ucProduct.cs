@@ -150,7 +150,7 @@ namespace SaberMart.UI.User_control.Admin.Data
         private void btnAdd_Click(object sender, EventArgs e)
         {
             if (cbIDc.Text == "" || cbIDg.Text == "" || txtNameg.Text == "" || txtIDp.Text == "" || txtNamep.Text == "" ||
-                txtType.Text == "" || txtSales.Text == "" || txtPrices.Text == "" || txtValue.Text == "")
+                txtType.Text == "" || txtSales.Text == "" || txtPrices.Text == "" || txtValue.Text == "" || picProduct.Image == null)
             {
                 MessageBox.Show("Vui lòng nhập đầy đủ thông tin!", "Thông báo!", MessageBoxButtons.OK);
             }

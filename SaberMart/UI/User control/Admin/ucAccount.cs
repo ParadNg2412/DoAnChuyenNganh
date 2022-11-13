@@ -73,7 +73,7 @@ namespace SaberMart.UI.User_control.Admin
                 {
                     dgvAccount.CurrentCell.Selected = true;
                     txtIDs.Text = dgvAccount.Rows[e.RowIndex].Cells["ColName"].FormattedValue.ToString();
-                    txtAcc.Text = dgvAccount.Rows[e.RowIndex].Cells["ColAccount"].FormattedValue.ToString();
+                    cbAcc.Text = dgvAccount.Rows[e.RowIndex].Cells["ColAccount"].FormattedValue.ToString();
                     txtUsername.Text = dgvAccount.Rows[e.RowIndex].Cells["ColUsername"].FormattedValue.ToString();
                     txtPassword.Text = dgvAccount.Rows[e.RowIndex].Cells["ColPassword"].FormattedValue.ToString();
                 }
@@ -86,7 +86,7 @@ namespace SaberMart.UI.User_control.Admin
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            if (txtIDs.Text == "" || txtAcc.Text == "" || txtUsername.Text == "" || txtPassword.Text == "")
+            if (txtIDs.Text == "" || cbAcc.Text == "" || txtUsername.Text == "" || txtPassword.Text == "")
             {
                 MessageBox.Show("Please enter full information!", "Notification!", MessageBoxButtons.OK);
             }
@@ -101,7 +101,7 @@ namespace SaberMart.UI.User_control.Admin
                     NHANVIEN addnv = new NHANVIEN()
                     {
                         MaNV = txtIDs.Text,
-                        LoaiTK = txtAcc.Text,
+                        LoaiTK = cbAcc.Text,
                         Username = txtUsername.Text,
                         MatKhau = txtPassword.Text
                     };
@@ -121,34 +121,34 @@ namespace SaberMart.UI.User_control.Admin
         {
             if (checkS(txtIDs.Text) == null)
             {
-                MessageBox.Show("Account cannot be found!", "Notification!", MessageBoxButtons.OK);
+                MessageBox.Show("Không tìm thấy tài khoản!", "Thông báo!", MessageBoxButtons.OK);
             }
             else
             {
                 NHANVIEN delnv = context.NHANVIENs.FirstOrDefault(p => p.MaNV == txtIDs.Text);
                 if (delnv != null)
                 {
-                    if (MessageBox.Show("Do you want to remove?", "Notification!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    if (MessageBox.Show("Bạn muốn xóa?", "Thông báo!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
                         context.NHANVIENs.Remove(delnv);
                         context.SaveChanges();
-                        MessageBox.Show("Remove successfull!", "Notification!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Xóa tài khoản thành công!", "Thông báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         List<NHANVIEN> lstS = context.NHANVIENs.ToList();
                         loadGridView(lstS);
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Account cannot be found!", "Notification!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Không tìm thấy tài khoản!", "Thông báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            if (txtIDs.Text == "" || txtAcc.Text == "" || txtUsername.Text == "" || txtPassword.Text == "")
+            if (txtIDs.Text == "" || cbAcc.Text == "" || txtUsername.Text == "" || txtPassword.Text == "")
             {
-                MessageBox.Show("Please enter full information!", "Notification!", MessageBoxButtons.OK);
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin!", "Thông báo!", MessageBoxButtons.OK);
             }
             else
             {
@@ -156,7 +156,7 @@ namespace SaberMart.UI.User_control.Admin
                 if (Uptk != null)
                 {
                     Uptk.MaNV = txtIDs.Text;
-                    Uptk.LoaiTK = txtAcc.Text;
+                    Uptk.LoaiTK = cbAcc.Text;
                     Uptk.Username = txtUsername.Text;
                     Uptk.MatKhau = txtPassword.Text;
                     context.SaveChanges();
@@ -174,21 +174,21 @@ namespace SaberMart.UI.User_control.Admin
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            if (checkA(txtAcc.Text) == null)
+            if (checkA(cbAcc.Text) == null)
             {
-                MessageBox.Show("Account cannot be found!", "Notification!", MessageBoxButtons.OK);
+                MessageBox.Show("Không tìm thấy tài khoản!", "Thông báo!", MessageBoxButtons.OK);
             }
             else
             {
-                NHANVIEN srchtk = context.NHANVIENs.FirstOrDefault(p => p.LoaiTK == txtAcc.Text);
+                NHANVIEN srchtk = context.NHANVIENs.FirstOrDefault(p => p.LoaiTK == cbAcc.Text);
                 if(srchtk != null)
                 {
-                    List<NHANVIEN> lstS = context.NHANVIENs.Where(p => p.LoaiTK == txtAcc.Text).ToList();
+                    List<NHANVIEN> lstS = context.NHANVIENs.Where(p => p.LoaiTK == cbAcc.Text).ToList();
                     loadGridView(lstS);
                 }
                 else
                 {
-                    MessageBox.Show("Account cannot be found!", "Notification!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Không tìm thấy tài khoản!", "Thông báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
         }
