@@ -53,15 +53,13 @@ create table NHACUNGCAP(
 
 create table NHOMSANPHAM(
 	MaNhom varchar(5) primary key NOT NULL,
-	TenNhom nvarchar(50) NULL
-	
+	TenNhom nvarchar(50) NULL	
 )
---PTTang int NULL
+
 create table SANPHAM(
 	MaSP varchar(5) primary key NOT NULL,
 	MaNhom varchar(5) NULL,
 	TenSP nvarchar(50) NULL,
-	PicSP image NULL,
 	DonViTinh nvarchar(50) NULL,
 	SLTon int NULL,
 	GiaBan int NULL,
@@ -189,28 +187,28 @@ insert into NHOMSANPHAM(MaNhom, TenNhom) values (N'NSP01', N'Món ăn')
 insert into NHOMSANPHAM(MaNhom, TenNhom) values (N'NSP02', N'Giải khát')
 insert into NHOMSANPHAM(MaNhom, TenNhom) values (N'NSP03', N'Hàng hóa khác')
 
-insert into SANPHAM(MaSP, MaNhom, TenSP, PicSP, DonViTinh, SLTon, GiaBan, GiaNhap, MaNCC)
-values('SP001', 'NSP02', N'Coca-Cola không đường chai 600ml', 'D:/Đồ án chuyên ngành/DoAnChuyenNganh/SaberMart/Database/PicSP/CocaKhongDuongChaiLon.png', N'Chai', 50, 10000, 10000, 'NCC03')
-insert into SANPHAM(MaSP, MaNhom, TenSP, PicSP, DonViTinh, SLTon, GiaBan, GiaNhap, MaNCC)
-values('SP002', 'NSP02', N'Coca-Cola không đường chai 500ml', 'D:/Đồ án chuyên ngành/DoAnChuyenNganh/SaberMart/Database/PicSP/CocaKhongDuongChaiNho.png', N'Chai', 50, 9000, 9000, 'NCC03')
-insert into SANPHAM(MaSP, MaNhom, TenSP, PicSP, DonViTinh, SLTon, GiaBan, GiaNhap, MaNCC)
-values('SP003', 'NSP02', N'Coca-Cola thường chai 600ml', 'D:/Đồ án chuyên ngành/DoAnChuyenNganh/SaberMart/Database/PicSP/CocaThuongChaiLon.png', N'Chai', 50, 10000, 10000, 'NCC03')
-insert into SANPHAM(MaSP, MaNhom, TenSP, PicSP, DonViTinh, SLTon, GiaBan, GiaNhap, MaNCC)
-values('SP004', 'NSP02', N'Coca-Cola thường cahi 500ml', 'D:/Đồ án chuyên ngành/DoAnChuyenNganh/SaberMart/Database/PicSP/CocaThuongChaiNho.png', N'Chai', 50, 9000, 9000, 'NCC03')
-insert into SANPHAM(MaSP, MaNhom, TenSP, PicSP, DonViTinh, SLTon, GiaBan, GiaNhap, MaNCC)
-values('SP005', 'NSP01', N'Mì Modern Lẩu thái tôm', 'D:/Đồ án chuyên ngành/DoAnChuyenNganh/SaberMart/Database/PicSP/MiLyModernLauThaiTom.png', N'Ly', 50, 10000, 10000, 'NCC02')
-insert into SANPHAM(MaSP, MaNhom, TenSP, PicSP, DonViTinh, SLTon, GiaBan, GiaNhap, MaNCC)
-values('SP006', 'NSP01', N'Mỳ Cung Đình Lẩu tôm chua cay', 'D:/Đồ án chuyên ngành/DoAnChuyenNganh/SaberMart/Database/PicSP/MiLyCungDinh.png', N'Ly', 50, 10000, 10000, 'NCC06')
-insert into SANPHAM(MaSP, MaNhom, TenSP, PicSP, DonViTinh, SLTon, GiaBan, GiaNhap, MaNCC)
-values('SP007', 'NSP01', N'Mỳ Cung Đình Lẩu tôm chua cay', 'D:/Đồ án chuyên ngành/DoAnChuyenNganh/SaberMart/Database/PicSP/MiGoiCungDinh.png', N'Gói', 50, 10000, 10000, 'NCC06')
-insert into SANPHAM(MaSP, MaNhom, TenSP, PicSP, DonViTinh, SLTon, GiaBan, GiaNhap, MaNCC)
-values('SP008', 'NSP02', N'Trà Olong TEA+ PLUS', 'D:/Đồ án chuyên ngành/DoAnChuyenNganh/SaberMart/Database/PicSP/TraOlongTeaPlus.png', N'Chai', 50, 10000, 10000, 'NCC04')
-insert into SANPHAM(MaSP, MaNhom, TenSP, PicSP, DonViTinh, SLTon, GiaBan, GiaNhap, MaNCC)
-values('SP009', 'NSP02', N'Sữa Milo nắp vặn', 'D:/Đồ án chuyên ngành/DoAnChuyenNganh/SaberMart/Database/PicSP/MiloNapVan.png', N'Hộp', 50, 15000, 15000, 'NCC05')
-insert into SANPHAM(MaSP, MaNhom, TenSP, PicSP, DonViTinh, SLTon, GiaBan, GiaNhap, MaNCC)
-values('SP010', 'NSP02', N'Sữa Vinamilk tiệt trùng không đường', 'D:/Đồ án chuyên ngành/DoAnChuyenNganh/SaberMart/Database/PicSP/VinamilkKhongDuong.png', N'Hộp', 50, 11000, 11000, 'NCC01')
-insert into SANPHAM(MaSP, MaNhom, TenSP, PicSP, DonViTinh, SLTon, GiaBan, GiaNhap, MaNCC)
-values('SP011', 'NSP02', N'Sữa Vinamilk tiệt trùng có đường', 'D:/Đồ án chuyên ngành/DoAnChuyenNganh/SaberMart/Database/PicSP/VinamilkCoDuong.png', N'Hộp', 50, 11000, 11000, 'NCC01')
+insert into SANPHAM(MaSP, MaNhom, TenSP, DonViTinh, SLTon, GiaBan, GiaNhap, MaNCC)
+values('SP001', 'NSP02', N'Coca-Cola không đường chai 600ml', N'Chai', 50, 10000, 10000, 'NCC03')
+insert into SANPHAM(MaSP, MaNhom, TenSP, DonViTinh, SLTon, GiaBan, GiaNhap, MaNCC)
+values('SP002', 'NSP02', N'Coca-Cola không đường chai 500ml', N'Chai', 50, 9000, 9000, 'NCC03')
+insert into SANPHAM(MaSP, MaNhom, TenSP, DonViTinh, SLTon, GiaBan, GiaNhap, MaNCC)
+values('SP003', 'NSP02', N'Coca-Cola thường chai 600ml', N'Chai', 50, 10000, 10000, 'NCC03')
+insert into SANPHAM(MaSP, MaNhom, TenSP, DonViTinh, SLTon, GiaBan, GiaNhap, MaNCC)
+values('SP004', 'NSP02', N'Coca-Cola thường cahi 500ml', N'Chai', 50, 9000, 9000, 'NCC03')
+insert into SANPHAM(MaSP, MaNhom, TenSP, DonViTinh, SLTon, GiaBan, GiaNhap, MaNCC)
+values('SP005', 'NSP01', N'Mì Modern Lẩu thái tôm', N'Ly', 50, 10000, 10000, 'NCC02')
+insert into SANPHAM(MaSP, MaNhom, TenSP, DonViTinh, SLTon, GiaBan, GiaNhap, MaNCC)
+values('SP006', 'NSP01', N'Mỳ Cung Đình Lẩu tôm chua cay', N'Ly', 50, 10000, 10000, 'NCC06')
+insert into SANPHAM(MaSP, MaNhom, TenSP, DonViTinh, SLTon, GiaBan, GiaNhap, MaNCC)
+values('SP007', 'NSP01', N'Mỳ Cung Đình Lẩu tôm chua cay', N'Gói', 50, 10000, 10000, 'NCC06')
+insert into SANPHAM(MaSP, MaNhom, TenSP, DonViTinh, SLTon, GiaBan, GiaNhap, MaNCC)
+values('SP008', 'NSP02', N'Trà Olong TEA+ PLUS', N'Chai', 50, 10000, 10000, 'NCC04')
+insert into SANPHAM(MaSP, MaNhom, TenSP, DonViTinh, SLTon, GiaBan, GiaNhap, MaNCC)
+values('SP009', 'NSP02', N'Sữa Milo nắp vặn', N'Hộp', 50, 15000, 15000, 'NCC05')
+insert into SANPHAM(MaSP, MaNhom, TenSP, DonViTinh, SLTon, GiaBan, GiaNhap, MaNCC)
+values('SP010', 'NSP02', N'Sữa Vinamilk tiệt trùng không đường', N'Hộp', 50, 11000, 11000, 'NCC01')
+insert into SANPHAM(MaSP, MaNhom, TenSP, DonViTinh, SLTon, GiaBan, GiaNhap, MaNCC)
+values('SP011', 'NSP02', N'Sữa Vinamilk tiệt trùng có đường', N'Hộp', 50, 11000, 11000, 'NCC01')
 
 select * from NHACUNGCAP
 select * from NHOMSANPHAM
