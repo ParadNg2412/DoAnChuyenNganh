@@ -546,6 +546,7 @@
     <None Include="Resources\bill.png" />
     <None Include="Resources\cash.png" />
     <None Include="Resources\customer.png" />
+    <None Include="Resources\Clear.png" />
     <Content Include="Resources\kaenken-rekka.png" />
     <None Include="Resources\producer.png" />
     <None Include="Resources\storage.png" />

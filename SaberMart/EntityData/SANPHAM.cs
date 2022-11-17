@@ -26,9 +26,6 @@ namespace SaberMart.EntityData
         [StringLength(50)]
         public string TenSP { get; set; }
 
-        [Column(TypeName = "image")]
-        public byte[] PicSP { get; set; }
-
         [StringLength(50)]
         public string DonViTinh { get; set; }
 

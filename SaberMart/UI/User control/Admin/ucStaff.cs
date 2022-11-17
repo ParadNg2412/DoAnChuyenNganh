@@ -65,12 +65,12 @@ namespace SaberMart.UI.User_control.Admin
                     dgvStaff.CurrentCell.Selected = true;
                     txtIDs.Text = dgvStaff.Rows[e.RowIndex].Cells["ColID"].FormattedValue.ToString();
                     txtNames.Text = dgvStaff.Rows[e.RowIndex].Cells["ColName"].FormattedValue.ToString();
-                    txtNamep.Text = dgvStaff.Rows[e.RowIndex].Cells["ColPositon"].FormattedValue.ToString();
+                    txtNamep.Text = dgvStaff.Rows[e.RowIndex].Cells["ColPosition"].FormattedValue.ToString();
                     dtpDate.Text = dgvStaff.Rows[e.RowIndex].Cells["ColDate"].FormattedValue.ToString();
                     cbGender.Text = dgvStaff.Rows[e.RowIndex].Cells["ColGender"].FormattedValue.ToString();
                     txtPN.Text = dgvStaff.Rows[e.RowIndex].Cells["ColPhone"].FormattedValue.ToString();
                     txtAddress.Text = dgvStaff.Rows[e.RowIndex].Cells["ColAddress"].FormattedValue.ToString();
-                    txtSalery.Text = dgvStaff.Rows[e.RowIndex].Cells["ColSalery"].FormattedValue.ToString();
+                    txtSalery.Text = dgvStaff.Rows[e.RowIndex].Cells["ColSalary"].FormattedValue.ToString();
                 }
             }
             catch (Exception ex)

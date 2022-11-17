@@ -1,6 +1,7 @@
 ﻿using SaberMart.EntityData;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -24,7 +25,7 @@ namespace SaberMart.UI.User_control.Admin.Data
             cbIDc.ValueMember = "MaNCC";
         }
 
-        private void loadLSP(List<SANPHAM> lstP)
+        private void loadLSP(List<NHOMSANPHAM> lstP)
         {
             cbIDg.DataSource = lstP;
             cbIDg.DisplayMember = "MaNhom";
@@ -42,46 +43,16 @@ namespace SaberMart.UI.User_control.Admin.Data
                 }
             }
             return null;
-        }
+        }       
 
-        private void loadGridView2 (List<NHACUNGCAP> lstC)
-        {
-            dgvCompany.Rows.Clear();
-            foreach (var item in lstC)
-            {
-                int index = dgvCompany.Rows.Add();
-                dgvCompany.Rows[index].Cells[0].Value = item.MaNCC;
-                dgvCompany.Rows[index].Cells[1].Value = item.TenNCC;
-            }
-        }
-
-        private void dgvCompany_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            try
-            {
-                if (dgvCompany.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
-                {
-                    dgvCompany.CurrentCell.Selected = true;
-                    cbIDc.Text = dgvCompany.Rows[e.RowIndex].Cells["ColIDc"].FormattedValue.ToString();
-                    txtNamec.Text = dgvCompany.Rows[e.RowIndex].Cells["ColNamec"].FormattedValue.ToString();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Error");
-            }
-        }
-
-        private void loadGridView(List<SANPHAM> lstP)
+        private void loadGridProduct(List<SANPHAM> lstP)
         {
             dgvProduct.Rows.Clear();
             foreach (var item in lstP)
             {
                 int index = dgvProduct.Rows.Add();
-                //dgvProduct.Rows[index].Cells[0].Value = item.PicSP;
                 dgvProduct.Rows[index].Cells[0].Value = item.MaSP;
                 dgvProduct.Rows[index].Cells[1].Value = item.TenSP;
-
                 dgvProduct.Rows[index].Cells[2].Value = item.DonViTinh;
                 dgvProduct.Rows[index].Cells[3].Value = item.NHOMSANPHAM.TenNhom;
                 dgvProduct.Rows[index].Cells[4].Value = item.NHACUNGCAP.TenNCC;
@@ -106,51 +77,52 @@ namespace SaberMart.UI.User_control.Admin.Data
                     txtValue.Text = dgvProduct.Rows[e.RowIndex].Cells["ColStorage"].FormattedValue.ToString();
                     txtSales.Text = dgvProduct.Rows[e.RowIndex].Cells["ColSales"].FormattedValue.ToString();
                     txtPrices.Text = dgvProduct.Rows[e.RowIndex].Cells["ColPrices"].FormattedValue.ToString();
-
-                    var item = context.SANPHAMs.FirstOrDefault(p => p.MaSP == txtIDp.Text);
-                    //byte[] imaged = (byte[])dgvProduct.Rows[e.RowIndex].Cells["ColImage"].FormattedValue;
-                    //string arr = item.PicSP;
-                    Byte[] arr = item.PicSP;
-                    MemoryStream ms = new MemoryStream(arr);
-                    picProduct.Image = Image.FromStream(ms);
-
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Error");
+                MessageBox.Show(ex.Message, "Lỗi");
             }
         }
 
-        private void btnUpLoadPicture_Click(object sender, EventArgs e)
+        private void loadGridGroup (List<NHOMSANPHAM> lstG)
         {
-            string filePathImage = null;
-            OpenFileDialog openFile = new OpenFileDialog();
-            openFile.Filter = "Pictures files (*.jpg, *.jpeg, *.jpe, *.jfif, *.png)|*.jpg; *.jpeg; *.jpe; *.jfif; *.png|All files (*.*)|*.*";
-            openFile.FilterIndex = 1;
-            openFile.RestoreDirectory = true;
-            if (openFile.ShowDialog() == DialogResult.OK)
+            dgvGroup.Rows.Clear();
+            foreach(var item in lstG)
             {
-                filePathImage = openFile.FileName;
-                picProduct.Image = Image.FromFile(filePathImage.ToString());
-            }
+                int index = dgvGroup.Rows.Add();
+                dgvGroup.Rows[index].Cells[0].Value = item.MaNhom;
+                dgvGroup.Rows[index].Cells[1].Value = item.TenNhom;
+            }           
         }
 
+        private void loadGridCompany (List<NHACUNGCAP> lstC)
+        {
+            dgvCompany.Rows.Clear();
+            foreach(var item in lstC)
+            {
+                int index = dgvCompany.Rows.Add();
+                dgvCompany.Rows[index].Cells[0].Value = item.MaNCC;
+                dgvCompany.Rows[index].Cells[1].Value = item.TenNCC;
+            }
+        }
 
         private void ucProduct_Load(object sender, EventArgs e)
         {
             List<SANPHAM> sp = context.SANPHAMs.ToList();
             List<NHACUNGCAP> ncc = context.NHACUNGCAPs.ToList();
-            loadGridView(sp);
-            loadGridView2(ncc);
-            loadLSP(sp);
+            List<NHOMSANPHAM> nsp = context.NHOMSANPHAMs.ToList();
+            loadGridProduct(sp);
+            loadGridGroup(nsp);
+            loadGridCompany(ncc);
+            loadLSP(nsp);
             loadNCC(ncc);
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
             if (cbIDc.Text == "" || cbIDg.Text == "" || txtNameg.Text == "" || txtIDp.Text == "" || txtNamep.Text == "" ||
-                txtType.Text == "" || txtSales.Text == "" || txtPrices.Text == "" || txtValue.Text == "" || picProduct.Image == null)
+                txtType.Text == "" || txtSales.Text == "" || txtPrices.Text == "" || txtValue.Text == "")
             {
                 MessageBox.Show("Vui lòng nhập đầy đủ thông tin!", "Thông báo!", MessageBoxButtons.OK);
             }
@@ -172,11 +144,12 @@ namespace SaberMart.UI.User_control.Admin.Data
                         SLTon = int.Parse(txtValue.Text),
                         GiaBan = int.Parse(txtSales.Text),
                         GiaNhap = int.Parse(txtPrices.Text)
+                        //PicSP = Convert.ToSByte(picProduct.Image)
                     };
                     context.SANPHAMs.Add(addsp);
                     context.SaveChanges();
                     List<SANPHAM> lstP = context.SANPHAMs.ToList();
-                    loadGridView(lstP);
+                    loadGridProduct(lstP);
                 }
             }
             catch (Exception ex)
@@ -202,7 +175,7 @@ namespace SaberMart.UI.User_control.Admin.Data
                         context.SaveChanges();
                         MessageBox.Show("Xóa sản phẩm thành công!", "Thông báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         List<SANPHAM> lstP = context.SANPHAMs.ToList();
-                        loadGridView(lstP);
+                        loadGridProduct(lstP);
                     }
                 }
                 else
@@ -233,18 +206,17 @@ namespace SaberMart.UI.User_control.Admin.Data
                     Upsp.SLTon = int.Parse(txtValue.Text);
                     Upsp.GiaBan = int.Parse(txtSales.Text);
                     Upsp.GiaNhap = int.Parse(txtPrices.Text);
-                    //Upsp.PicSP = Byte[](picProduct.Image);
                     context.SaveChanges();
                 }
                 List<SANPHAM> lstP = context.SANPHAMs.ToList();
-                loadGridView(lstP);
+                loadGridProduct(lstP);
             }
         }
 
         private void btnList_Click(object sender, EventArgs e)
         {
             List<SANPHAM> lstP = context.SANPHAMs.ToList();
-            loadGridView(lstP);
+            loadGridProduct(lstP);
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
@@ -259,7 +231,7 @@ namespace SaberMart.UI.User_control.Admin.Data
                 if (srchsp != null)
                 {
                     List<SANPHAM> lstP = context.SANPHAMs.Where(p => p.MaSP == txtIDp.Text).ToList();
-                    loadGridView(lstP);
+                    loadGridProduct(lstP);
                 }
                 else
                 {
@@ -268,6 +240,38 @@ namespace SaberMart.UI.User_control.Admin.Data
             }
         }
 
-        
+        private void dgvGroup_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                if (dgvGroup.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
+                {
+                    dgvGroup.CurrentCell.Selected = true;
+                    cbIDg.Text = dgvGroup.Rows[e.RowIndex].Cells["ColGroupID"].FormattedValue.ToString();
+                    txtNameg.Text = dgvGroup.Rows[e.RowIndex].Cells["ColGroupName"].FormattedValue.ToString();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Lỗi");
+            }
+        }
+
+        private void dgvCompany_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                if (dgvCompany.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
+                {
+                    dgvCompany.CurrentCell.Selected = true;
+                    cbIDc.Text = dgvCompany.Rows[e.RowIndex].Cells["ColCompanyID"].FormattedValue.ToString();
+                    txtNamec.Text = dgvCompany.Rows[e.RowIndex].Cells["ColCompanyName"].FormattedValue.ToString();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Lỗi");
+            }
+        }
     }
 }

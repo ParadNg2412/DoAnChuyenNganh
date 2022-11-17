@@ -177,10 +177,6 @@ namespace SaberMart.UI.User_control.Admin
                     txtNamep.Text = dgvProduct.Rows[e.RowIndex].Cells["ColNamep"].FormattedValue.ToString();
                     txtType.Text = dgvProduct.Rows[e.RowIndex].Cells["ColType"].FormattedValue.ToString();
                     txtSales.Text = dgvProduct.Rows[e.RowIndex].Cells["ColSale"].FormattedValue.ToString();
-                    var item = context.SANPHAMs.FirstOrDefault(p => p.MaSP == txtIDp.Text);
-                    byte[] arr = item.PicSP;
-                    MemoryStream ms = new MemoryStream(arr);
-                    picProduct.Image = Image.FromStream(ms);
                 }
             }
             catch (Exception ex)

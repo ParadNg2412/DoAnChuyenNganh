@@ -30,7 +30,6 @@
         {
             this.paMenu = new System.Windows.Forms.Panel();
             this.btnNew1 = new DevExpress.XtraEditors.SimpleButton();
-            this.btnGridView = new DevExpress.XtraEditors.SimpleButton();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dgvReceipt = new System.Windows.Forms.DataGridView();
             this.ColIDb = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -54,6 +53,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.standardReportDesigner2 = new DevExpress.XtraReports.UserDesigner.Native.StandardReportDesigner();
+            this.btnGridView = new DevExpress.XtraEditors.SimpleButton();
             this.paMenu.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReceipt)).BeginInit();
@@ -107,37 +107,6 @@
             this.btnNew1.TabIndex = 14;
             this.btnNew1.Text = "Làm mới";
             this.btnNew1.Click += new System.EventHandler(this.btnNew1_Click);
-            // 
-            // btnGridView
-            // 
-            this.btnGridView.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnGridView.Appearance.BackColor = System.Drawing.Color.Orange;
-            this.btnGridView.Appearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnGridView.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGridView.Appearance.Options.UseBackColor = true;
-            this.btnGridView.Appearance.Options.UseBorderColor = true;
-            this.btnGridView.Appearance.Options.UseFont = true;
-            this.btnGridView.AppearanceHovered.BackColor = System.Drawing.Color.Yellow;
-            this.btnGridView.AppearanceHovered.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnGridView.AppearanceHovered.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGridView.AppearanceHovered.Options.UseBackColor = true;
-            this.btnGridView.AppearanceHovered.Options.UseBorderColor = true;
-            this.btnGridView.AppearanceHovered.Options.UseFont = true;
-            this.btnGridView.AppearancePressed.BackColor = System.Drawing.Color.Gold;
-            this.btnGridView.AppearancePressed.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnGridView.AppearancePressed.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGridView.AppearancePressed.Options.UseBackColor = true;
-            this.btnGridView.AppearancePressed.Options.UseBorderColor = true;
-            this.btnGridView.AppearancePressed.Options.UseFont = true;
-            this.btnGridView.ImageOptions.Image = global::SaberMart.Properties.Resources.cash;
-            this.btnGridView.Location = new System.Drawing.Point(671, 14);
-            this.btnGridView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnGridView.Name = "btnGridView";
-            this.btnGridView.Size = new System.Drawing.Size(197, 58);
-            this.btnGridView.TabIndex = 15;
-            this.btnGridView.Text = "Xuất thống kê";
-            this.btnGridView.Click += new System.EventHandler(this.btnGridView_Click);
             // 
             // panel3
             // 
@@ -415,6 +384,37 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Mã hóa đơn";
             // 
+            // btnGridView
+            // 
+            this.btnGridView.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnGridView.Appearance.BackColor = System.Drawing.Color.Orange;
+            this.btnGridView.Appearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnGridView.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGridView.Appearance.Options.UseBackColor = true;
+            this.btnGridView.Appearance.Options.UseBorderColor = true;
+            this.btnGridView.Appearance.Options.UseFont = true;
+            this.btnGridView.AppearanceHovered.BackColor = System.Drawing.Color.Yellow;
+            this.btnGridView.AppearanceHovered.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnGridView.AppearanceHovered.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGridView.AppearanceHovered.Options.UseBackColor = true;
+            this.btnGridView.AppearanceHovered.Options.UseBorderColor = true;
+            this.btnGridView.AppearanceHovered.Options.UseFont = true;
+            this.btnGridView.AppearancePressed.BackColor = System.Drawing.Color.Gold;
+            this.btnGridView.AppearancePressed.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnGridView.AppearancePressed.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGridView.AppearancePressed.Options.UseBackColor = true;
+            this.btnGridView.AppearancePressed.Options.UseBorderColor = true;
+            this.btnGridView.AppearancePressed.Options.UseFont = true;
+            this.btnGridView.ImageOptions.Image = global::SaberMart.Properties.Resources.cash;
+            this.btnGridView.Location = new System.Drawing.Point(671, 14);
+            this.btnGridView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnGridView.Name = "btnGridView";
+            this.btnGridView.Size = new System.Drawing.Size(197, 58);
+            this.btnGridView.TabIndex = 15;
+            this.btnGridView.Text = "Xuất thống kê";
+            this.btnGridView.Click += new System.EventHandler(this.btnGridView_Click);
+            // 
             // ucReceipt
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
@@ -448,7 +448,6 @@
         private DevExpress.XtraEditors.SimpleButton btnNew1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel5;
-        private DevExpress.XtraEditors.SimpleButton btnGridView;
         private System.Windows.Forms.DataGridView dgvReceipt;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DateTimePicker dtpDate;
@@ -470,5 +469,6 @@
         private System.Windows.Forms.DateTimePicker dtpMonth;
         private System.Windows.Forms.DateTimePicker dtpDay;
         private DevExpress.XtraReports.UserDesigner.Native.StandardReportDesigner standardReportDesigner2;
+        private DevExpress.XtraEditors.SimpleButton btnGridView;
     }
 }

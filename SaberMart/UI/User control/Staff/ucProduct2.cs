@@ -79,14 +79,10 @@ namespace SaberMart.UI.User_control.Staff
                 if (dgvProduct.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
                 {
                     dgvProduct.CurrentCell.Selected = true;
-                    cbID.Text = dgvProduct.Rows[e.RowIndex].Cells["ColIDb"].FormattedValue.ToString();
-                    txtName.Text = dgvProduct.Rows[e.RowIndex].Cells["ColName"].FormattedValue.ToString();
+                    cbID.Text = dgvProduct.Rows[e.RowIndex].Cells["ColIDp"].FormattedValue.ToString();
+                    txtName.Text = dgvProduct.Rows[e.RowIndex].Cells["ColNamep"].FormattedValue.ToString();
                     cbType.Text = dgvProduct.Rows[e.RowIndex].Cells["ColType"].FormattedValue.ToString();
                     txtSales.Text = dgvProduct.Rows[e.RowIndex].Cells["ColSales"].FormattedValue.ToString();
-                    var item = context.SANPHAMs.FirstOrDefault(p => p.MaSP == cbID.Text);
-                    byte[] arr = item.PicSP;
-                    MemoryStream ms = new MemoryStream(arr);
-                    picProduct.Image = Image.FromStream(ms);
                 }
             }
             catch (Exception ex)
@@ -97,23 +93,7 @@ namespace SaberMart.UI.User_control.Staff
 
         private void btnUpLoadPicture_Click(object sender, EventArgs e)
         {
-            try
-            {
-                string filePathImage = null;
-                OpenFileDialog openFile = new OpenFileDialog();
-                openFile.Filter = "Pictures files (*.jpg, *.jpeg, *.jpe, *.jfif, *.png)|*.jpg; *.jpeg; *.jpe; *.jfif; *.png|All files (*.*)|*.*";
-                openFile.FilterIndex = 1;
-                openFile.RestoreDirectory = true;
-                if (openFile.ShowDialog() == DialogResult.OK)
-                {
-                    filePathImage = openFile.FileName;
-                    picProduct.Image = Image.FromFile(filePathImage.ToString());
-                }
-            }
-            catch (Exception)
-            {
-                return;
-            }
+
         }
 
         private void btnList_Click(object sender, EventArgs e)
