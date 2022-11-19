@@ -61,6 +61,7 @@ create table SANPHAM(
 	MaNhom varchar(5) NULL,
 	TenSP nvarchar(50) NULL,
 	DonViTinh nvarchar(50) NULL,
+	PicSP image NULL,
 	SLTon int NULL,
 	GiaBan int NULL,
 	GiaNhap int NULL,
@@ -147,7 +148,7 @@ values('NV001', 'CV001', N'Đỗ Hoàng Long Vũ', N'Tp.HCM', '0946222412', N'Na
 insert into NHANVIEN(MaNV, MaCV, TenNV, DiaChi, SDT, GioiTinh, NgaySinh, Username, MatKhau, LoaiTK)
 values('NV002', 'CV002', N'Huỳnh Gia Bảo', N'Tp.HCM', '0947236431', N'Nam', '12/04/2001', 'giabao1204', '1204@Bao', N'Nhân viên')
 insert into NHANVIEN(MaNV, MaCV, TenNV, DiaChi, SDT, GioiTinh, NgaySinh, Username, MatKhau, LoaiTK)
-values('NV003', 'CV003', N'Nguyễn Vũ Duy Khương', N'Tp.HCM', '03578356634', N'Nam', '12/04/2001', null, null, null)
+values('NV003', 'CV003', N'Nguyễn Vũ Duy Khương', N'Tp.HCM', '03578356634', N'Nam', '20/04/2001', 'duykhuong24', '2004@dk1', N'Admin')
 
 select * from CHUCVU
 select * from NHANVIEN
@@ -187,28 +188,28 @@ insert into NHOMSANPHAM(MaNhom, TenNhom) values (N'NSP01', N'Món ăn')
 insert into NHOMSANPHAM(MaNhom, TenNhom) values (N'NSP02', N'Giải khát')
 insert into NHOMSANPHAM(MaNhom, TenNhom) values (N'NSP03', N'Hàng hóa khác')
 
-insert into SANPHAM(MaSP, MaNhom, TenSP, DonViTinh, SLTon, GiaBan, GiaNhap, MaNCC)
-values('SP001', 'NSP02', N'Coca-Cola không đường chai 600ml', N'Chai', 50, 10000, 10000, 'NCC03')
-insert into SANPHAM(MaSP, MaNhom, TenSP, DonViTinh, SLTon, GiaBan, GiaNhap, MaNCC)
-values('SP002', 'NSP02', N'Coca-Cola không đường chai 500ml', N'Chai', 50, 9000, 9000, 'NCC03')
-insert into SANPHAM(MaSP, MaNhom, TenSP, DonViTinh, SLTon, GiaBan, GiaNhap, MaNCC)
-values('SP003', 'NSP02', N'Coca-Cola thường chai 600ml', N'Chai', 50, 10000, 10000, 'NCC03')
-insert into SANPHAM(MaSP, MaNhom, TenSP, DonViTinh, SLTon, GiaBan, GiaNhap, MaNCC)
-values('SP004', 'NSP02', N'Coca-Cola thường cahi 500ml', N'Chai', 50, 9000, 9000, 'NCC03')
-insert into SANPHAM(MaSP, MaNhom, TenSP, DonViTinh, SLTon, GiaBan, GiaNhap, MaNCC)
-values('SP005', 'NSP01', N'Mì Modern Lẩu thái tôm', N'Ly', 50, 10000, 10000, 'NCC02')
-insert into SANPHAM(MaSP, MaNhom, TenSP, DonViTinh, SLTon, GiaBan, GiaNhap, MaNCC)
-values('SP006', 'NSP01', N'Mỳ Cung Đình Lẩu tôm chua cay', N'Ly', 50, 10000, 10000, 'NCC06')
-insert into SANPHAM(MaSP, MaNhom, TenSP, DonViTinh, SLTon, GiaBan, GiaNhap, MaNCC)
-values('SP007', 'NSP01', N'Mỳ Cung Đình Lẩu tôm chua cay', N'Gói', 50, 10000, 10000, 'NCC06')
-insert into SANPHAM(MaSP, MaNhom, TenSP, DonViTinh, SLTon, GiaBan, GiaNhap, MaNCC)
-values('SP008', 'NSP02', N'Trà Olong TEA+ PLUS', N'Chai', 50, 10000, 10000, 'NCC04')
-insert into SANPHAM(MaSP, MaNhom, TenSP, DonViTinh, SLTon, GiaBan, GiaNhap, MaNCC)
-values('SP009', 'NSP02', N'Sữa Milo nắp vặn', N'Hộp', 50, 15000, 15000, 'NCC05')
-insert into SANPHAM(MaSP, MaNhom, TenSP, DonViTinh, SLTon, GiaBan, GiaNhap, MaNCC)
-values('SP010', 'NSP02', N'Sữa Vinamilk tiệt trùng không đường', N'Hộp', 50, 11000, 11000, 'NCC01')
-insert into SANPHAM(MaSP, MaNhom, TenSP, DonViTinh, SLTon, GiaBan, GiaNhap, MaNCC)
-values('SP011', 'NSP02', N'Sữa Vinamilk tiệt trùng có đường', N'Hộp', 50, 11000, 11000, 'NCC01')
+insert into SANPHAM(MaSP, MaNhom, TenSP, DonViTinh, PicSP, SLTon, GiaBan, GiaNhap, MaNCC)
+values('SP001', 'NSP02', N'Coca-Cola không đường chai 600ml', N'Chai', 'D:\Đồ án chuyên nghành\DoAnChuyenNganh\SaberMart\Database\PicSP\CocaKhongDuongChaiLon.png', 50, 10000, 10000, 'NCC03')
+insert into SANPHAM(MaSP, MaNhom, TenSP, DonViTinh, PicSP, SLTon, GiaBan, GiaNhap, MaNCC)
+values('SP002', 'NSP02', N'Coca-Cola không đường chai 500ml', N'Chai', 'D:\Đồ án chuyên nghành\DoAnChuyenNganh\SaberMart\Database\PicSP\CocaKhongDuongChaiNho.png', 50, 9000, 9000, 'NCC03')
+insert into SANPHAM(MaSP, MaNhom, TenSP, DonViTinh, PicSP, SLTon, GiaBan, GiaNhap, MaNCC)
+values('SP003', 'NSP02', N'Coca-Cola thường chai 600ml', N'Chai', 'D:\Đồ án chuyên nghành\DoAnChuyenNganh\SaberMart\Database\PicSP\CocaThuongChaiLon.png', 50, 10000, 10000, 'NCC03')
+insert into SANPHAM(MaSP, MaNhom, TenSP, DonViTinh, PicSP, SLTon, GiaBan, GiaNhap, MaNCC)
+values('SP004', 'NSP02', N'Coca-Cola thường cahi 500ml', N'Chai', 'D:\Đồ án chuyên nghành\DoAnChuyenNganh\SaberMart\Database\PicSP\CocaThuongChaiNho.png', 50, 9000, 9000, 'NCC03')
+insert into SANPHAM(MaSP, MaNhom, TenSP, DonViTinh, PicSP, SLTon, GiaBan, GiaNhap, MaNCC)
+values('SP005', 'NSP01', N'Mì Modern Lẩu thái tôm', N'Ly', 'D:\Đồ án chuyên nghành\DoAnChuyenNganh\SaberMart\Database\PicSP\MiLyModernLauThaiTom.png', 50, 10000, 10000, 'NCC02')
+insert into SANPHAM(MaSP, MaNhom, TenSP, DonViTinh, PicSP, SLTon, GiaBan, GiaNhap, MaNCC)
+values('SP006', 'NSP01', N'Mì ly Cung Đình Lẩu tôm chua cay', N'Ly', 'D:\Đồ án chuyên nghành\DoAnChuyenNganh\SaberMart\Database\PicSP\MiLyCungDinh.png', 50, 10000, 10000, 'NCC06')
+insert into SANPHAM(MaSP, MaNhom, TenSP, DonViTinh, PicSP, SLTon, GiaBan, GiaNhap, MaNCC)
+values('SP007', 'NSP01', N'Mì gói Cung Đình Lẩu tôm chua cay', N'Gói', 'D:\Đồ án chuyên nghành\DoAnChuyenNganh\SaberMart\Database\PicSP\MiGoiCungDinh.png', 50, 10000, 10000, 'NCC06')
+insert into SANPHAM(MaSP, MaNhom, TenSP, DonViTinh, PicSP, SLTon, GiaBan, GiaNhap, MaNCC)
+values('SP008', 'NSP02', N'Trà Olong TEA+ PLUS', N'Chai', 'D:\Đồ án chuyên nghành\DoAnChuyenNganh\SaberMart\Database\PicSP\TraOlongTeaPlus.png', 50, 10000, 10000, 'NCC04')
+insert into SANPHAM(MaSP, MaNhom, TenSP, DonViTinh, PicSP, SLTon, GiaBan, GiaNhap, MaNCC)
+values('SP009', 'NSP02', N'Sữa Milo nắp vặn', N'Hộp', 'D:\Đồ án chuyên nghành\DoAnChuyenNganh\SaberMart\Database\PicSP\MiloNapVan.png', 50, 15000, 15000, 'NCC05')
+insert into SANPHAM(MaSP, MaNhom, TenSP, DonViTinh, PicSP, SLTon, GiaBan, GiaNhap, MaNCC)
+values('SP010', 'NSP02', N'Sữa Vinamilk tiệt trùng không đường', N'Hộp lớn', 'D:\Đồ án chuyên nghành\DoAnChuyenNganh\SaberMart\Database\PicSP\VinamilkKhongDuong.png', 50, 11000, 11000, 'NCC01')
+insert into SANPHAM(MaSP, MaNhom, TenSP, DonViTinh, PicSP, SLTon, GiaBan, GiaNhap, MaNCC)
+values('SP011', 'NSP02', N'Sữa Vinamilk tiệt trùng có đường', N'Hộp lớn', 'D:\Đồ án chuyên nghành\DoAnChuyenNganh\SaberMart\Database\PicSP\VinamilkCoDuong.png', 50, 11000, 11000, 'NCC01')
 
 select * from NHACUNGCAP
 select * from NHOMSANPHAM

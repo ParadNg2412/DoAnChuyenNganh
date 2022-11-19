@@ -21,6 +21,9 @@ namespace SaberMart.EntityData
 
         public int? SLBan { get; set; }
 
+        [Column(TypeName = "date")]
+        public DateTime? NgayBan { get; set; }
+
         public int? DonGiaBan { get; set; }
 
         public int? ThanhTienBan { get; set; }

@@ -46,17 +46,20 @@
             this.btnNew = new DevExpress.XtraEditors.SimpleButton();
             this.txtSales = new DevExpress.XtraEditors.TextEdit();
             this.txtName = new DevExpress.XtraEditors.TextEdit();
+            this.picProduct = new System.Windows.Forms.PictureBox();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSales.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtName.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picProduct)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox2
             // 
             this.groupBox2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.groupBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.groupBox2.Controls.Add(this.picProduct);
             this.groupBox2.Controls.Add(this.cbType);
             this.groupBox2.Controls.Add(this.cbID);
             this.groupBox2.Controls.Add(this.txtSales);
@@ -72,7 +75,7 @@
             this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox2.Size = new System.Drawing.Size(1213, 162);
+            this.groupBox2.Size = new System.Drawing.Size(1213, 201);
             this.groupBox2.TabIndex = 24;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Sản phẩm";
@@ -80,7 +83,7 @@
             // cbType
             // 
             this.cbType.FormattingEnabled = true;
-            this.cbType.Location = new System.Drawing.Point(354, 93);
+            this.cbType.Location = new System.Drawing.Point(248, 132);
             this.cbType.Name = "cbType";
             this.cbType.Size = new System.Drawing.Size(136, 30);
             this.cbType.TabIndex = 60;
@@ -88,7 +91,7 @@
             // cbID
             // 
             this.cbID.FormattingEnabled = true;
-            this.cbID.Location = new System.Drawing.Point(354, 41);
+            this.cbID.Location = new System.Drawing.Point(248, 51);
             this.cbID.Name = "cbID";
             this.cbID.Size = new System.Drawing.Size(136, 30);
             this.cbID.TabIndex = 59;
@@ -98,7 +101,7 @@
             this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(622, 96);
+            this.label5.Location = new System.Drawing.Point(490, 135);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(80, 22);
             this.label5.TabIndex = 13;
@@ -109,7 +112,7 @@
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(161, 96);
+            this.label3.Location = new System.Drawing.Point(55, 135);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(106, 22);
             this.label3.TabIndex = 11;
@@ -120,7 +123,7 @@
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(613, 43);
+            this.label4.Location = new System.Drawing.Point(485, 54);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(137, 22);
             this.label4.TabIndex = 6;
@@ -131,7 +134,7 @@
             this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(161, 43);
+            this.label6.Location = new System.Drawing.Point(55, 53);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(128, 22);
             this.label6.TabIndex = 0;
@@ -146,11 +149,11 @@
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Right;
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.ForeColor = System.Drawing.Color.White;
-            this.groupBox3.Location = new System.Drawing.Point(1035, 162);
+            this.groupBox3.Location = new System.Drawing.Point(1035, 201);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox3.Size = new System.Drawing.Size(178, 598);
+            this.groupBox3.Size = new System.Drawing.Size(178, 559);
             this.groupBox3.TabIndex = 25;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Chức năng";
@@ -222,7 +225,7 @@
             this.btnList.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnList.ImageOptions.Image = global::SaberMart.Properties.Resources.print;
             this.btnList.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
-            this.btnList.Location = new System.Drawing.Point(3, 454);
+            this.btnList.Location = new System.Drawing.Point(3, 415);
             this.btnList.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnList.Name = "btnList";
             this.btnList.Size = new System.Drawing.Size(172, 68);
@@ -247,7 +250,7 @@
             this.btnSearch.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnSearch.ImageOptions.Image = global::SaberMart.Properties.Resources.search;
             this.btnSearch.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
-            this.btnSearch.Location = new System.Drawing.Point(3, 522);
+            this.btnSearch.Location = new System.Drawing.Point(3, 483);
             this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(172, 74);
@@ -282,7 +285,7 @@
             // txtSales
             // 
             this.txtSales.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.txtSales.Location = new System.Drawing.Point(729, 93);
+            this.txtSales.Location = new System.Drawing.Point(597, 132);
             this.txtSales.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtSales.Name = "txtSales";
             this.txtSales.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -293,13 +296,24 @@
             // txtName
             // 
             this.txtName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.txtName.Location = new System.Drawing.Point(773, 41);
+            this.txtName.Location = new System.Drawing.Point(645, 52);
             this.txtName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtName.Name = "txtName";
             this.txtName.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtName.Properties.Appearance.Options.UseFont = true;
             this.txtName.Size = new System.Drawing.Size(290, 30);
             this.txtName.TabIndex = 4;
+            // 
+            // picProduct
+            // 
+            this.picProduct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.picProduct.Image = global::SaberMart.Properties.Resources.Add_72;
+            this.picProduct.Location = new System.Drawing.Point(1007, 26);
+            this.picProduct.Name = "picProduct";
+            this.picProduct.Size = new System.Drawing.Size(159, 157);
+            this.picProduct.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.picProduct.TabIndex = 61;
+            this.picProduct.TabStop = false;
             // 
             // ucProduct2
             // 
@@ -320,6 +334,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSales.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtName.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picProduct)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -344,5 +359,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColNamep;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColType;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColSales;
+        private System.Windows.Forms.PictureBox picProduct;
     }
 }

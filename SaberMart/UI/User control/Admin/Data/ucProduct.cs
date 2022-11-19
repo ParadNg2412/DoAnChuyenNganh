@@ -77,6 +77,10 @@ namespace SaberMart.UI.User_control.Admin.Data
                     txtValue.Text = dgvProduct.Rows[e.RowIndex].Cells["ColStorage"].FormattedValue.ToString();
                     txtSales.Text = dgvProduct.Rows[e.RowIndex].Cells["ColSales"].FormattedValue.ToString();
                     txtPrices.Text = dgvProduct.Rows[e.RowIndex].Cells["ColPrices"].FormattedValue.ToString();
+                    var item = context.SANPHAMs.FirstOrDefault(p => p.TenSP == txtNamep.Text);
+                    byte[] arr = item.PicSP;
+                    MemoryStream ms = new MemoryStream(arr);
+                    picProduct.Image = Image.FromStream(ms);
                 }
             }
             catch (Exception ex)
@@ -122,7 +126,7 @@ namespace SaberMart.UI.User_control.Admin.Data
         private void btnAdd_Click(object sender, EventArgs e)
         {
             if (cbIDc.Text == "" || cbIDg.Text == "" || txtNameg.Text == "" || txtIDp.Text == "" || txtNamep.Text == "" ||
-                txtType.Text == "" || txtSales.Text == "" || txtPrices.Text == "" || txtValue.Text == "")
+                txtType.Text == "" || txtSales.Text == "" || txtPrices.Text == "" || txtValue.Text == "" || picProduct.Image == null)
             {
                 MessageBox.Show("Vui lòng nhập đầy đủ thông tin!", "Thông báo!", MessageBoxButtons.OK);
             }
@@ -134,6 +138,9 @@ namespace SaberMart.UI.User_control.Admin.Data
                 }
                 else
                 {
+                    Image img = Image.FromFile(picProduct.ImageLocation);
+                    MemoryStream ms = new MemoryStream();
+                    img.Save(ms, img.RawFormat);
                     SANPHAM addsp = new SANPHAM()
                     {
                         MaSP = txtIDp.Text,
@@ -143,8 +150,8 @@ namespace SaberMart.UI.User_control.Admin.Data
                         DonViTinh = txtType.Text,
                         SLTon = int.Parse(txtValue.Text),
                         GiaBan = int.Parse(txtSales.Text),
-                        GiaNhap = int.Parse(txtPrices.Text)
-                        //PicSP = Convert.ToSByte(picProduct.Image)
+                        GiaNhap = int.Parse(txtPrices.Text),
+                        PicSP = ms.ToArray()
                     };
                     context.SANPHAMs.Add(addsp);
                     context.SaveChanges();
@@ -188,25 +195,29 @@ namespace SaberMart.UI.User_control.Admin.Data
         private void btnEdit_Click(object sender, EventArgs e)
         {
             if (cbIDc.Text == "" || cbIDg.Text == "" || txtNameg.Text == "" || txtIDp.Text == "" || txtNamep.Text == "" ||
-                txtType.Text == "" || txtSales.Text == "" || txtPrices.Text == "" || txtValue.Text == "")
+                txtType.Text == "" || txtSales.Text == "" || txtPrices.Text == "" || txtValue.Text == "" || picProduct.Image == null)
             {
                 MessageBox.Show("Vui lòng nhập đầy đủ thông tin!", "Thông báo!", MessageBoxButtons.OK);
             }
             else
             {
+                Image img = Image.FromFile(picProduct.ImageLocation);
+                MemoryStream ms = new MemoryStream();
+                img.Save(ms, img.RawFormat);
                 SANPHAM Upsp = context.SANPHAMs.FirstOrDefault(p => p.MaSP == txtIDp.Text);
                 if (Upsp != null)
                 {
                     Upsp.MaSP = txtIDp.Text;
                     Upsp.TenSP = txtNamep.Text;
-                    Upsp.MaNCC = txtNamec.Text;
+                    Upsp.MaNCC = cbIDc.Text;
                     Upsp.MaNhom = cbIDg.Text;
                     Upsp.NHOMSANPHAM.TenNhom = txtNameg.Text;
                     Upsp.DonViTinh = txtType.Text;
                     Upsp.SLTon = int.Parse(txtValue.Text);
                     Upsp.GiaBan = int.Parse(txtSales.Text);
                     Upsp.GiaNhap = int.Parse(txtPrices.Text);
-                    context.SaveChanges();
+                    Upsp.PicSP = ms.ToArray();
+                    
                 }
                 List<SANPHAM> lstP = context.SANPHAMs.ToList();
                 loadGridProduct(lstP);
@@ -271,6 +282,16 @@ namespace SaberMart.UI.User_control.Admin.Data
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Lỗi");
+            }
+        }
+
+        private void picProduct_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog dlg = new OpenFileDialog();
+            dlg.RestoreDirectory = true;
+            if (dlg.ShowDialog() == DialogResult.OK)
+            {
+                picProduct.ImageLocation = dlg.FileName;
             }
         }
     }

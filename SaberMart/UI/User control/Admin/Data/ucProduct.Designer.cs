@@ -30,10 +30,9 @@ namespace SaberMart.UI.User_control.Admin.Data
         private void InitializeComponent()
         {
             this.label4 = new System.Windows.Forms.Label();
-            this.txtNamep = new DevExpress.XtraEditors.TextEdit();
-            this.txtIDp = new DevExpress.XtraEditors.TextEdit();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.picProduct = new System.Windows.Forms.PictureBox();
             this.cbIDc = new System.Windows.Forms.ComboBox();
             this.txtValue = new DevExpress.XtraEditors.TextEdit();
             this.label9 = new System.Windows.Forms.Label();
@@ -45,6 +44,8 @@ namespace SaberMart.UI.User_control.Admin.Data
             this.label5 = new System.Windows.Forms.Label();
             this.txtType = new DevExpress.XtraEditors.TextEdit();
             this.label3 = new System.Windows.Forms.Label();
+            this.txtNamep = new DevExpress.XtraEditors.TextEdit();
+            this.txtIDp = new DevExpress.XtraEditors.TextEdit();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cbIDg = new System.Windows.Forms.ComboBox();
@@ -71,14 +72,15 @@ namespace SaberMart.UI.User_control.Admin.Data
             this.dgvCompany = new System.Windows.Forms.DataGridView();
             this.ColCompanyID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColCompanyName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.txtNamep.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtIDp.Properties)).BeginInit();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picProduct)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtValue.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNamec.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPrices.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSales.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtType.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNamep.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtIDp.Properties)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtNameg.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).BeginInit();
@@ -92,40 +94,18 @@ namespace SaberMart.UI.User_control.Admin.Data
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(370, 38);
+            this.label4.Location = new System.Drawing.Point(333, 48);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(137, 22);
             this.label4.TabIndex = 6;
             this.label4.Text = "Tên sản phẩm";
-            // 
-            // txtNamep
-            // 
-            this.txtNamep.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.txtNamep.Location = new System.Drawing.Point(529, 36);
-            this.txtNamep.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtNamep.Name = "txtNamep";
-            this.txtNamep.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNamep.Properties.Appearance.Options.UseFont = true;
-            this.txtNamep.Size = new System.Drawing.Size(258, 28);
-            this.txtNamep.TabIndex = 4;
-            // 
-            // txtIDp
-            // 
-            this.txtIDp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.txtIDp.Location = new System.Drawing.Point(184, 36);
-            this.txtIDp.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtIDp.Name = "txtIDp";
-            this.txtIDp.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIDp.Properties.Appearance.Options.UseFont = true;
-            this.txtIDp.Size = new System.Drawing.Size(98, 28);
-            this.txtIDp.TabIndex = 3;
             // 
             // label6
             // 
             this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(40, 39);
+            this.label6.Location = new System.Drawing.Point(32, 48);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(128, 22);
             this.label6.TabIndex = 0;
@@ -135,6 +115,7 @@ namespace SaberMart.UI.User_control.Admin.Data
             // 
             this.groupBox2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.groupBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.groupBox2.Controls.Add(this.picProduct);
             this.groupBox2.Controls.Add(this.cbIDc);
             this.groupBox2.Controls.Add(this.txtValue);
             this.groupBox2.Controls.Add(this.label9);
@@ -157,16 +138,31 @@ namespace SaberMart.UI.User_control.Admin.Data
             this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox2.Size = new System.Drawing.Size(1449, 153);
+            this.groupBox2.Size = new System.Drawing.Size(1384, 227);
             this.groupBox2.TabIndex = 22;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Sản phẩm";
+            // 
+            // picProduct
+            // 
+            this.picProduct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.picProduct.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.picProduct.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.picProduct.Dock = System.Windows.Forms.DockStyle.Right;
+            this.picProduct.Image = global::SaberMart.Properties.Resources.Add_72;
+            this.picProduct.Location = new System.Drawing.Point(1161, 23);
+            this.picProduct.Name = "picProduct";
+            this.picProduct.Size = new System.Drawing.Size(220, 202);
+            this.picProduct.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picProduct.TabIndex = 62;
+            this.picProduct.TabStop = false;
+            this.picProduct.Click += new System.EventHandler(this.picProduct_Click);
             // 
             // cbIDc
             // 
             this.cbIDc.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.cbIDc.FormattingEnabled = true;
-            this.cbIDc.Location = new System.Drawing.Point(221, 88);
+            this.cbIDc.Location = new System.Drawing.Point(157, 160);
             this.cbIDc.Name = "cbIDc";
             this.cbIDc.Size = new System.Drawing.Size(121, 30);
             this.cbIDc.TabIndex = 61;
@@ -174,12 +170,12 @@ namespace SaberMart.UI.User_control.Admin.Data
             // txtValue
             // 
             this.txtValue.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.txtValue.Location = new System.Drawing.Point(1345, 36);
+            this.txtValue.Location = new System.Drawing.Point(492, 101);
             this.txtValue.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtValue.Name = "txtValue";
-            this.txtValue.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtValue.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtValue.Properties.Appearance.Options.UseFont = true;
-            this.txtValue.Size = new System.Drawing.Size(78, 28);
+            this.txtValue.Size = new System.Drawing.Size(78, 30);
             this.txtValue.TabIndex = 60;
             // 
             // label9
@@ -187,7 +183,7 @@ namespace SaberMart.UI.User_control.Admin.Data
             this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(1241, 39);
+            this.label9.Location = new System.Drawing.Point(388, 104);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(89, 22);
             this.label9.TabIndex = 59;
@@ -196,12 +192,12 @@ namespace SaberMart.UI.User_control.Admin.Data
             // txtNamec
             // 
             this.txtNamec.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.txtNamec.Location = new System.Drawing.Point(359, 88);
+            this.txtNamec.Location = new System.Drawing.Point(295, 160);
             this.txtNamec.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNamec.Name = "txtNamec";
-            this.txtNamec.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNamec.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNamec.Properties.Appearance.Options.UseFont = true;
-            this.txtNamec.Size = new System.Drawing.Size(311, 28);
+            this.txtNamec.Size = new System.Drawing.Size(311, 30);
             this.txtNamec.TabIndex = 26;
             // 
             // label8
@@ -209,7 +205,7 @@ namespace SaberMart.UI.User_control.Admin.Data
             this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(100, 91);
+            this.label8.Location = new System.Drawing.Point(36, 163);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(107, 22);
             this.label8.TabIndex = 25;
@@ -218,12 +214,12 @@ namespace SaberMart.UI.User_control.Admin.Data
             // txtPrices
             // 
             this.txtPrices.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.txtPrices.Location = new System.Drawing.Point(1204, 90);
+            this.txtPrices.Location = new System.Drawing.Point(145, 102);
             this.txtPrices.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPrices.Name = "txtPrices";
-            this.txtPrices.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPrices.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPrices.Properties.Appearance.Options.UseFont = true;
-            this.txtPrices.Size = new System.Drawing.Size(170, 28);
+            this.txtPrices.Size = new System.Drawing.Size(170, 30);
             this.txtPrices.TabIndex = 24;
             // 
             // label7
@@ -231,7 +227,7 @@ namespace SaberMart.UI.User_control.Admin.Data
             this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(1095, 92);
+            this.label7.Location = new System.Drawing.Point(36, 104);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(91, 22);
             this.label7.TabIndex = 15;
@@ -240,12 +236,12 @@ namespace SaberMart.UI.User_control.Admin.Data
             // txtSales
             // 
             this.txtSales.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.txtSales.Location = new System.Drawing.Point(855, 88);
+            this.txtSales.Location = new System.Drawing.Point(725, 101);
             this.txtSales.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtSales.Name = "txtSales";
-            this.txtSales.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSales.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSales.Properties.Appearance.Options.UseFont = true;
-            this.txtSales.Size = new System.Drawing.Size(170, 28);
+            this.txtSales.Size = new System.Drawing.Size(170, 30);
             this.txtSales.TabIndex = 14;
             // 
             // label5
@@ -253,7 +249,7 @@ namespace SaberMart.UI.User_control.Admin.Data
             this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(760, 91);
+            this.label5.Location = new System.Drawing.Point(630, 104);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(80, 22);
             this.label5.TabIndex = 13;
@@ -262,12 +258,12 @@ namespace SaberMart.UI.User_control.Admin.Data
             // txtType
             // 
             this.txtType.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.txtType.Location = new System.Drawing.Point(1005, 36);
+            this.txtType.Location = new System.Drawing.Point(968, 45);
             this.txtType.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtType.Name = "txtType";
-            this.txtType.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtType.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtType.Properties.Appearance.Options.UseFont = true;
-            this.txtType.Size = new System.Drawing.Size(170, 28);
+            this.txtType.Size = new System.Drawing.Size(170, 30);
             this.txtType.TabIndex = 12;
             // 
             // label3
@@ -275,11 +271,33 @@ namespace SaberMart.UI.User_control.Admin.Data
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(879, 38);
+            this.label3.Location = new System.Drawing.Point(842, 47);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(106, 22);
             this.label3.TabIndex = 11;
             this.label3.Text = "Đơn vị tính";
+            // 
+            // txtNamep
+            // 
+            this.txtNamep.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.txtNamep.Location = new System.Drawing.Point(492, 46);
+            this.txtNamep.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtNamep.Name = "txtNamep";
+            this.txtNamep.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNamep.Properties.Appearance.Options.UseFont = true;
+            this.txtNamep.Size = new System.Drawing.Size(258, 30);
+            this.txtNamep.TabIndex = 4;
+            // 
+            // txtIDp
+            // 
+            this.txtIDp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.txtIDp.Location = new System.Drawing.Point(176, 45);
+            this.txtIDp.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtIDp.Name = "txtIDp";
+            this.txtIDp.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIDp.Properties.Appearance.Options.UseFont = true;
+            this.txtIDp.Size = new System.Drawing.Size(98, 30);
+            this.txtIDp.TabIndex = 3;
             // 
             // label2
             // 
@@ -287,7 +305,7 @@ namespace SaberMart.UI.User_control.Admin.Data
             this.label2.AutoSize = true;
             this.label2.Cursor = System.Windows.Forms.Cursors.Default;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(768, 28);
+            this.label2.Location = new System.Drawing.Point(736, 28);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(99, 22);
             this.label2.TabIndex = 18;
@@ -307,7 +325,7 @@ namespace SaberMart.UI.User_control.Admin.Data
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox1.Size = new System.Drawing.Size(1449, 65);
+            this.groupBox1.Size = new System.Drawing.Size(1384, 65);
             this.groupBox1.TabIndex = 21;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Nhóm sản phẩm";
@@ -316,7 +334,7 @@ namespace SaberMart.UI.User_control.Admin.Data
             // 
             this.cbIDg.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.cbIDg.FormattingEnabled = true;
-            this.cbIDg.Location = new System.Drawing.Point(434, 21);
+            this.cbIDg.Location = new System.Drawing.Point(402, 21);
             this.cbIDg.Name = "cbIDg";
             this.cbIDg.Size = new System.Drawing.Size(121, 30);
             this.cbIDg.TabIndex = 62;
@@ -325,7 +343,7 @@ namespace SaberMart.UI.User_control.Admin.Data
             // 
             this.txtNameg.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.txtNameg.Cursor = System.Windows.Forms.Cursors.Default;
-            this.txtNameg.Location = new System.Drawing.Point(899, 22);
+            this.txtNameg.Location = new System.Drawing.Point(867, 22);
             this.txtNameg.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNameg.Name = "txtNameg";
             this.txtNameg.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -339,7 +357,7 @@ namespace SaberMart.UI.User_control.Admin.Data
             this.label1.AutoSize = true;
             this.label1.Cursor = System.Windows.Forms.Cursors.Default;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(323, 28);
+            this.label1.Location = new System.Drawing.Point(291, 28);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(90, 22);
             this.label1.TabIndex = 13;
@@ -361,13 +379,13 @@ namespace SaberMart.UI.User_control.Admin.Data
             this.ColStorage,
             this.ColSales,
             this.ColPrices});
-            this.dgvProduct.Location = new System.Drawing.Point(31, 241);
+            this.dgvProduct.Location = new System.Drawing.Point(20, 296);
             this.dgvProduct.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvProduct.Name = "dgvProduct";
             this.dgvProduct.ReadOnly = true;
             this.dgvProduct.RowHeadersWidth = 51;
             this.dgvProduct.RowTemplate.Height = 24;
-            this.dgvProduct.Size = new System.Drawing.Size(1216, 247);
+            this.dgvProduct.Size = new System.Drawing.Size(1162, 216);
             this.dgvProduct.TabIndex = 20;
             this.dgvProduct.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProduct_CellClick);
             // 
@@ -438,11 +456,11 @@ namespace SaberMart.UI.User_control.Admin.Data
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Right;
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.ForeColor = System.Drawing.Color.White;
-            this.groupBox3.Location = new System.Drawing.Point(1268, 218);
+            this.groupBox3.Location = new System.Drawing.Point(1203, 292);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox3.Size = new System.Drawing.Size(181, 542);
+            this.groupBox3.Size = new System.Drawing.Size(181, 498);
             this.groupBox3.TabIndex = 23;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Chức năng";
@@ -464,7 +482,7 @@ namespace SaberMart.UI.User_control.Admin.Data
             this.btnList.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnList.ImageOptions.Image = global::SaberMart.Properties.Resources.print;
             this.btnList.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
-            this.btnList.Location = new System.Drawing.Point(3, 398);
+            this.btnList.Location = new System.Drawing.Point(3, 354);
             this.btnList.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnList.Name = "btnList";
             this.btnList.Size = new System.Drawing.Size(175, 68);
@@ -489,7 +507,7 @@ namespace SaberMart.UI.User_control.Admin.Data
             this.btnSearch.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnSearch.ImageOptions.Image = global::SaberMart.Properties.Resources.search;
             this.btnSearch.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
-            this.btnSearch.Location = new System.Drawing.Point(3, 466);
+            this.btnSearch.Location = new System.Drawing.Point(3, 422);
             this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(175, 74);
@@ -571,21 +589,21 @@ namespace SaberMart.UI.User_control.Admin.Data
             // 
             // dgvGroup
             // 
-            this.dgvGroup.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvGroup.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.dgvGroup.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvGroup.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvGroup.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvGroup.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColGroupID,
             this.ColGroupName});
-            this.dgvGroup.Location = new System.Drawing.Point(31, 493);
+            this.dgvGroup.Location = new System.Drawing.Point(20, 528);
             this.dgvGroup.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvGroup.Name = "dgvGroup";
             this.dgvGroup.ReadOnly = true;
             this.dgvGroup.RowHeadersWidth = 51;
             this.dgvGroup.RowTemplate.Height = 24;
-            this.dgvGroup.Size = new System.Drawing.Size(620, 239);
+            this.dgvGroup.Size = new System.Drawing.Size(603, 259);
             this.dgvGroup.TabIndex = 25;
             this.dgvGroup.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvGroup_CellClick);
             // 
@@ -605,7 +623,7 @@ namespace SaberMart.UI.User_control.Admin.Data
             // 
             // dgvCompany
             // 
-            this.dgvCompany.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.dgvCompany.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvCompany.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvCompany.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
@@ -613,12 +631,12 @@ namespace SaberMart.UI.User_control.Admin.Data
             this.dgvCompany.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColCompanyID,
             this.ColCompanyName});
-            this.dgvCompany.Location = new System.Drawing.Point(688, 493);
+            this.dgvCompany.Location = new System.Drawing.Point(629, 528);
             this.dgvCompany.Name = "dgvCompany";
             this.dgvCompany.ReadOnly = true;
             this.dgvCompany.RowHeadersWidth = 51;
             this.dgvCompany.RowTemplate.Height = 24;
-            this.dgvCompany.Size = new System.Drawing.Size(559, 239);
+            this.dgvCompany.Size = new System.Drawing.Size(553, 259);
             this.dgvCompany.TabIndex = 26;
             this.dgvCompany.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCompany_CellClick);
             // 
@@ -650,17 +668,18 @@ namespace SaberMart.UI.User_control.Admin.Data
             this.Controls.Add(this.dgvProduct);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "ucProduct";
-            this.Size = new System.Drawing.Size(1449, 760);
+            this.Size = new System.Drawing.Size(1384, 790);
             this.Load += new System.EventHandler(this.ucProduct_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.txtNamep.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtIDp.Properties)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picProduct)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtValue.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNamec.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPrices.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSales.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtType.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNamep.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtIDp.Properties)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtNameg.Properties)).EndInit();
@@ -715,5 +734,6 @@ namespace SaberMart.UI.User_control.Admin.Data
         private System.Windows.Forms.DataGridView dgvCompany;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColCompanyID;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColCompanyName;
+        private System.Windows.Forms.PictureBox picProduct;
     }
 }

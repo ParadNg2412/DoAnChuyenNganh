@@ -535,7 +535,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Database\DACN.sql" />
     <None Include="Resources\report.png" />
     <None Include="Resources\KaenkenRekka1.jpg" />
     <None Include="Resources\KaenkenRekka4.jpg" />
@@ -547,6 +546,7 @@
     <None Include="Resources\cash.png" />
     <None Include="Resources\customer.png" />
     <None Include="Resources\Clear.png" />
+    <None Include="Resources\Add_72.png" />
     <Content Include="Resources\kaenken-rekka.png" />
     <None Include="Resources\producer.png" />
     <None Include="Resources\storage.png" />

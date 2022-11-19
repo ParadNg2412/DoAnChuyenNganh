@@ -88,6 +88,7 @@ namespace SaberMart.UI.User_control.Admin.Data
             this.ColValue = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColSales = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColPrices = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.picProduct = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -106,6 +107,7 @@ namespace SaberMart.UI.User_control.Admin.Data
             ((System.ComponentModel.ISupportInitialize)(this.txtTotal.Properties)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetail)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picProduct)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -128,7 +130,7 @@ namespace SaberMart.UI.User_control.Admin.Data
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox1.Size = new System.Drawing.Size(1596, 319);
+            this.groupBox1.Size = new System.Drawing.Size(1694, 319);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Phiếu nhập";
@@ -217,7 +219,7 @@ namespace SaberMart.UI.User_control.Admin.Data
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel4.Location = new System.Drawing.Point(3, 246);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(611, 71);
+            this.panel4.Size = new System.Drawing.Size(709, 71);
             this.panel4.TabIndex = 27;
             // 
             // btnEdit
@@ -382,7 +384,7 @@ namespace SaberMart.UI.User_control.Admin.Data
             this.ColDate,
             this.ColTotal});
             this.dgvBill.Dock = System.Windows.Forms.DockStyle.Right;
-            this.dgvBill.Location = new System.Drawing.Point(614, 23);
+            this.dgvBill.Location = new System.Drawing.Point(712, 23);
             this.dgvBill.Name = "dgvBill";
             this.dgvBill.ReadOnly = true;
             this.dgvBill.RowHeadersWidth = 51;
@@ -497,6 +499,7 @@ namespace SaberMart.UI.User_control.Admin.Data
             // 
             this.groupBox2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.groupBox2.BackColor = System.Drawing.Color.Orange;
+            this.groupBox2.Controls.Add(this.picProduct);
             this.groupBox2.Controls.Add(this.cbIDb);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.btnPrices);
@@ -514,7 +517,7 @@ namespace SaberMart.UI.User_control.Admin.Data
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(0, 319);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(749, 486);
+            this.groupBox2.Size = new System.Drawing.Size(890, 486);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Chi tiết";
@@ -525,7 +528,7 @@ namespace SaberMart.UI.User_control.Admin.Data
             | System.Windows.Forms.AnchorStyles.Left)));
             this.cbIDb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbIDb.FormattingEnabled = true;
-            this.cbIDb.Location = new System.Drawing.Point(595, 35);
+            this.cbIDb.Location = new System.Drawing.Point(515, 35);
             this.cbIDb.Name = "cbIDb";
             this.cbIDb.Size = new System.Drawing.Size(111, 33);
             this.cbIDb.TabIndex = 31;
@@ -533,7 +536,7 @@ namespace SaberMart.UI.User_control.Admin.Data
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(475, 40);
+            this.label5.Location = new System.Drawing.Point(395, 40);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(91, 22);
             this.label5.TabIndex = 28;
@@ -544,7 +547,7 @@ namespace SaberMart.UI.User_control.Admin.Data
             this.btnPrices.BackColor = System.Drawing.Color.Gray;
             this.btnPrices.Image = global::SaberMart.Properties.Resources.cash;
             this.btnPrices.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPrices.Location = new System.Drawing.Point(412, 164);
+            this.btnPrices.Location = new System.Drawing.Point(332, 164);
             this.btnPrices.Name = "btnPrices";
             this.btnPrices.Size = new System.Drawing.Size(144, 36);
             this.btnPrices.TabIndex = 27;
@@ -568,7 +571,7 @@ namespace SaberMart.UI.User_control.Admin.Data
             // 
             this.txtPrices.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtPrices.Location = new System.Drawing.Point(571, 166);
+            this.txtPrices.Location = new System.Drawing.Point(491, 166);
             this.txtPrices.Name = "txtPrices";
             this.txtPrices.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPrices.Properties.Appearance.Options.UseFont = true;
@@ -670,7 +673,7 @@ namespace SaberMart.UI.User_control.Admin.Data
             this.dgvProduct.ReadOnly = true;
             this.dgvProduct.RowHeadersWidth = 51;
             this.dgvProduct.RowTemplate.Height = 24;
-            this.dgvProduct.Size = new System.Drawing.Size(743, 244);
+            this.dgvProduct.Size = new System.Drawing.Size(884, 244);
             this.dgvProduct.TabIndex = 0;
             this.dgvProduct.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProduct_CellClick);
             // 
@@ -708,9 +711,9 @@ namespace SaberMart.UI.User_control.Admin.Data
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.dgvDetail);
             this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel1.Location = new System.Drawing.Point(785, 324);
+            this.panel1.Location = new System.Drawing.Point(896, 324);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(787, 485);
+            this.panel1.Size = new System.Drawing.Size(774, 485);
             this.panel1.TabIndex = 3;
             // 
             // panel3
@@ -723,7 +726,7 @@ namespace SaberMart.UI.User_control.Admin.Data
             this.panel3.ForeColor = System.Drawing.Color.Black;
             this.panel3.Location = new System.Drawing.Point(0, 339);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(787, 73);
+            this.panel3.Size = new System.Drawing.Size(774, 73);
             this.panel3.TabIndex = 3;
             // 
             // btnCalc
@@ -766,7 +769,7 @@ namespace SaberMart.UI.User_control.Admin.Data
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 412);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(787, 73);
+            this.panel2.Size = new System.Drawing.Size(774, 73);
             this.panel2.TabIndex = 2;
             // 
             // btnList1
@@ -786,7 +789,7 @@ namespace SaberMart.UI.User_control.Admin.Data
             this.btnList1.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnList1.ImageOptions.Image = global::SaberMart.Properties.Resources.print;
             this.btnList1.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
-            this.btnList1.Location = new System.Drawing.Point(490, 0);
+            this.btnList1.Location = new System.Drawing.Point(477, 0);
             this.btnList1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnList1.Name = "btnList1";
             this.btnList1.Size = new System.Drawing.Size(162, 69);
@@ -811,7 +814,7 @@ namespace SaberMart.UI.User_control.Admin.Data
             this.btnSearch1.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnSearch1.ImageOptions.Image = global::SaberMart.Properties.Resources.search;
             this.btnSearch1.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
-            this.btnSearch1.Location = new System.Drawing.Point(652, 0);
+            this.btnSearch1.Location = new System.Drawing.Point(639, 0);
             this.btnSearch1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSearch1.Name = "btnSearch1";
             this.btnSearch1.Size = new System.Drawing.Size(131, 69);
@@ -958,7 +961,7 @@ namespace SaberMart.UI.User_control.Admin.Data
             this.dgvDetail.ReadOnly = true;
             this.dgvDetail.RowHeadersWidth = 51;
             this.dgvDetail.RowTemplate.Height = 24;
-            this.dgvDetail.Size = new System.Drawing.Size(787, 318);
+            this.dgvDetail.Size = new System.Drawing.Size(774, 318);
             this.dgvDetail.TabIndex = 1;
             this.dgvDetail.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDetail_CellClick);
             // 
@@ -997,6 +1000,18 @@ namespace SaberMart.UI.User_control.Admin.Data
             this.ColPrices.Name = "ColPrices";
             this.ColPrices.ReadOnly = true;
             // 
+            // picProduct
+            // 
+            this.picProduct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.picProduct.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.picProduct.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.picProduct.Location = new System.Drawing.Point(655, 27);
+            this.picProduct.Name = "picProduct";
+            this.picProduct.Size = new System.Drawing.Size(220, 202);
+            this.picProduct.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picProduct.TabIndex = 63;
+            this.picProduct.TabStop = false;
+            // 
             // ucStorage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1008,7 +1023,7 @@ namespace SaberMart.UI.User_control.Admin.Data
             this.Controls.Add(this.groupBox1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "ucStorage";
-            this.Size = new System.Drawing.Size(1596, 805);
+            this.Size = new System.Drawing.Size(1694, 805);
             this.Load += new System.EventHandler(this.ucStorage_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -1030,6 +1045,7 @@ namespace SaberMart.UI.User_control.Admin.Data
             ((System.ComponentModel.ISupportInitialize)(this.txtTotal.Properties)).EndInit();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetail)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picProduct)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1094,5 +1110,6 @@ namespace SaberMart.UI.User_control.Admin.Data
         private DevExpress.XtraEditors.SimpleButton btnList1;
         private DevExpress.XtraEditors.SimpleButton btnSearch1;
         private System.Windows.Forms.ComboBox cbIDb;
+        private System.Windows.Forms.PictureBox picProduct;
     }
 }

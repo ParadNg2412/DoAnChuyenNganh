@@ -29,6 +29,9 @@ namespace SaberMart.EntityData
         [StringLength(50)]
         public string DonViTinh { get; set; }
 
+        [Column(TypeName = "image")]
+        public byte[] PicSP { get; set; }
+
         public int? SLTon { get; set; }
 
         public int? GiaBan { get; set; }
