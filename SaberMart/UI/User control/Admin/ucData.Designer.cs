@@ -88,7 +88,7 @@ namespace SaberMart.UI.User_control.Admin
             this.btnBrand.Appearance.Options.UseFont = true;
             this.btnBrand.Appearance.Options.UseForeColor = true;
             this.btnBrand.AppearanceHovered.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnBrand.AppearanceHovered.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBrand.AppearanceHovered.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBrand.AppearanceHovered.Options.UseBackColor = true;
             this.btnBrand.AppearanceHovered.Options.UseFont = true;
             this.btnBrand.AppearancePressed.BackColor = System.Drawing.Color.Black;

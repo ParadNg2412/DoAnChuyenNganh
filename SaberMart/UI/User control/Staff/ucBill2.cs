@@ -107,7 +107,7 @@ namespace SaberMart.UI.User_control.Staff
             foreach (var item in lstBD)
             {
                 int index = dgvDetail.Rows.Add();
-                dgvDetail.Rows[index].Cells[0].Value = item.HOADON.MaHD;
+                dgvDetail.Rows[index].Cells[0].Value = item.MaHD;
                 dgvDetail.Rows[index].Cells[1].Value = item.SANPHAM.TenSP;
                 dgvDetail.Rows[index].Cells[2].Value = item.SANPHAM.DonViTinh;
                 dgvDetail.Rows[index].Cells[3].Value = item.SLBan;
@@ -166,7 +166,7 @@ namespace SaberMart.UI.User_control.Staff
                 if (dgvDetail.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
                 {
                     dgvDetail.CurrentCell.Selected = true;
-                    txtIDb.Text = dgvDetail.Rows[e.RowIndex].Cells["ColIDbd"].FormattedValue.ToString();
+                    cbIDb.Text = dgvDetail.Rows[e.RowIndex].Cells["ColIDbd"].FormattedValue.ToString();
                     txtNamep.Text = dgvDetail.Rows[e.RowIndex].Cells["ColProduct"].FormattedValue.ToString();
                     txtType.Text = dgvDetail.Rows[e.RowIndex].Cells["ColType2"].FormattedValue.ToString();
                     txtValue.Text = dgvDetail.Rows[e.RowIndex].Cells["ColValue"].FormattedValue.ToString();

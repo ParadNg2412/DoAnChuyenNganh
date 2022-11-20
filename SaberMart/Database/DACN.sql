@@ -115,7 +115,6 @@ create table CHITIETHOADON(
 	MaHD varchar(5) NOT NULL,
 	MaSP varchar(5) NOT NULL,
 	SLBan int NULL,
-	NgayBan date NULL,
 	DonGiaBan int NULL,
 	ThanhTienBan int NULL,
 	primary key (MaHD, MaSP)
@@ -171,6 +170,8 @@ select * from KHACHHANG
 delete from KHACHHANG
 
 --san pham
+insert into NHACUNGCAP(MaNCC, TenNCC, SDT, DiaChi)
+values('NCC00', N'Công ty TNHH Saber Mart', '0946222412', N'Tp.Thủ Đức')
 insert into NHACUNGCAP(MaNCC, TenNCC, SDT, DiaChi)
 values('NCC01', N'Công ty sữa Vinamilk', '02854155555', N'Tp.HCM')
 insert into NHACUNGCAP(MaNCC, TenNCC, SDT, DiaChi)
