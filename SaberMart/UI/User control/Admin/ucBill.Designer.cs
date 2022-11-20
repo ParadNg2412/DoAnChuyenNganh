@@ -908,7 +908,7 @@
             this.btnNew1.AppearancePressed.Options.UseFont = true;
             this.btnNew1.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnNew1.ImageOptions.Image = global::SaberMart.Properties.Resources.Clear;
-            this.btnNew1.Location = new System.Drawing.Point(328, 0);
+            this.btnNew1.Location = new System.Drawing.Point(288, 0);
             this.btnNew1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnNew1.Name = "btnNew1";
             this.btnNew1.Size = new System.Drawing.Size(133, 69);
@@ -938,10 +938,10 @@
             this.btnSave1.AppearancePressed.Options.UseFont = true;
             this.btnSave1.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnSave1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSave1.ImageOptions.Image")));
-            this.btnSave1.Location = new System.Drawing.Point(213, 0);
+            this.btnSave1.Location = new System.Drawing.Point(196, 0);
             this.btnSave1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSave1.Name = "btnSave1";
-            this.btnSave1.Size = new System.Drawing.Size(115, 69);
+            this.btnSave1.Size = new System.Drawing.Size(92, 69);
             this.btnSave1.TabIndex = 12;
             this.btnSave1.Text = "Lưu";
             this.btnSave1.Click += new System.EventHandler(this.btnSave1_Click);
@@ -971,7 +971,7 @@
             this.btnDelete1.Location = new System.Drawing.Point(106, 0);
             this.btnDelete1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDelete1.Name = "btnDelete1";
-            this.btnDelete1.Size = new System.Drawing.Size(107, 69);
+            this.btnDelete1.Size = new System.Drawing.Size(90, 69);
             this.btnDelete1.TabIndex = 11;
             this.btnDelete1.Text = "Xóa";
             this.btnDelete1.Click += new System.EventHandler(this.btnDelete1_Click);
