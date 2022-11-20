@@ -28,7 +28,7 @@ namespace SaberMart.UI.User_control.Staff
             cbIDc.ValueMember = "MaKH";
         }
 
-        public void loadDetail(List<CHITIETHOADON> lstBD)
+        public void loadDetail(List<HOADON> lstBD)
         {
             cbIDb.DataSource = lstBD;
             cbIDb.DisplayMember = "MaHD";
@@ -107,7 +107,7 @@ namespace SaberMart.UI.User_control.Staff
             foreach (var item in lstBD)
             {
                 int index = dgvDetail.Rows.Add();
-                dgvDetail.Rows[index].Cells[0].Value = item.MaHD;
+                dgvDetail.Rows[index].Cells[0].Value = item.HOADON.MaHD;
                 dgvDetail.Rows[index].Cells[1].Value = item.SANPHAM.TenSP;
                 dgvDetail.Rows[index].Cells[2].Value = item.SANPHAM.DonViTinh;
                 dgvDetail.Rows[index].Cells[3].Value = item.SLBan;
@@ -127,6 +127,10 @@ namespace SaberMart.UI.User_control.Staff
                     txtNamep.Text = dgvProduct.Rows[e.RowIndex].Cells["ColNamep"].FormattedValue.ToString();
                     txtType.Text = dgvProduct.Rows[e.RowIndex].Cells["ColType"].FormattedValue.ToString();
                     txtSales.Text = dgvProduct.Rows[e.RowIndex].Cells["ColSale"].FormattedValue.ToString();
+                    var item = context.SANPHAMs.FirstOrDefault(p => p.TenSP == txtNamep.Text);
+                    byte[] arr = item.PicSP;
+                    MemoryStream ms = new MemoryStream(arr);
+                    picProduct.Image = Image.FromStream(ms);
                 }
             }
             catch (Exception ex)
@@ -168,6 +172,10 @@ namespace SaberMart.UI.User_control.Staff
                     txtValue.Text = dgvDetail.Rows[e.RowIndex].Cells["ColValue"].FormattedValue.ToString();
                     txtSales.Text = dgvDetail.Rows[e.RowIndex].Cells["ColSales"].FormattedValue.ToString();
                     txtPrices.Text = dgvDetail.Rows[e.RowIndex].Cells["ColPrices"].FormattedValue.ToString();
+                    var item = context.SANPHAMs.FirstOrDefault(p => p.TenSP == txtNamep.Text);
+                    byte[] arr = item.PicSP;
+                    MemoryStream ms = new MemoryStream(arr);
+                    picProduct.Image = Image.FromStream(ms);
                 }
             }
             catch (Exception ex)
@@ -187,7 +195,7 @@ namespace SaberMart.UI.User_control.Staff
             loadCustomer(lstC);
             loadGridSP(lstP);
             loadGridCTHD(lstBD);
-            loadDetail(lstBD);
+            loadDetail(lstB);
             txtIDs.Text = temp;
         }
 

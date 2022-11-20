@@ -54,6 +54,7 @@
             this.ColDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.picProduct = new System.Windows.Forms.PictureBox();
             this.cbIDb = new System.Windows.Forms.ComboBox();
             this.txtType = new DevExpress.XtraEditors.TextEdit();
             this.label10 = new System.Windows.Forms.Label();
@@ -91,13 +92,13 @@
             this.ColValue = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColSales = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColPrices = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.picProduct = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtIDb.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBill)).BeginInit();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picProduct)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtType.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtIDp.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPrices.Properties)).BeginInit();
@@ -110,7 +111,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtTotal.Properties)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetail)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picProduct)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -536,6 +536,18 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Chi tiết";
             // 
+            // picProduct
+            // 
+            this.picProduct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.picProduct.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.picProduct.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.picProduct.Location = new System.Drawing.Point(672, 35);
+            this.picProduct.Name = "picProduct";
+            this.picProduct.Size = new System.Drawing.Size(220, 202);
+            this.picProduct.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picProduct.TabIndex = 64;
+            this.picProduct.TabStop = false;
+            // 
             // cbIDb
             // 
             this.cbIDb.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -609,10 +621,14 @@
             // 
             this.txtPrices.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
+            this.txtPrices.EditValue = "0";
             this.txtPrices.Location = new System.Drawing.Point(454, 192);
             this.txtPrices.Name = "txtPrices";
+            this.txtPrices.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.txtPrices.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPrices.Properties.Appearance.Options.UseBackColor = true;
             this.txtPrices.Properties.Appearance.Options.UseFont = true;
+            this.txtPrices.Properties.ReadOnly = true;
             this.txtPrices.Size = new System.Drawing.Size(135, 32);
             this.txtPrices.TabIndex = 22;
             // 
@@ -1056,18 +1072,6 @@
             this.ColPrices.Name = "ColPrices";
             this.ColPrices.ReadOnly = true;
             // 
-            // picProduct
-            // 
-            this.picProduct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.picProduct.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.picProduct.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.picProduct.Location = new System.Drawing.Point(672, 35);
-            this.picProduct.Name = "picProduct";
-            this.picProduct.Size = new System.Drawing.Size(220, 202);
-            this.picProduct.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picProduct.TabIndex = 64;
-            this.picProduct.TabStop = false;
-            // 
             // ucBill
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1088,6 +1092,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvBill)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picProduct)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtType.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtIDp.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPrices.Properties)).EndInit();
@@ -1100,7 +1105,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtTotal.Properties)).EndInit();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetail)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picProduct)).EndInit();
             this.ResumeLayout(false);
 
         }

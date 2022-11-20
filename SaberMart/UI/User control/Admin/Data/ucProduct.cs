@@ -195,15 +195,12 @@ namespace SaberMart.UI.User_control.Admin.Data
         private void btnEdit_Click(object sender, EventArgs e)
         {
             if (cbIDc.Text == "" || cbIDg.Text == "" || txtNameg.Text == "" || txtIDp.Text == "" || txtNamep.Text == "" ||
-                txtType.Text == "" || txtSales.Text == "" || txtPrices.Text == "" || txtValue.Text == "" || picProduct.Image == null)
+                txtType.Text == "" || txtSales.Text == "" || txtPrices.Text == "" || txtValue.Text == "")
             {
                 MessageBox.Show("Vui lòng nhập đầy đủ thông tin!", "Thông báo!", MessageBoxButtons.OK);
             }
             else
             {
-                Image img = Image.FromFile(picProduct.ImageLocation);
-                MemoryStream ms = new MemoryStream();
-                img.Save(ms, img.RawFormat);
                 SANPHAM Upsp = context.SANPHAMs.FirstOrDefault(p => p.MaSP == txtIDp.Text);
                 if (Upsp != null)
                 {
@@ -216,7 +213,7 @@ namespace SaberMart.UI.User_control.Admin.Data
                     Upsp.SLTon = int.Parse(txtValue.Text);
                     Upsp.GiaBan = int.Parse(txtSales.Text);
                     Upsp.GiaNhap = int.Parse(txtPrices.Text);
-                    Upsp.PicSP = ms.ToArray();
+                    context.SaveChanges();
                     
                 }
                 List<SANPHAM> lstP = context.SANPHAMs.ToList();

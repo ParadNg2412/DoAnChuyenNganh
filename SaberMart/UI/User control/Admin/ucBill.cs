@@ -41,7 +41,7 @@ namespace SaberMart.UI.User_control.Admin
             cbIDs.ValueMember = "MaNV";
         }
 
-        public void loadDetail(List<CHITIETHOADON> lstBD)
+        public void loadDetail(List<HOADON> lstBD)
         {
             cbIDb.DataSource = lstBD;
             cbIDb.DisplayMember = "MaHD";
@@ -142,7 +142,7 @@ namespace SaberMart.UI.User_control.Admin
             loadGridSP(lstP);
             loadGridCTHD(lstBD);
             loadStaff(lstS);
-            loadDetail(lstBD);
+            loadDetail(lstB);
             cbIDs.Text = temp;
         }
 
@@ -196,12 +196,16 @@ namespace SaberMart.UI.User_control.Admin
                 if (dgvDetail.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
                 {
                     dgvDetail.CurrentCell.Selected = true;
-                    txtIDb.Text = dgvDetail.Rows[e.RowIndex].Cells["ColIDbd"].FormattedValue.ToString();
+                    cbIDb.Text = dgvDetail.Rows[e.RowIndex].Cells["ColIDbd"].FormattedValue.ToString();
                     txtNamep.Text = dgvDetail.Rows[e.RowIndex].Cells["ColProduct"].FormattedValue.ToString();
                     txtType.Text = dgvDetail.Rows[e.RowIndex].Cells["ColType2"].FormattedValue.ToString();
                     txtValue.Text = dgvDetail.Rows[e.RowIndex].Cells["ColValue"].FormattedValue.ToString();
                     txtSales.Text = dgvDetail.Rows[e.RowIndex].Cells["ColSales"].FormattedValue.ToString();
                     txtPrices.Text = dgvDetail.Rows[e.RowIndex].Cells["ColPrices"].FormattedValue.ToString();
+                    var item = context.SANPHAMs.FirstOrDefault(p => p.TenSP == txtNamep.Text);
+                    byte[] arr = item.PicSP;
+                    MemoryStream ms = new MemoryStream(arr);
+                    picProduct.Image = Image.FromStream(ms);
                 }
             }
             catch (Exception ex)

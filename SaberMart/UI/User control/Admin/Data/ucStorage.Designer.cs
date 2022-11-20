@@ -55,6 +55,7 @@ namespace SaberMart.UI.User_control.Admin.Data
             this.txtIDs = new DevExpress.XtraEditors.TextEdit();
             this.txtIDb = new DevExpress.XtraEditors.TextEdit();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.picProduct = new System.Windows.Forms.PictureBox();
             this.cbIDb = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.btnPrices = new System.Windows.Forms.Button();
@@ -88,7 +89,6 @@ namespace SaberMart.UI.User_control.Admin.Data
             this.ColValue = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColSales = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColPrices = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.picProduct = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -96,6 +96,7 @@ namespace SaberMart.UI.User_control.Admin.Data
             ((System.ComponentModel.ISupportInitialize)(this.txtIDs.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtIDb.Properties)).BeginInit();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picProduct)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtIDp.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPrices.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSales.Properties)).BeginInit();
@@ -107,7 +108,6 @@ namespace SaberMart.UI.User_control.Admin.Data
             ((System.ComponentModel.ISupportInitialize)(this.txtTotal.Properties)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetail)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picProduct)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -522,6 +522,18 @@ namespace SaberMart.UI.User_control.Admin.Data
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Chi tiết";
             // 
+            // picProduct
+            // 
+            this.picProduct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.picProduct.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.picProduct.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.picProduct.Location = new System.Drawing.Point(655, 27);
+            this.picProduct.Name = "picProduct";
+            this.picProduct.Size = new System.Drawing.Size(220, 202);
+            this.picProduct.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picProduct.TabIndex = 63;
+            this.picProduct.TabStop = false;
+            // 
             // cbIDb
             // 
             this.cbIDb.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -571,10 +583,14 @@ namespace SaberMart.UI.User_control.Admin.Data
             // 
             this.txtPrices.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
+            this.txtPrices.EditValue = "0";
             this.txtPrices.Location = new System.Drawing.Point(491, 166);
             this.txtPrices.Name = "txtPrices";
+            this.txtPrices.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.txtPrices.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPrices.Properties.Appearance.Options.UseBackColor = true;
             this.txtPrices.Properties.Appearance.Options.UseFont = true;
+            this.txtPrices.Properties.ReadOnly = true;
             this.txtPrices.Size = new System.Drawing.Size(135, 32);
             this.txtPrices.TabIndex = 22;
             // 
@@ -1000,18 +1016,6 @@ namespace SaberMart.UI.User_control.Admin.Data
             this.ColPrices.Name = "ColPrices";
             this.ColPrices.ReadOnly = true;
             // 
-            // picProduct
-            // 
-            this.picProduct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.picProduct.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.picProduct.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.picProduct.Location = new System.Drawing.Point(655, 27);
-            this.picProduct.Name = "picProduct";
-            this.picProduct.Size = new System.Drawing.Size(220, 202);
-            this.picProduct.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picProduct.TabIndex = 63;
-            this.picProduct.TabStop = false;
-            // 
             // ucStorage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1034,6 +1038,7 @@ namespace SaberMart.UI.User_control.Admin.Data
             ((System.ComponentModel.ISupportInitialize)(this.txtIDb.Properties)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picProduct)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtIDp.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPrices.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSales.Properties)).EndInit();
@@ -1045,7 +1050,6 @@ namespace SaberMart.UI.User_control.Admin.Data
             ((System.ComponentModel.ISupportInitialize)(this.txtTotal.Properties)).EndInit();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetail)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picProduct)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -28,7 +28,7 @@ namespace SaberMart.UI.User_control.Admin.Data
             cbIDc.ValueMember = "MaNCC";
         }
 
-        public void loadDetail(List<CHITIETPHIEUNHAP> lstBD)
+        public void loadDetail(List<PHIEUNHAP> lstBD)
         {
             cbIDb.DataSource = lstBD;
             cbIDb.DisplayMember = "MaPN";
@@ -109,7 +109,7 @@ namespace SaberMart.UI.User_control.Admin.Data
             List<CHITIETPHIEUNHAP> lstBD = context.CHITIETPHIEUNHAPs.ToList();
             loadGridPN(lstB);
             loadCompany(lstC);
-            loadDetail(lstBD);
+            loadDetail(lstB);
             loadGridSP(lstP);
             loadGridCTPN(lstBD);
         }
@@ -168,6 +168,10 @@ namespace SaberMart.UI.User_control.Admin.Data
                     txtValue.Text = dgvDetail.Rows[e.RowIndex].Cells["ColValue"].FormattedValue.ToString();
                     txtSales.Text = dgvDetail.Rows[e.RowIndex].Cells["ColSales"].FormattedValue.ToString();
                     txtPrices.Text = dgvDetail.Rows[e.RowIndex].Cells["ColPrices"].FormattedValue.ToString();
+                    var item = context.SANPHAMs.FirstOrDefault(p => p.TenSP == txtNamep.Text);
+                    byte[] arr = item.PicSP;
+                    MemoryStream ms = new MemoryStream(arr);
+                    picProduct.Image = Image.FromStream(ms);
                 }
             }
             catch (Exception ex)
