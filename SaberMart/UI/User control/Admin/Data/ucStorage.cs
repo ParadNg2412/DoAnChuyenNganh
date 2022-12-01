@@ -35,6 +35,13 @@ namespace SaberMart.UI.User_control.Admin.Data
             cbIDb.ValueMember = "MaPN";
         }
 
+        public void loadStaff(List<NHANVIEN> lstS)
+        {
+            cbIDs.DataSource = lstS;
+            cbIDs.DisplayMember = "MaNV";
+            cbIDs.ValueMember = "MaNV";
+        }
+
         private string checkB(string ID)
         {
             List<CHITIETPHIEUNHAP> lstBD = context.CHITIETPHIEUNHAPs.ToList();
@@ -107,9 +114,11 @@ namespace SaberMart.UI.User_control.Admin.Data
             List<PHIEUNHAP> lstB = context.PHIEUNHAPs.ToList();
             List<NHACUNGCAP> lstC = context.NHACUNGCAPs.ToList();
             List<CHITIETPHIEUNHAP> lstBD = context.CHITIETPHIEUNHAPs.ToList();
+            List<NHANVIEN> lstS = context.NHANVIENs.ToList();
             loadGridPN(lstB);
             loadCompany(lstC);
             loadDetail(lstB);
+            loadStaff(lstS);
             loadGridSP(lstP);
             loadGridCTPN(lstBD);
         }
@@ -122,7 +131,7 @@ namespace SaberMart.UI.User_control.Admin.Data
                 {
                     dgvBill.CurrentCell.Selected = true;
                     txtIDb.Text = dgvBill.Rows[e.RowIndex].Cells["ColIDb"].FormattedValue.ToString();
-                    txtIDs.Text = dgvBill.Rows[e.RowIndex].Cells["ColStaff"].FormattedValue.ToString();
+                    cbIDs.Text = dgvBill.Rows[e.RowIndex].Cells["ColStaff"].FormattedValue.ToString();
                     cbIDc.Text = dgvBill.Rows[e.RowIndex].Cells["ColCompany"].FormattedValue.ToString();
                     dtpDate.Text = dgvBill.Rows[e.RowIndex].Cells["ColDate"].FormattedValue.ToString();
                     txtTotal.Text = dgvBill.Rows[e.RowIndex].Cells["ColTotal"].FormattedValue.ToString();
@@ -182,7 +191,7 @@ namespace SaberMart.UI.User_control.Admin.Data
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            if (txtIDb.Text == "" || txtIDs.Text == "" || cbIDc.Text == "" || dtpDate.Text == "")
+            if (txtIDb.Text == "" || cbIDs.Text == "" || cbIDc.Text == "" || dtpDate.Text == "")
             {
                 MessageBox.Show("Vui lòng nhập đầy đủ thông tin!", "Thông báo!", MessageBoxButtons.OK);
             }
@@ -198,7 +207,7 @@ namespace SaberMart.UI.User_control.Admin.Data
                     {
                         MaPN = txtIDb.Text,
                         MaNCC = cbIDc.Text,
-                        MaNV = txtIDs.Text,
+                        MaNV = cbIDs.Text,
                         NgayNhap = dtpDate.Value
                     };
                     context.PHIEUNHAPs.Add(pn);
@@ -229,7 +238,7 @@ namespace SaberMart.UI.User_control.Admin.Data
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            if (txtIDb.Text == "" || txtIDs.Text == "" || cbIDc.Text == "" || dtpDate.Text == "" || txtTotal.Text == "")
+            if (txtIDb.Text == "" || cbIDs.Text == "" || cbIDc.Text == "" || dtpDate.Text == "" || txtTotal.Text == "")
             {
                 MessageBox.Show("Vui lòng nhập đầy đủ thông tin!", "Thông báo!", MessageBoxButtons.OK);
             }
@@ -239,7 +248,7 @@ namespace SaberMart.UI.User_control.Admin.Data
                 if (PN != null)
                 {
                     PN.MaPN = txtIDb.Text;
-                    PN.MaNV = txtIDs.Text;
+                    PN.MaNV = cbIDs.Text;
                     PN.MaNCC = cbIDc.Text;
                     PN.NgayNhap = dtpDate.Value;
                     PN.TongTienNhap = int.Parse(txtTotal.Text);

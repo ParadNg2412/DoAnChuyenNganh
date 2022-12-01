@@ -82,7 +82,7 @@ namespace SaberMart.UI.User_control.Admin
                 if (dgvAccount.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
                 {
                     dgvAccount.CurrentCell.Selected = true;
-                    cbIDs.SelectedItem = dgvAccount.Rows[e.RowIndex].Cells["ColID"].FormattedValue.ToString();
+                    cbIDs.Text = dgvAccount.Rows[e.RowIndex].Cells["ColID"].FormattedValue.ToString();
                     txtNames.Text = dgvAccount.Rows[e.RowIndex].Cells["ColName"].FormattedValue.ToString();
                     cbAcc.Text = dgvAccount.Rows[e.RowIndex].Cells["ColAccount"].FormattedValue.ToString();
                     txtUsername.Text = dgvAccount.Rows[e.RowIndex].Cells["ColUsername"].FormattedValue.ToString();
@@ -95,49 +95,15 @@ namespace SaberMart.UI.User_control.Admin
             }
         }
 
-        private void btnAdd_Click(object sender, EventArgs e)
-        {
-            if (cbIDs.SelectedItem == null || txtNames.Text == "" || cbAcc.Text == "" || txtUsername.Text == "" || txtPassword.Text == "")
-            {
-                MessageBox.Show("Please enter full information!", "Notification!", MessageBoxButtons.OK);
-            }
-            try
-            {
-                if (checkS(txtNames.Text) != null)
-                {
-                    MessageBox.Show("Account already exist!", "Notification", MessageBoxButtons.OK);
-                }
-                else
-                {
-                    NHANVIEN addnv = new NHANVIEN()
-                    {
-                        MaNV= cbIDs.Text,
-                        TenNV = txtNames.Text,
-                        LoaiTK = cbAcc.Text,
-                        Username = txtUsername.Text,
-                        MatKhau = txtPassword.Text
-                    };
-                    context.NHANVIENs.Add(addnv);
-                    context.SaveChanges();
-                    List<NHANVIEN> lstS = context.NHANVIENs.ToList();
-                    loadGridView(lstS);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
-
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            if (checkS(txtNames.Text) == null)
+            if (checkS(cbIDs.Text) == null)
             {
                 MessageBox.Show("Không tìm thấy tài khoản!", "Thông báo!", MessageBoxButtons.OK);
             }
             else
             {
-                NHANVIEN delnv = context.NHANVIENs.FirstOrDefault(p => p.MaNV == txtNames.Text);
+                NHANVIEN delnv = context.NHANVIENs.FirstOrDefault(p => p.MaNV == cbIDs.Text);
                 if (delnv != null)
                 {
                     if (MessageBox.Show("Bạn muốn xóa?", "Thông báo!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
@@ -158,7 +124,7 @@ namespace SaberMart.UI.User_control.Admin
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            if (cbIDs.SelectedItem == null || txtNames.Text == "" || cbAcc.Text == "" || txtUsername.Text == "" || txtPassword.Text == "")
+            if (cbIDs.Text == "" || txtNames.Text == "" || cbAcc.Text == "" || txtUsername.Text == "" || txtPassword.Text == "")
             {
                 MessageBox.Show("Vui lòng nhập đầy đủ thông tin!", "Thông báo!", MessageBoxButtons.OK);
             }

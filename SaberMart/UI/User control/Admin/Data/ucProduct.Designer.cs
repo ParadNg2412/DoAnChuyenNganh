@@ -61,7 +61,6 @@ namespace SaberMart.UI.User_control.Admin.Data
             this.ColSales = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColPrices = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.btnList = new DevExpress.XtraEditors.SimpleButton();
             this.btnSearch = new DevExpress.XtraEditors.SimpleButton();
             this.btnEdit = new DevExpress.XtraEditors.SimpleButton();
             this.btnDelete = new DevExpress.XtraEditors.SimpleButton();
@@ -72,6 +71,7 @@ namespace SaberMart.UI.User_control.Admin.Data
             this.dgvCompany = new System.Windows.Forms.DataGridView();
             this.ColCompanyID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColCompanyName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnList = new DevExpress.XtraEditors.SimpleButton();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picProduct)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtValue.Properties)).BeginInit();
@@ -379,13 +379,13 @@ namespace SaberMart.UI.User_control.Admin.Data
             this.ColStorage,
             this.ColSales,
             this.ColPrices});
-            this.dgvProduct.Location = new System.Drawing.Point(20, 296);
+            this.dgvProduct.Location = new System.Drawing.Point(18, 296);
             this.dgvProduct.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvProduct.Name = "dgvProduct";
             this.dgvProduct.ReadOnly = true;
             this.dgvProduct.RowHeadersWidth = 51;
             this.dgvProduct.RowTemplate.Height = 24;
-            this.dgvProduct.Size = new System.Drawing.Size(1197, 216);
+            this.dgvProduct.Size = new System.Drawing.Size(1199, 216);
             this.dgvProduct.TabIndex = 20;
             this.dgvProduct.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProduct_CellClick);
             // 
@@ -464,31 +464,6 @@ namespace SaberMart.UI.User_control.Admin.Data
             this.groupBox3.TabIndex = 23;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Chức năng";
-            // 
-            // btnList
-            // 
-            this.btnList.Appearance.BackColor = System.Drawing.Color.Coral;
-            this.btnList.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnList.Appearance.Options.UseBackColor = true;
-            this.btnList.Appearance.Options.UseFont = true;
-            this.btnList.AppearanceHovered.BackColor = System.Drawing.Color.DarkOrange;
-            this.btnList.AppearanceHovered.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnList.AppearanceHovered.Options.UseBackColor = true;
-            this.btnList.AppearanceHovered.Options.UseFont = true;
-            this.btnList.AppearancePressed.BackColor = System.Drawing.Color.DarkOrange;
-            this.btnList.AppearancePressed.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnList.AppearancePressed.Options.UseBackColor = true;
-            this.btnList.AppearancePressed.Options.UseFont = true;
-            this.btnList.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnList.ImageOptions.Image = global::SaberMart.Properties.Resources.print;
-            this.btnList.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
-            this.btnList.Location = new System.Drawing.Point(3, 354);
-            this.btnList.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnList.Name = "btnList";
-            this.btnList.Size = new System.Drawing.Size(155, 68);
-            this.btnList.TabIndex = 5;
-            this.btnList.Text = "Xuất danh sách";
-            this.btnList.Click += new System.EventHandler(this.btnList_Click);
             // 
             // btnSearch
             // 
@@ -597,13 +572,13 @@ namespace SaberMart.UI.User_control.Admin.Data
             this.dgvGroup.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColGroupID,
             this.ColGroupName});
-            this.dgvGroup.Location = new System.Drawing.Point(20, 528);
+            this.dgvGroup.Location = new System.Drawing.Point(18, 528);
             this.dgvGroup.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvGroup.Name = "dgvGroup";
             this.dgvGroup.ReadOnly = true;
             this.dgvGroup.RowHeadersWidth = 51;
             this.dgvGroup.RowTemplate.Height = 24;
-            this.dgvGroup.Size = new System.Drawing.Size(611, 259);
+            this.dgvGroup.Size = new System.Drawing.Size(618, 259);
             this.dgvGroup.TabIndex = 25;
             this.dgvGroup.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvGroup_CellClick);
             // 
@@ -631,12 +606,12 @@ namespace SaberMart.UI.User_control.Admin.Data
             this.dgvCompany.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColCompanyID,
             this.ColCompanyName});
-            this.dgvCompany.Location = new System.Drawing.Point(648, 528);
+            this.dgvCompany.Location = new System.Drawing.Point(654, 528);
             this.dgvCompany.Name = "dgvCompany";
             this.dgvCompany.ReadOnly = true;
             this.dgvCompany.RowHeadersWidth = 51;
             this.dgvCompany.RowTemplate.Height = 24;
-            this.dgvCompany.Size = new System.Drawing.Size(569, 259);
+            this.dgvCompany.Size = new System.Drawing.Size(563, 259);
             this.dgvCompany.TabIndex = 26;
             this.dgvCompany.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCompany_CellClick);
             // 
@@ -653,6 +628,30 @@ namespace SaberMart.UI.User_control.Admin.Data
             this.ColCompanyName.MinimumWidth = 6;
             this.ColCompanyName.Name = "ColCompanyName";
             this.ColCompanyName.ReadOnly = true;
+            // 
+            // btnList
+            // 
+            this.btnList.Appearance.BackColor = System.Drawing.Color.Coral;
+            this.btnList.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnList.Appearance.Options.UseBackColor = true;
+            this.btnList.Appearance.Options.UseFont = true;
+            this.btnList.AppearanceHovered.BackColor = System.Drawing.Color.DarkOrange;
+            this.btnList.AppearanceHovered.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnList.AppearanceHovered.Options.UseBackColor = true;
+            this.btnList.AppearanceHovered.Options.UseFont = true;
+            this.btnList.AppearancePressed.BackColor = System.Drawing.Color.DarkOrange;
+            this.btnList.AppearancePressed.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnList.AppearancePressed.Options.UseBackColor = true;
+            this.btnList.AppearancePressed.Options.UseFont = true;
+            this.btnList.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnList.ImageOptions.Image = global::SaberMart.Properties.Resources.print;
+            this.btnList.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
+            this.btnList.Location = new System.Drawing.Point(3, 354);
+            this.btnList.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnList.Name = "btnList";
+            this.btnList.Size = new System.Drawing.Size(155, 68);
+            this.btnList.TabIndex = 7;
+            this.btnList.Text = "Xuất danh sách";
             // 
             // ucProduct
             // 
@@ -713,7 +712,6 @@ namespace SaberMart.UI.User_control.Admin.Data
         private DevExpress.XtraEditors.TextEdit txtValue;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.GroupBox groupBox3;
-        private DevExpress.XtraEditors.SimpleButton btnList;
         private DevExpress.XtraEditors.SimpleButton btnSearch;
         private DevExpress.XtraEditors.SimpleButton btnEdit;
         private DevExpress.XtraEditors.SimpleButton btnDelete;
@@ -735,5 +733,6 @@ namespace SaberMart.UI.User_control.Admin.Data
         private System.Windows.Forms.DataGridViewTextBoxColumn ColCompanyID;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColCompanyName;
         private System.Windows.Forms.PictureBox picProduct;
+        private DevExpress.XtraEditors.SimpleButton btnList;
     }
 }

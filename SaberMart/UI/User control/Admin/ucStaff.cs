@@ -46,14 +46,27 @@ namespace SaberMart.UI.User_control.Admin
                 dgvStaff.Rows[index].Cells[4].Value = item.GioiTinh;
                 dgvStaff.Rows[index].Cells[5].Value = item.SDT;
                 dgvStaff.Rows[index].Cells[6].Value = item.DiaChi;
-                dgvStaff.Rows[index].Cells[7].Value = item.CHUCVU.Luong;
+            }
+        }
+
+        private void loadGridView2 (List<CHUCVU> lstP)
+        {
+            dgvPosition.Rows.Clear();
+            foreach (var item in lstP)
+            {
+                int index = dgvPosition.Rows.Add();
+                dgvPosition.Rows[index].Cells[0].Value = item.MaCV;
+                dgvPosition.Rows[index].Cells[1].Value = item.TenCV;
+                dgvPosition.Rows[index].Cells[2].Value = item.Luong;
             }
         }
 
         private void ucStaff_Load(object sender, EventArgs e)
         {
             List<NHANVIEN> nv = context.NHANVIENs.ToList();
+            List<CHUCVU> cv = context.CHUCVUs.ToList();
             loadGridView(nv);
+            loadGridView2(cv);
         }
 
         private void dgvStaff_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -70,7 +83,6 @@ namespace SaberMart.UI.User_control.Admin
                     cbGender.Text = dgvStaff.Rows[e.RowIndex].Cells["ColGender"].FormattedValue.ToString();
                     txtPN.Text = dgvStaff.Rows[e.RowIndex].Cells["ColPhone"].FormattedValue.ToString();
                     txtAddress.Text = dgvStaff.Rows[e.RowIndex].Cells["ColAddress"].FormattedValue.ToString();
-                    txtSalery.Text = dgvStaff.Rows[e.RowIndex].Cells["ColSalary"].FormattedValue.ToString();
                 }
             }
             catch (Exception ex)
@@ -197,6 +209,24 @@ namespace SaberMart.UI.User_control.Admin
                 {
                     MessageBox.Show("Không tìm thấy nhân viên!", "Thông báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
+            }
+        }
+
+        private void dgvPosition_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                if (dgvPosition.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
+                {
+                    dgvPosition.CurrentCell.Selected = true;
+                    txtIDp.Text = dgvPosition.Rows[e.RowIndex].Cells["ColIDp"].FormattedValue.ToString();
+                    txtNamep.Text = dgvPosition.Rows[e.RowIndex].Cells["ColNamep"].FormattedValue.ToString();
+                    txtSalery.Text = dgvPosition.Rows[e.RowIndex].Cells["ColSalary"].FormattedValue.ToString();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Lỗi");
             }
         }
     }

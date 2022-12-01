@@ -176,6 +176,7 @@ namespace SaberMart.UI.User_control.Admin.Data
                 SANPHAM delsp = context.SANPHAMs.FirstOrDefault(p => p.MaSP == txtIDp.Text);
                 if (delsp != null)
                 {
+                    
                     if (MessageBox.Show("Bạn muốn xóa?", "Thông báo!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
                         context.SANPHAMs.Remove(delsp);
@@ -187,7 +188,7 @@ namespace SaberMart.UI.User_control.Admin.Data
                 }
                 else
                 {
-                    MessageBox.Show("Không tìm thấy sản phẩm!", "Thông báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Không tìm thấy sản phẩm!", "Thông báo!", MessageBoxButtons.OK);
                 }
             }
         }
@@ -195,15 +196,12 @@ namespace SaberMart.UI.User_control.Admin.Data
         private void btnEdit_Click(object sender, EventArgs e)
         {
             if (cbIDc.Text == "" || cbIDg.Text == "" || txtNameg.Text == "" || txtIDp.Text == "" || txtNamep.Text == "" ||
-                txtType.Text == "" || txtSales.Text == "" || txtPrices.Text == "" || txtValue.Text == "" || picProduct.Image == null)
+                txtType.Text == "" || txtSales.Text == "" || txtPrices.Text == "" || txtValue.Text == "")
             {
                 MessageBox.Show("Vui lòng nhập đầy đủ thông tin!", "Thông báo!", MessageBoxButtons.OK);
             }
             else
             {
-                Image img = Image.FromFile(picProduct.ImageLocation);
-                MemoryStream ms = new MemoryStream();
-                img.Save(ms, img.RawFormat);
                 SANPHAM Upsp = context.SANPHAMs.FirstOrDefault(p => p.MaSP == txtIDp.Text);
                 if (Upsp != null)
                 {
@@ -216,7 +214,6 @@ namespace SaberMart.UI.User_control.Admin.Data
                     Upsp.SLTon = int.Parse(txtValue.Text);
                     Upsp.GiaBan = int.Parse(txtSales.Text);
                     Upsp.GiaNhap = int.Parse(txtPrices.Text);
-                    Upsp.PicSP = ms.ToArray();
                     context.SaveChanges();                  
                 }
                 List<SANPHAM> lstP = context.SANPHAMs.ToList();
@@ -292,6 +289,48 @@ namespace SaberMart.UI.User_control.Admin.Data
             if (dlg.ShowDialog() == DialogResult.OK)
             {
                 picProduct.ImageLocation = dlg.FileName;
+            }
+        }
+
+        private void nbiID_ItemChanged(object sender, EventArgs e)
+        {
+            if (checkP(txtIDp.Text) == null)
+            {
+                MessageBox.Show("Không tìm thấy sản phẩm!", "Thông báo!", MessageBoxButtons.OK);
+            }
+            else
+            {
+                SANPHAM srchsp = context.SANPHAMs.FirstOrDefault(p => p.MaSP == txtIDp.Text);
+                if (srchsp != null)
+                {
+                    List<SANPHAM> lstP = context.SANPHAMs.Where(p => p.MaSP == txtIDp.Text).ToList();
+                    loadGridProduct(lstP);
+                }
+                else
+                {
+                    MessageBox.Show("Không tìm thấy sản phẩm!", "Thông báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+        }
+
+        private void nbiGroup_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            if (checkP(txtIDp.Text) == null)
+            {
+                MessageBox.Show("Không tìm thấy sản phẩm!", "Thông báo!", MessageBoxButtons.OK);
+            }
+            else
+            {
+                SANPHAM srchsp = context.SANPHAMs.FirstOrDefault(p => p.MaSP == txtIDp.Text);
+                if (srchsp != null)
+                {
+                    List<SANPHAM> lstP = context.SANPHAMs.Where(p => p.MaSP == txtIDp.Text).ToList();
+                    loadGridProduct(lstP);
+                }
+                else
+                {
+                    MessageBox.Show("Không tìm thấy sản phẩm!", "Thông báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
         }
     }
