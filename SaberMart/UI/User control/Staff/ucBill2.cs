@@ -147,10 +147,12 @@ namespace SaberMart.UI.User_control.Staff
                 {
                     dgvBill.CurrentCell.Selected = true;
                     txtIDb.Text = cbIDb.Text = dgvBill.Rows[e.RowIndex].Cells["ColIDb"].FormattedValue.ToString();
-                    txtIDs.Text = dgvBill.Rows[e.RowIndex].Cells["ColStaff"].FormattedValue.ToString();
-                    cbIDc.Text = dgvBill.Rows[e.RowIndex].Cells["ColCustomer"].FormattedValue.ToString();
+                    txtNames.Text = dgvBill.Rows[e.RowIndex].Cells["ColStaff"].FormattedValue.ToString();
+                    txtNamec.Text = dgvBill.Rows[e.RowIndex].Cells["ColCustomer"].FormattedValue.ToString();
                     dtpDate.Text = dgvBill.Rows[e.RowIndex].Cells["ColDate"].FormattedValue.ToString();
                     txtTotal.Text = dgvBill.Rows[e.RowIndex].Cells["ColTotal"].FormattedValue.ToString();
+                    List<CHITIETHOADON> lstB = context.CHITIETHOADONs.Where(p => p.MaHD == cbIDb.Text).ToList();
+                    loadGridCTHD(lstB);
                 }
             }
             catch (Exception ex)
@@ -194,7 +196,6 @@ namespace SaberMart.UI.User_control.Staff
             loadGridHD(lstB);
             loadCustomer(lstC);
             loadGridSP(lstP);
-            loadGridCTHD(lstBD);
             loadDetail(lstB);
             txtIDs.Text = temp;
         }

@@ -284,7 +284,7 @@ namespace SaberMart.UI
             // pAdmin
             // 
             this.pAdmin.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.pAdmin.BackgroundImage = global::SaberMart.Properties.Resources.KaenkenRekka1;
+            this.pAdmin.BackgroundImage = global::SaberMart.Properties.Resources.KaenkenRekka11;
             this.pAdmin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pAdmin.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pAdmin.Dock = System.Windows.Forms.DockStyle.Fill;

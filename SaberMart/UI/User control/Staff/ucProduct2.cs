@@ -95,15 +95,18 @@ namespace SaberMart.UI.User_control.Staff
             }
         }
 
-        private void btnUpLoadPicture_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnList_Click(object sender, EventArgs e)
         {
             List<SANPHAM> lstP = context.SANPHAMs.ToList();
             loadGridView(lstP);
+        }
+
+        private void Clear()
+        {
+            cbID.Text = string.Empty;
+            txtName.Text = string.Empty;
+            cbType.Text = string.Empty;
+            txtSales.Text = "0";
         }
 
         private void btnNew_Click(object sender, EventArgs e)
@@ -111,6 +114,7 @@ namespace SaberMart.UI.User_control.Staff
             List<SANPHAM> lstP = context.SANPHAMs.ToList();
             loadGridView(lstP);
             dgvProduct.Rows.Clear();
+            Clear();
         }
 
         private void btnSearch_Click(object sender, EventArgs e)

@@ -90,6 +90,8 @@
             this.ColValue = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColSales = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColPrices = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtNames = new DevExpress.XtraEditors.TextEdit();
+            this.txtNamec = new DevExpress.XtraEditors.TextEdit();
             this.groupBox1.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -110,12 +112,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtTotal.Properties)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetail)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNames.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNamec.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
             this.groupBox1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.groupBox1.BackColor = System.Drawing.Color.Gold;
+            this.groupBox1.Controls.Add(this.txtNames);
+            this.groupBox1.Controls.Add(this.txtNamec);
             this.groupBox1.Controls.Add(this.panel5);
             this.groupBox1.Controls.Add(this.panel4);
             this.groupBox1.Controls.Add(this.txtIDs);
@@ -208,7 +214,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel4.Location = new System.Drawing.Point(3, 206);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(676, 59);
+            this.panel4.Size = new System.Drawing.Size(762, 59);
             this.panel4.TabIndex = 12;
             // 
             // btnEdit
@@ -336,7 +342,7 @@
             this.txtIDs.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.txtIDs.EditValue = "NV00";
-            this.txtIDs.Location = new System.Drawing.Point(327, 70);
+            this.txtIDs.Location = new System.Drawing.Point(306, 68);
             this.txtIDs.Name = "txtIDs";
             this.txtIDs.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIDs.Properties.Appearance.Options.UseFont = true;
@@ -349,7 +355,7 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.cbIDc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbIDc.FormattingEnabled = true;
-            this.cbIDc.Location = new System.Drawing.Point(341, 122);
+            this.cbIDc.Location = new System.Drawing.Point(320, 120);
             this.cbIDc.Name = "cbIDc";
             this.cbIDc.Size = new System.Drawing.Size(111, 33);
             this.cbIDc.TabIndex = 10;
@@ -360,7 +366,7 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.dtpDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpDate.Location = new System.Drawing.Point(288, 170);
+            this.dtpDate.Location = new System.Drawing.Point(267, 168);
             this.dtpDate.Name = "dtpDate";
             this.dtpDate.Size = new System.Drawing.Size(164, 30);
             this.dtpDate.TabIndex = 8;
@@ -369,7 +375,7 @@
             // 
             this.txtIDb.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtIDb.Location = new System.Drawing.Point(317, 21);
+            this.txtIDb.Location = new System.Drawing.Point(296, 19);
             this.txtIDb.Name = "txtIDb";
             this.txtIDb.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIDb.Properties.Appearance.Options.UseFont = true;
@@ -381,7 +387,7 @@
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(180, 177);
+            this.label4.Location = new System.Drawing.Point(159, 175);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(89, 22);
             this.label4.TabIndex = 4;
@@ -392,7 +398,7 @@
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(180, 127);
+            this.label3.Location = new System.Drawing.Point(159, 125);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(145, 22);
             this.label3.TabIndex = 3;
@@ -403,7 +409,7 @@
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(183, 75);
+            this.label2.Location = new System.Drawing.Point(162, 73);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(129, 22);
             this.label2.TabIndex = 2;
@@ -414,7 +420,7 @@
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(185, 26);
+            this.label1.Location = new System.Drawing.Point(164, 24);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(114, 22);
             this.label1.TabIndex = 1;
@@ -432,12 +438,12 @@
             this.ColDate,
             this.ColTotal});
             this.dgvBill.Dock = System.Windows.Forms.DockStyle.Right;
-            this.dgvBill.Location = new System.Drawing.Point(679, 24);
+            this.dgvBill.Location = new System.Drawing.Point(765, 24);
             this.dgvBill.Name = "dgvBill";
             this.dgvBill.ReadOnly = true;
             this.dgvBill.RowHeadersWidth = 51;
             this.dgvBill.RowTemplate.Height = 24;
-            this.dgvBill.Size = new System.Drawing.Size(922, 241);
+            this.dgvBill.Size = new System.Drawing.Size(836, 241);
             this.dgvBill.TabIndex = 0;
             this.dgvBill.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBill_CellClick);
             // 
@@ -1008,6 +1014,28 @@
             this.ColPrices.Name = "ColPrices";
             this.ColPrices.ReadOnly = true;
             // 
+            // txtNames
+            // 
+            this.txtNames.Enabled = false;
+            this.txtNames.Location = new System.Drawing.Point(423, 68);
+            this.txtNames.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtNames.Name = "txtNames";
+            this.txtNames.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNames.Properties.Appearance.Options.UseFont = true;
+            this.txtNames.Size = new System.Drawing.Size(316, 32);
+            this.txtNames.TabIndex = 36;
+            // 
+            // txtNamec
+            // 
+            this.txtNamec.Enabled = false;
+            this.txtNamec.Location = new System.Drawing.Point(446, 120);
+            this.txtNamec.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtNamec.Name = "txtNamec";
+            this.txtNamec.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNamec.Properties.Appearance.Options.UseFont = true;
+            this.txtNamec.Size = new System.Drawing.Size(313, 32);
+            this.txtNamec.TabIndex = 35;
+            // 
             // ucBill2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1041,6 +1069,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtTotal.Properties)).EndInit();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetail)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNames.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNamec.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1108,5 +1138,7 @@
         private DevExpress.XtraEditors.SimpleButton btnSearch2;
         private System.Windows.Forms.ComboBox cbIDb;
         private System.Windows.Forms.PictureBox picProduct;
+        private DevExpress.XtraEditors.TextEdit txtNames;
+        private DevExpress.XtraEditors.TextEdit txtNamec;
     }
 }

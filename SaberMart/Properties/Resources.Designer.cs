@@ -173,9 +173,9 @@ namespace SaberMart.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap KaenkenRekka1 {
+        internal static System.Drawing.Bitmap KaenkenRekka11 {
             get {
-                object obj = ResourceManager.GetObject("KaenkenRekka1", resourceCulture);
+                object obj = ResourceManager.GetObject("KaenkenRekka11", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
