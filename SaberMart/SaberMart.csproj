@@ -443,12 +443,6 @@
     <Compile Include="UI\User control\Admin\ucStaff.Designer.cs">
       <DependentUpon>ucStaff.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\User control\Staff\ucAccount2.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UI\User control\Staff\ucAccount2.Designer.cs">
-      <DependentUpon>ucAccount2.cs</DependentUpon>
-    </Compile>
     <Compile Include="UI\User control\Staff\ucBill2.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -460,18 +454,6 @@
     </Compile>
     <Compile Include="UI\User control\Staff\ucProduct2.Designer.cs">
       <DependentUpon>ucProduct2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\User control\Staff\Account\ucProfile.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UI\User control\Staff\Account\ucProfile.Designer.cs">
-      <DependentUpon>ucProfile.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\User control\Staff\Account\ucProfileEdit.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UI\User control\Staff\Account\ucProfileEdit.Designer.cs">
-      <DependentUpon>ucProfileEdit.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -532,20 +514,11 @@
     <EmbeddedResource Include="UI\User control\Admin\ucStaff.resx">
       <DependentUpon>ucStaff.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\User control\Staff\ucAccount2.resx">
-      <DependentUpon>ucAccount2.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="UI\User control\Staff\ucBill2.resx">
       <DependentUpon>ucBill2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\User control\Staff\ucProduct2.resx">
       <DependentUpon>ucProduct2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UI\User control\Staff\Account\ucProfile.resx">
-      <DependentUpon>ucProfile.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UI\User control\Staff\Account\ucProfileEdit.resx">
-      <DependentUpon>ucProfileEdit.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

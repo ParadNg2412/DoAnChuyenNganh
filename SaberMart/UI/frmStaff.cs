@@ -53,10 +53,7 @@ namespace SaberMart.UI
 
         private void btnAccount_Click(object sender, EventArgs e)
         {
-            pStaff.Controls.Clear();
-            ucAccount2 account = new ucAccount2();
-            account.Dock = DockStyle.Fill;
-            pStaff.Controls.Add(account);
+
         }
     }
 }

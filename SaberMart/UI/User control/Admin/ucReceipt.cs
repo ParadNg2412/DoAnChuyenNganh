@@ -68,11 +68,20 @@ namespace SaberMart.UI.User_control.Admin
             }
         }
 
+        private void Clear()
+        {
+            cbIDb.Text = string.Empty;
+            dtpDate.Text = string.Empty;
+            txtPrices.Text = "0";
+            txtTotal.Text = "0";
+        }
+
         private void btnNew1_Click(object sender, EventArgs e)
         {
             tk = context.HOADONs.ToList();
             loadGridView(tk);
             dgvReceipt.Rows.Clear();
+            Clear();
         }
 
         private void btnGridView_Click(object sender, EventArgs e)

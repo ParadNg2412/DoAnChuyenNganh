@@ -30,11 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmStaff));
             this.paMenu = new System.Windows.Forms.Panel();
-            this.pStaff = new System.Windows.Forms.Panel();
             this.btnBill = new System.Windows.Forms.Button();
             this.btnProduct = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
-            this.btnAccount = new System.Windows.Forms.Button();
+            this.pStaff = new System.Windows.Forms.Panel();
             this.paMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -43,7 +42,6 @@
             this.paMenu.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.paMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.paMenu.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.paMenu.Controls.Add(this.btnAccount);
             this.paMenu.Controls.Add(this.btnBill);
             this.paMenu.Controls.Add(this.btnProduct);
             this.paMenu.Controls.Add(this.btnLogout);
@@ -54,19 +52,6 @@
             this.paMenu.Size = new System.Drawing.Size(153, 716);
             this.paMenu.TabIndex = 4;
             this.paMenu.Click += new System.EventHandler(this.paMenu_Click);
-            // 
-            // pStaff
-            // 
-            this.pStaff.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.pStaff.BackgroundImage = global::SaberMart.Properties.Resources.KaenkenRekka4;
-            this.pStaff.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pStaff.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pStaff.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pStaff.Location = new System.Drawing.Point(153, 0);
-            this.pStaff.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pStaff.Name = "pStaff";
-            this.pStaff.Size = new System.Drawing.Size(1295, 716);
-            this.pStaff.TabIndex = 5;
             // 
             // btnBill
             // 
@@ -134,27 +119,18 @@
             this.btnLogout.UseVisualStyleBackColor = false;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
-            // btnAccount
+            // pStaff
             // 
-            this.btnAccount.BackColor = System.Drawing.Color.OrangeRed;
-            this.btnAccount.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnAccount.FlatAppearance.CheckedBackColor = System.Drawing.Color.Black;
-            this.btnAccount.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.btnAccount.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
-            this.btnAccount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAccount.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnAccount.Image = global::SaberMart.Properties.Resources.User_32x32;
-            this.btnAccount.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnAccount.Location = new System.Drawing.Point(0, 178);
-            this.btnAccount.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnAccount.Name = "btnAccount";
-            this.btnAccount.Size = new System.Drawing.Size(149, 103);
-            this.btnAccount.TabIndex = 8;
-            this.btnAccount.Text = "Tài khoản\r\n";
-            this.btnAccount.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnAccount.UseVisualStyleBackColor = false;
-            this.btnAccount.Click += new System.EventHandler(this.btnAccount_Click);
+            this.pStaff.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.pStaff.BackgroundImage = global::SaberMart.Properties.Resources.KaenkenRekka4;
+            this.pStaff.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pStaff.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pStaff.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pStaff.Location = new System.Drawing.Point(153, 0);
+            this.pStaff.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pStaff.Name = "pStaff";
+            this.pStaff.Size = new System.Drawing.Size(1295, 716);
+            this.pStaff.TabIndex = 5;
             // 
             // frmStaff
             // 
@@ -184,6 +160,5 @@
         private System.Windows.Forms.Button btnProduct;
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Panel pStaff;
-        private System.Windows.Forms.Button btnAccount;
     }
 }
