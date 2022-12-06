@@ -43,7 +43,33 @@ namespace SaberMart.UI.User_control.Admin.Data
                 }
             }
             return null;
-        }       
+        }
+
+        private string checkC(string ID)
+        {
+            List<SANPHAM> lstS = context.SANPHAMs.ToList();
+            foreach (var ck in lstS)
+            {
+                if (ID.Equals(ck.MaNCC))
+                {
+                    return ck.MaNCC;
+                }
+            }
+            return null;
+        }
+
+        private string checkG(string ID)
+        {
+            List<SANPHAM> lstS = context.SANPHAMs.ToList();
+            foreach (var ck in lstS)
+            {
+                if (ID.Equals(ck.MaNhom))
+                {
+                    return ck.MaNhom;
+                }
+            }
+            return null;
+        }
 
         private void loadGridProduct(List<SANPHAM> lstP)
         {
@@ -227,26 +253,26 @@ namespace SaberMart.UI.User_control.Admin.Data
             loadGridProduct(lstP);
         }
 
-        private void btnSearch_Click(object sender, EventArgs e)
-        {
-            if (checkP(txtIDp.Text) == null)
-            {
-                MessageBox.Show("Không tìm thấy sản phẩm!", "Thông báo!", MessageBoxButtons.OK);
-            }
-            else
-            {
-                SANPHAM srchsp = context.SANPHAMs.FirstOrDefault(p => p.MaSP == txtIDp.Text);
-                if (srchsp != null)
-                {
-                    List<SANPHAM> lstP = context.SANPHAMs.Where(p => p.MaSP == txtIDp.Text).ToList();
-                    loadGridProduct(lstP);
-                }
-                else
-                {
-                    MessageBox.Show("Không tìm thấy sản phẩm!", "Thông báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-            }
-        }
+        //private void btnSearch_Click(object sender, EventArgs e)
+        //{
+        //    if (checkP(txtIDp.Text) == null)
+        //    {
+        //        MessageBox.Show("Không tìm thấy sản phẩm!", "Thông báo!", MessageBoxButtons.OK);
+        //    }
+        //    else
+        //    {
+        //        SANPHAM srchsp = context.SANPHAMs.FirstOrDefault(p => p.MaSP == txtIDp.Text);
+        //        if (srchsp != null)
+        //        {
+        //            List<SANPHAM> lstP = context.SANPHAMs.Where(p => p.MaSP == txtIDp.Text).ToList();
+        //            loadGridProduct(lstP);
+        //        }
+        //        else
+        //        {
+        //            MessageBox.Show("Không tìm thấy sản phẩm!", "Thông báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        //        }
+        //    }
+        //}
 
         private void dgvGroup_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -292,44 +318,108 @@ namespace SaberMart.UI.User_control.Admin.Data
             }
         }
 
-        private void nbiID_ItemChanged(object sender, EventArgs e)
-        {
-            if (checkP(txtIDp.Text) == null)
-            {
-                MessageBox.Show("Không tìm thấy sản phẩm!", "Thông báo!", MessageBoxButtons.OK);
-            }
-            else
-            {
-                SANPHAM srchsp = context.SANPHAMs.FirstOrDefault(p => p.MaSP == txtIDp.Text);
-                if (srchsp != null)
-                {
-                    List<SANPHAM> lstP = context.SANPHAMs.Where(p => p.MaSP == txtIDp.Text).ToList();
-                    loadGridProduct(lstP);
-                }
-                else
-                {
-                    MessageBox.Show("Không tìm thấy sản phẩm!", "Thông báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-            }
-        }
+        //private void nbiID_ItemChanged(object sender, EventArgs e)
+        //{
+        //    if (checkP(txtIDp.Text) == null)
+        //    {
+        //        MessageBox.Show("Không tìm thấy sản phẩm!", "Thông báo!", MessageBoxButtons.OK);
+        //    }
+        //    else
+        //    {
+        //        SANPHAM srchsp = context.SANPHAMs.FirstOrDefault(p => p.MaSP == txtIDp.Text);
+        //        if (srchsp != null)
+        //        {
+        //            List<SANPHAM> lstP = context.SANPHAMs.Where(p => p.MaSP == txtIDp.Text).ToList();
+        //            loadGridProduct(lstP);
+        //        }
+        //        else
+        //        {
+        //            MessageBox.Show("Không tìm thấy sản phẩm!", "Thông báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        //        }
+        //    }
+        //}
 
-        private void nbiGroup_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        //private void nbiGroup_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        //{
+        //    if (checkP(txtIDp.Text) == null)
+        //    {
+        //        MessageBox.Show("Không tìm thấy sản phẩm!", "Thông báo!", MessageBoxButtons.OK);
+        //    }
+        //    else
+        //    {
+        //        SANPHAM srchsp = context.SANPHAMs.FirstOrDefault(p => p.MaSP == txtIDp.Text);
+        //        if (srchsp != null)
+        //        {
+        //            List<SANPHAM> lstP = context.SANPHAMs.Where(p => p.MaSP == txtIDp.Text).ToList();
+        //            loadGridProduct(lstP);
+        //        }
+        //        else
+        //        {
+        //            MessageBox.Show("Không tìm thấy sản phẩm!", "Thông báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        //        }
+        //    }
+        //}
+
+        private void btnSearch_Click(object sender, EventArgs e)
         {
-            if (checkP(txtIDp.Text) == null)
+            if(ckIDp.Checked == true)
             {
-                MessageBox.Show("Không tìm thấy sản phẩm!", "Thông báo!", MessageBoxButtons.OK);
-            }
-            else
-            {
-                SANPHAM srchsp = context.SANPHAMs.FirstOrDefault(p => p.MaSP == txtIDp.Text);
-                if (srchsp != null)
+                if (checkP(txtIDp.Text) == null)
                 {
-                    List<SANPHAM> lstP = context.SANPHAMs.Where(p => p.MaSP == txtIDp.Text).ToList();
-                    loadGridProduct(lstP);
+                    MessageBox.Show("Không tìm thấy sản phẩm!", "Thông báo!", MessageBoxButtons.OK);
                 }
                 else
                 {
-                    MessageBox.Show("Không tìm thấy sản phẩm!", "Thông báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    SANPHAM srchsp = context.SANPHAMs.FirstOrDefault(p => p.MaSP == txtIDp.Text);
+                    if (srchsp != null)
+                    {
+                        List<SANPHAM> lstP = context.SANPHAMs.Where(p => p.MaSP == txtIDp.Text).ToList();
+                        loadGridProduct(lstP);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Không tìm thấy sản phẩm!", "Thông báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+            }
+            if(ckIDc.Checked == true)
+            {
+                if(checkC(cbIDc.Text) == null)
+                {
+                    MessageBox.Show("Không tìm thấy sản phẩm!", "Thông báo!", MessageBoxButtons.OK);
+                }
+                else
+                {
+                    SANPHAM srchsp = context.SANPHAMs.FirstOrDefault(p => p.MaNCC == cbIDc.Text);
+                    if (srchsp != null)
+                    {
+                        List<SANPHAM> lstP = context.SANPHAMs.Where(p => p.MaNCC == cbIDc.Text).ToList();
+                        loadGridProduct(lstP);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Không tìm thấy sản phẩm!", "Thông báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+            }
+            if(ckIDg.Checked == true)
+            {
+                if (checkG(cbIDg.Text) == null)
+                {
+                    MessageBox.Show("Không tìm thấy sản phẩm!", "Thông báo!", MessageBoxButtons.OK);
+                }
+                else
+                {
+                    SANPHAM srchsp = context.SANPHAMs.FirstOrDefault(p => p.MaNhom == cbIDg.Text);
+                    if (srchsp != null)
+                    {
+                        List<SANPHAM> lstP = context.SANPHAMs.Where(p => p.MaNhom == cbIDg.Text).ToList();
+                        loadGridProduct(lstP);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Không tìm thấy sản phẩm!", "Thông báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
                 }
             }
         }

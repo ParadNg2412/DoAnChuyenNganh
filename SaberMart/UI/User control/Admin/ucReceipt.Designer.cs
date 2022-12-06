@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.paMenu = new System.Windows.Forms.Panel();
             this.btnNew1 = new DevExpress.XtraEditors.SimpleButton();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dgvReceipt = new System.Windows.Forms.DataGridView();
@@ -53,8 +52,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.standardReportDesigner2 = new DevExpress.XtraReports.UserDesigner.Native.StandardReportDesigner();
-            this.btnGridView = new DevExpress.XtraEditors.SimpleButton();
-            this.paMenu.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReceipt)).BeginInit();
             this.panel5.SuspendLayout();
@@ -63,20 +60,6 @@
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtPrices.Properties)).BeginInit();
             this.SuspendLayout();
-            // 
-            // paMenu
-            // 
-            this.paMenu.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.paMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.paMenu.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.paMenu.Controls.Add(this.btnNew1);
-            this.paMenu.Controls.Add(this.btnGridView);
-            this.paMenu.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.paMenu.Location = new System.Drawing.Point(0, 731);
-            this.paMenu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.paMenu.Name = "paMenu";
-            this.paMenu.Size = new System.Drawing.Size(1154, 87);
-            this.paMenu.TabIndex = 4;
             // 
             // btnNew1
             // 
@@ -100,7 +83,8 @@
             this.btnNew1.AppearancePressed.Options.UseBackColor = true;
             this.btnNew1.AppearancePressed.Options.UseBorderColor = true;
             this.btnNew1.AppearancePressed.Options.UseFont = true;
-            this.btnNew1.Location = new System.Drawing.Point(323, 14);
+            this.btnNew1.ImageOptions.Image = global::SaberMart.Properties.Resources.Clear;
+            this.btnNew1.Location = new System.Drawing.Point(599, 24);
             this.btnNew1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnNew1.Name = "btnNew1";
             this.btnNew1.Size = new System.Drawing.Size(132, 58);
@@ -113,12 +97,12 @@
             this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel3.BackColor = System.Drawing.Color.Crimson;
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.dgvReceipt);
-            this.panel3.Location = new System.Drawing.Point(85, 157);
+            this.panel3.Location = new System.Drawing.Point(23, 157);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(980, 568);
+            this.panel3.Size = new System.Drawing.Size(1112, 638);
             this.panel3.TabIndex = 5;
             // 
             // dgvReceipt
@@ -138,7 +122,7 @@
             this.dgvReceipt.ReadOnly = true;
             this.dgvReceipt.RowHeadersWidth = 51;
             this.dgvReceipt.RowTemplate.Height = 24;
-            this.dgvReceipt.Size = new System.Drawing.Size(946, 532);
+            this.dgvReceipt.Size = new System.Drawing.Size(1078, 602);
             this.dgvReceipt.TabIndex = 1;
             this.dgvReceipt.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvReceipt_CellClick);
             // 
@@ -182,6 +166,7 @@
             // 
             this.groupBox1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.groupBox1.BackColor = System.Drawing.Color.Gray;
+            this.groupBox1.Controls.Add(this.btnNew1);
             this.groupBox1.Controls.Add(this.dtpYear);
             this.groupBox1.Controls.Add(this.dtpMonth);
             this.groupBox1.Controls.Add(this.dtpDay);
@@ -384,37 +369,6 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Mã hóa đơn";
             // 
-            // btnGridView
-            // 
-            this.btnGridView.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnGridView.Appearance.BackColor = System.Drawing.Color.Orange;
-            this.btnGridView.Appearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnGridView.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGridView.Appearance.Options.UseBackColor = true;
-            this.btnGridView.Appearance.Options.UseBorderColor = true;
-            this.btnGridView.Appearance.Options.UseFont = true;
-            this.btnGridView.AppearanceHovered.BackColor = System.Drawing.Color.Yellow;
-            this.btnGridView.AppearanceHovered.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnGridView.AppearanceHovered.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGridView.AppearanceHovered.Options.UseBackColor = true;
-            this.btnGridView.AppearanceHovered.Options.UseBorderColor = true;
-            this.btnGridView.AppearanceHovered.Options.UseFont = true;
-            this.btnGridView.AppearancePressed.BackColor = System.Drawing.Color.Gold;
-            this.btnGridView.AppearancePressed.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnGridView.AppearancePressed.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGridView.AppearancePressed.Options.UseBackColor = true;
-            this.btnGridView.AppearancePressed.Options.UseBorderColor = true;
-            this.btnGridView.AppearancePressed.Options.UseFont = true;
-            this.btnGridView.ImageOptions.Image = global::SaberMart.Properties.Resources.cash;
-            this.btnGridView.Location = new System.Drawing.Point(671, 14);
-            this.btnGridView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnGridView.Name = "btnGridView";
-            this.btnGridView.Size = new System.Drawing.Size(197, 58);
-            this.btnGridView.TabIndex = 15;
-            this.btnGridView.Text = "Xuất thống kê";
-            this.btnGridView.Click += new System.EventHandler(this.btnGridView_Click);
-            // 
             // ucReceipt
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
@@ -423,12 +377,10 @@
             this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.paMenu);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "ucReceipt";
             this.Size = new System.Drawing.Size(1154, 818);
             this.Load += new System.EventHandler(this.ucReceipt_Load);
-            this.paMenu.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvReceipt)).EndInit();
             this.panel5.ResumeLayout(false);
@@ -443,8 +395,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel paMenu;
         private DevExpress.XtraEditors.SimpleButton btnNew1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel5;
@@ -469,6 +419,5 @@
         private System.Windows.Forms.DateTimePicker dtpMonth;
         private System.Windows.Forms.DateTimePicker dtpDay;
         private DevExpress.XtraReports.UserDesigner.Native.StandardReportDesigner standardReportDesigner2;
-        private DevExpress.XtraEditors.SimpleButton btnGridView;
     }
 }

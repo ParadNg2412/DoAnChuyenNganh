@@ -33,6 +33,19 @@ namespace SaberMart.UI.User_control.Admin
             return null;
         }
 
+        private string checkP(string ID)
+        {
+            List<NHANVIEN> lstS = context.NHANVIENs.ToList();
+            foreach (var ck in lstS)
+            {
+                if (ID.Equals(ck.MaCV))
+                {
+                    return ck.MaCV;
+                }
+            }
+            return null;
+        }
+
         private void loadGridView(List<NHANVIEN> lstS)
         {
             dgvStaff.Rows.Clear();
@@ -193,21 +206,44 @@ namespace SaberMart.UI.User_control.Admin
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            if(checkS(txtIDs.Text) == null)
+            if(ckIDs.Checked == true)
             {
-                MessageBox.Show("Không tìm thấy nhân viên!", "Thông báo!", MessageBoxButtons.OK);
-            }
-            else
-            {
-                NHANVIEN srchnv = context.NHANVIENs.FirstOrDefault(p => p.MaNV == txtIDs.Text);
-                if (srchnv != null)
+                if (checkS(txtIDs.Text) == null)
                 {
-                    List<NHANVIEN> lstS = context.NHANVIENs.Where(p => p.MaNV == txtIDs.Text).ToList();
-                    loadGridView(lstS);
+                    MessageBox.Show("Không tìm thấy nhân viên!", "Thông báo!", MessageBoxButtons.OK);
                 }
                 else
                 {
-                    MessageBox.Show("Không tìm thấy nhân viên!", "Thông báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    NHANVIEN srchnv = context.NHANVIENs.FirstOrDefault(p => p.MaNV == txtIDs.Text);
+                    if (srchnv != null)
+                    {
+                        List<NHANVIEN> lstS = context.NHANVIENs.Where(p => p.MaNV == txtIDs.Text).ToList();
+                        loadGridView(lstS);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Không tìm thấy nhân viên!", "Thông báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+            }
+            if(ckIDp.Checked == true)
+            {
+                if (checkS(txtIDp.Text) == null)
+                {
+                    MessageBox.Show("Không tìm thấy nhân viên!", "Thông báo!", MessageBoxButtons.OK);
+                }
+                else
+                {
+                    NHANVIEN srchnv = context.NHANVIENs.FirstOrDefault(p => p.MaCV == txtIDp.Text);
+                    if (srchnv != null)
+                    {
+                        List<NHANVIEN> lstS = context.NHANVIENs.Where(p => p.MaCV == txtIDp.Text).ToList();
+                        loadGridView(lstS);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Không tìm thấy nhân viên!", "Thông báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
                 }
             }
         }

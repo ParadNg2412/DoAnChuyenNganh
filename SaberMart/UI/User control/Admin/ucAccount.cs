@@ -153,23 +153,47 @@ namespace SaberMart.UI.User_control.Admin
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            if (checkA(cbAcc.Text) == null)
+            if(ckIDs.Checked == true) 
             {
-                MessageBox.Show("Không tìm thấy tài khoản!", "Thông báo!", MessageBoxButtons.OK);
-            }
-            else
-            {
-                NHANVIEN srchtk = context.NHANVIENs.FirstOrDefault(p => p.LoaiTK == cbAcc.Text);
-                if(srchtk != null)
+                if (checkS(cbIDs.Text) == null)
                 {
-                    List<NHANVIEN> lstS = context.NHANVIENs.Where(p => p.LoaiTK == cbAcc.Text).ToList();
-                    loadGridView(lstS);
+                    MessageBox.Show("Không tìm thấy tài khoản!", "Thông báo!", MessageBoxButtons.OK);
                 }
                 else
                 {
-                    MessageBox.Show("Không tìm thấy tài khoản!", "Thông báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    NHANVIEN srchtk = context.NHANVIENs.FirstOrDefault(p => p.MaNV == cbIDs.Text);
+                    if (srchtk != null)
+                    {
+                        List<NHANVIEN> lstS = context.NHANVIENs.Where(p => p.MaNV == cbIDs.Text).ToList();
+                        loadGridView(lstS);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Không tìm thấy tài khoản!", "Thông báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
                 }
             }
+            if(ckAcc.Checked == true)
+            {
+                if (checkA(cbAcc.Text) == null)
+                {
+                    MessageBox.Show("Không tìm thấy tài khoản!", "Thông báo!", MessageBoxButtons.OK);
+                }
+                else
+                {
+                    NHANVIEN srchtk = context.NHANVIENs.FirstOrDefault(p => p.LoaiTK == cbAcc.Text);
+                    if (srchtk != null)
+                    {
+                        List<NHANVIEN> lstS = context.NHANVIENs.Where(p => p.LoaiTK == cbAcc.Text).ToList();
+                        loadGridView(lstS);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Không tìm thấy tài khoản!", "Thông báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+            }
+            
         }
     }
 }

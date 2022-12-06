@@ -158,6 +158,8 @@ namespace SaberMart.UI.User_control.Admin
                     cbIDc.Text = dgvBill.Rows[e.RowIndex].Cells["ColCustomer"].FormattedValue.ToString();
                     dtpDate.Text = dgvBill.Rows[e.RowIndex].Cells["ColDate"].FormattedValue.ToString();
                     txtTotal.Text = dgvBill.Rows[e.RowIndex].Cells["ColTotal"].FormattedValue.ToString();
+                    List<CHITIETHOADON> lstB = context.CHITIETHOADONs.Where(p => p.MaHD == cbIDb.Text).ToList();
+                    loadGridCTHD(lstB);
                 }
             }
             catch (Exception ex)
@@ -294,11 +296,27 @@ namespace SaberMart.UI.User_control.Admin
             }
         }
 
+        private void Clear()
+        {
+            txtIDb.Text = string.Empty;
+            cbIDs.Text = string.Empty;
+            txtNames.Text = string.Empty;
+            cbIDc.Text = string.Empty;
+            txtNamec.Text = string.Empty;
+            dtpDate.Text = string.Empty;
+            cbIDb.Text = string.Empty;
+            txtTotal.Text = "0";
+            txtSales.Text = "0";
+            txtPrices.Text = "0";
+            txtValue.Text = "0";
+        }
+
         private void btnNew_Click(object sender, EventArgs e)
         {
             List<HOADON> lst = context.HOADONs.ToList();
             loadGridHD(lst);
             dgvBill.Rows.Clear();
+            Clear();
         }
 
         private void btnAdd_Click(object sender, EventArgs e)

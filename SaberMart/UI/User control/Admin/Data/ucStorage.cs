@@ -76,7 +76,8 @@ namespace SaberMart.UI.User_control.Admin.Data
                 int index = dgvProduct.Rows.Add();
                 dgvProduct.Rows[index].Cells[0].Value = item.MaSP;
                 dgvProduct.Rows[index].Cells[1].Value = item.TenSP;
-                dgvProduct.Rows[index].Cells[2].Value = item.GiaNhap;
+                dgvProduct.Rows[index].Cells[2].Value = item.DonViTinh;
+                dgvProduct.Rows[index].Cells[3].Value = item.GiaNhap;
             }
         }
 
@@ -108,19 +109,31 @@ namespace SaberMart.UI.User_control.Admin.Data
             }
         }
 
+        private void Clear()
+        {
+            txtIDb.Text = string.Empty;
+            cbIDs.Text = string.Empty;
+            txtNames.Text = string.Empty;
+            cbIDc.Text = string.Empty;
+            txtNamec.Text = string.Empty;
+            dtpDate.Text = string.Empty;
+            cbIDb.Text = string.Empty;
+            txtTotal.Text = "0";
+            txtSales.Text = "0";
+            txtPrices.Text = "0";
+            txtValue.Text = "0";
+        }
+
         private void ucStorage_Load(object sender, EventArgs e)
         {
             List<SANPHAM> lstP = context.SANPHAMs.ToList();
             List<PHIEUNHAP> lstB = context.PHIEUNHAPs.ToList();
             List<NHACUNGCAP> lstC = context.NHACUNGCAPs.ToList();
-            List<CHITIETPHIEUNHAP> lstBD = context.CHITIETPHIEUNHAPs.ToList();
             List<NHANVIEN> lstS = context.NHANVIENs.ToList();
             loadGridPN(lstB);
             loadCompany(lstC);
-            loadDetail(lstB);
             loadStaff(lstS);
             loadGridSP(lstP);
-            loadGridCTPN(lstBD);
         }
 
         private void dgvBill_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -131,10 +144,12 @@ namespace SaberMart.UI.User_control.Admin.Data
                 {
                     dgvBill.CurrentCell.Selected = true;
                     txtIDb.Text = dgvBill.Rows[e.RowIndex].Cells["ColIDb"].FormattedValue.ToString();
-                    cbIDs.Text = dgvBill.Rows[e.RowIndex].Cells["ColStaff"].FormattedValue.ToString();
-                    cbIDc.Text = dgvBill.Rows[e.RowIndex].Cells["ColCompany"].FormattedValue.ToString();
+                    txtNames.Text = dgvBill.Rows[e.RowIndex].Cells["ColStaff"].FormattedValue.ToString();
+                    txtNamec.Text = dgvBill.Rows[e.RowIndex].Cells["ColCompany"].FormattedValue.ToString();
                     dtpDate.Text = dgvBill.Rows[e.RowIndex].Cells["ColDate"].FormattedValue.ToString();
                     txtTotal.Text = dgvBill.Rows[e.RowIndex].Cells["ColTotal"].FormattedValue.ToString();
+                    List<CHITIETPHIEUNHAP> lstB = context.CHITIETPHIEUNHAPs.Where(p => p.MaPN == cbIDb.Text).ToList();
+                    loadGridCTPN(lstB);
                 }
             }
             catch (Exception ex)
@@ -152,6 +167,7 @@ namespace SaberMart.UI.User_control.Admin.Data
                     dgvProduct.CurrentCell.Selected = true;
                     txtIDp.Text = dgvProduct.Rows[e.RowIndex].Cells["ColIDp"].FormattedValue.ToString();
                     txtNamep.Text = dgvProduct.Rows[e.RowIndex].Cells["ColNamep"].FormattedValue.ToString();
+                    txtType.Text = dgvProduct.Rows[e.RowIndex].Cells["ColType"].FormattedValue.ToString();
                     txtSales.Text = dgvProduct.Rows[e.RowIndex].Cells["ColSale"].FormattedValue.ToString();
                     var item = context.SANPHAMs.FirstOrDefault(p => p.TenSP == txtNamep.Text);
                     byte[] arr = item.PicSP;
@@ -281,6 +297,7 @@ namespace SaberMart.UI.User_control.Admin.Data
             List<PHIEUNHAP> lst = context.PHIEUNHAPs.ToList();
             loadGridPN(lst);
             dgvBill.Rows.Clear();
+            Clear();
         }
 
         private void txtValue_KeyPress(object sender, KeyPressEventArgs e)
@@ -454,5 +471,6 @@ namespace SaberMart.UI.User_control.Admin.Data
                 }
             }
         }
+
     }
 }

@@ -31,11 +31,17 @@ namespace SaberMart.UI.User_control.Admin
         {
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.btnList = new DevExpress.XtraEditors.SimpleButton();
-            this.btnSearch = new DevExpress.XtraEditors.SimpleButton();
             this.btnEdit = new DevExpress.XtraEditors.SimpleButton();
             this.btnDelete = new DevExpress.XtraEditors.SimpleButton();
             this.btnAdd = new DevExpress.XtraEditors.SimpleButton();
             this.dgvStaff = new System.Windows.Forms.DataGridView();
+            this.ColID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColPosition = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColGender = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColPhone = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColAddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtSalery = new DevExpress.XtraEditors.TextEdit();
@@ -57,16 +63,13 @@ namespace SaberMart.UI.User_control.Admin
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.dgvPosition = new System.Windows.Forms.DataGridView();
-            this.ColID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColPosition = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColGender = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColPhone = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColAddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColIDp = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColNamep = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColSalary = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnSearch = new DevExpress.XtraEditors.SimpleButton();
+            this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.ckIDp = new System.Windows.Forms.CheckBox();
+            this.ckIDs = new System.Windows.Forms.CheckBox();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStaff)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -80,13 +83,16 @@ namespace SaberMart.UI.User_control.Admin
             ((System.ComponentModel.ISupportInitialize)(this.txtNames.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtIDs.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPosition)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
+            this.panelControl1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.groupBox3.Controls.Add(this.btnList);
+            this.groupBox3.Controls.Add(this.panelControl1);
             this.groupBox3.Controls.Add(this.btnSearch);
+            this.groupBox3.Controls.Add(this.btnList);
             this.groupBox3.Controls.Add(this.btnEdit);
             this.groupBox3.Controls.Add(this.btnDelete);
             this.groupBox3.Controls.Add(this.btnAdd);
@@ -119,38 +125,13 @@ namespace SaberMart.UI.User_control.Admin
             this.btnList.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnList.ImageOptions.Image = global::SaberMart.Properties.Resources.print;
             this.btnList.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
-            this.btnList.Location = new System.Drawing.Point(3, 524);
+            this.btnList.Location = new System.Drawing.Point(3, 598);
             this.btnList.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnList.Name = "btnList";
             this.btnList.Size = new System.Drawing.Size(166, 68);
             this.btnList.TabIndex = 5;
             this.btnList.Text = "Xuất danh sách";
             this.btnList.Click += new System.EventHandler(this.btnList_Click);
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.Appearance.BackColor = System.Drawing.Color.Coral;
-            this.btnSearch.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch.Appearance.Options.UseBackColor = true;
-            this.btnSearch.Appearance.Options.UseFont = true;
-            this.btnSearch.AppearanceHovered.BackColor = System.Drawing.Color.DarkOrange;
-            this.btnSearch.AppearanceHovered.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch.AppearanceHovered.Options.UseBackColor = true;
-            this.btnSearch.AppearanceHovered.Options.UseFont = true;
-            this.btnSearch.AppearancePressed.BackColor = System.Drawing.Color.DarkOrange;
-            this.btnSearch.AppearancePressed.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch.AppearancePressed.Options.UseBackColor = true;
-            this.btnSearch.AppearancePressed.Options.UseFont = true;
-            this.btnSearch.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnSearch.ImageOptions.Image = global::SaberMart.Properties.Resources.search;
-            this.btnSearch.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
-            this.btnSearch.Location = new System.Drawing.Point(3, 592);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(166, 74);
-            this.btnSearch.TabIndex = 4;
-            this.btnSearch.Text = "Tìm theo mã";
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // btnEdit
             // 
@@ -173,7 +154,7 @@ namespace SaberMart.UI.User_control.Admin
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(166, 39);
             this.btnEdit.TabIndex = 2;
-            this.btnEdit.Text = "Sửa";
+            this.btnEdit.Text = "Cập nhật";
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnDelete
@@ -248,6 +229,55 @@ namespace SaberMart.UI.User_control.Admin
             this.dgvStaff.Size = new System.Drawing.Size(1016, 233);
             this.dgvStaff.TabIndex = 16;
             this.dgvStaff.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvStaff_CellClick);
+            // 
+            // ColID
+            // 
+            this.ColID.HeaderText = "Mã nhân viên";
+            this.ColID.MinimumWidth = 6;
+            this.ColID.Name = "ColID";
+            this.ColID.ReadOnly = true;
+            // 
+            // ColName
+            // 
+            this.ColName.HeaderText = "Họ tên";
+            this.ColName.MinimumWidth = 6;
+            this.ColName.Name = "ColName";
+            this.ColName.ReadOnly = true;
+            // 
+            // ColPosition
+            // 
+            this.ColPosition.HeaderText = "Chức vụ";
+            this.ColPosition.MinimumWidth = 6;
+            this.ColPosition.Name = "ColPosition";
+            this.ColPosition.ReadOnly = true;
+            // 
+            // ColDate
+            // 
+            this.ColDate.HeaderText = "Ngày sinh";
+            this.ColDate.MinimumWidth = 6;
+            this.ColDate.Name = "ColDate";
+            this.ColDate.ReadOnly = true;
+            // 
+            // ColGender
+            // 
+            this.ColGender.HeaderText = "Giới tính";
+            this.ColGender.MinimumWidth = 6;
+            this.ColGender.Name = "ColGender";
+            this.ColGender.ReadOnly = true;
+            // 
+            // ColPhone
+            // 
+            this.ColPhone.HeaderText = "Số điện thoại";
+            this.ColPhone.MinimumWidth = 6;
+            this.ColPhone.Name = "ColPhone";
+            this.ColPhone.ReadOnly = true;
+            // 
+            // ColAddress
+            // 
+            this.ColAddress.HeaderText = "Địa chỉ";
+            this.ColAddress.MinimumWidth = 6;
+            this.ColAddress.Name = "ColAddress";
+            this.ColAddress.ReadOnly = true;
             // 
             // groupBox1
             // 
@@ -529,55 +559,6 @@ namespace SaberMart.UI.User_control.Admin
             this.dgvPosition.TabIndex = 19;
             this.dgvPosition.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPosition_CellClick);
             // 
-            // ColID
-            // 
-            this.ColID.HeaderText = "Mã nhân viên";
-            this.ColID.MinimumWidth = 6;
-            this.ColID.Name = "ColID";
-            this.ColID.ReadOnly = true;
-            // 
-            // ColName
-            // 
-            this.ColName.HeaderText = "Họ tên";
-            this.ColName.MinimumWidth = 6;
-            this.ColName.Name = "ColName";
-            this.ColName.ReadOnly = true;
-            // 
-            // ColPosition
-            // 
-            this.ColPosition.HeaderText = "Chức vụ";
-            this.ColPosition.MinimumWidth = 6;
-            this.ColPosition.Name = "ColPosition";
-            this.ColPosition.ReadOnly = true;
-            // 
-            // ColDate
-            // 
-            this.ColDate.HeaderText = "Ngày sinh";
-            this.ColDate.MinimumWidth = 6;
-            this.ColDate.Name = "ColDate";
-            this.ColDate.ReadOnly = true;
-            // 
-            // ColGender
-            // 
-            this.ColGender.HeaderText = "Giới tính";
-            this.ColGender.MinimumWidth = 6;
-            this.ColGender.Name = "ColGender";
-            this.ColGender.ReadOnly = true;
-            // 
-            // ColPhone
-            // 
-            this.ColPhone.HeaderText = "Số điện thoại";
-            this.ColPhone.MinimumWidth = 6;
-            this.ColPhone.Name = "ColPhone";
-            this.ColPhone.ReadOnly = true;
-            // 
-            // ColAddress
-            // 
-            this.ColAddress.HeaderText = "Địa chỉ";
-            this.ColAddress.MinimumWidth = 6;
-            this.ColAddress.Name = "ColAddress";
-            this.ColAddress.ReadOnly = true;
-            // 
             // ColIDp
             // 
             this.ColIDp.HeaderText = "Mã chức vụ";
@@ -599,6 +580,71 @@ namespace SaberMart.UI.User_control.Admin
             this.ColSalary.Name = "ColSalary";
             this.ColSalary.ReadOnly = true;
             // 
+            // btnSearch
+            // 
+            this.btnSearch.Appearance.BackColor = System.Drawing.Color.Coral;
+            this.btnSearch.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch.Appearance.Options.UseBackColor = true;
+            this.btnSearch.Appearance.Options.UseFont = true;
+            this.btnSearch.AppearanceHovered.BackColor = System.Drawing.Color.DarkOrange;
+            this.btnSearch.AppearanceHovered.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch.AppearanceHovered.Options.UseBackColor = true;
+            this.btnSearch.AppearanceHovered.Options.UseFont = true;
+            this.btnSearch.AppearancePressed.BackColor = System.Drawing.Color.DarkOrange;
+            this.btnSearch.AppearancePressed.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch.AppearancePressed.Options.UseBackColor = true;
+            this.btnSearch.AppearancePressed.Options.UseFont = true;
+            this.btnSearch.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnSearch.ImageOptions.Image = global::SaberMart.Properties.Resources.search;
+            this.btnSearch.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
+            this.btnSearch.Location = new System.Drawing.Point(3, 524);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(166, 74);
+            this.btnSearch.TabIndex = 6;
+            this.btnSearch.Text = "Tìm theo mã";
+            // 
+            // panelControl1
+            // 
+            this.panelControl1.Appearance.BackColor = System.Drawing.Color.Black;
+            this.panelControl1.Appearance.Options.UseBackColor = true;
+            this.panelControl1.AutoSize = true;
+            this.panelControl1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.panelControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.panelControl1.Controls.Add(this.ckIDp);
+            this.panelControl1.Controls.Add(this.ckIDs);
+            this.panelControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panelControl1.Location = new System.Drawing.Point(3, 468);
+            this.panelControl1.Name = "panelControl1";
+            this.panelControl1.Size = new System.Drawing.Size(166, 56);
+            this.panelControl1.TabIndex = 10;
+            // 
+            // ckIDp
+            // 
+            this.ckIDp.AutoSize = true;
+            this.ckIDp.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ckIDp.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ckIDp.ForeColor = System.Drawing.Color.White;
+            this.ckIDp.Location = new System.Drawing.Point(2, 28);
+            this.ckIDp.Name = "ckIDp";
+            this.ckIDp.Size = new System.Drawing.Size(162, 26);
+            this.ckIDp.TabIndex = 1;
+            this.ckIDp.Text = "Chức vụ";
+            this.ckIDp.UseVisualStyleBackColor = true;
+            // 
+            // ckIDs
+            // 
+            this.ckIDs.AutoSize = true;
+            this.ckIDs.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ckIDs.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ckIDs.ForeColor = System.Drawing.Color.White;
+            this.ckIDs.Location = new System.Drawing.Point(2, 2);
+            this.ckIDs.Name = "ckIDs";
+            this.ckIDs.Size = new System.Drawing.Size(162, 26);
+            this.ckIDs.TabIndex = 0;
+            this.ckIDs.Text = "Nhân viên";
+            this.ckIDs.UseVisualStyleBackColor = true;
+            // 
             // ucStaff
             // 
             this.AllowDrop = true;
@@ -618,6 +664,7 @@ namespace SaberMart.UI.User_control.Admin
             this.Size = new System.Drawing.Size(1229, 668);
             this.Load += new System.EventHandler(this.ucStaff_Load);
             this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStaff)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -632,6 +679,9 @@ namespace SaberMart.UI.User_control.Admin
             ((System.ComponentModel.ISupportInitialize)(this.txtNames.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtIDs.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPosition)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
+            this.panelControl1.ResumeLayout(false);
+            this.panelControl1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -639,7 +689,6 @@ namespace SaberMart.UI.User_control.Admin
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox3;
-        private DevExpress.XtraEditors.SimpleButton btnSearch;
         private DevExpress.XtraEditors.SimpleButton btnEdit;
         private DevExpress.XtraEditors.SimpleButton btnDelete;
         private DevExpress.XtraEditors.SimpleButton btnAdd;
@@ -676,5 +725,9 @@ namespace SaberMart.UI.User_control.Admin
         private System.Windows.Forms.DataGridViewTextBoxColumn ColIDp;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColNamep;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColSalary;
+        private DevExpress.XtraEditors.SimpleButton btnSearch;
+        private DevExpress.XtraEditors.PanelControl panelControl1;
+        private System.Windows.Forms.CheckBox ckIDp;
+        private System.Windows.Forms.CheckBox ckIDs;
     }
 }
