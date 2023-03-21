@@ -131,6 +131,7 @@ namespace SaberMart.UI.User_control.Admin.Data
             List<NHACUNGCAP> lstC = context.NHACUNGCAPs.ToList();
             List<NHANVIEN> lstS = context.NHANVIENs.ToList();
             loadGridPN(lstB);
+            loadDetail(lstB);
             loadCompany(lstC);
             loadStaff(lstS);
             loadGridSP(lstP);
@@ -188,7 +189,7 @@ namespace SaberMart.UI.User_control.Admin.Data
                 if (dgvDetail.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
                 {
                     dgvDetail.CurrentCell.Selected = true;
-                    cbIDb.Text = dgvDetail.Rows[e.RowIndex].Cells["ColIDbd"].FormattedValue.ToString();
+                    txtIDb.Text = cbIDb.Text = dgvDetail.Rows[e.RowIndex].Cells["ColIDbd"].FormattedValue.ToString();
                     txtNamep.Text = dgvDetail.Rows[e.RowIndex].Cells["ColProduct"].FormattedValue.ToString();
                     txtValue.Text = dgvDetail.Rows[e.RowIndex].Cells["ColValue"].FormattedValue.ToString();
                     txtSales.Text = dgvDetail.Rows[e.RowIndex].Cells["ColSales"].FormattedValue.ToString();
@@ -471,6 +472,5 @@ namespace SaberMart.UI.User_control.Admin.Data
                 }
             }
         }
-
     }
 }

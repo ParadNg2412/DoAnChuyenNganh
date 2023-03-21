@@ -144,8 +144,7 @@ namespace SaberMart.UI.User_control.Admin
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            if (txtIDp.Text == "" || txtNamep.Text == "" || txtSalery.Text == "" ||
-                txtIDs.Text == "" || txtNames.Text == "" || cbGender.Text == "" || 
+            if (txtIDp.Text == "" || txtIDs.Text == "" || txtNames.Text == "" || cbGender.Text == "" || 
                 dtpDate.Text == "" || txtPN.Text == "" || txtAddress.Text == "")
             {
                 MessageBox.Show("Vui lòng nhập đầy đủ thông tin!", "Thông báo!", MessageBoxButtons.OK);
@@ -155,9 +154,7 @@ namespace SaberMart.UI.User_control.Admin
                 NHANVIEN Upnv = context.NHANVIENs.FirstOrDefault(p => p.MaNV == txtIDs.Text);
                 if (Upnv != null)
                 {
-                    Upnv.CHUCVU.MaCV = Upnv.MaCV = txtIDp.Text;
-                    Upnv.CHUCVU.TenCV = txtNamep.Text;
-                    Upnv.CHUCVU.Luong = int.Parse(txtSalery.Text);
+                    Upnv.MaCV = txtIDp.Text;
                     Upnv.MaNV = txtIDs.Text;
                     Upnv.TenNV = txtNames.Text;
                     Upnv.GioiTinh = cbGender.Text;
@@ -204,9 +201,27 @@ namespace SaberMart.UI.User_control.Admin
             loadGridView(lstS);
         }
 
+        private void dgvPosition_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                if (dgvPosition.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
+                {
+                    dgvPosition.CurrentCell.Selected = true;
+                    txtIDp.Text = dgvPosition.Rows[e.RowIndex].Cells["ColIDp"].FormattedValue.ToString();
+                    txtNamep.Text = dgvPosition.Rows[e.RowIndex].Cells["ColNamep"].FormattedValue.ToString();
+                    txtSalery.Text = dgvPosition.Rows[e.RowIndex].Cells["ColSalary"].FormattedValue.ToString();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Lỗi");
+            }
+        }
+
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            if(ckIDs.Checked == true)
+            if (ckIDs.Checked == true)
             {
                 if (checkS(txtIDs.Text) == null)
                 {
@@ -226,9 +241,9 @@ namespace SaberMart.UI.User_control.Admin
                     }
                 }
             }
-            if(ckIDp.Checked == true)
+            if (ckIDp.Checked == true)
             {
-                if (checkS(txtIDp.Text) == null)
+                if (checkP(txtIDp.Text) == null)
                 {
                     MessageBox.Show("Không tìm thấy nhân viên!", "Thông báo!", MessageBoxButtons.OK);
                 }
@@ -245,24 +260,6 @@ namespace SaberMart.UI.User_control.Admin
                         MessageBox.Show("Không tìm thấy nhân viên!", "Thông báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
-            }
-        }
-
-        private void dgvPosition_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            try
-            {
-                if (dgvPosition.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
-                {
-                    dgvPosition.CurrentCell.Selected = true;
-                    txtIDp.Text = dgvPosition.Rows[e.RowIndex].Cells["ColIDp"].FormattedValue.ToString();
-                    txtNamep.Text = dgvPosition.Rows[e.RowIndex].Cells["ColNamep"].FormattedValue.ToString();
-                    txtSalery.Text = dgvPosition.Rows[e.RowIndex].Cells["ColSalary"].FormattedValue.ToString();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Lỗi");
             }
         }
     }

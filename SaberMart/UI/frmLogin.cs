@@ -54,7 +54,6 @@ namespace SaberMart.UI
             {
                 if (context.NHANVIENs.Where(p => p.Username == txtUsername.Text && p.MatKhau == txtPassword.Text && p.LoaiTK == "Admin").Count() > 0)
                 {
-                    MessageBox.Show("Admin: Đăng nhập thành công!", "Thông báo", MessageBoxButtons.OK);
                     frmAdmin fAdmin = new frmAdmin();
                     valueText = txtUsername.Text;
                     this.Hide();
@@ -63,7 +62,6 @@ namespace SaberMart.UI
                 }
                 if (context.NHANVIENs.Where(p => p.Username == txtUsername.Text && p.MatKhau == txtPassword.Text && p.LoaiTK == "Nhân viên").Count() > 0)
                 {
-                    MessageBox.Show("Staff: Đăng nhập thành công!", "Thông báo!", MessageBoxButtons.OK);
                     frmStaff fStaff = new frmStaff();
                     valueText = txtUsername.Text;
                     this.Hide();

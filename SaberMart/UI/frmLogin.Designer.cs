@@ -100,7 +100,7 @@ namespace SaberMart.UI
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl3.Appearance.BackColor = System.Drawing.Color.DarkRed;
-            this.labelControl3.Appearance.Font = new System.Drawing.Font("Swordoflogos", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl3.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl3.Appearance.ForeColor = System.Drawing.Color.White;
             this.labelControl3.Appearance.Options.UseBackColor = true;
             this.labelControl3.Appearance.Options.UseFont = true;
@@ -108,7 +108,7 @@ namespace SaberMart.UI
             this.labelControl3.Location = new System.Drawing.Point(174, 239);
             this.labelControl3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(180, 40);
+            this.labelControl3.Size = new System.Drawing.Size(142, 58);
             this.labelControl3.TabIndex = 13;
             this.labelControl3.Text = "MART";
             // 
@@ -118,7 +118,7 @@ namespace SaberMart.UI
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl2.Appearance.BackColor = System.Drawing.Color.White;
-            this.labelControl2.Appearance.Font = new System.Drawing.Font("Swordoflogos", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl2.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl2.Appearance.ForeColor = System.Drawing.Color.Black;
             this.labelControl2.Appearance.Options.UseBackColor = true;
             this.labelControl2.Appearance.Options.UseFont = true;
@@ -126,7 +126,7 @@ namespace SaberMart.UI
             this.labelControl2.Location = new System.Drawing.Point(174, 200);
             this.labelControl2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(223, 40);
+            this.labelControl2.Size = new System.Drawing.Size(168, 58);
             this.labelControl2.TabIndex = 12;
             this.labelControl2.Text = "SABER";
             // 

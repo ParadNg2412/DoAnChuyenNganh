@@ -130,7 +130,7 @@ namespace SaberMart.UI.User_control.Admin
             }
             else
             {
-                NHANVIEN Uptk = context.NHANVIENs.FirstOrDefault(p => p.MaNV == txtNames.Text);
+                NHANVIEN Uptk = context.NHANVIENs.FirstOrDefault(p => p.MaNV == cbIDs.Text);
                 if (Uptk != null)
                 {
                     Uptk.MaNV = cbIDs.Text;
@@ -181,7 +181,7 @@ namespace SaberMart.UI.User_control.Admin
                 }
                 else
                 {
-                    NHANVIEN srchtk = context.NHANVIENs.FirstOrDefault(p => p.LoaiTK == cbAcc.Text);
+                    NHANVIEN srchtk = context.NHANVIENs.FirstOrDefault(p => p.MaNV == cbIDs.Text);
                     if (srchtk != null)
                     {
                         List<NHANVIEN> lstS = context.NHANVIENs.Where(p => p.LoaiTK == cbAcc.Text).ToList();

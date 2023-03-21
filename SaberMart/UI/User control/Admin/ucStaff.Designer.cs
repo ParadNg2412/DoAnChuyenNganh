@@ -30,6 +30,10 @@ namespace SaberMart.UI.User_control.Admin
         private void InitializeComponent()
         {
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.ckIDp = new System.Windows.Forms.CheckBox();
+            this.ckIDs = new System.Windows.Forms.CheckBox();
+            this.btnSearch = new DevExpress.XtraEditors.SimpleButton();
             this.btnList = new DevExpress.XtraEditors.SimpleButton();
             this.btnEdit = new DevExpress.XtraEditors.SimpleButton();
             this.btnDelete = new DevExpress.XtraEditors.SimpleButton();
@@ -66,11 +70,9 @@ namespace SaberMart.UI.User_control.Admin
             this.ColIDp = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColNamep = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColSalary = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnSearch = new DevExpress.XtraEditors.SimpleButton();
-            this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
-            this.ckIDp = new System.Windows.Forms.CheckBox();
-            this.ckIDs = new System.Windows.Forms.CheckBox();
             this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
+            this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStaff)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtSalery.Properties)).BeginInit();
@@ -83,8 +85,6 @@ namespace SaberMart.UI.User_control.Admin
             ((System.ComponentModel.ISupportInitialize)(this.txtNames.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtIDs.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPosition)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
-            this.panelControl1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox3
@@ -107,6 +107,72 @@ namespace SaberMart.UI.User_control.Admin
             this.groupBox3.TabIndex = 15;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Chức năng";
+            // 
+            // panelControl1
+            // 
+            this.panelControl1.Appearance.BackColor = System.Drawing.Color.Black;
+            this.panelControl1.Appearance.Options.UseBackColor = true;
+            this.panelControl1.AutoSize = true;
+            this.panelControl1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.panelControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.panelControl1.Controls.Add(this.ckIDp);
+            this.panelControl1.Controls.Add(this.ckIDs);
+            this.panelControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panelControl1.Location = new System.Drawing.Point(3, 468);
+            this.panelControl1.Name = "panelControl1";
+            this.panelControl1.Size = new System.Drawing.Size(166, 56);
+            this.panelControl1.TabIndex = 10;
+            // 
+            // ckIDp
+            // 
+            this.ckIDp.AutoSize = true;
+            this.ckIDp.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ckIDp.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ckIDp.ForeColor = System.Drawing.Color.White;
+            this.ckIDp.Location = new System.Drawing.Point(2, 28);
+            this.ckIDp.Name = "ckIDp";
+            this.ckIDp.Size = new System.Drawing.Size(162, 26);
+            this.ckIDp.TabIndex = 1;
+            this.ckIDp.Text = "Chức vụ";
+            this.ckIDp.UseVisualStyleBackColor = true;
+            // 
+            // ckIDs
+            // 
+            this.ckIDs.AutoSize = true;
+            this.ckIDs.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ckIDs.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ckIDs.ForeColor = System.Drawing.Color.White;
+            this.ckIDs.Location = new System.Drawing.Point(2, 2);
+            this.ckIDs.Name = "ckIDs";
+            this.ckIDs.Size = new System.Drawing.Size(162, 26);
+            this.ckIDs.TabIndex = 0;
+            this.ckIDs.Text = "Nhân viên";
+            this.ckIDs.UseVisualStyleBackColor = true;
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.Appearance.BackColor = System.Drawing.Color.Coral;
+            this.btnSearch.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch.Appearance.Options.UseBackColor = true;
+            this.btnSearch.Appearance.Options.UseFont = true;
+            this.btnSearch.AppearanceHovered.BackColor = System.Drawing.Color.DarkOrange;
+            this.btnSearch.AppearanceHovered.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch.AppearanceHovered.Options.UseBackColor = true;
+            this.btnSearch.AppearanceHovered.Options.UseFont = true;
+            this.btnSearch.AppearancePressed.BackColor = System.Drawing.Color.DarkOrange;
+            this.btnSearch.AppearancePressed.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch.AppearancePressed.Options.UseBackColor = true;
+            this.btnSearch.AppearancePressed.Options.UseFont = true;
+            this.btnSearch.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnSearch.ImageOptions.Image = global::SaberMart.Properties.Resources.search;
+            this.btnSearch.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
+            this.btnSearch.Location = new System.Drawing.Point(3, 524);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(166, 74);
+            this.btnSearch.TabIndex = 6;
+            this.btnSearch.Text = "Tìm theo mã";
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // btnList
             // 
@@ -580,71 +646,6 @@ namespace SaberMart.UI.User_control.Admin
             this.ColSalary.Name = "ColSalary";
             this.ColSalary.ReadOnly = true;
             // 
-            // btnSearch
-            // 
-            this.btnSearch.Appearance.BackColor = System.Drawing.Color.Coral;
-            this.btnSearch.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch.Appearance.Options.UseBackColor = true;
-            this.btnSearch.Appearance.Options.UseFont = true;
-            this.btnSearch.AppearanceHovered.BackColor = System.Drawing.Color.DarkOrange;
-            this.btnSearch.AppearanceHovered.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch.AppearanceHovered.Options.UseBackColor = true;
-            this.btnSearch.AppearanceHovered.Options.UseFont = true;
-            this.btnSearch.AppearancePressed.BackColor = System.Drawing.Color.DarkOrange;
-            this.btnSearch.AppearancePressed.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch.AppearancePressed.Options.UseBackColor = true;
-            this.btnSearch.AppearancePressed.Options.UseFont = true;
-            this.btnSearch.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnSearch.ImageOptions.Image = global::SaberMart.Properties.Resources.search;
-            this.btnSearch.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
-            this.btnSearch.Location = new System.Drawing.Point(3, 524);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(166, 74);
-            this.btnSearch.TabIndex = 6;
-            this.btnSearch.Text = "Tìm theo mã";
-            // 
-            // panelControl1
-            // 
-            this.panelControl1.Appearance.BackColor = System.Drawing.Color.Black;
-            this.panelControl1.Appearance.Options.UseBackColor = true;
-            this.panelControl1.AutoSize = true;
-            this.panelControl1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.panelControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.panelControl1.Controls.Add(this.ckIDp);
-            this.panelControl1.Controls.Add(this.ckIDs);
-            this.panelControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelControl1.Location = new System.Drawing.Point(3, 468);
-            this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(166, 56);
-            this.panelControl1.TabIndex = 10;
-            // 
-            // ckIDp
-            // 
-            this.ckIDp.AutoSize = true;
-            this.ckIDp.Dock = System.Windows.Forms.DockStyle.Top;
-            this.ckIDp.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ckIDp.ForeColor = System.Drawing.Color.White;
-            this.ckIDp.Location = new System.Drawing.Point(2, 28);
-            this.ckIDp.Name = "ckIDp";
-            this.ckIDp.Size = new System.Drawing.Size(162, 26);
-            this.ckIDp.TabIndex = 1;
-            this.ckIDp.Text = "Chức vụ";
-            this.ckIDp.UseVisualStyleBackColor = true;
-            // 
-            // ckIDs
-            // 
-            this.ckIDs.AutoSize = true;
-            this.ckIDs.Dock = System.Windows.Forms.DockStyle.Top;
-            this.ckIDs.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ckIDs.ForeColor = System.Drawing.Color.White;
-            this.ckIDs.Location = new System.Drawing.Point(2, 2);
-            this.ckIDs.Name = "ckIDs";
-            this.ckIDs.Size = new System.Drawing.Size(162, 26);
-            this.ckIDs.TabIndex = 0;
-            this.ckIDs.Text = "Nhân viên";
-            this.ckIDs.UseVisualStyleBackColor = true;
-            // 
             // ucStaff
             // 
             this.AllowDrop = true;
@@ -665,6 +666,9 @@ namespace SaberMart.UI.User_control.Admin
             this.Load += new System.EventHandler(this.ucStaff_Load);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
+            this.panelControl1.ResumeLayout(false);
+            this.panelControl1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStaff)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -679,9 +683,6 @@ namespace SaberMart.UI.User_control.Admin
             ((System.ComponentModel.ISupportInitialize)(this.txtNames.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtIDs.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPosition)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
-            this.panelControl1.ResumeLayout(false);
-            this.panelControl1.PerformLayout();
             this.ResumeLayout(false);
 
         }
